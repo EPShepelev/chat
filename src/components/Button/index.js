@@ -8,7 +8,6 @@ export default function Button(props) {
   return (
     <BaseButton
       {...props}
-      type="primary"
       className={classNames("button", props.className)}
     ></BaseButton>
   );
