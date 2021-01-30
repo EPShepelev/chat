@@ -7,8 +7,9 @@ import "./Button.scss";
 export default function Button(props) {
   return (
     <BaseButton
-      className={classNames("button", props.className)}
       {...props}
+      type="primary"
+      className={classNames("button", props.className)}
     ></BaseButton>
   );
 }
