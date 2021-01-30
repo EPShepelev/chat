@@ -148,7 +148,5 @@
       "react-app"
     ]
   },
-  "devDependencies": {
-    "react-styleguidist": "^11.1.5"
-  }
+  "devDependencies": {}
 }
