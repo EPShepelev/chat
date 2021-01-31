@@ -4,11 +4,11 @@ import { Button, Block } from "components";
 function App() {
   return (
     <div className="wrapper">
-      <Blcok>
+      <Block>
         <Button type="primary" size="large">
           Click
         </Button>
-      </Blcok>
+      </Block>
     </div>
   );
 }

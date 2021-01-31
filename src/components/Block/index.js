@@ -1,7 +1,9 @@
 import React from "react";
-import propTypes from "prop-types";
+import classNames from "classnames";
 import "./Block.scss";
 
-const Block = ({ children }) => <div className="block">{children}</div>;
+const Block = ({ children, className }) => (
+  <div className={classNames("block", className)}>{children}</div>
+);
 
 export default Block;
