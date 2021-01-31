@@ -1,7 +1,10 @@
 .auth {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   .block {
-    display: inline-block;
     max-width: 430px;
+    width: 100%;
   }
 }
