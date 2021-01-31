@@ -1,13 +1,14 @@
 import React from "react";
-import Button from "./components/Button/index";
+import { Button, Block } from "components";
 
 function App() {
   return (
     <div className="wrapper">
-      <h1>Hello</h1>
-      <Button type="primary" size="large">
-        Click
-      </Button>
+      <Blcok>
+        <Button type="primary" size="large">
+          Click
+        </Button>
+      </Blcok>
     </div>
   );
 }
