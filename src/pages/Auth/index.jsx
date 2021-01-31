@@ -1,4 +1,5 @@
 import React from "react";
+import { Button, Block } from "components";
 
 const Auth = () => {
   return (
