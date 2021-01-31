@@ -1,15 +1,16 @@
 import React from "react";
 import { Button, Block } from "components";
+import "./Auth.scss";
 
 const Auth = () => {
   return (
-    <div>
+    <section className="auth">
       <Block>
         <Button type="primary" size="large">
           Click
         </Button>
       </Block>
-    </div>
+    </section>
   );
 };
 
