@@ -52,9 +52,9 @@ const Auth = () => {
               <Input.Password placeholder="Password" size="large" />
             </Form.Item>
 
-            <Form.Item {...tailLayout}>
-              <Button type="primary" htmlType="submit">
-                Submit
+            <Form.Item>
+              <Button type="primary" size="large">
+                Войти в аккаунт
               </Button>
             </Form.Item>
           </Form>
