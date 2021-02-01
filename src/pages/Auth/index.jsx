@@ -28,7 +28,6 @@ const Auth = () => {
         </div>
         <Block>
           <Form
-            {...layout}
             name="basic"
             initialValues={{ remember: true }}
             onFinish={onFinish}
@@ -57,6 +56,9 @@ const Auth = () => {
                 Войти в аккаунт
               </Button>
             </Form.Item>
+            <a className="auth__register-link" href="#">
+              Зарегистрироваться
+            </a>
           </Form>
         </Block>
       </div>

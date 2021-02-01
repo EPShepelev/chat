@@ -18,7 +18,14 @@
       opacity: 0.5;
     }
   }
-  .button {
+  &__register-link {
+    text-align: center;
+    display: block;
+    color: #adadad;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+  }
+  .button--large {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 14px;
