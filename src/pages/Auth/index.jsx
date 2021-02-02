@@ -3,22 +3,7 @@ import { Form, Input } from "antd";
 import { Button, Block } from "components";
 import "./Auth.scss";
 
-const layout = {
-  labelCol: { span: 8 },
-  wrapperCol: { span: 16 },
-};
-const tailLayout = {
-  wrapperCol: { offset: 8, span: 16 },
-};
-
 const Auth = () => {
-  const onFinish = (values: any) => {
-    console.log("Success:", values);
-  };
-
-  const onFinishFailed = (errorInfo: any) => {
-    console.log("Failed:", errorInfo);
-  };
   return (
     <section className="auth">
       <div className="auth__content">
@@ -26,41 +11,7 @@ const Auth = () => {
           <h2>Войти в аккаунт</h2>
           <p>Пожалуйста, войдите в свой аккаунт</p>
         </div>
-        <Block>
-          <Form
-            name="basic"
-            initialValues={{ remember: true }}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-          >
-            <Form.Item
-              name="username"
-              rules={[
-                { required: true, message: "Please input your username!" },
-              ]}
-            >
-              <Input placeholder="Username" size="large" />
-            </Form.Item>
-
-            <Form.Item
-              name="password"
-              rules={[
-                { required: true, message: "Please input your password!" },
-              ]}
-            >
-              <Input.Password placeholder="Password" size="large" />
-            </Form.Item>
-
-            <Form.Item>
-              <Button type="primary" size="large">
-                Войти в аккаунт
-              </Button>
-            </Form.Item>
-            <a className="auth__register-link" href="#">
-              Зарегистрироваться
-            </a>
-          </Form>
-        </Block>
+        <Block></Block>
       </div>
     </section>
   );
