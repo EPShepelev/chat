@@ -1,27 +1,26 @@
 import React, { Component } from "react";
-import { Form, Input } from "antd";
+import { Form, Icon, Input } from "antd";
+import { Link } from "react-router-dom";
+import { Button } from "components";
 
 export default class LoginForm extends Component {
   render() {
     return (
-      <Form
-        name="basic"
-        initialValues={{ remember: true }}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-      >
-        <Form.Item
-          name="username"
-          rules={[{ required: true, message: "Please input your username!" }]}
-        >
-          <Input placeholder="Username" size="large" />
+      <Form className="login-form" name="basic">
+        <Form.Item>
+          <Input
+            prefix={<Icon type="user" style={{ color: "rgba(0,0,0,0.25)" }} />}
+            placeholder="Username"
+            size="large"
+          />
         </Form.Item>
 
-        <Form.Item
-          name="password"
-          rules={[{ required: true, message: "Please input your password!" }]}
-        >
-          <Input.Password placeholder="Password" size="large" />
+        <Form.Item>
+          <Input.Password
+            prefix={<Icon type="lock" style={{ color: "rgba(0,0,0,0.25)" }} />}
+            placeholder="Password"
+            size="large"
+          />
         </Form.Item>
 
         <Form.Item>
@@ -29,9 +28,9 @@ export default class LoginForm extends Component {
             Войти в аккаунт
           </Button>
         </Form.Item>
-        <a className="auth__register-link" href="#">
+        <Link className="auth__register-link" to="/registration">
           Зарегистрироваться
-        </a>
+        </Link>
       </Form>
     );
   }
