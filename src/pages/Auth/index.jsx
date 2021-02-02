@@ -1,16 +1,13 @@
 import React from "react";
-import { Block } from "components";
+
+import { LoginForm } from "modules";
 import "./Auth.scss";
 
 const Auth = () => {
   return (
     <section className="auth">
       <div className="auth__content">
-        <div className="auth__top">
-          <h2>Войти в аккаунт</h2>
-          <p>Пожалуйста, войдите в свой аккаунт</p>
-        </div>
-        <Block></Block>
+        <LoginForm />
       </div>
     </section>
   );
