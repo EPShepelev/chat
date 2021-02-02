@@ -16,9 +16,9 @@ export default class LoginForm extends Component {
           <Form className="login-form" name="basic">
             <Form.Item>
               <Input
-                prefix={
-                  <Icon type="user" style={{ color: "rgba(0,0,0,0.25)" }} />
-                }
+                // prefix={
+                //   <Icon type="user" style={{ color: "rgba(0,0,0,0.25)" }} />
+                // }
                 placeholder="Username"
                 size="large"
               />
@@ -26,9 +26,9 @@ export default class LoginForm extends Component {
 
             <Form.Item>
               <Input.Password
-                prefix={
-                  <Icon type="lock" style={{ color: "rgba(0,0,0,0.25)" }} />
-                }
+                // prefix={
+                //   <Icon type="lock" style={{ color: "rgba(0,0,0,0.25)" }} />
+                // }
                 placeholder="Password"
                 size="large"
               />
