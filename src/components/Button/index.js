@@ -1,33 +1,20 @@
 import React from "react";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Button as BaseButton } from "antd";
 import "./Button.scss";
 
-// export default function Button(props) {
-//   return (
-//     <BaseButton
-//       {...props}
-//       className={
-//         (classNames("button", props.className),
-//         { "button--large": props.size === "large" })
-//       }
-//     ></BaseButton>
-//   );
-// }
-
 const Button = (props) => (
   <BaseButton
     {...props}
-    className={
-      (classNames("button", props.className),
-      { "button--large": props.size === "large" })
-    }
-  ></BaseButton>
+    className={classNames("button", props.className, {
+      "button--large": props.size === "large",
+    })}
+  />
 );
 
-export default Button;
-
 Button.propTypes = {
-  className: propTypes.string,
+  className: PropTypes.string,
 };
+
+export default Button;
