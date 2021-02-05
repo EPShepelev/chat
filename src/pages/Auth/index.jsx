@@ -6,13 +6,8 @@ import "./Auth.scss";
 const Auth = () => (
   <section className="auth">
     <div className="auth__content">
-      <Route path="/:(|/login)" component={LoginForm} />
-      <Route
-        path="/:(|/login)"
-        render={() => {
-          <h1>Test</h1>;
-        }}
-      />
+      <Route exact path="/" component={LoginForm} />
+      <Route path="/registration" component={RegistrationForm} />
     </div>
   </section>
 );
