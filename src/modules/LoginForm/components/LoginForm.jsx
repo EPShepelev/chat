@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Form, Input } from "antd";
+import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { Button, Block } from "components";
 
@@ -15,11 +16,19 @@ export default class LoginForm extends Component {
         <Block>
           <Form className="login-form" name="basic">
             <Form.Item>
-              <Input placeholder="Username" size="large" />
+              <Input
+                prefix={<UserOutlined className="site-form-item-icon" />}
+                placeholder="Username"
+                size="large"
+              />
             </Form.Item>
 
             <Form.Item>
-              <Input.Password placeholder="Password" size="large" />
+              <Input.Password
+                prefix={<LockOutlined className="site-form-item-icon" />}
+                placeholder="Password"
+                size="large"
+              />
             </Form.Item>
 
             <Form.Item>
