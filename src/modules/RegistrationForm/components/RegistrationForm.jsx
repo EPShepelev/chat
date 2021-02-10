@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, Input } from "antd";
-import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { Button, Block } from "components";
 
@@ -15,7 +15,7 @@ const RegistrationForm = () => {
         <Form className="login-form" name="basic">
           <Form.Item>
             <Input
-              prefix={<UserOutlined className="site-form-item-icon" />}
+              prefix={<MailOutlined className="site-form-item-icon" />}
               placeholder="E-mail"
               size="large"
             />
@@ -23,7 +23,7 @@ const RegistrationForm = () => {
 
           <Form.Item>
             <Input.Password
-              prefix={<LockOutlined className="site-form-item-icon" />}
+              prefix={<UserOutlined className="site-form-item-icon" />}
               placeholder="Ваше имя"
               size="large"
             />
