@@ -42,11 +42,14 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    p {
+      color: #adadad;
+    }
     h2 {
       margin-top: 20px;
     }
     svg {
-      color: blue;
+      color: #1890ff;
     }
   }
 }

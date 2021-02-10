@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { Button, Block } from "components";
 
 const RegistrationForm = () => {
-  const sucsess = true;
+  const sucsess = false;
   return (
     <div>
       <div className="auth__top">
