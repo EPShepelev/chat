@@ -50,7 +50,7 @@ const RegistrationForm = () => {
               Зарегистрироваться
             </Button>
           </Form.Item>
-          <Link className="auth__register-link" to="/registration">
+          <Link className="auth__register-link" to="/login">
             Войти в аккаунт
           </Link>
         </Form>
