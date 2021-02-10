@@ -8,15 +8,15 @@ const RegistrationForm = () => {
   return (
     <div>
       <div className="auth__top">
-        <h2>Войти в аккаунт</h2>
-        <p>Пожалуйста, войдите в свой аккаунт</p>
+        <h2>Регистрация</h2>
+        <p>Для входа в чат, вам нужно зарегистрироваться</p>
       </div>
       <Block>
         <Form className="login-form" name="basic">
           <Form.Item>
             <Input
               prefix={<UserOutlined className="site-form-item-icon" />}
-              placeholder="Username"
+              placeholder="E-mail"
               size="large"
             />
           </Form.Item>
@@ -24,18 +24,34 @@ const RegistrationForm = () => {
           <Form.Item>
             <Input.Password
               prefix={<LockOutlined className="site-form-item-icon" />}
-              placeholder="Password"
+              placeholder="Ваше имя"
+              size="large"
+            />
+          </Form.Item>
+
+          <Form.Item>
+            <Input.Password
+              prefix={<LockOutlined className="site-form-item-icon" />}
+              placeholder="Пароль"
+              size="large"
+            />
+          </Form.Item>
+
+          <Form.Item>
+            <Input.Password
+              prefix={<LockOutlined className="site-form-item-icon" />}
+              placeholder="Повторите пароль"
               size="large"
             />
           </Form.Item>
 
           <Form.Item>
             <Button type="primary" size="large">
-              Войти в аккаунт
+              Зарегистрироваться
             </Button>
           </Form.Item>
           <Link className="auth__register-link" to="/registration">
-            Зарегистрироваться
+            Войти в аккаунт
           </Link>
         </Form>
       </Block>
