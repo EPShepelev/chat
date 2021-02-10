@@ -66,7 +66,7 @@ const RegistrationForm = () => {
             <div>
               <ExclamationCircleOutlined style={{ fontSize: "50px" }} />
             </div>
-            <h3>Подтвердите свой аккаунт</h3>
+            <h2>Подтвердите свой аккаунт</h2>
             <p>
               На вашу почту отправлено письмо со ссылкой на подтверждение
               аккаунта.

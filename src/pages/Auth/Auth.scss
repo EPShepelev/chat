@@ -35,4 +35,10 @@
   .block {
     width: 430px;
   }
+  &__sucsess-block {
+    text-align: center;
+    svg {
+      color: blue;
+    }
+  }
 }
