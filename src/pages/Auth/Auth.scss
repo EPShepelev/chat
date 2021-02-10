@@ -36,7 +36,15 @@
     width: 430px;
   }
   &__sucsess-block {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
+    h2 {
+      margin-top: 20px;
+    }
     svg {
       color: blue;
     }
