@@ -8,7 +8,6 @@ const LoginForm = () => {
   return (
     <div>
       <div className="auth__top">
-        <LoginForm />
         <h2>Войти в аккаунт</h2>
         <p>Пожалуйста, войдите в свой аккаунт</p>
       </div>
