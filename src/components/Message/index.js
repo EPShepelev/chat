@@ -1,13 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-// import { Divider, Message as BaseButton } from "antd";
 import "./Message.scss";
 
 const Message = ({ avatar, user, text, date }) => (
   <div className="message">
     <div className="message__avatar">
       <img src={avatar} alt={`Avatar ${user.fullname}`}></img>
+    </div>
+    <div className="message__content">
+      <div className="message__bubble">
+        <p className="message__text">{text}</p>
+      </div>
     </div>
   </div>
 );
