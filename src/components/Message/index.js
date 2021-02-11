@@ -12,6 +12,7 @@ const Message = ({ avatar, user, text, date }) => (
       <div className="message__bubble">
         <p className="message__text">{text}</p>
       </div>
+      <span className="message__date">Вчера в 12:30</span>
     </div>
   </div>
 );
