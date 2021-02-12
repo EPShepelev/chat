@@ -2,9 +2,12 @@
   display: flex;
   flex-direction: column;
   &__avatar {
-    border-radius: 50px;
-    width: 33px;
-    height: 33px;
-    margin-right: 13px;
+    img {
+      border-radius: 50px;
+      width: 33px;
+      height: 33px;
+      margin-right: 13px;
+      margin-bottom: 18px;
+    }
   }
 }
