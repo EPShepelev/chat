@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import "./Message.scss";
 
 const Message = ({ avatar, user, text, date }) => (
@@ -12,7 +13,7 @@ const Message = ({ avatar, user, text, date }) => (
       <div className="message__bubble">
         <p className="message__text">{text}</p>
       </div>
-      <span className="message__date">Вчера в 12:30</span>
+      <span className="message__date">{formatDistanceToNow(new Date())}</span>
     </div>
   </div>
 );
