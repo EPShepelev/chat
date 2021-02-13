@@ -7,19 +7,21 @@ import "./Message.scss";
 
 const Message = ({ avatar, user, text, date, isMe }) => (
   <div className={classNames("message", { "message--isme": isMe })}>
-    <div className="message__avatar">
-      <img src={avatar} alt={`Avatar ${user.fullname}`}></img>
-    </div>
     <div className="message__content">
-      <div className="message__bubble">
-        <p className="message__text">{text}</p>
+      <div className="message__avatar">
+        <img src={avatar} alt={`Avatar ${user.fullname}`}></img>
       </div>
-      <span className="message__date">
-        {formatDistanceToNow(new Date(date), {
-          addSuffix: true,
-          locale: ruLocale,
-        })}
-      </span>
+      <div className="message__content">
+        <div className="message__bubble">
+          <p className="message__text">{text}</p>
+        </div>
+        <span className="message__date">
+          {formatDistanceToNow(new Date(date), {
+            addSuffix: true,
+            locale: ruLocale,
+          })}
+        </span>
+      </div>
     </div>
   </div>
 );
