@@ -5,8 +5,8 @@ import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import ruLocale from "date-fns/locale/ru";
 import "./Message.scss";
 
-const Message = ({ avatar, user, text, date }) => (
-  <div className="message">
+const Message = ({ avatar, user, text, date, isMe }) => (
+  <div className={classNames("message", { "message--isme": isMe })}>
     <div className="message__avatar">
       <img src={avatar} alt={`Avatar ${user.fullname}`}></img>
     </div>
@@ -15,7 +15,10 @@ const Message = ({ avatar, user, text, date }) => (
         <p className="message__text">{text}</p>
       </div>
       <span className="message__date">
-        {formatDistanceToNow(new Date(), { addSuffix: true, locale: ruLocale })}
+        {formatDistanceToNow(new Date(date), {
+          addSuffix: true,
+          locale: ruLocale,
+        })}
       </span>
     </div>
   </div>

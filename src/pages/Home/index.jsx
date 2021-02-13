@@ -9,7 +9,14 @@ const Home = () => (
     <Message
       avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
       text="Ну что у нас там? Все хорошо?"
-      date="Thu Feb 11 2021 15:12:14"
+      date="Thu Feb 13 2021 17:12:14"
+      isMe={false}
+    />
+    <Message
+      avatar="https://pbs.twimg.com/profile_images/456803584504393728/Im9iEap0.jpeg"
+      text="Да, все хорошо. Все сделали, нарушения будут"
+      date="Thu Feb 13 2021 18:12:14"
+      isMe={true}
     />
   </section>
 );
