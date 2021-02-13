@@ -1,9 +1,12 @@
 @import "~styles/variables";
 
 .message {
-  display: flex;
-  max-width: 440px;
-  margin-bottom: 15px;
+  $self: &;
+  &__content {
+    display: flex;
+    max-width: 440px;
+    margin-bottom: 15px;
+  }
   &__avatar {
     display: flex;
     flex-direction: column-reverse;
@@ -29,5 +32,15 @@
   &__text {
     color: #fff;
     line-height: 20px;
+  }
+  &--isme {
+    display: flex;
+    flex-direction: row-reverse;
+    #{$self}__bubble {
+      background: #fff;
+      border: 1px solid #ececec;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.220444);
+      border-radius: 12px 12px 0 12px;
+    }
   }
 }
