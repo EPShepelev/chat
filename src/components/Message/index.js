@@ -11,7 +11,7 @@ const Message = ({ avatar, user, text, date, isMe }) => (
       <div className="message__avatar">
         <img src={avatar} alt={`Avatar ${user.fullname}`}></img>
       </div>
-      <div className="message__content">
+      <div className="message__info">
         <div className="message__bubble">
           <p className="message__text">{text}</p>
         </div>

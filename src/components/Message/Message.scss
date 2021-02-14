@@ -36,6 +36,19 @@
   &--isme {
     display: flex;
     flex-direction: row-reverse;
+    #{$self}__content {
+      margin-bottom: 15px;
+      flex-direction: row-reverse;
+    }
+    #{$self}__avatar {
+      img {
+        margin-right: 0;
+        margin-left: 13px;
+      }
+    }
+    #{$self}__info {
+      display: flex;
+    }
     #{$self}__bubble {
       background: #fff;
       border: 1px solid #ececec;
