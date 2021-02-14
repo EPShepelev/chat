@@ -18,6 +18,20 @@ const Home = () => (
       date="Thu Feb 13 2021 18:12:14"
       isMe={true}
       isRead={true}
+      attachments={[
+        {
+          filename: "image.jpg",
+          url: "https://source.unsplash.com/100x100/?random=1&nature,water",
+        },
+        {
+          filename: "image.jpg",
+          url: "https://source.unsplash.com/100x100/?random=2&nature,water",
+        },
+        {
+          filename: "image.jpg",
+          url: "https://source.unsplash.com/100x100/?random=3&nature,water",
+        },
+      ]}
     />
   </section>
 );
