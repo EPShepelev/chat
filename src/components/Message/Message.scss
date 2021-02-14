@@ -49,6 +49,7 @@
     #{$self}__info {
       display: flex;
       flex-direction: column;
+      text-align: right;
     }
     #{$self}__bubble {
       background: #fff;

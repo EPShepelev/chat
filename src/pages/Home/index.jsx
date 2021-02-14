@@ -17,6 +17,7 @@ const Home = () => (
       text="Да, все хорошо. Все сделали, нарушения будут"
       date="Thu Feb 13 2021 18:12:14"
       isMe={true}
+      isRead={true}
     />
   </section>
 );
