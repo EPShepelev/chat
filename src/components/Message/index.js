@@ -4,16 +4,19 @@ import classNames from "classnames";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import ruLocale from "date-fns/locale/ru";
 import "./Message.scss";
-import checkedSvg from "assets/img/checked.svg";
+import readSvg from "assets/img/read.svg";
+import noReadSvg from "assets/img/noread.svg";
 
 const Message = ({ avatar, user, text, date, isMe, isRead }) => (
   <div className={classNames("message", { "message--isme": isMe })}>
     <div className="message__content">
-      {isMe && isRead && (
+      {isMe && isRead ? (
+        <img className="message__icon-readed" src={readSvg} alt="read icon" />
+      ) : (
         <img
           className="message__icon-readed"
-          src={checkedSvg}
-          alt="checked icon"
+          src={noReadSvg}
+          alt="no read icon"
         />
       )}
       <div className="message__avatar">
