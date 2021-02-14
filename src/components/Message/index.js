@@ -9,7 +9,13 @@ import checkedSvg from "assets/img/checked.svg";
 const Message = ({ avatar, user, text, date, isMe, isRead }) => (
   <div className={classNames("message", { "message--isme": isMe })}>
     <div className="message__content">
-      <img src={checkedSvg} alt="checked icon" />
+      {isMe && isRead && (
+        <img
+          className="message__icon-readed"
+          src={checkedSvg}
+          alt="checked icon"
+        />
+      )}
       <div className="message__avatar">
         <img src={avatar} alt={`Avatar ${user.fullname}`}></img>
       </div>
