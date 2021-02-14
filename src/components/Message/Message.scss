@@ -48,6 +48,7 @@
     }
     #{$self}__info {
       display: flex;
+      flex-direction: column;
     }
     #{$self}__bubble {
       background: #fff;
