@@ -34,11 +34,12 @@ const Message = ({ avatar, user, text, date, isMe, isRead, attachments }) => (
         </span>
       </div>
       <div className="message__attachments">
-        {attachments.map((item) => {
-          <div className="message__attachments-item">
-            <img src={item.url} alt={item.filename} />
-          </div>;
-        })}
+        {attachments &&
+          attachments.map((item) => (
+            <div className="message__attachments-item">
+              <img src={item.url} alt={item.filename} />
+            </div>
+          ))}
       </div>
     </div>
   </div>
