@@ -30,12 +30,11 @@
     font-size: 12px;
     opacity: 0.5;
   }
-  &__info {
-    display: flex;
-  }
   &__attachments {
     display: flex;
+    margin-bottom: 5px;
     &-item {
+      margin-right: 5px;
       img {
         width: 45px;
         height: 45px;
