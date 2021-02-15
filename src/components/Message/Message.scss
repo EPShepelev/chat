@@ -30,6 +30,19 @@
     font-size: 12px;
     opacity: 0.5;
   }
+  &__info {
+    display: flex;
+  }
+  &__attachments {
+    display: flex;
+    &-item {
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 8px;
+      }
+    }
+  }
   &__text {
     color: #fff;
     line-height: 20px;
