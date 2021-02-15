@@ -11,13 +11,6 @@ const Home = () => (
       text="Ну что у нас там? Все хорошо?"
       date="Thu Feb 13 2021 17:12:14"
       isMe={false}
-    />
-    <Message
-      avatar="https://pbs.twimg.com/profile_images/456803584504393728/Im9iEap0.jpeg"
-      text="Да, все хорошо. Все сделали, нарушения будут"
-      date="Thu Feb 13 2021 18:12:14"
-      isMe={true}
-      isRead={true}
       attachments={[
         {
           filename: "image.jpg",
@@ -32,6 +25,13 @@ const Home = () => (
           url: "https://source.unsplash.com/100x100/?random=3&nature,water",
         },
       ]}
+    />
+    <Message
+      avatar="https://pbs.twimg.com/profile_images/456803584504393728/Im9iEap0.jpeg"
+      text="Да, все хорошо. Все сделали, нарушения будут"
+      date="Thu Feb 13 2021 18:12:14"
+      isMe={true}
+      isRead={true}
     />
   </section>
 );

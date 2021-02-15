@@ -7,7 +7,7 @@ import "./Message.scss";
 import readSvg from "assets/img/read.svg";
 import noReadSvg from "assets/img/noread.svg";
 
-const Message = ({ avatar, user, text, date, isMe, isRead }) => (
+const Message = ({ avatar, user, text, date, isMe, isRead, attachments }) => (
   <div className={classNames("message", { "message--isme": isMe })}>
     <div className="message__content">
       {isMe && isRead ? (
@@ -34,9 +34,11 @@ const Message = ({ avatar, user, text, date, isMe, isRead }) => (
         </span>
       </div>
       <div className="message__attachments">
-        <div className="message__attachments-item">
-          <img></img>
-        </div>
+        {attachments.map((item) => {
+          <div className="message__attachments-item">
+            <img src={item.url} alt={item.filename} />
+          </div>;
+        })}
       </div>
     </div>
   </div>
@@ -51,6 +53,7 @@ Message.propTypes = {
   text: PropTypes.string,
   date: PropTypes.string,
   user: PropTypes.object,
+  attachments: PropTypes.array,
 };
 
 export default Message;
