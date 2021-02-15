@@ -33,6 +33,11 @@ const Message = ({ avatar, user, text, date, isMe, isRead }) => (
           })}
         </span>
       </div>
+      <div className="message__attachments">
+        <div className="message__attachments-item">
+          <img></img>
+        </div>
+      </div>
     </div>
   </div>
 );
