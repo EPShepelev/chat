@@ -30,7 +30,9 @@ const RegistrationForm = (props) => {
         {!sucsess ? (
           <Form className="login-form" onSubmit={handleSubmit} name="basic">
             <Form.Item
-              validateStatus={errors.email && touched.email}
+              validateStatus={
+                errors.email && touched.email ? "error" : "success"
+              }
               hasFeedback
             >
               <Input
