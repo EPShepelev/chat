@@ -71,7 +71,7 @@ const RegistrationForm = (props) => {
             </Form.Item>
 
             <Form.Item>
-              <Button type="primary" size="large">
+              <Button onclick={handleSubmit} type="primary" size="large">
                 Зарегистрироваться
               </Button>
             </Form.Item>

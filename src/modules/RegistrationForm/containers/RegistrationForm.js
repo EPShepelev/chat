@@ -2,7 +2,7 @@ import RegistrationForm from "../components/RegistrationForm";
 import { withFormik } from "formik";
 
 export default withFormik({
-  mapPropsToValues: () => ({ email: "default e-mail" }),
+  mapPropsToValues: () => ({}),
   validate: (values) => {
     const errors = {};
 
