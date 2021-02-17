@@ -29,11 +29,15 @@ const RegistrationForm = (props) => {
       <Block>
         {!sucsess ? (
           <Form className="login-form" onSubmit={handleSubmit} name="basic">
-            <Form.Item>
+            <Form.Item
+              validateStatus={errors.email && touched.email}
+              hasFeedback
+            >
               <Input
                 prefix={<MailOutlined className="site-form-item-icon" />}
                 placeholder="E-mail"
                 size="large"
+                value={values.email}
               />
             </Form.Item>
 
