@@ -34,10 +34,13 @@ const RegistrationForm = (props) => {
               hasFeedback
             >
               <Input
+                id="email"
                 prefix={<MailOutlined className="site-form-item-icon" />}
                 placeholder="E-mail"
                 size="large"
                 value={values.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
               />
             </Form.Item>
 
