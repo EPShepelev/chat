@@ -9,8 +9,17 @@ import {
 import { Link } from "react-router-dom";
 import { Button, Block } from "components";
 
-const RegistrationForm = () => {
-  const sucsess = false;
+const sucsess = false;
+
+const RegistrationForm = (props) => {
+  const {
+    values,
+    touched,
+    errors,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+  } = props;
   return (
     <div>
       <div className="auth__top">
@@ -19,7 +28,7 @@ const RegistrationForm = () => {
       </div>
       <Block>
         {!sucsess ? (
-          <Form className="login-form" name="basic">
+          <Form className="login-form" onSubmit={handleSubmit} name="basic">
             <Form.Item>
               <Input
                 prefix={<MailOutlined className="site-form-item-icon" />}
