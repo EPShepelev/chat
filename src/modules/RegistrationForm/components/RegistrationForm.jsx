@@ -31,7 +31,7 @@ const RegistrationForm = (props) => {
           <Form className="login-form" onSubmit={handleSubmit} name="basic">
             <Form.Item
               validateStatus={
-                errors.email && touched.email ? "error" : "success"
+                !touched.email ? "" : errors.email ? "error" : "success"
               }
               hasFeedback
             >
