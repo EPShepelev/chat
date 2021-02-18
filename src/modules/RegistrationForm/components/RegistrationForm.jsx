@@ -28,7 +28,7 @@ const RegistrationForm = (props) => {
       </div>
       <Block>
         {!sucsess ? (
-          <Form className="login-form" onSubmit={handleSubmit} name="basic">
+          <Form className="login-form" onSubmit={handleSubmit}>
             <Form.Item
               validateStatus={
                 !touched.email ? "" : errors.email ? "error" : "success"
@@ -54,11 +54,21 @@ const RegistrationForm = (props) => {
               />
             </Form.Item>
 
-            <Form.Item>
+            <Form.Item
+              validateStatus={
+                !touched.password ? "" : errors.password ? "error" : "success"
+              }
+              hasFeedback
+            >
               <Input.Password
                 prefix={<LockOutlined className="site-form-item-icon" />}
                 placeholder="Пароль"
                 size="large"
+                id="password"
+                type="password"
+                value={values.password}
+                onChange={handleChange}
+                onBlur={handleBlur}
               />
             </Form.Item>
 
@@ -71,7 +81,7 @@ const RegistrationForm = (props) => {
             </Form.Item>
 
             <Form.Item>
-              <Button onclick={handleSubmit} type="primary" size="large">
+              <Button onClick={handleSubmit} type="primary" size="large">
                 Зарегистрироваться
               </Button>
             </Form.Item>
