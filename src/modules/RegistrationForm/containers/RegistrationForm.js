@@ -15,8 +15,13 @@ export default withFormik({
 
     if (!values.password) {
       errors.password = "Введите пароль!";
-    } else if (!/(?=.*[a-zA-Z0-9])/i.test(values.password)) {
-      errors.email = "Пароль должен содержать заглавные буквы и цифры";
+    } else if (
+      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/.test(
+        values.password
+      )
+    ) {
+      errors.password =
+        "Пароль должен содержать заглавные буквы, цифры, спецсимволы";
     }
 
     return errors;
