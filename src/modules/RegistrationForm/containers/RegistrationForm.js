@@ -1,9 +1,12 @@
 import RegistrationForm from "../components/RegistrationForm";
 import { withFormik } from "formik";
+import validate from "utils/validate";
 
 export default withFormik({
   validate: (values) => {
     let errors = {};
+    const keys = Object.keys(values);
+    keys.forEach((key) => validate[key] && validate[key](errors, values));
 
     if (!values.email) {
       errors.email = "Введите email";
