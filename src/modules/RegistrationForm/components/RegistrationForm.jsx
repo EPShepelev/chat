@@ -20,7 +20,7 @@ const RegistrationForm = (props) => {
     handleBlur,
     handleSubmit,
     isValid,
-    dirty,
+    isSubmitting,
   } = props;
   return (
     <div>
@@ -85,7 +85,7 @@ const RegistrationForm = (props) => {
             </Form.Item>
 
             <Form.Item>
-              {dirty && !isValid && <span>Ошибка!</span>}
+              {isSubmitting && !isValid && <span>Ошибка!</span>}
               <Button onClick={handleSubmit} type="primary" size="large">
                 Зарегистрироваться
               </Button>
