@@ -60,6 +60,7 @@ const RegistrationForm = (props) => {
                 !touched.password ? "" : errors.password ? "error" : "success"
               }
               hasFeedback
+              help={!touched.password ? "" : errors.password}
             >
               <Input.Password
                 prefix={<LockOutlined className="site-form-item-icon" />}
