@@ -6,15 +6,7 @@ export default withFormik({
   validate: (values) => {
     let errors = {};
     const keys = Object.keys(values);
-    keys.forEach((key) => validate[key] && validate[key](errors, values));
-
-    if (!values.email) {
-      errors.email = "Введите email";
-    } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-    ) {
-      errors.email = "Invalid email address";
-    }
+    keys.forEach((key) => validate[key] && validate[key](errors, values[key]));
 
     if (!values.password) {
       errors.password = "Введите пароль!";
