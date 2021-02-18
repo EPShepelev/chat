@@ -5,17 +5,9 @@ import validate from "utils/validate";
 export default withFormik({
   validate: (values) => {
     let errors = {};
-    const keys = Object.keys(values);
-    keys.forEach((key) => validate[key] && validate[key](errors, values[key]));
-
-    if (!values.password) {
-      errors.password = "Введите пароль!";
-    } else if (
-      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/.test(values.password)
-    ) {
-      errors.password = "Пароль должен содержать заглавные буквы и цифры";
-    }
-
+    Object.keys(values).forEach(
+      (key) => validate[key] && validate[key](errors, values[key])
+    );
     return errors;
   },
 

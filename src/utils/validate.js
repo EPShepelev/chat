@@ -1,4 +1,4 @@
-const validate = {
+export default {
   email: (errors, value) => {
     if (!value) {
       errors.email = "Введите email";
@@ -6,6 +6,11 @@ const validate = {
       errors.email = "Некорректный email";
     }
   },
+  password: (errors, value) => {
+    if (!value) {
+      errors.password = "Введите пароль!";
+    } else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/.test(value)) {
+      errors.password = "Пароль должен содержать заглавные буквы и цифры";
+    }
+  },
 };
-
-export default validate;
