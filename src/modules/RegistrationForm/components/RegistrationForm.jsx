@@ -34,6 +34,7 @@ const RegistrationForm = (props) => {
                 !touched.email ? "" : errors.email ? "error" : "success"
               }
               hasFeedback
+              help={!touched.email ? "" : errors.email}
             >
               <Input
                 id="email"
