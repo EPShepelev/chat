@@ -1,4 +1,4 @@
-export default (isAuth) => ({
+export default ({ ...isAuth }) => ({
   email: (errors, value) => {
     if (!value) {
       errors.email = "Введите email";
@@ -10,7 +10,9 @@ export default (isAuth) => ({
     if (!value) {
       errors.password = "Введите пароль!";
     } else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/.test(value)) {
-      errors.password = "Пароль должен содержать заглавные буквы и цифры";
+      errors.password = isAuth
+        ? "Неверный пароль"
+        : "Пароль должен содержать заглавные буквы и цифры";
     }
   },
 });
