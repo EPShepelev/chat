@@ -1,4 +1,4 @@
-export default {
+export default () => ({
   email: (errors, value) => {
     if (!value) {
       errors.email = "Введите email";
@@ -13,4 +13,4 @@ export default {
       errors.password = "Пароль должен содержать заглавные буквы и цифры";
     }
   },
-};
+});
