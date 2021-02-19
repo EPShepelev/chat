@@ -6,7 +6,7 @@ export default {
       errors.email = "Некорректный email";
     }
   },
-  password: (errors, value) => {
+  password: (errors, value, isAuth) => {
     if (!value) {
       errors.password = "Введите пароль!";
     } else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/.test(value)) {
