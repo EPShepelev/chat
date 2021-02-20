@@ -102,39 +102,6 @@ const LoginForm = () => {
       </Block>
     </div>
   );
-
-  return (
-    <div>
-      <Block>
-        <Form className="login-form" name="basic">
-          <Form.Item>
-            <Input
-              prefix={<UserOutlined className="site-form-item-icon" />}
-              placeholder="Username"
-              size="large"
-            />
-          </Form.Item>
-
-          <Form.Item>
-            <Input.Password
-              prefix={<LockOutlined className="site-form-item-icon" />}
-              placeholder="Password"
-              size="large"
-            />
-          </Form.Item>
-
-          <Form.Item>
-            <Button type="primary" size="large">
-              Войти в аккаунт
-            </Button>
-          </Form.Item>
-          <Link className="auth__register-link" to="/registration">
-            Зарегистрироваться
-          </Link>
-        </Form>
-      </Block>
-    </div>
-  );
 };
 
 export default LoginForm;
