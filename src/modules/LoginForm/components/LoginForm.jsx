@@ -40,14 +40,6 @@ const LoginForm = (props) => {
               />
             </Form.Item>
 
-            <Form.Item>
-              <Input
-                prefix={<UserOutlined className="site-form-item-icon" />}
-                placeholder="Ваше имя"
-                size="large"
-              />
-            </Form.Item>
-
             <Form.Item
               validateStatus={
                 !touched.password ? "" : errors.password ? "error" : "success"
