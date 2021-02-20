@@ -60,14 +60,6 @@ const LoginForm = (props) => {
             </Form.Item>
 
             <Form.Item>
-              <Input.Password
-                prefix={<LockOutlined className="site-form-item-icon" />}
-                placeholder="Повторите пароль"
-                size="large"
-              />
-            </Form.Item>
-
-            <Form.Item>
               {isSubmitting && !isValid && <span>Ошибка!</span>}
               <Button onClick={handleSubmit} type="primary" size="large">
                 Зарегистрироваться
