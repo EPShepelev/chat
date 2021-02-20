@@ -62,11 +62,11 @@ const LoginForm = (props) => {
             <Form.Item>
               {isSubmitting && !isValid && <span>Ошибка!</span>}
               <Button onClick={handleSubmit} type="primary" size="large">
-                Зарегистрироваться
+                Войти в аккаунт
               </Button>
             </Form.Item>
             <Link className="auth__register-link" to="/login">
-              Войти в аккаунт
+              Зарегистрироваться
             </Link>
           </Form>
         {!sucsess ? (
