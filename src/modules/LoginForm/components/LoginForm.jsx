@@ -4,7 +4,7 @@ import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { Button, Block } from "components";
 
-const LoginForm = () => {
+const LoginForm = (props) => {
   const {
     values,
     touched,
@@ -21,9 +21,7 @@ const LoginForm = () => {
         <h2>Войти в аккаунт</h2>
         <p>Пожалуйста, войдите в свой аккаунт</p>
       </div>
-      <Block>
-        {!sucsess ? (
-          <Form className="login-form" onSubmit={handleSubmit}>
+      <Block><Form className="login-form" onSubmit={handleSubmit}>
             <Form.Item
               validateStatus={
                 !touched.email ? "" : errors.email ? "error" : "success"
@@ -87,6 +85,8 @@ const LoginForm = () => {
               Войти в аккаунт
             </Link>
           </Form>
+        {!sucsess ? (
+          
         ) : (
           <div className="auth__sucsess-block">
             <div>
