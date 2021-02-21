@@ -5,6 +5,15 @@ import { Link } from "react-router-dom";
 import { Button, Block } from "components";
 
 const LoginForm = (props) => {
+  const validate = (touched, errors, key) => {
+    if (touched.email && errors.email) {
+      return "error";
+    } else if (!touched.email) {
+      return "";
+    } else {
+      return "success";
+    }
+  };
   const {
     values,
     touched,
