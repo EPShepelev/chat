@@ -24,9 +24,7 @@ const LoginForm = (props) => {
       <Block>
         <Form className="login-form" onSubmit={handleSubmit}>
           <Form.Item
-            validateStatus={
-              !touched.email ? "" : errors.email ? "error" : "success"
-            }
+            validateStatus={validate("email")}
             hasFeedback
             help={!touched.email ? "" : errors.email}
           >

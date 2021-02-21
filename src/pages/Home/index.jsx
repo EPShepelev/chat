@@ -1,6 +1,5 @@
 import React from "react";
 import { Message } from "components";
-import { Route } from "react-router-dom";
 
 import "./Home.scss";
 
