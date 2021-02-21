@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 import { Button, Block } from "components";
 
 const LoginForm = (props) => {
-  const validate = (touched, errors, key) => {
-    if (touched.email && errors.email) {
-      return "error";
-    } else if (!touched.email) {
-      return "";
-    } else {
-      return "success";
+  const validate = (key, touched, errors) => {
+    if (touched[key]) {
+      if (errors[key]) {
+        return "error";
+      } else {
+        return "";
+      }
     }
   };
   const {
@@ -33,7 +33,7 @@ const LoginForm = (props) => {
       <Block>
         <Form className="login-form" onSubmit={handleSubmit}>
           <Form.Item
-            validateStatus={validate("email")}
+            validateStatus={validate("email", touched, errors)}
             hasFeedback
             help={!touched.email ? "" : errors.email}
           >
