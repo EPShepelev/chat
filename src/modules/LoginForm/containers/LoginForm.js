@@ -5,7 +5,7 @@ import validateForm from "utils/validate";
 export default withFormik({
   validate: (values) => {
     let errors = {};
-    validateForm({ isAuth: true, valuse, errors });
+    validateForm({ isAuth: true, values, errors });
     return errors;
   },
 
