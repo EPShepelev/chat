@@ -10,8 +10,10 @@ const LoginForm = (props) => {
       if (errors[key]) {
         return "error";
       } else {
-        return "";
+        return "success";
       }
+    } else {
+      return "";
     }
   };
   const {
