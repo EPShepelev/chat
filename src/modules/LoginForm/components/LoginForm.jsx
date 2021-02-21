@@ -66,7 +66,7 @@ const LoginForm = (props) => {
               Войти в аккаунт
             </Button>
           </Form.Item>
-          <Link className="auth__register-link" to="/login">
+          <Link className="auth__register-link" to="/registration">
             Зарегистрироваться
           </Link>
         </Form>

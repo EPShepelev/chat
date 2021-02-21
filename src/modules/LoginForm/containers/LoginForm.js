@@ -18,5 +18,3 @@ export default withFormik({
 
   displayName: "LoginForm",
 })(LoginForm);
-
-export default LoginForm;
