@@ -3,6 +3,7 @@ import { withFormik } from "formik";
 import validateForm from "utils/validate";
 
 export default withFormik({
+  enableReinitialize: true,
   mapPropsToValues: () => ({
     email: "",
     password: "",
