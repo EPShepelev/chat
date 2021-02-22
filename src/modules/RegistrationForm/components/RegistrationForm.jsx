@@ -78,6 +78,7 @@ const RegistrationForm = (props) => {
                 prefix={<LockOutlined className="site-form-item-icon" />}
                 placeholder="Повторите пароль"
                 size="large"
+                type="password2"
               />
             </Form.Item>
 
