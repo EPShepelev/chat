@@ -7,8 +7,22 @@ import "./Message.scss";
 import readSvg from "assets/img/read.svg";
 import noReadSvg from "assets/img/noread.svg";
 
-const Message = ({ avatar, user, text, date, isMe, isRead, attachments }) => (
-  <div className={classNames("message", { "message--isme": isMe })}>
+const Message = ({
+  avatar,
+  user,
+  text,
+  date,
+  isMe,
+  isRead,
+  attachments,
+  isTyping,
+}) => (
+  <div
+    className={classNames("message", {
+      "message--isme": isMe,
+      "message--istyping": isTyping,
+    })}
+  >
     <div className="message__content">
       {isMe && isRead ? (
         <img className="message__icon-readed" src={readSvg} alt="read icon" />
