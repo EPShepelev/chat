@@ -51,9 +51,7 @@ const LoginForm = (props) => {
           </Form.Item>
 
           <Form.Item
-            validateStatus={
-              !touched.password ? "" : errors.password ? "error" : "success"
-            }
+            validateStatus={validate("password", touched, errors)}
             hasFeedback
             help={!touched.password ? "" : errors.password}
           >
