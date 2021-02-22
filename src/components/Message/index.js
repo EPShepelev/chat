@@ -38,7 +38,7 @@ const Message = ({
       </div>
       <div className="message__info">
         <div className="message__bubble">
-          <p className="message__text">{text}</p>
+          {text && <p className="message__text">{text}</p>}
         </div>
         <div className="message__attachments">
           {attachments &&
@@ -48,12 +48,14 @@ const Message = ({
               </div>
             ))}
         </div>
-        <span className="message__date">
-          {formatDistanceToNow(new Date(date), {
-            addSuffix: true,
-            locale: ruLocale,
-          })}
-        </span>
+        {date && (
+          <span className="message__date">
+            {formatDistanceToNow(new Date(date), {
+              addSuffix: true,
+              locale: ruLocale,
+            })}
+          </span>
+        )}
       </div>
     </div>
   </div>
