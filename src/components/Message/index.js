@@ -55,6 +55,7 @@ Message.propTypes = {
   date: PropTypes.string,
   user: PropTypes.object,
   attachments: PropTypes.array,
+  isTyping: PropTypes.boolean,
 };
 
 export default Message;
