@@ -8,6 +8,7 @@ import {
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { Button, Block } from "components";
+import { validateField } from "utils/helpers";
 
 const sucsess = false;
 
@@ -32,9 +33,7 @@ const RegistrationForm = (props) => {
         {!sucsess ? (
           <Form className="login-form" onSubmit={handleSubmit}>
             <Form.Item
-              validateStatus={
-                !touched.email ? "" : errors.email ? "error" : "success"
-              }
+              validateStatus={validateField("email", touched, errors)}
               hasFeedback
               help={!touched.email ? "" : errors.email}
             >
@@ -58,9 +57,7 @@ const RegistrationForm = (props) => {
             </Form.Item>
 
             <Form.Item
-              validateStatus={
-                !touched.password ? "" : errors.password ? "error" : "success"
-              }
+              validateStatus={validateField("password", touched, errors)}
               hasFeedback
               help={!touched.password ? "" : errors.password}
             >
