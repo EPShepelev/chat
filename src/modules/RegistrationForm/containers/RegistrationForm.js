@@ -3,6 +3,11 @@ import { withFormik } from "formik";
 import validateForm from "utils/validate";
 
 export default withFormik({
+  enableReinitialize: true,
+  mapPropsToValues: () => ({
+    email: "",
+    password: "",
+  }),
   validate: (values) => {
     let errors = {};
     const validate = validateForm({ isAuth: false });
