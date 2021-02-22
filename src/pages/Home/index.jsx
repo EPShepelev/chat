@@ -32,7 +32,10 @@ const Home = () => (
       isMe={true}
       isRead={true}
     />
-    <Message avatar="https://pbs.twimg.com/profile_images/456803584504393728/Im9iEap0.jpeg" />
+    <Message
+      avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
+      isTyping
+    />
   </section>
 );
 
