@@ -83,6 +83,7 @@
   &--istyping {
     #{$self}__bubble {
       background-color: $message-typing-background;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.0220444);
     }
   }
   &__typing {
