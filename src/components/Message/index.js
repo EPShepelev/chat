@@ -39,11 +39,13 @@ const Message = ({
       <div className="message__info">
         <div className="message__bubble">
           {text && <p className="message__text">{text}</p>}
-          <div className="message__typing">
-            <span className="dot one"></span>
-            <span className="dot two"></span>
-            <span className="dot three"></span>
-          </div>
+          {isTyping && (
+            <div className="message__typing">
+              <span className="dot one"></span>
+              <span className="dot two"></span>
+              <span className="dot three"></span>
+            </div>
+          )}
         </div>
         <div className="message__attachments">
           {attachments &&
