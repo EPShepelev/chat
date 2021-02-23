@@ -81,26 +81,29 @@
     }
   }
   &__typing {
-    height: 17px;
-    width: 17px;
-    border-radius: 50%;
-    display: block;
-    float: left;
-    margin: 0 0 0 8px;
-    &:first-child {
-      margin: 0;
-    }
-    &.one {
-      -webkit-animation: cycleOne 1s ease-in-out infinite;
-      -webkit-animation-direction: normal;
-    }
-    &.two {
-      -webkit-animation: cycleOne 1s ease-in-out infinite;
-      -webkit-animation-direction: normal;
-    }
-    &.three {
-      -webkit-animation: cycleOne 1s ease-in-out infinite;
-      -webkit-animation-direction: normal;
+    span {
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background: #c1c1c1;
+      display: block;
+      float: left;
+      margin: 0 0 0 8px;
+      &:first-child {
+        margin: 0;
+      }
+      &.one {
+        -webkit-animation: cycleOne 1s ease-in-out infinite;
+        -webkit-animation-direction: normal;
+      }
+      &.two {
+        -webkit-animation: cycleOne 1s ease-in-out infinite;
+        -webkit-animation-direction: normal;
+      }
+      &.three {
+        -webkit-animation: cycleOne 1s ease-in-out infinite;
+        -webkit-animation-direction: normal;
+      }
     }
   }
 }
