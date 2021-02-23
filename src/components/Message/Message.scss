@@ -80,6 +80,11 @@
       }
     }
   }
+  &--istyping {
+    #{$self}__bubble {
+      background-color: $message-typing-background;
+    }
+  }
   &__typing {
     span {
       height: 8px;
