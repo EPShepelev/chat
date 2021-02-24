@@ -37,16 +37,18 @@ const Message = ({
         <img src={avatar} alt={`Avatar ${user.fullname}`}></img>
       </div>
       <div className="message__info">
-        <div className="message__bubble">
-          {text && <p className="message__text">{text}</p>}
-          {isTyping && (
-            <div className="message__typing">
-              <span className="dot one"></span>
-              <span className="dot two"></span>
-              <span className="dot three"></span>
-            </div>
-          )}
-        </div>
+        {(text || isTyping) && (
+          <div className="message__bubble">
+            {text && <p className="message__text">{text}</p>}
+            {isTyping && (
+              <div className="message__typing">
+                <span className="dot one"></span>
+                <span className="dot two"></span>
+                <span className="dot three"></span>
+              </div>
+            )}
+          </div>
+        )}
         <div className="message__attachments">
           {attachments &&
             attachments.map((item) => (
