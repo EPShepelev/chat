@@ -1,10 +1,12 @@
 import React from "react";
 import { Message } from "components";
+import { DialogItem } from "components";
 
 import "./Home.scss";
 
 const Home = () => (
   <section className="home">
+    <DialogItem />
     {/* <Dialogs
       item={[
         {
