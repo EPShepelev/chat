@@ -38,7 +38,6 @@ const Home = () => (
     />
     <Message
       avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
-      isTyping
       attachments={[
         {
           filename: "image.jpg",

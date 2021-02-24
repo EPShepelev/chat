@@ -87,6 +87,16 @@
       box-shadow: 0 5px 5px rgba(0, 0, 0, 0.0220444);
     }
   }
+  &--image {
+    #{$self}__attachments {
+      &-item {
+        img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  }
   &__typing {
     span {
       height: 8px;
