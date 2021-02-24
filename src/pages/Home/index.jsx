@@ -34,16 +34,16 @@ const Home = () => (
     />
     <Message
       avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
-      isTyping
-    />
-    <Message
-      avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
       attachments={[
         {
           filename: "image.jpg",
           url: "https://source.unsplash.com/100x100/?random=1&nature,water",
         },
       ]}
+    />
+    <Message
+      avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
+      isTyping
     />
   </section>
 );
