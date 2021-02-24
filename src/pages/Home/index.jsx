@@ -5,7 +5,7 @@ import "./Home.scss";
 
 const Home = () => (
   <section className="home">
-    <Dialogs
+    {/* <Dialogs
       item={[
         {
           user: {
@@ -20,7 +20,7 @@ const Home = () => (
           },
         },
       ]}
-    />
+    /> */}
     {/* <Message
       avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
       text="Ну что у нас там? Все хорошо?"
