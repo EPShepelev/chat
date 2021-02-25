@@ -9,7 +9,9 @@ const DialogItem = ({ user, message }) => (
       <img src="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg></img>
     </div>
     <div className="dialogs__item-info">
-     <div className="dialogs__item-info-top"></div>
+     <div className="dialogs__item-info-top">
+      <b>Усатый Прибалт</b>
+     </div>
 
     </div>
   </div>
