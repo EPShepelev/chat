@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import formatDistanceToNow from "date-fns/formatDistanceToNow";
-import ruLocale from "date-fns/locale/ru";
+import readSvg from "assets/img/read.svg";
+import noReadSvg from "assets/img/noread.svg";
 
 const IconRead = ({ isMe, isRead }) => {
   isMe &&
@@ -17,12 +17,6 @@ const IconRead = ({ isMe, isRead }) => {
 };
 
 IconRead.propTypes = {
-  avatar: PropTypes.string,
-  text: PropTypes.string,
-  date: PropTypes.string,
-  user: PropTypes.object,
-  attachments: PropTypes.array,
-  isTyping: PropTypes.bool,
   isRead: PropTypes.bool,
   isMe: PropTypes.bool,
 };

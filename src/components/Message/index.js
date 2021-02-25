@@ -1,10 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Time } from "../";
+import { Time, IconRead } from "../";
 import "./Message.scss";
-import readSvg from "assets/img/read.svg";
-import noReadSvg from "assets/img/noread.svg";
 
 const Message = ({
   avatar,
@@ -24,6 +22,7 @@ const Message = ({
     })}
   >
     <div className="message__content">
+      <IconRead isMe={isMe} isRead={isRead} />
       <div className="message__avatar">
         <img src={avatar} alt={`Avatar ${user.fullname}`}></img>
       </div>

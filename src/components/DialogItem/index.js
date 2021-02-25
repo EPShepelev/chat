@@ -1,9 +1,9 @@
 import React from "react";
 import classNames from "classnames";
 import "./DialogItem.scss";
-import { Time } from "../";
+import { Time, IconRead } from "../";
 
-const DialogItem = ({ user, message }) => (
+const DialogItem = ({ user, message, isMe, isRead }) => (
   <div className="dialogs__item">
     <div className="dialogs__item-avatar">
       {/* <img src={user.avatar} alt={`${user.fullname} avatar`} /> */}
@@ -23,6 +23,7 @@ const DialogItem = ({ user, message }) => (
           совмещающихся между собой словосочетаний, что позволяло нести
           псевдоумную ахинею часами. Что-то вроде дорвеев для политсобраний.
         </p>
+        <IconRead isMe={isMe} isRead={isRead} />
       </div>
     </div>
   </div>
