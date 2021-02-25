@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import formatDistanceToNow from "date-fns/formatDistanceToNow";
-import ruLocale from "date-fns/locale/ru";
+import { Time } from "../Time";
 import "./Message.scss";
 import readSvg from "assets/img/read.svg";
 import noReadSvg from "assets/img/noread.svg";
@@ -61,10 +60,7 @@ const Message = ({
         </div>
         {date && (
           <span className="message__date">
-            {formatDistanceToNow(new Date(date), {
-              addSuffix: true,
-              locale: ruLocale,
-            })}
+            <Time date={date} />
           </span>
         )}
       </div>

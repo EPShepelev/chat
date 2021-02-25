@@ -1,13 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Time.scss";
+import formatDistanceToNow from "date-fns/formatDistanceToNow";
+import ruLocale from "date-fns/locale/ru";
 
-const Time = (props) => (
-  
-);
+const Time = ({ date }) =>
+  formatDistanceToNow(new Date(date), {
+    addSuffix: true,
+    locale: ruLocale,
+  });
 
 Time.propTypes = {
-  className: PropTypes.string,
+  date: PropTypes.string,
 };
 
 export default Time;
