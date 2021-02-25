@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import "./DialogItem.scss";
-import { Time } from "../Time";
+import { Time } from "../";
 
 const DialogItem = ({ user, message }) => (
   <div className="dialogs__item">
@@ -12,7 +12,7 @@ const DialogItem = ({ user, message }) => (
     <div className="dialogs__item-info">
       <div className="dialogs__item-info-top">
         <b>Усатый Прибалт</b>
-        <Time date={date} />
+        <Time date={new Date()} />
       </div>
     </div>
   </div>

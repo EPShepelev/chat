@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Time } from "../Time";
+import { Time } from "../";
 import "./Message.scss";
 import readSvg from "assets/img/read.svg";
 import noReadSvg from "assets/img/noread.svg";
@@ -60,7 +60,7 @@ const Message = ({
         </div>
         {date && (
           <span className="message__date">
-            <Time date={date} />
+            <Time date={<Time date={new Date()} />} />
           </span>
         )}
       </div>
