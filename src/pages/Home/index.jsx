@@ -6,7 +6,10 @@ import "./Home.scss";
 
 const Home = () => (
   <section className="home">
-    <DialogItem />
+    <div className="dialogs">
+      <DialogItem />
+    </div>
+
     {/* <Dialogs
       item={[
         {
