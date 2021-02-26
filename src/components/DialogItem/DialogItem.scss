@@ -41,7 +41,18 @@
           white-space: nowrap;
         }
         &-count {
+          position: absolute;
+          right: 0;
+          bottom: 0;
           background: #f46b6b;
+          color: #fff;
+          font-weight: bold;
+          width: 18px;
+          height: 18px;
+          border-radius: 30px;
+          font-size: 11px;
+          text-align: center;
+          line-height: 17px;
         }
       }
     }

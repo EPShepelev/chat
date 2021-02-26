@@ -36,7 +36,8 @@ const DialogItem = ({ user, message, isMe, isRead }) => (
           совмещающихся между собой словосочетаний, что позволяло нести
           псевдоумную ахинею часами. Что-то вроде дорвеев для политсобраний.
         </p>
-        <IconRead isMe={isMe} isRead={isRead} />
+        {/* <IconRead isMe={isMe} isRead={isRead} /> */}
+        <div className="dialogs__item-info-bottom-count">3</div>
       </div>
     </div>
   </div>
