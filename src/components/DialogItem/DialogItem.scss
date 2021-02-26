@@ -1,12 +1,24 @@
 .dialogs {
+  width: 280px;
   &__item {
     display: flex;
     &-avatar {
-      flex-basis: 40px;
+      flex: 0 0 50px;
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
       img {
         width: 100%;
         height: 100%;
         border-radius: 50%;
+      }
+    }
+    &-info {
+      &-top {
+        b {
+          font-size: 14px;
+          font-weight: 500;
+        }
       }
     }
   }
