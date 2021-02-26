@@ -25,10 +25,11 @@ const DialogItem = ({ user, message, isMe, isRead }) => (
       <div className="dialogs__item-info-top">
         <b>Усатый Прибалт</b>
         <span>
-          <Time date={new Date()} />
+          {/* <Time date={new Date()} /> */}
+          13:07
         </span>
       </div>
-      <div className="dialogs__item-info-buttom">
+      <div className="dialogs__item-info-bottom">
         <p>
           Вот мы все тут собрались... По легенде, всякие депутаты и руководители
           в СССР использовали в своих выступлениях заготовленный набор
