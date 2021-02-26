@@ -3,6 +3,14 @@ import classNames from "classnames";
 import "./DialogItem.scss";
 import { Time, IconRead } from "../";
 
+const getAvatar = (avatar) => {
+  if (avatar) {
+    return avatar;
+  } else {
+    // make avatar
+  }
+};
+
 const DialogItem = ({ user, message, isMe, isRead }) => (
   <div className="dialogs__item">
     <div className="dialogs__item-avatar">
