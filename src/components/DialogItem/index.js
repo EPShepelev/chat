@@ -5,7 +5,9 @@ import { Time, IconRead } from "../";
 
 const getAvatar = (avatar) => {
   if (avatar) {
-    return avatar;
+    return (
+      <img src="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"></img>
+    );
   } else {
     // make avatar
   }
@@ -15,7 +17,9 @@ const DialogItem = ({ user, message, isMe, isRead }) => (
   <div className="dialogs__item">
     <div className="dialogs__item-avatar">
       {/* <img src={user.avatar} alt={`${user.fullname} avatar`} /> */}
-      <img src="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"></img>
+      {getAvatar(
+        "https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
+      )}
     </div>
     <div className="dialogs__item-info">
       <div className="dialogs__item-info-top">
