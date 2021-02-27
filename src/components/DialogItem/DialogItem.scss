@@ -1,9 +1,12 @@
+@import "~styles/variables";
+
 .dialogs {
   width: 300px;
   &__item {
     display: flex;
     $item: $;
     &-avatar {
+      position: relative;
       flex: 0 0 40px;
       width: 40px;
       height: 40px;
@@ -17,11 +20,16 @@
     &--online {
       #{$item}--avatar {
         &::before {
+          display: block;
+          position: absolute;
           content: "";
           background: $green;
           border-radius: 30px;
-          width: 8px;
-          height: 8px;
+          width: 13px;
+          height: 13px;
+          bottom: -2px;
+          right: 0;
+          border: 3px solid #fff;
         }
       }
     }
