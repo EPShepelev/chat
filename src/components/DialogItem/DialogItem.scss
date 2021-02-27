@@ -16,6 +16,13 @@
     }
     &--online {
       #{$item}--avatar {
+        &::before {
+          content: "";
+          background: $green;
+          border-radius: 30px;
+          width: 8px;
+          height: 8px;
+        }
       }
     }
     &-info {
