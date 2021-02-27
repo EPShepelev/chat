@@ -14,7 +14,7 @@ const getAvatar = (avatar) => {
 };
 
 const DialogItem = ({ user, message, isMe, isRead }) => (
-  <div className="dialogs__item">
+  <div className="dialogs__item dialogs__item--online">
     <div className="dialogs__item-avatar">
       {/* <img src={user.avatar} alt={`${user.fullname} avatar`} /> */}
       {getAvatar(
