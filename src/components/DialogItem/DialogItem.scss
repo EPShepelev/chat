@@ -3,6 +3,7 @@
 .dialogs {
   width: 300px;
   &__item {
+    margin-bottom: 20px;
     display: flex;
     $item: $;
     &-avatar {
