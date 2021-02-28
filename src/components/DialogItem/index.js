@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import "./DialogItem.scss";
 import { Time, IconRead } from "../";
+import classNames from "classnames";
 
 const getAvatar = (avatar) => {
   if (avatar) {
@@ -14,7 +15,11 @@ const getAvatar = (avatar) => {
 };
 
 const DialogItem = ({ user, message, isMe, isRead }) => (
-  <div className="dialogs__item dialogs__item--online">
+  <div
+    className={classNames("dialogs__item", {
+      "dialogs__item--online": isOnline,
+    })}
+  >
     <div className="dialogs__item-avatar">
       {/* <img src={user.avatar} alt={`${user.fullname} avatar`} /> */}
       {getAvatar(
