@@ -42,7 +42,7 @@ const DialogItem = ({ user, message, isMe, isRead }) => (
           псевдоумную ахинею часами. Что-то вроде дорвеев для политсобраний.
         </p>
         {/* <IconRead isMe={isMe} isRead={isRead} /> */}
-        {isRead && (
+        {isRead > 0 && (
           <div className="dialogs__item-info-bottom-count">{isRead}</div>
         )}
       </div>
