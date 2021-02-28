@@ -10,7 +10,7 @@ const Home = () => (
       <DialogItem user={{
         fullname: "усатый прибалт"
         isOnline: true
-      }} online/>
+      }} isRead={3} online/>
     </div>
 
     {/* <Dialogs
