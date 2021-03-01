@@ -6,13 +6,6 @@ import "./Home.scss";
 
 const Home = () => (
   <section className="home">
-    <div className="dialogs">
-      <DialogItem user={{
-        fullname: "усатый прибалт"
-        isOnline: true
-      }} isRead={3}/>
-    </div>
-
     {/* <Dialogs
       item={[
         {
