@@ -2,7 +2,6 @@ import React from "react";
 import classNames from "classnames";
 import "./DialogItem.scss";
 import { Time, IconRead } from "../";
-import classNames from "classnames";
 
 const getAvatar = (avatar) => {
   if (avatar) {
