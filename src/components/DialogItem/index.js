@@ -13,7 +13,7 @@ const getAvatar = (avatar) => {
   }
 };
 
-const DialogItem = ({ user, message, isMe, isRead }) => (
+const DialogItem = ({ user, message, isMe, isRead, unread }) => (
   <div
     className={classNames("dialogs__item", {
       "dialogs__item--online": user.isOnline,
@@ -41,9 +41,9 @@ const DialogItem = ({ user, message, isMe, isRead }) => (
           псевдоумную ахинею часами. Что-то вроде дорвеев для политсобраний.
         </p>
         <IconRead isMe={isMe} isRead={true} />
-        {isRead > 0 && (
+        {unread > 0 && (
           <div className="dialogs__item-info-bottom-count">
-            {isRead > 9 ? "+9" : isRead}
+            {unread > 9 ? "+9" : unread}
           </div>
         )}
       </div>
