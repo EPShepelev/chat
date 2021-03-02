@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import "./Dialogs.scss";
+import { DialogItem } from "../"
 
 const Dialogs = ({ user, message, unread }) => 
   <div className="dialogs">
