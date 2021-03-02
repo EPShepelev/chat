@@ -6,7 +6,7 @@ import { DialogItem } from "../";
 const Dialogs = ({ items }) => (
   <div className="dialogs">
     {items.map((item) => (
-      <DialogItem user={item.user} unread={999} />
+      <DialogItem user={item.user} lastMessage={item.lastMessage} unread={0} />
     ))}
   </div>
 );
