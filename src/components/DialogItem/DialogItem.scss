@@ -5,7 +5,7 @@
   &__item {
     margin-bottom: 20px;
     display: flex;
-    $item: $;
+    $item: &;
     &-avatar {
       position: relative;
       flex: 0 0 40px;
