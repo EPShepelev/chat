@@ -2,6 +2,13 @@ import React from "react";
 import classNames from "classnames";
 import "./DialogItem.scss";
 import { Time, IconRead } from "../";
+import { format } from "date-fns";
+
+const getMessageTime = (created_at) => {
+  if (true) {
+    return format(new Date());
+  }
+};
 
 const getAvatar = (avatar) => {
   if (avatar) {
@@ -28,9 +35,7 @@ const DialogItem = ({ user, message, unread, isMe, isRead }) => (
     <div className="dialogs__item-info">
       <div className="dialogs__item-info-top">
         <b>Усатый Прибалт</b>
-        <span>
-          <Time date={message.created_at} />
-        </span>
+        <span>{getMessageTime(created_at)}</span>
       </div>
       <div className="dialogs__item-info-bottom">
         <p>{message.text}</p>
