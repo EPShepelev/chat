@@ -13,7 +13,7 @@ const getAvatar = (avatar) => {
   }
 };
 
-const DialogItem = ({ user, message, isMe, isRead, unread }) => (
+const DialogItem = ({ user, message, unread, isMe, isRead }) => (
   <div
     className={classNames("dialogs__item", {
       "dialogs__item--online": user.isOnline,
@@ -34,12 +34,7 @@ const DialogItem = ({ user, message, isMe, isRead, unread }) => (
         </span>
       </div>
       <div className="dialogs__item-info-bottom">
-        <p>
-          Вот мы все тут собрались... По легенде, всякие депутаты и руководители
-          в СССР использовали в своих выступлениях заготовленный набор
-          совмещающихся между собой словосочетаний, что позволяло нести
-          псевдоумную ахинею часами. Что-то вроде дорвеев для политсобраний.
-        </p>
+        <p>{message.text}</p>
         <IconRead isMe={isMe} isRead={true} />
         {unread > 0 && (
           <div className="dialogs__item-info-bottom-count">
