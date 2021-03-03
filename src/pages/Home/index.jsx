@@ -7,7 +7,7 @@ import "./Home.scss";
 const Home = () => (
   <section className="home">
     <Dialogs
-      item={[
+      items={[
         {
           user: {
             fullname: "Усатый Прибалт",
