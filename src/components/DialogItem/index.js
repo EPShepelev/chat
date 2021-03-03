@@ -1,12 +1,12 @@
 import React from "react";
 import classNames from "classnames";
 import "./DialogItem.scss";
-import { Time, IconRead } from "../";
+import { IconRead } from "../";
 import { format } from "date-fns";
 
 const getMessageTime = (created_at) => {
   if (true) {
-    return format(new Date());
+    return format(new Date(2014, 2, 11), "mm/dd/yyyy");
   }
 };
 
@@ -35,7 +35,7 @@ const DialogItem = ({ user, message, unread, isMe, isRead }) => (
     <div className="dialogs__item-info">
       <div className="dialogs__item-info-top">
         <b>Усатый Прибалт</b>
-        <span>{getMessageTime(created_at)}</span>
+        <span>{getMessageTime(message.created_at)}</span>
       </div>
       <div className="dialogs__item-info-bottom">
         <p>{message.text}</p>
