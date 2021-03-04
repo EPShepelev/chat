@@ -25,7 +25,7 @@ const getAvatar = (avatar) => {
 const DialogItem = ({ user, message, unread, isMe, isRead }) => (
   <div
     className={classNames("dialogs__item", {
-      "dialogs__item--online": message.isOnline,
+      "dialogs__item--online": user.isOnline,
     })}
   >
     <div className="dialogs__item-avatar">
