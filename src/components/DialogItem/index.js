@@ -25,7 +25,7 @@ const getAvatar = (avatar) => {
 const DialogItem = ({ user, message, unread, isMe, isRead }) => (
   <div
     className={classNames("dialogs__item", {
-      "dialogs__item--online": user.isOnline,
+      "dialogs__item--online": message.isOnline,
     })}
   >
     <div className="dialogs__item-avatar">
@@ -41,7 +41,7 @@ const DialogItem = ({ user, message, unread, isMe, isRead }) => (
       </div>
       <div className="dialogs__item-info-bottom">
         <p>{message.text}</p>
-        <IconRead isMe={true} isRead={true} />
+        {<IconRead isMe={true} isRead={true} />}
         {unread > 0 && (
           <div className="dialogs__item-info-bottom-count">
             {unread > 9 ? "+9" : unread}

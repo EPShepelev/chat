@@ -16,6 +16,7 @@ const Home = () => (
             isRead: true,
             created_at: new Date("Thu Mar 04 2020 13:36:08"),
             user: {
+              _id: 1,
               fullname: "Усатый Прибалт",
               avatar: null,
             },
