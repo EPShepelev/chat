@@ -8,7 +8,7 @@ const Dialogs = ({ items }) => (
       <DialogItem
         key={item._id}
         user={item.user}
-        message={item.lastMessage}
+        message={item.message}
         unread={0}
       />
     ))}
