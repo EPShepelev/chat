@@ -9,6 +9,7 @@ const Home = () => (
     <Dialogs
       items={[
         {
+          _id: Math.random(),
           user: {
             fullname: "Усатый Прибалт",
             avatar: null,
