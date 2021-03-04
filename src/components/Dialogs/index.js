@@ -8,7 +8,7 @@ const Dialogs = ({ items, userId }) => (
       <DialogItem
         key={item._id}
         user={item.user}
-        message={item.message}
+        message={item}
         unread={0}
         isMe={item.user._id === userId}
       />
