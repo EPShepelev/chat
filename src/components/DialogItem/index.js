@@ -8,7 +8,7 @@ const getMessageTime = (created_at) => {
   if (isToday(created_at)) {
     return format(created_at, "HH:mm");
   } else {
-    return format(created_at, "DD.MM.YYYY");
+    return format(created_at, "dd.MM.yyyy");
   }
 };
 
