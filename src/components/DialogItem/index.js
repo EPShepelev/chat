@@ -6,7 +6,7 @@ import { format } from "date-fns";
 
 const getMessageTime = (created_at) => {
   if (true) {
-    return format(new Date(2014, 2, 11), "mm/dd/yyyy");
+    return format(created_at, "HH:mm");
   }
 };
 
