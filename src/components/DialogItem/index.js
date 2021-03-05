@@ -22,7 +22,7 @@ const getAvatar = (avatar) => {
   }
 };
 
-const DialogItem = ({ user, message, unread, isMe, isRead }) => (
+const DialogItem = ({ user, unread, created_at, isMe, text }) => (
   <div
     className={classNames("dialogs__item", {
       "dialogs__item--online": user.isOnline,
@@ -35,10 +35,10 @@ const DialogItem = ({ user, message, unread, isMe, isRead }) => (
     <div className="dialogs__item-info">
       <div className="dialogs__item-info-top">
         <b>{user.fullname}</b>
-        <span>{getMessageTime(message.created_at)}</span>
+        <span>{getMessageTime(created_at)}</span>
       </div>
       <div className="dialogs__item-info-bottom">
-        <p>{message.text}</p>
+        <p>{text}</p>
         {isMe && <IconRead isMe={true} isRead={true} />}
         {unread > 0 && (
           <div className="dialogs__item-info-bottom-count">
