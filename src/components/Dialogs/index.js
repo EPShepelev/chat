@@ -1,12 +1,12 @@
 import React from "react";
 import "./Dialogs.scss";
 import { DialogItem } from "../";
-import sortBy from "lodash/sortBy";
+import orderBy from "lodash/orderBy";
 import { isToday } from "date-fns";
 
 const Dialogs = ({ items, userId }) => (
   <div className="dialogs">
-    {sortBy(items, (dialog) => isToday(dialog.created_at)).map((item) => (
+    {orderBy(items, ["created_at"], ["desc"]).map((item) => (
       <DialogItem
         key={item._id}
         user={item.user}

@@ -23,7 +23,7 @@ const Home = () => (
         {
           _id: Math.random(),
           text: "Привет! Как твои дела? Все хорошо?",
-          created_at: new Date("Thu Mar 04 2020 13:36:08"),
+          created_at: new Date("Thu Mar 04 2019 13:36:08"),
           user: {
             _id: 1,
             fullname: "Пикачу Покемоновский",
