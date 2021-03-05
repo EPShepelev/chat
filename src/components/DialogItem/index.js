@@ -30,13 +30,11 @@ const DialogItem = ({ user, message, unread, isMe, isRead }) => (
   >
     <div className="dialogs__item-avatar">
       {/* <img src={user.avatar} alt={`${user.fullname} avatar`} /> */}
-      {getAvatar(
-        "https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
-      )}
+      {getAvatar(user.avatar)}
     </div>
     <div className="dialogs__item-info">
       <div className="dialogs__item-info-top">
-        <b>Усатый Прибалт</b>
+        <b>{user.fullname}</b>
         <span>{getMessageTime(message.created_at)}</span>
       </div>
       <div className="dialogs__item-info-bottom">

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Dialogs.scss";
 import { DialogItem } from "../";
+import orderBy from "lodash/orderBy";
 
 const Dialogs = ({ items, userId }) => (
   <div className="dialogs">
