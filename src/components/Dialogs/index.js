@@ -2,7 +2,6 @@ import React from "react";
 import "./Dialogs.scss";
 import { DialogItem } from "../";
 import orderBy from "lodash/orderBy";
-import { isToday } from "date-fns";
 
 const Dialogs = ({ items, userId }) => (
   <div className="dialogs">

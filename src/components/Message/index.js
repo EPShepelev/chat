@@ -8,6 +8,7 @@ const Message = ({
   avatar,
   user,
   text,
+  audio,
   date,
   isMe,
   isRead,
@@ -19,15 +20,16 @@ const Message = ({
       "message--isme": isMe,
       "message--istyping": isTyping,
       "message--image": attachments && attachments.length === 1,
+      "message--is-audio": audio,
     })}
   >
     <div className="message__content">
-      <IconRead isMe={isMe} isRead={isRead} />
+      <IconRead isMe={isMe} isRead={true} />
       <div className="message__avatar">
         <img src={avatar} alt={`Avatar ${user.fullname}`}></img>
       </div>
       <div className="message__info">
-        {(text || isTyping) && (
+        {(audio || text || isTyping) && (
           <div className="message__bubble">
             {text && <p className="message__text">{text}</p>}
             {isTyping && (
@@ -37,6 +39,7 @@ const Message = ({
                 <span className="dot three"></span>
               </div>
             )}
+            <p className="message__text">123212123121</p>
           </div>
         )}
         <div className="message__attachments">
@@ -123,6 +126,7 @@ Message.propTypes = {
   isTyping: PropTypes.bool,
   isRead: PropTypes.bool,
   isMe: PropTypes.bool,
+  audio: PropTypes.string,
 };
 
 export default Message;

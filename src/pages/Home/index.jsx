@@ -1,6 +1,5 @@
 import React from "react";
-import { Message } from "components";
-import { Dialogs } from "components";
+import { Message, Dialogs } from "components";
 
 import "./Home.scss";
 
@@ -34,8 +33,7 @@ const Home = () => (
     />
     <Message
       avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
-      text="Ну что у нас там? Все хорошо?"
-      date="Thu Feb 13 2021 17:12:14"
+      date={new Date("Thu Mar 04 2019 13:36:08")}
       audio="https://filesamples.com/samples/audio/wav/sample1.wav"
     />
     {/*
