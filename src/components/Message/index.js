@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Time, IconRead } from "../";
 import "./Message.scss";
+import waveSvg from "assets/img/wave.svg";
 
 const Message = ({
   avatar,
@@ -49,7 +50,11 @@ const Message = ({
                   <div className="message__audio-btn">
                     <button>...</button>
                   </div>
-                  <div className="message__audio-svg"></div>
+                  <div className="message__audio-svg">
+                    {" "}
+                    <img src={waveSvg} alt="audio wave image"></img>
+                  </div>
+                  <span className="message__audio-duration">00:19</span>
                 </div>
               </div>
             )}
