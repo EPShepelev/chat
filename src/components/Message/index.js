@@ -39,7 +39,20 @@ const Message = ({
                 <span className="dot three"></span>
               </div>
             )}
-            {audio && <div className="message__typing"></div>}
+            {audio && (
+              <div className="message__audio">
+                <div
+                  className="message__audio-progress"
+                  style={{ width: "40%" }}
+                ></div>
+                <div className="message__audio-info">
+                  <div className="message__audio-btn">
+                    <button>...</button>
+                  </div>
+                  <div className="message__audio-svg"></div>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
