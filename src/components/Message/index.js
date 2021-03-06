@@ -39,17 +39,17 @@ const Message = ({
                 <span className="dot three"></span>
               </div>
             )}
-            <p className="message__text">123212123121</p>
+            {audio && <div className="message__typing"></div>}
           </div>
         )}
 
         {attachments && (
           <div className="message__attachments">
-            attachments.map((item) => (
-            <div className="message__attachments-item">
-              <img src={item.url} alt={item.filename} />
-            </div>
-            ))
+            {attachments.map((item) => (
+              <div className="message__attachments-item">
+                <img src={item.url} alt={item.filename} />
+              </div>
+            ))}
           </div>
         )}
         {date && (
