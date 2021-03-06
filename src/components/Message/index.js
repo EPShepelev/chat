@@ -24,7 +24,7 @@ const Message = ({
     })}
   >
     <div className="message__content">
-      <IconRead isMe={isMe} isRead={true} />
+      {/* <IconRead isMe={isMe} isRead={isRead} /> */}
       <div className="message__avatar">
         <img src={avatar} alt={`Avatar ${user.fullname}`}></img>
       </div>
@@ -42,14 +42,16 @@ const Message = ({
             <p className="message__text">123212123121</p>
           </div>
         )}
-        <div className="message__attachments">
-          {attachments &&
+
+        {attachments && (
+          <div className="message__attachments">
             attachments.map((item) => (
-              <div className="message__attachments-item">
-                <img src={item.url} alt={item.filename} />
-              </div>
-            ))}
-        </div>
+            <div className="message__attachments-item">
+              <img src={item.url} alt={item.filename} />
+            </div>
+            ))
+          </div>
+        )}
         {date && (
           <span className="message__date">
             <Time date={<Time date={new Date()} />} />
