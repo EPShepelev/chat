@@ -72,7 +72,7 @@ const Message = ({
         )}
         {date && (
           <span className="message__date">
-            <Time date={<Time date={new Date()} />} />
+            <Time date={new Date()} />
           </span>
         )}
       </div>
