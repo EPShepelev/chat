@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Time, IconRead } from "../";
@@ -17,70 +17,80 @@ const Message = ({
   isRead,
   attachments,
   isTyping,
-}) => (
-  <div
-    className={classNames("message", {
-      "message--isme": isMe,
-      "message--istyping": isTyping,
-      "message--image": attachments && attachments.length === 1,
-      "message--is-audio": audio,
-    })}
-  >
-    <div className="message__content">
-      {/* <IconRead isMe={isMe} isRead={isRead} /> */}
-      <div className="message__avatar">
-        <img src={avatar} alt={`Avatar ${user.fullname}`}></img>
-      </div>
-      <div className="message__info">
-        {(audio || text || isTyping) && (
-          <div className="message__bubble">
-            {text && <p className="message__text">{text}</p>}
-            {isTyping && (
-              <div className="message__typing">
-                <span className="dot one"></span>
-                <span className="dot two"></span>
-                <span className="dot three"></span>
-              </div>
-            )}
-            {audio && (
-              <div className="message__audio">
-                <div
-                  className="message__audio-progress"
-                  style={{ width: "40%" }}
-                ></div>
-                <div className="message__audio-info">
-                  <div className="message__audio-btn">
-                    <button>...</button>
-                  </div>
-                  <div className="message__audio-svg">
-                    {" "}
-                    <img src={waveSvg} alt="audio wave image"></img>
-                  </div>
-                  <span className="message__audio-duration">00:19</span>
-                </div>
-              </div>
-            )}
-          </div>
-        )}
+}) => {
+  const [isPaly, setIsPaly] = useState(false);
 
-        {attachments && (
-          <div className="message__attachments">
-            {attachments.map((item) => (
-              <div className="message__attachments-item">
-                <img src={item.url} alt={item.filename} />
-              </div>
-            ))}
-          </div>
-        )}
-        {date && (
-          <span className="message__date">
-            <Time date={new Date()} />
-          </span>
-        )}
+  return (
+    <div
+      className={classNames("message", {
+        "message--isme": isMe,
+        "message--istyping": isTyping,
+        "message--image": attachments && attachments.length === 1,
+        "message--is-audio": audio,
+      })}
+    >
+      <div className="message__content">
+        {/* <IconRead isMe={isMe} isRead={isRead} /> */}
+        <div className="message__avatar">
+          <img src={avatar} alt={`Avatar ${user.fullname}`}></img>
+        </div>
+        <div className="message__info">
+          {(audio || text || isTyping) && (
+            <div className="message__bubble">
+              {text && <p className="message__text">{text}</p>}
+              {isTyping && (
+                <div className="message__typing">
+                  <span className="dot one"></span>
+                  <span className="dot two"></span>
+                  <span className="dot three"></span>
+                </div>
+              )}
+              {audio && (
+                <div className="message__audio">
+                  <div
+                    className="message__audio-progress"
+                    style={{ width: "40%" }}
+                  ></div>
+                  <div className="message__audio-info">
+                    <div className="message__audio-btn">
+                      <button>
+                        {isPaly ? (
+                          <img src={pauseSvg} alt="pause audio"></img>
+                        ) : (
+                          <img src={playSvg} alt="play audio"></img>
+                        )}
+                      </button>
+                    </div>
+                    <div className="message__audio-svg">
+                      {" "}
+                      <img src={waveSvg} alt="audio wave image"></img>
+                    </div>
+                    <span className="message__audio-duration">00:19</span>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {attachments && (
+            <div className="message__attachments">
+              {attachments.map((item) => (
+                <div className="message__attachments-item">
+                  <img src={item.url} alt={item.filename} />
+                </div>
+              ))}
+            </div>
+          )}
+          {date && (
+            <span className="message__date">
+              <Time date={new Date()} />
+            </span>
+          )}
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Message1 = ({
   avatar,
