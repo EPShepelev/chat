@@ -4,6 +4,8 @@ import classNames from "classnames";
 import { Time, IconRead } from "../";
 import "./Message.scss";
 import waveSvg from "assets/img/wave.svg";
+import playSvg from "assets/img/play.svg";
+import pauseSvg from "assets/img/pause.svg";
 
 const Message = ({
   avatar,
