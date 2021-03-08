@@ -47,6 +47,7 @@ const Message = ({
               )}
               {audio && (
                 <div className="message__audio">
+                  <audio src={audio} preload />
                   <div
                     className="message__audio-progress"
                     style={{ width: "40%" }}
