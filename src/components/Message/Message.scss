@@ -54,6 +54,8 @@
   }
   &--is-audio {
     #{$self}__bubble {
+      position: relative;
+      overflow: hidden;
       width: 280px;
     }
     #{$self}__audio {
@@ -61,6 +63,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
       }
       &-btn {
         button {
@@ -80,6 +83,12 @@
         font-weight: 500;
         font-size: 12px;
         opacity: 0.5;
+      }
+      &-progress {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #418fff;
       }
     }
   }
