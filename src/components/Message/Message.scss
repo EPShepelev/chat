@@ -53,10 +53,14 @@
     left: -25px;
   }
   &--is-audio {
+    #{$self}__bubble {
+      width: 250px;
+    }
     #{$self}__audio {
       &-info {
         display: flex;
         align-items: center;
+        justify-content: space-between;
       }
       &-btn {
         button {
