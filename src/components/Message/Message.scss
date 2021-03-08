@@ -54,7 +54,7 @@
   }
   &--is-audio {
     #{$self}__bubble {
-      width: 250px;
+      width: 280px;
     }
     #{$self}__audio {
       &-info {
@@ -74,6 +74,12 @@
             height: 13px;
           }
         }
+      }
+      &-duration {
+        color: #fff;
+        font-weight: 500;
+        font-size: 12px;
+        opacity: 0.5;
       }
     }
   }
