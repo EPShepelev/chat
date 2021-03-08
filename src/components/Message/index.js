@@ -21,7 +21,8 @@ const Message = ({
   const [isPaly, setIsPaly] = useState(false);
   const audioElem = useRef(null);
   const togglePaly = () => {
-    audioElem.play();
+    audioElem.current.volume = "0.2";
+    audioElem.current.play();
   };
 
   return (
@@ -51,7 +52,7 @@ const Message = ({
               )}
               {audio && (
                 <div className="message__audio">
-                  <audio ref={audioElem} src={audio} preload />
+                  <audio ref={audioElem} src={audio} preload="auto" />
                   <div
                     className="message__audio-progress"
                     style={{ width: "40%" }}
