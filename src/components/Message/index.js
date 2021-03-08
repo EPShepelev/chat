@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Time, IconRead } from "../";
@@ -19,6 +19,10 @@ const Message = ({
   isTyping,
 }) => {
   const [isPaly, setIsPaly] = useState(false);
+  const audioElem = useRef(null);
+  const togglePaly = () => {
+    audioElem.play();
+  };
 
   return (
     <div
@@ -47,14 +51,14 @@ const Message = ({
               )}
               {audio && (
                 <div className="message__audio">
-                  <audio src={audio} preload />
+                  <audio ref={audioElem} src={audio} preload />
                   <div
                     className="message__audio-progress"
                     style={{ width: "40%" }}
                   ></div>
                   <div className="message__audio-info">
                     <div className="message__audio-btn">
-                      <button>
+                      <button onClick={togglePaly}>
                         {isPaly ? (
                           <img src={pauseSvg} alt="pause audio"></img>
                         ) : (
