@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Time, IconRead } from "../";
@@ -20,6 +20,16 @@ const Message = ({
 }) => {
   const [isPaly, setIsPaly] = useState(false);
   const audioElem = useRef(null);
+  useEffect(() => {
+    audioElem.current.addEventListener(
+      "playing",
+      () => {
+        setIsPaly(true);
+      },
+      false
+    );
+  }, []);
+
   const togglePaly = () => {
     audioElem.current.volume = "0.2";
     audioElem.current.play();
