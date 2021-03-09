@@ -19,8 +19,11 @@ const Message = ({
   isTyping,
 }) => {
   const [isPaly, setIsPaly] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
   const audioElem = useRef(null);
   useEffect(() => {
+    audioElem.current.volume = "0.2";
     audioElem.current.addEventListener(
       "playing",
       () => {
@@ -42,10 +45,14 @@ const Message = ({
       },
       false
     );
+    audioElem.current.addEventListener("timeupdate", () => {
+      const duration = (audioElem.current && audioElem.current.duration) || 0;
+      setCurrentTime(audioElem.current.currentTime);
+      setProgress((audioElem.current.progress / duration) * 100);
+    });
   }, []);
 
   const togglePaly = () => {
-    audioElem.current.volume = "0.2";
     if (!isPaly) {
       audioElem.current.play();
     } else {
@@ -83,7 +90,7 @@ const Message = ({
                   <audio ref={audioElem} src={audio} preload="auto" />
                   <div
                     className="message__audio-progress"
-                    style={{ width: "40%" }}
+                    style={{ width: progress + "%" }}
                   ></div>
                   <div className="message__audio-info">
                     <div className="message__audio-btn">
