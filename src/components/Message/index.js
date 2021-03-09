@@ -6,6 +6,7 @@ import "./Message.scss";
 import waveSvg from "assets/img/wave.svg";
 import playSvg from "assets/img/play.svg";
 import pauseSvg from "assets/img/pause.svg";
+import convertCurrentTime from "utils/helpers";
 
 const Message = ({
   avatar,
