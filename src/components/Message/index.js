@@ -48,7 +48,7 @@ const Message = ({
     audioElem.current.addEventListener("timeupdate", () => {
       const duration = (audioElem.current && audioElem.current.duration) || 0;
       setCurrentTime(audioElem.current.currentTime);
-      setProgress((audioElem.current.progress / duration) * 100);
+      setProgress((audioElem.current.currentTime / duration) * 100);
     });
   }, []);
 
