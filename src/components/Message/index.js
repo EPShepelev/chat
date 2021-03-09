@@ -28,11 +28,29 @@ const Message = ({
       },
       false
     );
+    audioElem.current.addEventListener(
+      "ended",
+      () => {
+        setIsPaly(false);
+      },
+      false
+    );
+    audioElem.current.addEventListener(
+      "pause",
+      () => {
+        setIsPaly(false);
+      },
+      false
+    );
   }, []);
 
   const togglePaly = () => {
     audioElem.current.volume = "0.2";
-    audioElem.current.play();
+    if (!isPaly) {
+      audioElem.current.play();
+    } else {
+      audioElem.current.pause();
+    }
   };
 
   return (
