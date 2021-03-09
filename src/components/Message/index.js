@@ -6,7 +6,7 @@ import "./Message.scss";
 import waveSvg from "assets/img/wave.svg";
 import playSvg from "assets/img/play.svg";
 import pauseSvg from "assets/img/pause.svg";
-import convertCurrentTime from "utils/helpers";
+import { convertCurrentTime } from "utils/helpers";
 
 const Message = ({
   avatar,
@@ -108,7 +108,9 @@ const Message = ({
                       {" "}
                       <img src={waveSvg} alt="audio wave image"></img>
                     </div>
-                    <span className="message__audio-duration">00:19</span>
+                    <span className="message__audio-duration">
+                      {convertCurrentTime(currentTime)}
+                    </span>
                   </div>
                 </div>
               )}
