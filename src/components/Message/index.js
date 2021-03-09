@@ -35,6 +35,7 @@ const Message = ({
       "ended",
       () => {
         setIsPaly(false);
+        setProgress(0);
       },
       false
     );
