@@ -8,7 +8,7 @@ import playSvg from "assets/img/play.svg";
 import pauseSvg from "assets/img/pause.svg";
 import { convertCurrentTime } from "utils/helpers";
 
-const MessageAudio = (audio) => {
+const MessageAudio = ({ audioSrc }) => {
   const audioElem = useRef(null);
   const [isPaly, setIsPaly] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -56,7 +56,7 @@ const MessageAudio = (audio) => {
 
   return (
     <div className="message__audio">
-      <audio ref={audioElem} src={audio} preload="auto" />
+      <audio ref={audioElem} src={audioSrc} preload="auto" />
       <div
         className="message__audio-progress"
         style={{ width: progress + "%" }}
@@ -119,7 +119,7 @@ const Message = ({
                   <span className="dot three"></span>
                 </div>
               )}
-              {audio && <MessageAudio />}
+              {audio && <MessageAudio audioSrc={audio} />}
             </div>
           )}
 

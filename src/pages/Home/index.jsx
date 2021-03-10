@@ -34,7 +34,7 @@ const Home = () => (
     <Message
       avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
       date={new Date("Thu Mar 04 2019 13:36:08")}
-      // audio="https://filesamples.com/samples/audio/wav/sample1.wav"
+      audio="https://filesamples.com/samples/audio/wav/sample1.wav"
     />
     {/*
     <Message
