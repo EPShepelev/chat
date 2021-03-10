@@ -8,21 +8,20 @@ import playSvg from "assets/img/play.svg";
 import pauseSvg from "assets/img/pause.svg";
 import { convertCurrentTime } from "utils/helpers";
 
-const Message = ({
-  avatar,
-  user,
-  text,
-  audio,
-  date,
-  isMe,
-  isRead,
-  attachments,
-  isTyping,
-}) => {
+const MessageAudio = (audio) => {
+  const audioElem = useRef(null);
   const [isPaly, setIsPaly] = useState(false);
   const [progress, setProgress] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
-  const audioElem = useRef(null);
+
+  const togglePaly = () => {
+    if (!isPaly) {
+      audioElem.current.play();
+    } else {
+      audioElem.current.pause();
+    }
+  };
+
   useEffect(() => {
     audioElem.current.volume = "0.2";
     audioElem.current.addEventListener(
@@ -55,14 +54,46 @@ const Message = ({
     });
   }, []);
 
-  const togglePaly = () => {
-    if (!isPaly) {
-      audioElem.current.play();
-    } else {
-      audioElem.current.pause();
-    }
-  };
+  return (
+    <div className="message__audio">
+      <audio ref={audioElem} src={audio} preload="auto" />
+      <div
+        className="message__audio-progress"
+        style={{ width: progress + "%" }}
+      ></div>
+      <div className="message__audio-info">
+        <div className="message__audio-btn">
+          <button onClick={togglePaly}>
+            {isPaly ? (
+              <img src={pauseSvg} alt="pause audio"></img>
+            ) : (
+              <img src={playSvg} alt="play audio"></img>
+            )}
+          </button>
+        </div>
+        <div className="message__audio-svg">
+          {" "}
+          <img src={waveSvg} alt="audio wave image"></img>
+        </div>
+        <span className="message__audio-duration">
+          {convertCurrentTime(currentTime)}
+        </span>
+      </div>
+    </div>
+  );
+};
 
+const Message = ({
+  avatar,
+  user,
+  text,
+  audio,
+  date,
+  isMe,
+  isRead,
+  attachments,
+  isTyping,
+}) => {
   return (
     <div
       className={classNames("message", {
@@ -88,33 +119,7 @@ const Message = ({
                   <span className="dot three"></span>
                 </div>
               )}
-              {audio && (
-                <div className="message__audio">
-                  <audio ref={audioElem} src={audio} preload="auto" />
-                  <div
-                    className="message__audio-progress"
-                    style={{ width: progress + "%" }}
-                  ></div>
-                  <div className="message__audio-info">
-                    <div className="message__audio-btn">
-                      <button onClick={togglePaly}>
-                        {isPaly ? (
-                          <img src={pauseSvg} alt="pause audio"></img>
-                        ) : (
-                          <img src={playSvg} alt="play audio"></img>
-                        )}
-                      </button>
-                    </div>
-                    <div className="message__audio-svg">
-                      {" "}
-                      <img src={waveSvg} alt="audio wave image"></img>
-                    </div>
-                    <span className="message__audio-duration">
-                      {convertCurrentTime(currentTime)}
-                    </span>
-                  </div>
-                </div>
-              )}
+              {audio && <MessageAudio />}
             </div>
           )}
 
