@@ -37,6 +37,7 @@ const Message = ({
       () => {
         setIsPaly(false);
         setProgress(0);
+        setCurrentTime(0);
       },
       false
     );
