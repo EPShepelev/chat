@@ -16,11 +16,12 @@ const Home = () => (
           user: {
             _id: 1,
             fullname: "Усатый Прибалт",
-            avatar: null,
+            avatar:
+              "https://pbs.twimg.com/profile_images/456803584504393728/Im9iEap0.jpeg",
           },
         },
         {
-          _id: Math.random(),
+          _id: "4ce53b05d1bf187b905c43129fb767f7",
           text: "Привет! Как твои дела? Все хорошо?",
           created_at: new Date("Thu Mar 04 2019 13:36:08"),
           user: {
