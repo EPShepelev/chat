@@ -3,23 +3,12 @@ import classNames from "classnames";
 import "./DialogItem.scss";
 import { IconRead } from "../";
 import { format, isToday } from "date-fns";
-import { generateAvatarFromHash } from "utils/helpers";
 
 const getMessageTime = (created_at) => {
   if (isToday(created_at)) {
     return format(created_at, "HH:mm");
   } else {
     return format(created_at, "dd.MM.yyyy");
-  }
-};
-
-const getAvatar = (avatar) => {
-  if (avatar) {
-    return (
-      <img src="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"></img>
-    );
-  } else {
-    generateAvatarFromHash("4ce53b05d1bf187b905c43129fb767f7");
   }
 };
 
