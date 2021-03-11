@@ -15,6 +15,8 @@ export default (hash) => {
     .substr(0, 3)
     .split("")
     .map((char) => getCorrectIndex(char.charCodeAt(0)));
-  const color = tinycolor({ r, g, b });
-  return color;
+  return {
+    color: tinycolor({ r, g, b }).toHexString(),
+    colorLighten: tinycolor({ r, g, b }).lighten().toHexString(),
+  };
 };
