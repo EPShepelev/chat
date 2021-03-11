@@ -12,7 +12,7 @@ const getCorrectIndex = (number) => {
 
 export default (hash) => {
   const [r, g, b] = hash
-    .subst(0, 3)
+    .substr(0, 3)
     .split("")
     .map((char) => getCorrectIndex(char.charCodeAt(0)));
   const color = tinycolor({ r, g, b });
