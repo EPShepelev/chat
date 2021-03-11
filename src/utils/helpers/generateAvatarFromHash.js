@@ -1,4 +1,4 @@
-import tinycolor from "tinycolor";
+import tinycolor from "tinycolor2";
 
 export default (hash) => {
   const [r, g, b] = hash.subst(0, 3).split("");
