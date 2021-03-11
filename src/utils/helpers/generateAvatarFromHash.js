@@ -7,14 +7,14 @@ const getCorrectIndex = (number) => {
   if (number < 0) {
     return 0;
   }
-  return number;
+  return number > 255 ? 255 : number < 0 ? 0 : number;
 };
 
 export default (hash) => {
   const [r, g, b] = hash
     .subst(0, 3)
     .split("")
-    .map((char) => (char.charCodeAt(0) > 255 ? 255 : char.charCodeAt(0)));
+    .map((char) => getCorrectIndex(char.charCodeAt(0)));
   const color = tinycolor({ r, g, b });
   return color;
 };

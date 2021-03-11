@@ -3,7 +3,7 @@ import classNames from "classnames";
 import "./DialogItem.scss";
 import { IconRead } from "../";
 import { format, isToday } from "date-fns";
-import { generateAvatarFromHash } from "./utils/helpers";
+import { generateAvatarFromHash } from "utils/helpers";
 
 const getMessageTime = (created_at) => {
   if (isToday(created_at)) {
