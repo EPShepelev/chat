@@ -3,6 +3,7 @@ import classNames from "classnames";
 import "./DialogItem.scss";
 import { IconRead } from "../";
 import { format, isToday } from "date-fns";
+import { generateAvatarFromHash } from "./utils/helpers";
 
 const getMessageTime = (created_at) => {
   if (isToday(created_at)) {
@@ -18,7 +19,7 @@ const getAvatar = (avatar) => {
       <img src="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"></img>
     );
   } else {
-    // make avatar
+    generateAvatarFromHash("4ce53b05d1bf187b905c43129fb767f7");
   }
 };
 
