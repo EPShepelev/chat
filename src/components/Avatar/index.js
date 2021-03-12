@@ -15,12 +15,12 @@ const Avatar = ({ user }) => {
     );
   } else {
     const { color, colorLighten } = generateAvatarFromHash(user._id);
-    const firstCharFromFullName = user.fullname.charCodeAt(0);
+    const firstCharFromFullName = user.fullname[0];
     return (
       <div
         className="avatar avatar--symbol"
         style={{
-          backgroundColor: `linear-gradient(135deg, ${color} 0%, ${colorLighten} 96%)`,
+          background: `linear-gradient(135deg, ${color} 0%, ${colorLighten} 96%)`,
         }}
       >
         {firstCharFromFullName}
