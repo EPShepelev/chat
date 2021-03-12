@@ -3,6 +3,7 @@ import classNames from "classnames";
 import "./DialogItem.scss";
 import { IconRead } from "../";
 import { format, isToday } from "date-fns";
+import { Avatar } from "components";
 
 const getMessageTime = (created_at) => {
   if (isToday(created_at)) {
@@ -19,8 +20,7 @@ const DialogItem = ({ user, unread, created_at, isMe, text }) => (
     })}
   >
     <div className="dialogs__item-avatar">
-      {/* <img src={user.avatar} alt={`${user.fullname} avatar`} /> */}
-      {getAvatar(user.avatar)}
+      <Avatar user={user} />
     </div>
     <div className="dialogs__item-info">
       <div className="dialogs__item-info-top">
