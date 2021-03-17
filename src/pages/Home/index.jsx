@@ -16,40 +16,39 @@ const Home = () => (
         <FormOutlined />
       </div>
       <div className="chat__sidebar-search">
-        <Input.Search
-          placeholder="Поиск по сообщениям"
-          style={{ width: 200 }}
+        <Input.Search placeholder="Поиск среди контактов" />
+      </div>
+      <div className="chat__sidebar-dialogs">
+        <Dialogs
+          userId={0}
+          items={[
+            {
+              _id: "4ce53b05d1bf187b905c43129fb767f7",
+              text:
+                "Вот мы все тут собрались... По легенде, всякие депутаты и руководители в СССР использовали в своих выступлениях заготовленный набор совмещающихся между собой словосочетаний, что позволяло нести псевдоумную ахинею часами. Что-то вроде дорвеев для политсобраний.",
+              created_at: new Date("Thu Mar 04 2020 13:36:08"),
+              user: {
+                _id: "4ce53b05d1bf187b905c43129fb767f7",
+                fullname: "Усатый Прибалт",
+                avatar:
+                  "https://pbs.twimg.com/profile_images/456803584504393728/Im9iEap0.jpeg",
+              },
+            },
+            {
+              _id: "4ce53b05d1bf187b905c43129fb767f7",
+              text: "Привет! Как твои дела? Все хорошо?",
+              created_at: new Date("Thu Mar 04 2019 13:36:08"),
+              user: {
+                _id: "4ce53b05d1bf187b905c43129fb767f7",
+                fullname: "Пикачу Покемоновский",
+                avatar: null,
+              },
+            },
+          ]}
         />
       </div>
     </div>
     <div className="chat__dialog"></div>
-    {/* <Dialogs
-      userId={0}
-      items={[
-        {
-          _id: "4ce53b05d1bf187b905c43129fb767f7",
-          text:
-            "Вот мы все тут собрались... По легенде, всякие депутаты и руководители в СССР использовали в своих выступлениях заготовленный набор совмещающихся между собой словосочетаний, что позволяло нести псевдоумную ахинею часами. Что-то вроде дорвеев для политсобраний.",
-          created_at: new Date("Thu Mar 04 2020 13:36:08"),
-          user: {
-            _id: "4ce53b05d1bf187b905c43129fb767f7",
-            fullname: "Усатый Прибалт",
-            avatar:
-              "https://pbs.twimg.com/profile_images/456803584504393728/Im9iEap0.jpeg",
-          },
-        },
-        {
-          _id: "4ce53b05d1bf187b905c43129fb767f7",
-          text: "Привет! Как твои дела? Все хорошо?",
-          created_at: new Date("Thu Mar 04 2019 13:36:08"),
-          user: {
-            _id: "4ce53b05d1bf187b905c43129fb767f7",
-            fullname: "Пикачу Покемоновский",
-            avatar: null,
-          },
-        },
-      ]}
-    /> */}
     {/* <Message
       avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
       date={new Date("Thu Mar 04 2019 13:36:08")}
