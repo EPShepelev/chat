@@ -1,6 +1,7 @@
 import React from "react";
 import { Message, Dialogs } from "components";
-import { TeamOutlined } from "@ant-design/icons";
+import { TeamOutlined, FormOutlined } from "@ant-design/icons";
+import { Input } from "antd";
 
 import "./Home.scss";
 
@@ -9,6 +10,16 @@ const Home = () => (
     <div className="chat__sidebar">
       <div className="chat__sidebar-header">
         <TeamOutlined />
+        <div>
+          <span>Список диалогов</span>
+        </div>
+        <FormOutlined />
+      </div>
+      <div className="chat__sidebar-search">
+        <Input.Search
+          placeholder="Поиск по сообщениям"
+          style={{ width: 200 }}
+        />
       </div>
     </div>
     <div className="chat__dialog"></div>
