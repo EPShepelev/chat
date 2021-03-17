@@ -1,11 +1,16 @@
 import React from "react";
 import { Message, Dialogs } from "components";
+import { TeamOutlined } from "@ant-design/icons";
 
 import "./Home.scss";
 
 const Home = () => (
   <section className="home">
-    <div className="chat__sidebar"></div>
+    <div className="chat__sidebar">
+      <div className="chat__sidebar-header">
+        <TeamOutlined />
+      </div>
+    </div>
     <div className="chat__dialog"></div>
     {/* <Dialogs
       userId={0}
