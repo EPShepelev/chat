@@ -5,7 +5,9 @@ import "./Home.scss";
 
 const Home = () => (
   <section className="home">
-    <Dialogs
+    <div className="chat__sidebar"></div>
+    <div className="chat__dialog"></div>
+    {/* <Dialogs
       userId={0}
       items={[
         {
@@ -31,12 +33,12 @@ const Home = () => (
           },
         },
       ]}
-    />
-    <Message
+    /> */}
+    {/* <Message
       avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
       date={new Date("Thu Mar 04 2019 13:36:08")}
       audio="https://filesamples.com/samples/audio/wav/sample1.wav"
-    />
+    /> */}
     {/*
     <Message
       avatar="https://pbs.twimg.com/profile_images/456803584504393728/Im9iEap0.jpeg"
