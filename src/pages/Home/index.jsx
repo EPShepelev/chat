@@ -10,7 +10,7 @@ import { Input } from "antd";
 import "./Home.scss";
 
 const Home = () => (
-  <section className="home">
+  <section className="chat">
     <div className="chat__sidebar">
       <div className="chat__sidebar-header">
         <TeamOutlined />
