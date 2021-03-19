@@ -1,6 +1,10 @@
 import React from "react";
 import { Message, Dialogs } from "components";
-import { TeamOutlined, FormOutlined } from "@ant-design/icons";
+import {
+  TeamOutlined,
+  FormOutlined,
+  EllipsisOutlined,
+} from "@ant-design/icons";
 import { Input } from "antd";
 
 import "./Home.scss";
@@ -48,7 +52,17 @@ const Home = () => (
         />
       </div>
     </div>
-    <div className="chat__dialog"></div>
+    <div className="chat__dialog">
+      <div className="chat__dialog-header">
+        <div className="chat__dialog-header-center">
+          <b className="chat__dialog-header-username">Гай Юлий Цезарь</b>
+          <div className="chat__dialog-header-status">
+            <div className="status status--online">онлайн</div>
+          </div>
+        </div>
+        <EllipsisOutlined />
+      </div>
+    </div>
     {/* <Message
       avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
       date={new Date("Thu Mar 04 2019 13:36:08")}
