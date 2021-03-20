@@ -8,6 +8,13 @@
     &-header {
       display: flex;
       justify-content: space-between;
+      padding: 20px;
+      & > div {
+        i {
+          display: inline-block;
+          margin-right: 5px;
+        }
+      }
     }
     width: 320px;
   }
