@@ -151,34 +151,34 @@ const Home = () => (
         </div>
         <EllipsisOutlined />
       </div>
+      <div className="chat__dialog-messages">
+        <Message
+          avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
+          date={new Date("Thu Mar 04 2019 13:36:08")}
+          audio="https://filesamples.com/samples/audio/wav/sample1.wav"
+        />
+        <Message
+          avatar="https://pbs.twimg.com/profile_images/456803584504393728/Im9iEap0.jpeg"
+          text="Да, все хорошо. Все сделали, нарушения будут"
+          date="Thu Feb 13 2021 18:12:14"
+          isMe={true}
+          isRead={true}
+        />
+        <Message
+          avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
+          attachments={[
+            {
+              filename: "image.jpg",
+              url: "https://source.unsplash.com/100x100/?random=1&nature,water",
+            },
+          ]}
+        />
+        <Message
+          avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
+          isTyping
+        />
+      </div>
     </div>
-    {/* <Message
-      avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
-      date={new Date("Thu Mar 04 2019 13:36:08")}
-      audio="https://filesamples.com/samples/audio/wav/sample1.wav"
-    /> */}
-    {/*
-    <Message
-      avatar="https://pbs.twimg.com/profile_images/456803584504393728/Im9iEap0.jpeg"
-      text="Да, все хорошо. Все сделали, нарушения будут"
-      date="Thu Feb 13 2021 18:12:14"
-      isMe={true}
-      isRead={true}
-    />
-    <Message
-      avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
-      attachments={[
-        {
-          filename: "image.jpg",
-          url: "https://source.unsplash.com/100x100/?random=1&nature,water",
-        },
-      ]}
-    />
-    <Message
-      avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
-      isTyping
-    />{" "}
-    */}
   </section>
 );
 
