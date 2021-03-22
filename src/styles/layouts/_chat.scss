@@ -21,7 +21,7 @@
     &-search {
       padding: 0 20px 20px 20px;
       .ant-input {
-        background: #f7f8f9;
+        background-color: #f7f8f9;
         border: 0;
         height: 38px;
         padding: 4px 11px 6px;
@@ -29,7 +29,13 @@
     }
     &-dialogs {
       .dialogs {
-        padding: 0 20px;
+        &__item {
+          padding: 10px 20px;
+          margin-bottom: 0;
+          &:hover {
+            background-color: #f3f7ff;
+          }
+        }
       }
     }
   }
