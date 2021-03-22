@@ -44,5 +44,37 @@
   }
   &__dialog {
     flex: 1;
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid #f7f7f7;
+      &-center {
+        text-align: center;
+        position: relative;
+        .status {
+          color: #bfbfbf;
+          &--online {
+            &::before {
+              background-color: #00c980;
+            }
+          }
+          &::before {
+            display: block;
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 30px;
+            background-color: #d3d3d3;
+          }
+        }
+      }
+      &-username {
+        font-weight: 500;
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
   }
 }

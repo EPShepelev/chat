@@ -143,19 +143,27 @@ const Home = () => (
     </div>
     <div className="chat__dialog">
       <div className="chat__dialog-header">
+        <div />
         <div className="chat__dialog-header-center">
           <b className="chat__dialog-header-username">Гай Юлий Цезарь</b>
           <div className="chat__dialog-header-status">
-            <div className="status status--online">онлайн</div>
+            <span className="status status--online">онлайн</span>
           </div>
         </div>
-        <EllipsisOutlined />
+        <EllipsisOutlined style={{ fontSize: "22px" }} />
       </div>
       <div className="chat__dialog-messages">
         <Message
           avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
           date={new Date("Thu Mar 04 2019 13:36:08")}
           audio="https://filesamples.com/samples/audio/wav/sample1.wav"
+        />
+        <Message
+          avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
+          text="Ну что там у нас? Все хорошо?"
+          date="Thu Feb 13 2021 18:12:14"
+          isMe={false}
+          isRead={true}
         />
         <Message
           avatar="https://pbs.twimg.com/profile_images/456803584504393728/Im9iEap0.jpeg"
