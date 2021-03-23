@@ -6,3 +6,4 @@ export { default as Dialogs } from "./Dialogs";
 export { default as Time } from "./Time";
 export { default as IconRead } from "./IconRead";
 export { default as Avatar } from "./Avatar";
+export { default as Status } from "./Status";

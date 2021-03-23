@@ -146,9 +146,7 @@ const Home = () => (
         <div />
         <div className="chat__dialog-header-center">
           <b className="chat__dialog-header-username">Гай Юлий Цезарь</b>
-          <div className="chat__dialog-header-status">
-            <span className="status status--online">онлайн</span>
-          </div>
+          <div className="chat__dialog-header-status"></div>
         </div>
         <EllipsisOutlined style={{ fontSize: "22px" }} />
       </div>
