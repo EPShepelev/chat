@@ -2,11 +2,6 @@
   color: #bfbfbf;
   display: inline-block;
   position: relative;
-  &--online {
-    &::before {
-      background-color: #00c980;
-    }
-  }
   &::before {
     display: block;
     position: absolute;
@@ -17,5 +12,10 @@
     height: 6px;
     border-radius: 30px;
     background-color: #d3d3d3;
+  }
+  &--online {
+    &::before {
+      background-color: #00c980;
+    }
   }
 }
