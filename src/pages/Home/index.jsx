@@ -1,12 +1,11 @@
 import React from "react";
-import { Message, Dialogs } from "components";
+import { Message, Dialogs, Status } from "components";
 import {
   TeamOutlined,
   FormOutlined,
   EllipsisOutlined,
 } from "@ant-design/icons";
 import { Input } from "antd";
-
 import "./Home.scss";
 
 const Home = () => (
@@ -146,7 +145,9 @@ const Home = () => (
         <div />
         <div className="chat__dialog-header-center">
           <b className="chat__dialog-header-username">Гай Юлий Цезарь</b>
-          <div className="chat__dialog-header-status"></div>
+          <div className="chat__dialog-header-status">
+            <Status />
+          </div>
         </div>
         <EllipsisOutlined style={{ fontSize: "22px" }} />
       </div>
