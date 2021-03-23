@@ -12,6 +12,9 @@
       display: flex;
       justify-content: space-between;
       padding: 20px;
+      height: 58px;
+      border-bottom: 1px solid #f7f7f7;
+      margin-bottom: 20px;
       & > div {
         i {
           display: inline-block;
