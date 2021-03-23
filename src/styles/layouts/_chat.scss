@@ -55,28 +55,6 @@
       border-bottom: 1px solid #f7f7f7;
       &-center {
         text-align: center;
-        position: relative;
-        .status {
-          color: #bfbfbf;
-          display: inline-block;
-          position: relative;
-          &--online {
-            &::before {
-              background-color: #00c980;
-            }
-          }
-          &::before {
-            display: block;
-            position: absolute;
-            top: 5px;
-            left: -11px;
-            content: "";
-            width: 6px;
-            height: 6px;
-            border-radius: 30px;
-            background-color: #d3d3d3;
-          }
-        }
       }
       &-username {
         font-weight: 500;
