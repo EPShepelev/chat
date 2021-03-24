@@ -182,6 +182,48 @@ const Home = () => (
         />
         <Message
           avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
+          text="Вот и наши подьехали, думаю это будет прикольно. Ну а вы что думали? Так просто никогда не бывает."
+          attachments={[
+            {
+              filename: "image.jpg",
+              url: "https://source.unsplash.com/100x100/?random=1&nature,water",
+            },
+            {
+              filename: "image.jpg",
+              url: "https://source.unsplash.com/100x100/?random=1&nature,water",
+            },
+            {
+              filename: "image.jpg",
+              url: "https://source.unsplash.com/100x100/?random=1&nature,water",
+            },
+          ]}
+        />
+        <Message
+          avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
+          text="Вот и наши подьехали, думаю это будет прикольно. Ну а вы что думали? Так просто никогда не бывает."
+        />
+        <Message
+          avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
+          text="Вот и наши подьехали, думаю это будет прикольно. Ну а вы что думали? Так просто никогда не бывает."
+        />
+        <Message
+          avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
+          text="Вот и наши подьехали, думаю это будет прикольно. Ну а вы что думали? Так просто никогда не бывает."
+        />
+        <Message
+          avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
+          text="Вот и наши подьехали, думаю это будет прикольно. Ну а вы что думали? Так просто никогда не бывает."
+        />
+        <Message
+          avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
+          text="Вот и наши подьехали, думаю это будет прикольно. Ну а вы что думали? Так просто никогда не бывает."
+        />
+        <Message
+          avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
+          text="Вот и наши подьехали, думаю это будет прикольно. Ну а вы что думали? Так просто никогда не бывает."
+        />
+        <Message
+          avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
           isTyping
         />
       </div>
