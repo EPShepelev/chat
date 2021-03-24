@@ -1,5 +1,5 @@
 import React from "react";
-import { Message, Dialogs, Status } from "components";
+import { Message, Dialogs, Status, ChatInput } from "components";
 import {
   TeamOutlined,
   FormOutlined,
@@ -224,7 +224,7 @@ const Home = () => (
         />
       </div>
       <div className="chat__dialog-input">
-        <Input.Search placeholder="Поиск среди контактов" />
+        <ChatInput />
       </div>
     </div>
   </section>
