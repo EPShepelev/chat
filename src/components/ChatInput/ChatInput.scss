@@ -1,1 +1,10 @@
-
+.chat-input {
+  padding: 20px;
+  &__smile-btn,
+  &__actions {
+    position: absolute;
+  }
+  span.anticon {
+    font-size: 18px;
+  }
+}

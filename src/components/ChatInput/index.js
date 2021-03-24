@@ -16,7 +16,7 @@ const ChatInput = () => (
     <div className="chat-input__smile-btn">
       <SmileOutlined />
     </div>
-    <Input.Search placeholder="Поиск среди контактов" />
+    <Input size="large" placeholder="Поиск среди контактов" />
     <div className="chat-input__actions">
       <CameraOutlined />
       <AudioOutlined />
