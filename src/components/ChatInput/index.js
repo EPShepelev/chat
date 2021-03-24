@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Button as BaseButton } from "antd";
-import "./Button.scss";
 
-const Button = (props) => (
-  <BaseButton
+import "./ChatInput.scss";
+
+const ChatInput = (props) => (
+  <div
     {...props}
     className={classNames("button", props.className, {
       "button--large": props.size === "large",
@@ -13,8 +13,8 @@ const Button = (props) => (
   />
 );
 
-Button.propTypes = {
+ChatInput.propTypes = {
   className: PropTypes.string,
 };
 
-export default Button;
+export default ChatInput;
