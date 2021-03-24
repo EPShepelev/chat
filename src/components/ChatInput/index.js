@@ -1,15 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { SmileOutlined } from "@ant-design/icons";
+import {
+  SmileOutlined,
+  CameraOutlined,
+  AudioOutlined,
+  SendOutlined,
+} from "@ant-design/icons";
 import { Input } from "antd";
 
 import "./ChatInput.scss";
 
 const ChatInput = () => (
   <div className="chat-input">
-    <SmileOutlined />
+    <div className="chat-input__smile-btn">
+      <SmileOutlined />
+    </div>
     <Input.Search placeholder="Поиск среди контактов" />
+    <div className="chat-input__actions">
+      <CameraOutlined />
+      <AudioOutlined />
+      <SendOutlined />
+    </div>
   </div>
 );
 
