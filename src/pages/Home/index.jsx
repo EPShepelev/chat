@@ -220,12 +220,11 @@ const Home = () => (
         />
         <Message
           avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
-          text="Вот и наши подьехали, думаю это будет прикольно. Ну а вы что думали? Так просто никогда не бывает."
-        />
-        <Message
-          avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
           isTyping
         />
+      </div>
+      <div className="chat__dialog-input">
+        <Input.Search placeholder="Поиск среди контактов" />
       </div>
     </div>
   </section>
