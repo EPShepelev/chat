@@ -21,7 +21,7 @@ const ChatInput = () => {
       <Input
         onChange={(e) => setValue(e.target.value)}
         size="large"
-        placeholder="Введите текст сообщения"
+        placeholder="Введите сообщение"
       />
       <div className="chat-input__actions">
         <CameraOutlined />
