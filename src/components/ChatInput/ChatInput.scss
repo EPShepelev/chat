@@ -1,15 +1,12 @@
 .chat-input {
+  display: flex;
   margin: 20px;
   position: relative;
-  &__smile-btn,
-  &__actions {
-    position: absolute;
-    z-index: 1;
-  }
   &__smile-btn {
-    background-color: #fff;
-    top: 11px;
-    left: 10px;
+    margin-right: 15px;
+    span.anticon {
+      margin-top: 11px;
+    }
   }
   span.anticon {
     font-size: 18px;
