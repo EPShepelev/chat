@@ -3,18 +3,26 @@
   margin: 20px;
   position: relative;
   &__smile-btn {
-    opacity: 0.5;
-    cursor: pointer;
-    &:hover {
-      opacity: 1;
-    }
     margin-right: 15px;
     span.anticon {
-      margin-top: 11px;
+      margin-top: 12px;
     }
   }
   span.anticon {
+    cursor: pointer;
     font-size: 18px;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__actions {
+    display: flex;
+    width: 90px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+    cursor: pointer;
   }
   input:focus,
   input:hover {
