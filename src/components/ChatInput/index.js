@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import {
@@ -11,19 +11,25 @@ import { Input } from "antd";
 
 import "./ChatInput.scss";
 
-const ChatInput = () => (
-  <div className="chat-input">
-    <div className="chat-input__smile-btn">
-      <SmileOutlined />
+const ChatInput = () => {
+  const [value, setValue] = useState("");
+  return (
+    <div className="chat-input">
+      <div className="chat-input__smile-btn">
+        <SmileOutlined />
+      </div>
+      <Input
+        onChange={(e) => setValue(e.target.value)}
+        size="large"
+        placeholder="Введите текст сообщения"
+      />
+      <div className="chat-input__actions">
+        <CameraOutlined />
+        {value ? <SendOutlined /> : <AudioOutlined />}
+      </div>
     </div>
-    <Input size="large" placeholder="Введите текст сообщения" />
-    <div className="chat-input__actions">
-      <CameraOutlined />
-      <AudioOutlined />
-      <SendOutlined />
-    </div>
-  </div>
-);
+  );
+};
 
 ChatInput.propTypes = {
   className: PropTypes.string,
