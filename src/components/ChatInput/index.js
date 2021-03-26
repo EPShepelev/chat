@@ -7,7 +7,7 @@ import {
   AudioOutlined,
   SendOutlined,
 } from "@ant-design/icons";
-import { Input } from "antd";
+import { Input, Button } from "antd";
 
 import "./ChatInput.scss";
 
@@ -16,7 +16,7 @@ const ChatInput = () => {
   return (
     <div className="chat-input">
       <div className="chat-input__smile-btn">
-        <SmileOutlined />
+        <Button type="link" shape="circle" icon={<SmileOutlined />} />
       </div>
       <Input
         onChange={(e) => setValue(e.target.value)}
@@ -24,8 +24,13 @@ const ChatInput = () => {
         placeholder="Введите сообщение"
       />
       <div className="chat-input__actions">
-        <CameraOutlined />
-        {value ? <SendOutlined /> : <AudioOutlined />}
+        <Button type="link" shape="circle" icon={<CameraOutlined />} />
+
+        {value ? (
+          <Button type="link" shape="circle" icon={<SendOutlined />} />
+        ) : (
+          <Button type="link" shape="circle" icon={<AudioOutlined />} />
+        )}
       </div>
     </div>
   );
