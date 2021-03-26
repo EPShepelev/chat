@@ -114,28 +114,6 @@ const Home = () => (
                 avatar: null,
               },
             },
-            {
-              _id: "1002496f09a036f02e358e7dd42556fc",
-              text:
-                "Eu reprehenderit magna laborum anim ipsum consequat id consectetur consectetur eiusmod amet. Reprehenderit cupidatat id minim ut officia proident sint ea dolor nulla occaecat. Enim quis laboris id sint labore elit veniam ipsum.",
-              created_at: new Date("Tue Mar 17 2020 17:45:43"),
-              user: {
-                _id: "1002496f09a036f02e358e7dd42556fc",
-                fullname: "Booth Frank",
-                avatar: null,
-              },
-            },
-            {
-              _id: "1a71b3a6a70e4c373c1cd022612eee98",
-              text:
-                "Consequat ipsum nostrud sit laboris velit. Aliquip amet qui elit et anim. Eu minim cupidatat nulla sunt sunt laboris fugiat magna Lorem ullamco commodo dolore ullamco anim.",
-              created_at: new Date("Fri Aug 07 2015 05:23:58"),
-              user: {
-                _id: "1a71b3a6a70e4c373c1cd022612eee98",
-                fullname: "Davis Gonzalez",
-                avatar: null,
-              },
-            },
           ]}
         />
       </div>
