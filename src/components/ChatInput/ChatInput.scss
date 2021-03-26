@@ -12,6 +12,11 @@
     border: 0;
     box-shadow: none;
     color: #202020 !important;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+    &:hover {
+      opacity: 1;
+    }
     &:after {
       display: none;
     }
@@ -19,18 +24,13 @@
   span.anticon {
     cursor: pointer;
     font-size: 18px;
-    opacity: 0.5;
-    transition: opacity 0.2s ease;
-    &:hover {
-      opacity: 1;
-    }
   }
   &__actions {
     display: flex;
-    width: 70px;
+    width: 80px;
     justify-content: space-between;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 15px;
     cursor: pointer;
   }
   input:focus,
