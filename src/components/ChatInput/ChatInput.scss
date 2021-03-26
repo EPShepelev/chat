@@ -8,6 +8,14 @@
       margin-top: 11px;
     }
   }
+  .ant-btn-circle {
+    border: 0;
+    box-shadow: none;
+    color: #202020 !important;
+    &:after {
+      display: none;
+    }
+  }
   span.anticon {
     cursor: pointer;
     font-size: 18px;
