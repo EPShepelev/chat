@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Dialogs as BaseDialogs } from "components";
 
-const Dialogs = ({ items }) => {
+const Dialogs = ({ items, userId }) => {
   const [inputValue, setInputValue] = useState("");
   let filtered = Array.from(items);
 
@@ -14,6 +14,7 @@ const Dialogs = ({ items }) => {
   };
   return (
     <BaseDialogs
+      uerId={userId}
       items={filtered}
       onSearch={onChangeInput}
       inputValue={inputValue}
