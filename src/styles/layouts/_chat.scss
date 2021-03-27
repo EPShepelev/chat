@@ -37,9 +37,9 @@
       }
     }
     &-dialogs {
-      height: 100%;
+      height: calc(100% - 138px);
       .dialogs {
-        height: calc(100%-136px);
+        height: 100%;
         overflow: auto;
         &__item {
           padding: 10px 20px;
