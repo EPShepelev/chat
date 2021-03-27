@@ -1,5 +1,6 @@
 import React from "react";
-import { Message, Dialogs, Status, ChatInput } from "components";
+import { Message, Status, ChatInput } from "components";
+import { Dialogs } from "containers";
 import {
   TeamOutlined,
   FormOutlined,
