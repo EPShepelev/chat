@@ -8,7 +8,12 @@
       margin-top: 11px;
     }
   }
-
+  .ant-btn-circle {
+    span.anticon {
+      cursor: pointer;
+      font-size: 18px;
+    }
+  }
   &__actions {
     display: flex;
     width: 80px;
