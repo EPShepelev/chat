@@ -37,7 +37,10 @@
       }
     }
     &-dialogs {
+      height: 100%;
       .dialogs {
+        height: calc(100%-136px);
+        overflow: auto;
         &__item {
           padding: 10px 20px;
           margin-bottom: 0;
@@ -58,6 +61,11 @@
       align-items: center;
       padding: 15px;
       border-bottom: 1px solid #f7f7f7;
+      .ant-btn-circle {
+        span {
+          font-size: 22px;
+        }
+      }
       &-center {
         text-align: center;
       }
