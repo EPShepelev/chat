@@ -127,7 +127,11 @@ const Home = () => (
             <Status online />
           </div>
         </div>
-        <EllipsisOutlined style={{ fontSize: "22px" }} />
+        <Button
+          type="link"
+          shape="circle"
+          icon={<EllipsisOutlined style={{ fontSize: "22px" }} />}
+        />
       </div>
       <div className="chat__dialog-messages">
         <Message

@@ -11,10 +11,15 @@
     &-header {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 20px;
       height: 58px;
       border-bottom: 1px solid #f7f7f7;
       margin-bottom: 20px;
+      .ant-btn-circle {
+        position: relative;
+        left: 5px;
+      }
       & > div {
         i {
           display: inline-block;
