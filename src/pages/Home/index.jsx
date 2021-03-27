@@ -5,7 +5,7 @@ import {
   FormOutlined,
   EllipsisOutlined,
 } from "@ant-design/icons";
-import { Input } from "antd";
+import { Input, Button } from "antd";
 import "./Home.scss";
 
 const Home = () => (
@@ -16,7 +16,7 @@ const Home = () => (
         <div>
           <span>Список диалогов</span>
         </div>
-        <FormOutlined />
+        <Button type="link" shape="circle" icon={<FormOutlined />} />
       </div>
       <div className="chat__sidebar-search">
         <Input.Search placeholder="Поиск среди контактов" />
