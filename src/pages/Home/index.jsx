@@ -20,7 +20,10 @@ const Home = () => (
         <Button type="link" shape="circle" icon={<FormOutlined />} />
       </div>
       <div className="chat__sidebar-search">
-        <Input.Search placeholder="Поиск среди контактов" />
+        <Input.Search
+          placeholder="Поиск среди контактов"
+          onSearch={(value) => console.log(value)}
+        />
       </div>
       <div className="chat__sidebar-dialogs">
         <Dialogs
