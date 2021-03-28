@@ -4,12 +4,13 @@ import { DialogItem } from "../";
 import orderBy from "lodash/orderBy";
 import { Input } from "antd";
 
-const Dialogs = ({ items, userId, onSearch }) => (
+const Dialogs = ({ items, userId, onSearch, inputValue }) => (
   <div className="dialogs">
     <div className="dialogs__search">
       <Input.Search
+        value={inputValue}
         placeholder="Поиск среди контактов"
-        onSearch={(value) => console.log(value)}
+        onChange={(e) => onSearch(e.target.value)}
       />
     </div>
     {orderBy(items, ["created_at"], ["desc"]).map((item) => (

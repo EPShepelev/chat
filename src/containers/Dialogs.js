@@ -5,12 +5,11 @@ const Dialogs = ({ items, userId }) => {
   const [inputValue, setInputValue] = useState("");
   let filtered = Array.from(items);
 
-  const onChangeInput = (e) => {
-    const value = e.target.value;
+  const onChangeInput = (value) => {
     filtered = filtered.filter(
       (dialog) => dialog.user.fullname.indexOf(value) >= 0
     );
-    setInputValue(e.target.value);
+    setInputValue(value);
   };
   return (
     <BaseDialogs

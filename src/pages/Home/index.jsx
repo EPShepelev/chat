@@ -6,7 +6,7 @@ import {
   FormOutlined,
   EllipsisOutlined,
 } from "@ant-design/icons";
-import { Input, Button } from "antd";
+import { Button } from "antd";
 import "./Home.scss";
 
 const Home = () => (
