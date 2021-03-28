@@ -7,7 +7,7 @@ const Dialogs = ({ items, userId }) => {
 
   const onChangeInput = (value) => {
     setFilteredItems(
-      filtered.filter((dialog) => dialog.user.fullname.indexOf(value) >= 0)
+      items.filter((dialog) => dialog.user.fullname.indexOf(value) >= 0)
     );
     setInputValue(value);
   };
