@@ -6,7 +6,7 @@ import { Input } from "antd";
 
 const Dialogs = ({ items, userId, onSearch }) => (
   <div className="dialogs">
-    <div className="chat__sidebar-search">
+    <div className="dialogs-search">
       <Input.Search
         placeholder="Поиск среди контактов"
         onSearch={(value) => console.log(value)}
