@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Empty } from "antd";
+import { Message } from "components";
 
 const Messages = ({ items }) => {
-  return items.length ? (
+  return items ? (
     <div>
       <Message
         avatar="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg"
