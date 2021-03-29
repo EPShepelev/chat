@@ -78,7 +78,7 @@ const Messages = ({ items }) => {
       />
     </div>
   ) : (
-    <Empty description="Нет сообщений" />
+    <Empty description="Откройте диалог" />
   );
 };
 
