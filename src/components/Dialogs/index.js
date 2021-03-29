@@ -2,7 +2,7 @@ import React from "react";
 import "./Dialogs.scss";
 import { DialogItem } from "../";
 import orderBy from "lodash/orderBy";
-import { Input } from "antd";
+import { Input, Empty } from "antd";
 
 const Dialogs = ({ items, userId, onSearch, inputValue }) => (
   <div className="dialogs">
