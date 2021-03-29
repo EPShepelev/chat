@@ -18,7 +18,10 @@ const Dialogs = ({ items, userId, onSearch, inputValue }) => (
         <DialogItem key={item._id} isMe={item.user._id === userId} {...item} />
       ))
     ) : (
-      <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
+      <Empty
+        image={Empty.PRESENTED_IMAGE_SIMPLE}
+        description="Ничего не найдено"
+      />
     )}
   </div>
 );
