@@ -7,7 +7,10 @@ const Dialogs = ({ items, userId }) => {
 
   const onChangeInput = (value) => {
     setFilteredItems(
-      items.filter((dialog) => dialog.user.fullname.indexOf(value) >= 0)
+      items.filter(
+        (dialog) =>
+          dialog.user.fullname.toLowerCase().indexOf(value.toLowerCase()) >= 0
+      )
     );
     setInputValue(value);
   };
