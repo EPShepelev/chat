@@ -104,7 +104,6 @@ const Message = ({
       })}
     >
       <div className="message__content">
-        {/* <IconRead isMe={isMe} isRead={isRead} /> */}
         <div className="message__avatar">
           <img src={avatar} alt={`Avatar ${user.fullname}`}></img>
         </div>
