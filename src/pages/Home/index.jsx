@@ -8,7 +8,7 @@ import {
 } from "@ant-design/icons";
 import { Button } from "antd";
 import "./Home.scss";
-import dialogsJson from "dialogs.json";
+import dialogsJson from "../../dialogs.json";
 
 const Home = () => (
   <section className="chat">

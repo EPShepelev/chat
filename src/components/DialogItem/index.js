@@ -6,10 +6,10 @@ import { format, isToday } from "date-fns";
 import { Avatar } from "components";
 
 const getMessageTime = (created_at) => {
-  if (isToday(created_at)) {
-    return format(created_at, "HH:mm");
+  if (isToday(new Date(created_at))) {
+    return format(new Date(created_at), "HH:mm");
   } else {
-    return format(created_at, "dd.MM.yyyy");
+    return format(new Date(created_at), "dd.MM.yyyy");
   }
 };
 
