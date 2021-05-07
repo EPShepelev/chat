@@ -1,5 +1,5 @@
-import axios from "axios";
+import { axios } from "core";
 
-axios.defaults.baseUrl = "http://lochalhost:9999";
-
-export default axios;
+export default {
+  getAll: () => axios.get("./dialogs"),
+};
