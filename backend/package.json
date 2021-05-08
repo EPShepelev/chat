@@ -1,0 +1,14 @@
+{
+  "name": "chat-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json --port 9999"
+  },
+  "author": "Shepelev Evgeniy <shepelev.ep@yandex.ru>",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^0.16.3"
+  }
+}
