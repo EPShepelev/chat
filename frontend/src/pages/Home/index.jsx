@@ -8,7 +8,6 @@ import {
 } from "@ant-design/icons";
 import { Button } from "antd";
 import "./Home.scss";
-import dialogsJson from "../../dialogs.json";
 
 const Home = () => (
   <section className="chat">
@@ -22,7 +21,7 @@ const Home = () => (
       </div>
 
       <div className="chat__sidebar-dialogs">
-        <Dialogs userId={0} items={dialogsJson} />
+        <Dialogs userId={0} />
       </div>
     </div>
     <div className="chat__dialog">
