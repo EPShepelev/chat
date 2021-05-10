@@ -23,7 +23,7 @@ const Dialogs = ({ fetchDialogs, items, userId }) => {
     } else {
       setFilteredItems(items);
     }
-  }, []);
+  }, [items]);
 
   return (
     <BaseDialogs
