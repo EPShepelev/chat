@@ -20,6 +20,8 @@ const Dialogs = ({ fetchDialogs, items, userId }) => {
   useEffect(() => {
     if (!items.length) {
       fetchDialogs();
+    } else {
+      setFilteredItems(items);
     }
   }, []);
 
