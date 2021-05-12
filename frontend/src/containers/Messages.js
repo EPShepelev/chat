@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Messages as BaseMessages } from "components";
 import { MessagesActions } from "redux/actions";
 
-const Dialogs = ({ fetchDialogs, setCurrentDialog, items, userId }) => {
-  const [filtered, setFilteredItems] = useState(Array.from(items));
-
+const Dialogs = ({ currentDialogId, items }) => {
   useEffect(() => {
     if (!items.length) {
       fetchDialogs();
@@ -14,7 +12,7 @@ const Dialogs = ({ fetchDialogs, setCurrentDialog, items, userId }) => {
     }
   }, [items]);
 
-  return <BaseMessages />;
+  return <BaseMessages items={items} />;
 };
 
-export default connect(({ dialogs }) => dialogs, dialogsActions)(Dialogs);
+export default connect(({ messages }) => messages, MessagesActions)(Messages);
