@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { Dialogs as BaseDialogs } from "components";
-import { dialogsActions } from "redux/actions";
+import { Messages as MessagesDialogs } from "components";
+import { MessagesActions } from "redux/actions";
 
 const Dialogs = ({ fetchDialogs, setCurrentDialog, items, userId }) => {
   const [inputValue, setInputValue] = useState("");
