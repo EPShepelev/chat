@@ -7,9 +7,11 @@ const actions = {
   }),
 
   fetchMessages: (dialogId) => (dispatch) => {
-    messagesApi.getAllByDialogId(dialogId).then(({ data }) => {
-      dispatch(actions.setMessages(data));
-    });
+    messagesApi
+      .getAllByDialogId("/messages?_id=" + dialogId)
+      .then(({ data }) => {
+        dispatch(actions.setMessages(data));
+      });
   },
 };
 
