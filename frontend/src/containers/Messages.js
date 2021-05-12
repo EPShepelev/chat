@@ -3,14 +3,10 @@ import { connect } from "react-redux";
 import { Messages as BaseMessages } from "components";
 import { MessagesActions } from "redux/actions";
 
-const Dialogs = ({ currentDialogId, items }) => {
+const Dialogs = ({ currentDialogId, fetchMessages, items }) => {
   useEffect(() => {
-    if (!items.length) {
-      fetchDialogs();
-    } else {
-      setFilteredItems(items);
-    }
-  }, [items]);
+    fetchMessages(currentDialogId);
+  }, [currentDialogId]);
 
   return <BaseMessages items={items} />;
 };
