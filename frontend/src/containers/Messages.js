@@ -14,15 +14,7 @@ const Dialogs = ({ fetchDialogs, setCurrentDialog, items, userId }) => {
     }
   }, [items]);
 
-  return (
-    <BaseMessages
-      uerId={userId}
-      items={filtered}
-      onSearch={onChangeInput}
-      inputValue={inputValue}
-      onSelectDialog={setCurrentDialog}
-    />
-  );
+  return <BaseMessages />;
 };
 
 export default connect(({ dialogs }) => dialogs, dialogsActions)(Dialogs);
