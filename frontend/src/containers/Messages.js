@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Messages as BaseMessages } from "components";
-import { MessagesActions } from "redux/actions";
+import { messagesActions } from "redux/actions";
 
 const Dialogs = ({ currentDialogId, fetchMessages, items }) => {
   useEffect(() => {
@@ -11,4 +11,4 @@ const Dialogs = ({ currentDialogId, fetchMessages, items }) => {
   return <BaseMessages items={items} />;
 };
 
-export default connect(({ dialogs }) => dialogs, MessagesActions)(Dialogs);
+export default connect(({ dialogs }) => dialogs, messagesActions)(Dialogs);
