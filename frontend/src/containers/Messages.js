@@ -11,4 +11,10 @@ const Dialogs = ({ currentDialogId, fetchMessages, items }) => {
   return <BaseMessages items={items} />;
 };
 
-export default connect(({ dialogs }) => dialogs, messagesActions)(Dialogs);
+export default connect(
+  ({ dialogs, messages }) => ({
+    currentDialogId: dialogs.currentDialogId,
+    messages: messages.item,
+  }),
+  messagesActions
+)(Dialogs);
