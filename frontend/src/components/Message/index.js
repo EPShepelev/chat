@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Time, IconRead, Avatar } from "../";
+import { Time, Avatar } from "../";
 import "./Message.scss";
 import waveSvg from "assets/img/wave.svg";
 import playSvg from "assets/img/play.svg";
