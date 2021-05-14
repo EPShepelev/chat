@@ -5,7 +5,9 @@ import { messagesActions } from "redux/actions";
 
 class Dialogs extends React.Component {
   componentDidUpdate(prevProps) {
+    const { fetchMessages, currentDialogId } = this.props;
     if (prevProps.currentDialogId !== this.props.currentDialogId) {
+      fetchMessages(currentDialogId);
     }
   }
 
