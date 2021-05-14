@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Time, IconRead } from "../";
+import { Time, IconRead, Avatar } from "../";
 import "./Message.scss";
 import waveSvg from "assets/img/wave.svg";
 import playSvg from "assets/img/play.svg";
@@ -105,7 +105,7 @@ const Message = ({
     >
       <div className="message__content">
         <div className="message__avatar">
-          <img src={avatar} alt={`Avatar ${user.fullname}`}></img>
+          <Avatar user={user} />
         </div>
         <div className="message__info">
           {(audio || text || isTyping) && (
