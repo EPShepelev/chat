@@ -1,6 +1,7 @@
 const initialState = {
   items: [],
   currentDialogId: null,
+  isLoading: false,
 };
 
 export default (state = initialState, { type, payload }) => {

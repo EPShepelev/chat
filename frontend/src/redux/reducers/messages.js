@@ -1,5 +1,6 @@
 const initialState = {
   items: null,
+  isLoading: false,
 };
 
 export default (state = initialState, { type, payload }) => {
