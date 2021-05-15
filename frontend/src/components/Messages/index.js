@@ -3,8 +3,21 @@ import PropTypes from "prop-types";
 import { Empty, Spin, Alert } from "antd";
 import { Message } from "components";
 
-const Messages = ({ items }) => {
-  return items ? (
+const Messages = ({ isLoading, items }) => {
+  return (
+    <div className="messages">
+      isLoading && !items ?{" "}
+      <Spin tip="Loading...">
+        <Alert
+          message="Alert message title"
+          description="Further details about the context of this alert."
+          type="info"
+        />
+      </Spin>
+    </div>
+  );
+
+  items ? (
     <div>
       {items.map((item) => (
         <Message {...item} />
