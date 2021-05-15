@@ -10,6 +10,11 @@ export default (state = initialState, { type, payload }) => {
         ...state,
         items: payload,
       };
+    case "MESSAGES:SET_IS_LOADING":
+      return {
+        ...state,
+        isLoading: payload,
+      };
     default:
       return state;
   }
