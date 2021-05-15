@@ -16,7 +16,6 @@ const actions = {
       .getAllByDialogId(dialogId)
       .then(({ data }) => {
         dispatch(actions.setMessages(data));
-        dispatch(actions.setIsLoading(false));
       })
       .catch(() => {
         dispatch(actions.setIsLoading(false));
