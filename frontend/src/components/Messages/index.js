@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Empty } from "antd";
+import { Empty, Spin, Alert } from "antd";
 import { Message } from "components";
 
 const Messages = ({ items }) => {
