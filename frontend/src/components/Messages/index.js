@@ -7,7 +7,7 @@ const Messages = ({ isLoading, items }) => {
   return (
     <div className="messages">
       {isLoading && !items ? (
-        <Spin tip="Loading..."></Spin>
+        <Spin tip="Загрузка сообщений..." size="large"></Spin>
       ) : items ? (
         items.map((item) => <Message {...item} />)
       ) : (
