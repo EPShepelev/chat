@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Empty, Spin } from "antd";
 import { Message } from "components";
 import classNames from "classnames";
+import "./Messages.scss";
 
 const Messages = ({ isLoading, items }) => {
   return (
