@@ -8,9 +8,9 @@ import "./Messages.scss";
 const Messages = ({ isLoading, items }) => {
   return (
     <div className={classNames("messages", { "messages--loading": isLoading })}>
-      {isLoading && !items ? (
+      {isLoading ? (
         <Spin tip="Загрузка сообщений..." size="large"></Spin>
-      ) : items ? (
+      ) : items && !isLoading ? (
         items.map((item) => <Message {...item} />)
       ) : (
         <Empty description="Откройте диалог" />
