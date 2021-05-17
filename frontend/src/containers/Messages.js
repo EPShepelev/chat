@@ -13,9 +13,7 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
   }, [currentDialogId]);
 
   useEffect(() => {
-    if (messagesRef.current) {
-      messagesRef.current.scrollTo(0, 99999);
-    }
+    messagesRef.current.scrollTo(0, 99999);
   }, [items]);
 
   return (
