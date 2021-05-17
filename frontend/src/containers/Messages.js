@@ -16,7 +16,7 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
     if (messagesRef.current) {
       messagesRef.current.scrollTo(0, 99999);
     }
-  });
+  }, [items]);
 
   return <BaseMessages items={items} isLoading={isLoading} />;
 };

@@ -14,7 +14,7 @@ const Messages = ({ ref, isLoading, items }) => {
       {isLoading ? (
         <Spin tip="Загрузка сообщений..." size="large"></Spin>
       ) : items && !isLoading ? (
-        items.map((item) => <Message {...item} />)
+        items.map((item) => <Message key={item._id} {...item} />)
       ) : (
         <Empty description="Откройте диалог" />
       )}
