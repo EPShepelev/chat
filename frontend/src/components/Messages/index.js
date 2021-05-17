@@ -5,9 +5,12 @@ import { Message } from "components";
 import classNames from "classnames";
 import "./Messages.scss";
 
-const Messages = ({ isLoading, items }) => {
+const Messages = ({ ref, isLoading, items }) => {
   return (
-    <div className={classNames("messages", { "messages--loading": isLoading })}>
+    <div
+      ref={ref}
+      className={classNames("messages", { "messages--loading": isLoading })}
+    >
       {isLoading ? (
         <Spin tip="Загрузка сообщений..." size="large"></Spin>
       ) : items && !isLoading ? (
