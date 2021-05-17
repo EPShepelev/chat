@@ -18,7 +18,9 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
     }
   }, [items]);
 
-  return <BaseMessages items={items} isLoading={isLoading} />;
+  return (
+    <BaseMessages blockRef={messagesRef} items={items} isLoading={isLoading} />
+  );
 };
 
 export default connect(

@@ -5,10 +5,10 @@ import { Message } from "components";
 import classNames from "classnames";
 import "./Messages.scss";
 
-const Messages = ({ ref, isLoading, items }) => {
+const Messages = ({ blockRef, isLoading, items }) => {
   return (
     <div
-      ref={ref}
+      ref={blockRef}
       className={classNames("messages", { "messages--loading": isLoading })}
     >
       {isLoading ? (
