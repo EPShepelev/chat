@@ -14,7 +14,11 @@ const Messages = ({ blockRef, isLoading, items }) => {
       {isLoading ? (
         <Spin tip="Загрузка сообщений..." size="large"></Spin>
       ) : items && !isLoading ? (
-        items.map((item) => <Message key={item._id} {...item} />)
+        items.length > 0 ? (
+          items.map((item) => <Message key={item._id} {...item} />)
+        ) : (
+          <Empty description="Сообщений еще нет" />
+        )
       ) : (
         <Empty description="Откройте диалог" />
       )}
