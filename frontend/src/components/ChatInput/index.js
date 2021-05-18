@@ -24,7 +24,22 @@ const ChatInput = () => {
         placeholder="Введите сообщение"
       />
       <div className="chat-input__actions">
-        <Button type="link" shape="circle" icon={<CameraOutlined />} onClick={}/>
+        <Button type="link" shape="circle" icon={<CameraOutlined />}/>
+        
+        <UploadField
+    onFiles={files => //files object here}
+    containerProps={{
+      className: 'resume_import'
+    }}
+    uploadProps={{
+      accept: '.pdf,.doc,.docx,.txt,.rtf',
+    }}
+  >
+    <div>
+      Click here to upload! This can be an image,
+      or any component you can dream of.
+    </div>
+  </UploadField>
 
         {value ? (
           <Button type="link" shape="circle" icon={<SendOutlined />} />
