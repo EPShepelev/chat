@@ -24,7 +24,7 @@ const ChatInput = () => {
         placeholder="Введите сообщение"
       />
       <div className="chat-input__actions">
-        <Button type="link" shape="circle" icon={<CameraOutlined />} />
+        <Button type="link" shape="circle" icon={<CameraOutlined />} onClick={}/>
 
         {value ? (
           <Button type="link" shape="circle" icon={<SendOutlined />} />
