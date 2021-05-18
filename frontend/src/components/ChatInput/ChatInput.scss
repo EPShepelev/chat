@@ -21,6 +21,17 @@
     align-items: center;
     margin-left: 15px;
     cursor: pointer;
+    &-upload-btn {
+      cursor: pointer;
+      input {
+        cursor: pointer;
+      }
+      &:hover {
+        button {
+          opacity: 1;
+        }
+      }
+    }
   }
   input {
     padding: 6px 11px 8px;

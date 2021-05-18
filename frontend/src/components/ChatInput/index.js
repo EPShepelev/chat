@@ -27,7 +27,7 @@ const ChatInput = () => {
         <UploadField
           onFiles={(files) => console.log(files)}
           containerProps={{
-            className: "photo",
+            className: "chat-input__actions-upload-btn",
           }}
           uploadProps={{
             accept: ".jpg,.png,.jpeg,.gif,.bmp",
