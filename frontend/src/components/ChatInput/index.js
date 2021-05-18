@@ -8,6 +8,7 @@ import {
   SendOutlined,
 } from "@ant-design/icons";
 import { Input, Button } from "antd";
+import { UploadField } from "@navjobs/upload";
 
 import "./ChatInput.scss";
 
