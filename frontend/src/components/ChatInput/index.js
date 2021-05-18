@@ -32,8 +32,8 @@ const ChatInput = () => {
           }}
           uploadProps={{
             accept: ".jpg,.png,.jpeg,.gif,.bmp",
+            multiple: "multiple",
           }}
-          multiple
         >
           <Button type="link" shape="circle" icon={<CameraOutlined />} />
         </UploadField>
