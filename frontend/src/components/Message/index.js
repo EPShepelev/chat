@@ -7,6 +7,7 @@ import waveSvg from "assets/img/wave.svg";
 import playSvg from "assets/img/play.svg";
 import pauseSvg from "assets/img/pause.svg";
 import { convertCurrentTime } from "utils/helpers";
+import { Picker } from "emoji-mart";
 
 const MessageAudio = ({ audioSrc }) => {
   const audioElem = useRef(null);
