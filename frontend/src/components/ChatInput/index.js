@@ -9,6 +9,7 @@ import {
 } from "@ant-design/icons";
 import { Input, Button } from "antd";
 import { UploadField } from "@navjobs/upload";
+import { Picker } from "emoji-mart";
 
 import "./ChatInput.scss";
 
