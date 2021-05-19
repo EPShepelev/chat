@@ -15,13 +15,24 @@ import "./ChatInput.scss";
 
 const ChatInput = () => {
   const [value, setValue] = useState("");
+  const [emojiPickerVisible, setEmojiPickerVisible] = useState("");
+
+  const toggleEmojiPicker = () => {
+    setEmojiPickerVisible(!emojiPickerVisible);
+  };
+
   return (
     <div className="chat-input">
       <div className="chat-input__smile-btn">
         <div className="chat-input__emoji-picker">
           <Picker set="emojion" />
         </div>
-        <Button type="link" shape="circle" icon={<SmileOutlined />} />
+        <Button
+          onClick={toggleEmojiPicker}
+          type="link"
+          shape="circle"
+          icon={<SmileOutlined />}
+        />
       </div>
       <Input
         onChange={(e) => setValue(e.target.value)}
