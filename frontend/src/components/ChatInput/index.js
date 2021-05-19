@@ -18,6 +18,9 @@ const ChatInput = () => {
   return (
     <div className="chat-input">
       <div className="chat-input__smile-btn">
+        <div className="chat-input__emoji-picker">
+          <Picker set="emojion" />
+        </div>
         <Button type="link" shape="circle" icon={<SmileOutlined />} />
       </div>
       <Input
