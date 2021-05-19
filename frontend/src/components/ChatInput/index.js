@@ -15,7 +15,7 @@ import "./ChatInput.scss";
 
 const ChatInput = () => {
   const [value, setValue] = useState("");
-  const [emojiPickerVisible, setEmojiPickerVisible] = useState("");
+  const [emojiPickerVisible, setEmojiPickerVisible] = useState(false);
 
   const toggleEmojiPicker = () => {
     setEmojiPickerVisible(!emojiPickerVisible);
