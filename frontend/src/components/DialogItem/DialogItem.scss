@@ -34,8 +34,10 @@
         }
       }
     }
-    &--selected {
-      background-color: #f3f7ff;
+    &--selected,
+    &--selected:hover {
+      background-color: #4280ff;
+      color: #fff !important;
     }
     &-info {
       display: flex;
