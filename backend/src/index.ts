@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-mongoose.connect("mongodb://localhost:27017/test", {
+mongoose.connect("mongodb://localhost:27017/chat", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
