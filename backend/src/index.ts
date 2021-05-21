@@ -1,5 +1,11 @@
-const func = (a: number, b: number) => {
-  return a + b;
-};
+const express = require("express");
+const app = express();
+const port = 3000;
 
-func(1, 2);
+app.get("/", (_: any, res: any) => {
+  res.send("Hello World!");
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
