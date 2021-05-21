@@ -10,5 +10,9 @@ const UserSchema = new Schema(
     confirm_hash: String,
     last_seen: Date,
   },
-  {}
+  {
+    timestamps: true,
+  }
 );
+
+export default UserSchema;
