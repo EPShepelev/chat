@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch db.json --port 9999"
+    "start": "ts-node src/index.ts"
+    // "start": "json-server --watch db.json --port 9999"
   },
   "author": "Shepelev Evgeniy <shepelev.ep@yandex.ru>",
   "license": "ISC",
