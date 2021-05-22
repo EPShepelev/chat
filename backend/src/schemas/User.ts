@@ -4,16 +4,16 @@ const UserSchema = new Schema(
   {
     email: {
       type: "String",
-      require: true,
+      require: "Email address is required",
     },
     avatar: String,
     fullname: {
       type: "String",
-      require: true,
+      require: "Full name is required",
     },
     password: {
       type: "String",
-      require: true,
+      require: "Password is required",
     },
     confirmed: {
       type: "Boolean",
