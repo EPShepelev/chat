@@ -20,7 +20,7 @@ app.get("/create", (req: any, res: any) => {
     fullname: req.body.fullname,
     password: req.body.password,
   };
-  const user = new User({ email: "hello@email.com", fullname: "Test User" });
+  const user = new User(postData);
   user.save().then((obj: any) => {
     res.json(obj);
   });
