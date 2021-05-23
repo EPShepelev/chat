@@ -12,6 +12,7 @@ const port = 3000;
 
 mongoose.connect("mongodb://localhost:27017/chat", {
   useNewUrlParser: true,
+  useFindAndModify: false,
 });
 
 app.get("/create", (req: any, res: any) => {
