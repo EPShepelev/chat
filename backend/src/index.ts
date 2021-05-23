@@ -5,6 +5,9 @@ import bodyParser from "body-parser";
 import User from "./schemas/User";
 
 const app = express();
+
+app.use(bodyParser.json());
+
 const port = 3000;
 
 mongoose.connect("mongodb://localhost:27017/chat", {
