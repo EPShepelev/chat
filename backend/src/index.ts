@@ -15,6 +15,11 @@ mongoose.connect("mongodb://localhost:27017/chat", {
 });
 
 app.get("/create", (req: any, res: any) => {
+  const postData = {
+    email: req.body.email,
+    fullname: req.body.fullname,
+    password: req.body.password,
+  };
   const user = new User({ email: "hello@email.com", fullname: "Test User" });
   user.save().then((obj: any) => {
     res.json(obj);
