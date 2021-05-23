@@ -7,6 +7,7 @@ const UserSchema = new Schema(
       type: "String",
       require: "Email address is required",
       validate: [isEmail, "Invalid email"],
+      unique: true,
     },
     avatar: String,
     fullname: {
