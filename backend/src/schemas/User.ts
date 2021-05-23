@@ -6,6 +6,7 @@ const UserSchema = new Schema(
     email: {
       type: "String",
       require: "Email address is required",
+      validate: [isEmail, "Invalid email"],
     },
     avatar: String,
     fullname: {
