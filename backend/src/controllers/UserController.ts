@@ -1,3 +1,5 @@
+import express from "express";
+
 class UserController {
-  index(req: Request, res: Response) {}
+  index(req: express.Request, res: express.Response) {}
 }

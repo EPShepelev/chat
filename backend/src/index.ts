@@ -15,7 +15,7 @@ mongoose.connect("mongodb://localhost:27017/chat", {
   useCreateIndex: true,
 });
 
-app.get("/create", (req: Request, res: Response) => {
+app.get("/create", (req: express.Request, res: express.Response) => {
   const postData = {
     email: req.body.email,
     fullname: req.body.fullname,
