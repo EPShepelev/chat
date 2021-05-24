@@ -22,9 +22,14 @@ app.get("/create", (req: any, res: any) => {
     password: req.body.password,
   };
   const user = new User(postData);
-  user.save().then((obj: any) => {
-    res.json(obj);
-  });
+  user
+    .save()
+    .then((obj: any) => {
+      res.json(obj);
+    })
+    .catch((reason) => {
+      res.json({ reason });
+    });
 });
 
 app.listen(port, () => {
