@@ -9,6 +9,8 @@ const app = express();
 
 app.use(bodyParser.json());
 
+const User = new UserController();
+
 const port = 3000;
 
 mongoose.connect("mongodb://localhost:27017/chat", {
@@ -16,7 +18,9 @@ mongoose.connect("mongodb://localhost:27017/chat", {
   useCreateIndex: true,
 });
 
-app.get("/create", (req: express.Request, res: express.Response) => {
+app.get("/:id", User.index);
+
+app.post("/create", (req: express.Request, res: express.Response) => {
   const postData = {
     email: req.body.email,
     fullname: req.body.fullname,
