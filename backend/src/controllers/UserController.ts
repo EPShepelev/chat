@@ -5,15 +5,14 @@ import { UserModel } from "../schemas";
 class UserController {
   index(req: express.Request, res: express.Response) {
     const id: string = req.params.id;
-    UserModel.findById(id)
-      .then((user) => {
-        res.json(user);
-      })
-      .then(() => {
-        res.status(404).json({
+    UserModel.findById(id, (err, user) => {
+      if (err) {
+        return res.status(404).json({
           message: "Not found",
         });
-      });
+      }
+      res.json(user);
+    });
   }
 
   create(req: express.Request, res: express.Response) {
