@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import express from "express";
 import bodyParser from "body-parser";
 
-import User from "./schemas/User";
+import { UserModel } from "./schemas";
 
 const app = express();
 
@@ -21,7 +21,7 @@ app.get("/create", (req: express.Request, res: express.Response) => {
     fullname: req.body.fullname,
     password: req.body.password,
   };
-  const user = new User(postData);
+  const user = new UserModel(postData);
   user
     .save()
     .then((obj: any) => {
