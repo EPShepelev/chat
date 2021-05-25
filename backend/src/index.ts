@@ -18,8 +18,8 @@ mongoose.connect("mongodb://localhost:27017/chat", {
   useCreateIndex: true,
 });
 
-app.get("/:id", User.index);
-app.get("/:registration", User.create);
+app.get("/user/:id", User.index);
+app.get("/user/registration", User.create);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
