@@ -38,17 +38,14 @@ class UserController {
     const id: string = req.params.id;
     UserModel.findOneAndRemove({ _id: id })
       .then((user) => {
-        if (!user) {
-          return res.status(404).json({
-            message: "User not found",
-          });
-        }
         res.json({
           message: "User deleted",
         });
       })
       .catch((err) => {
-        return res.status(404).json(err);
+        res.json({
+          message: "User deleted",
+        });
       });
   }
 }
