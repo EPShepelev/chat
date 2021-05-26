@@ -33,6 +33,18 @@ class UserController {
         res.json({ reason });
       });
   }
+
+  delete(req: express.Request, res: express.Response) {
+    const id: string = req.params.id;
+    UserModel.findByIdAndRemove(id, (err, user) => {
+      if (err) {
+        return res.status(404).json({
+          message: "Not found",
+        });
+      }
+      res.json({ message: "User removed" });
+    });
+  }
 }
 
 export default UserController;
