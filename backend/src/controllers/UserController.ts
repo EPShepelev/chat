@@ -8,7 +8,7 @@ class UserController {
     UserModel.findById(id, (err, user) => {
       if (err) {
         return res.status(404).json({
-          message: "Not found",
+          message: "User not found",
         });
       }
       res.json(user);
