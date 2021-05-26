@@ -20,6 +20,7 @@ mongoose.connect("mongodb://localhost:27017/chat", {
 
 app.get("/user/:id", User.index);
 app.get("/user/registration", User.create);
+app.delete("/user/:id", User.delete);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
