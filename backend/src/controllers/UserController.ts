@@ -42,7 +42,9 @@ class UserController {
           message: "Not found",
         });
       }
-      res.json({ message: "User removed" });
+      res.json({
+        message: `User ${user.fullname} deleted`,
+      });
     });
   }
 }
