@@ -15,6 +15,8 @@ class UserController {
     });
   }
 
+  getMe() {}
+
   create(req: express.Request, res: express.Response) {
     const postData = {
       email: req.body.email,
