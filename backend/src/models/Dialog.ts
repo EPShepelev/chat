@@ -2,13 +2,18 @@ import mongoose, { Schema, Document } from "mongoose";
 import { isEmail } from "validator";
 
 export interface IDialog extends Document {
-  email: string;
-  fullname: string;
-  password: string;
-  confirmed: boolean;
-  avatar: string;
-  confirm_hash: string;
-  last_seen: Date;
+  author: {
+    type: Schema.Types.ObjectId;
+    ref: String;
+  };
+  partner: {
+    type: Schema.Types.ObjectId;
+    ref: String;
+  };
+  lastMessage: {
+    type: Schema.Types.ObjectId;
+    ref: String;
+  };
 }
 
 const DialogSchema = new Schema(
