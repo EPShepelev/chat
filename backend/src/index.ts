@@ -19,7 +19,7 @@ mongoose.connect("mongodb://localhost:27017/chat", {
   useFindAndModify: true,
 });
 
-app.get("/user/:id", User.index);
+app.get("/user/:id", User.show);
 app.post("/user/registration", User.create);
 app.delete("/user/:id", User.delete);
 

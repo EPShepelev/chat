@@ -3,7 +3,7 @@ import express from "express";
 import { UserModel } from "../models";
 
 class UserController {
-  index(req: express.Request, res: express.Response) {
+  show(req: express.Request, res: express.Response) {
     const id: string = req.params.id;
     UserModel.findById(id, (err, user) => {
       if (err) {
