@@ -5,10 +5,12 @@ export interface IDialog extends Document {
   author: {
     type: Schema.Types.ObjectId;
     ref: String;
+    require: true;
   };
   partner: {
     type: Schema.Types.ObjectId;
     ref: String;
+    require: true;
   };
   lastMessage: {
     type: Schema.Types.ObjectId;

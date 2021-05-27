@@ -15,22 +15,21 @@ class DialogController {
     });
   }
 
-  // create(req: express.Request, res: express.Response) {
-  //   const postData = {
-  //     email: req.body.email,
-  //     fullname: req.body.fullname,
-  //     password: req.body.password,
-  //   };
-  //   const user = new DialogModel(postData);
-  //   user
-  //     .save()
-  //     .then((obj: any) => {
-  //       res.json(obj);
-  //     })
-  //     .catch((reason) => {
-  //       res.json({ reason });
-  //     });
-  // }
+  create(req: express.Request, res: express.Response) {
+    const postData = {
+      author: req.body.author,
+      partner: req.body.partner,
+    };
+    const dialog = new DialogModel(postData);
+    dialog
+      .save()
+      .then((obj: any) => {
+        res.json(obj);
+      })
+      .catch((reason) => {
+        res.json({ reason });
+      });
+  }
 
   // delete(req: express.Request, res: express.Response) {
   //   const id: string = req.params.id;
