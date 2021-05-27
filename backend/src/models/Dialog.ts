@@ -11,13 +11,16 @@ export interface IDialog extends Document {
   last_seen: Date;
 }
 
-const DialogSchema = new Schema({
-  author: String,
-  partner: String,
-  text: String,
-  dialog: String,
-  unread: Boolean,
-});
+const DialogSchema = new Schema(
+  {
+    author: { type: Schema.Types.ObjectId, ref: "User" },
+    partner: { type: Schema.Types.ObjectId, ref: "User" },
+    lastMessage: { type: Schema.Types.ObjectId, ref: "Message" },
+  },
+  {
+    timestamps: true,
+  }
+);
 
 const DialogModel = mongoose.model<IDialog>("Dialog", DialogSchema);
 
