@@ -1,7 +1,7 @@
 import mongoose, { Schema, Document } from "mongoose";
 import { isEmail } from "validator";
 
-export interface IMessage extends Document {
+export interface IDialog extends Document {
   email: string;
   fullname: string;
   password: string;
@@ -11,7 +11,7 @@ export interface IMessage extends Document {
   last_seen: Date;
 }
 
-const MessageSchema = new Schema({
+const DialogSchema = new Schema({
   author: String,
   partner: String,
   text: String,
@@ -19,6 +19,6 @@ const MessageSchema = new Schema({
   unread: Boolean,
 });
 
-const MessageModel = mongoose.model<IMessage>("Message", MessageSchema);
+const DialogModel = mongoose.model<IDialog>("Dialog", DialogSchema);
 
-export default MessageModel;
+export default DialogModel;
