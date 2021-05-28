@@ -7,7 +7,7 @@ class DialogController {
     const authorId: string = req.params.id;
 
     DialogModel.find({ author: authorId })
-      .populate("dialog")
+      .populate("author")
       .exec(function (err, dialogs) {
         if (err) {
           return res.status(404).json({
