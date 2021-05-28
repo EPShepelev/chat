@@ -23,7 +23,7 @@ app.get("/user/:id", User.show);
 app.post("/user/registration", User.create);
 app.delete("/user/:id", User.delete);
 
-app.get("/dialogs", Dialog.index);
+app.get("/dialogs/:id", Dialog.index);
 app.post("/dialogs", Dialog.create);
 
 app.listen(port, () => {
