@@ -12,7 +12,7 @@ export interface IDialog extends Document {
     ref: String;
     require: true;
   };
-  lastMessage: {
+  messages: {
     type: Schema.Types.ObjectId;
     ref: String;
   };
