@@ -2,6 +2,7 @@ import mongoose, { Schema, Document } from "mongoose";
 import { isEmail } from "validator";
 
 export interface IDialog extends Document {
+  text: String;
   author: {
     type: Schema.Types.ObjectId;
     ref: String;
