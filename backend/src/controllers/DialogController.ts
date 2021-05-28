@@ -1,6 +1,6 @@
 import express from "express";
 
-import { DialogModel } from "../models";
+import { DialogModel, UserModel } from "../models";
 
 class DialogController {
   index(req: express.Request, res: express.Response) {
@@ -21,6 +21,19 @@ class DialogController {
       partner: req.body.partner,
     };
     const dialog = new DialogModel(postData);
+    dialog.save(function(err){
+      if(err) return res.json({ err });
+
+      const story1 = new Story({
+        title:
+        author:
+      });
+      stort1.save(function(err){
+        if(err)return handleError(err);
+      });
+    });
+
+
     dialog
       .save()
       .then((obj: any) => {
