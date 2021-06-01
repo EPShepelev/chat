@@ -2,13 +2,16 @@ import mongoose, { Schema, Document } from "mongoose";
 import { isEmail } from "validator";
 
 export interface IDialog extends Document {
-  text: String;
-  unread: Boolean;
+  text: {
+    type: String;
+    require: true;
+  };
   dialog: {
     type: Schema.Types.ObjectId;
     ref: String;
     require: true;
   };
+  unread: Boolean;
 }
 
 const DialogSchema = new Schema(
