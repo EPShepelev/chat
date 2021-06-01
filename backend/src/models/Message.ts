@@ -4,12 +4,7 @@ import { isEmail } from "validator";
 export interface IDialog extends Document {
   text: String;
   unread: Boolean;
-  author: {
-    type: Schema.Types.ObjectId;
-    ref: String;
-    require: true;
-  };
-  partner: {
+  dialog: {
     type: Schema.Types.ObjectId;
     ref: String;
     require: true;
