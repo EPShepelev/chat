@@ -4,21 +4,21 @@ import { isEmail } from "validator";
 export interface IDialog extends Document {
   text: {
     type: String;
-    require: true;
+    require: boolean;
   };
   dialog: {
     type: Schema.Types.ObjectId;
     ref: String;
     require: true;
   };
-  unread: Boolean;
+  unread: boolean;
 }
 
 const DialogSchema = new Schema(
   {
-    author: { type: Schema.Types.ObjectId, ref: "User" },
-    partner: { type: Schema.Types.ObjectId, ref: "User" },
-    lastMessage: { type: Schema.Types.ObjectId, ref: "Message" },
+    text: { type: String, require: Boolean },
+    unread: { type: Boolean },
+    lastMessage: { type: Schema.Types.ObjectId, ref: "Dialog" },
   },
   {
     timestamps: true,
