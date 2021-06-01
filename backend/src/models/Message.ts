@@ -18,7 +18,7 @@ const DialogSchema = new Schema(
   {
     text: { type: String, require: Boolean },
     lastMessage: { type: Schema.Types.ObjectId, ref: "Dialog" },
-    nread: Boolean,
+    unread: Boolean,
   },
   {
     timestamps: true,
