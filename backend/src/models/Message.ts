@@ -17,8 +17,8 @@ export interface IDialog extends Document {
 const DialogSchema = new Schema(
   {
     text: { type: String, require: Boolean },
-    unread: { type: Boolean },
     lastMessage: { type: Schema.Types.ObjectId, ref: "Dialog" },
+    nread: Boolean,
   },
   {
     timestamps: true,
