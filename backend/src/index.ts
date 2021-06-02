@@ -2,7 +2,11 @@ import mongoose from "mongoose";
 import express from "express";
 import bodyParser from "body-parser";
 
-import { UserController, DialogController } from "./controllers";
+import {
+  UserController,
+  DialogController,
+  MessageController,
+} from "./controllers";
 
 const app = express();
 
@@ -10,6 +14,7 @@ app.use(bodyParser.json());
 
 const User = new UserController();
 const Dialog = new DialogController();
+const Messages = new MessageController();
 
 const port = 3000;
 
@@ -26,6 +31,8 @@ app.delete("/user/:id", User.delete);
 app.get("/dialogs/:id", Dialog.index);
 app.post("/dialogs", Dialog.create);
 app.delete("/dialogs/:id", Dialog.delete);
+
+app.get("/messages/dialog/:id", Messages.index);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
