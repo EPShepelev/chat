@@ -25,7 +25,7 @@ app.delete("/user/:id", User.delete);
 
 app.get("/dialogs/:id", Dialog.index);
 app.post("/dialogs", Dialog.create);
-app.delete("/dialogs", Dialog.delete);
+app.delete("/dialogs/:id", Dialog.delete);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
