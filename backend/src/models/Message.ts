@@ -12,7 +12,8 @@ export interface IMessage extends Document {
     require: true;
   };
   unread: {
-    type: Boolean;
+    type: boolean;
+    default: boolean;
   };
 }
 
