@@ -20,8 +20,11 @@ export interface IMessage extends Document {
 const MessageSchema = new Schema(
   {
     text: { type: String, require: Boolean },
-    lastMessage: { type: Schema.Types.ObjectId, ref: "Dialog" },
-    unread: Boolean,
+    dialog: { type: Schema.Types.ObjectId, ref: "Dialog", require: true },
+    unread: {
+      type: boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,
