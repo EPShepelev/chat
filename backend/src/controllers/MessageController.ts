@@ -4,7 +4,7 @@ import { MessageModel } from "../models";
 
 class MessageController {
   index(req: express.Request, res: express.Response) {
-    const dialogId: string = req.params.dialog;
+    const dialogId: string = req.query.dialog;
     MessageModel.find({ dialog: dialogId })
       .populate(["dialog"])
       .exec(function (err, messages) {
