@@ -17,21 +17,21 @@ class MessageController {
       });
   }
 
-  // create(req: express.Request, res: express.Response) {
-  //   const postData = {
-  //     author: req.body.author,
-  //     partner: req.body.partner,
-  //   };
-  //   const dialog = new DialogModel(postData);
-  //   dialog
-  //     .save()
-  //     .then((obj: any) => {
-  //       res.json(obj);
-  //     })
-  //     .catch((reason) => {
-  //       res.json({ reason });
-  //     });
-  // }
+  create(req: express.Request, res: express.Response) {
+    const postData = {
+      text: req.body.text,
+      dialogId: req.body.dialogId,
+    };
+    const dialog = new DialogModel(postData);
+    dialog
+      .save()
+      .then((obj: any) => {
+        res.json(obj);
+      })
+      .catch((reason) => {
+        res.json({ reason });
+      });
+  }
 
   // delete(req: express.Request, res: express.Response) {
   //   const id: string = req.params.id;
@@ -51,4 +51,4 @@ class MessageController {
   // }
 }
 
-export default DialogController;
+export default MessageController;

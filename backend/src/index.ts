@@ -33,6 +33,7 @@ app.post("/dialogs", Dialog.create);
 app.delete("/dialogs/:id", Dialog.delete);
 
 app.get("/messages", Messages.index);
+app.post("/messages", Messages.create);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
