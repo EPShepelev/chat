@@ -22,8 +22,8 @@ class MessageController {
       text: req.body.text,
       dialogId: req.body.dialogId,
     };
-    const dialog = new DialogModel(postData);
-    dialog
+    const message = new MessageModel(postData);
+    message
       .save()
       .then((obj: any) => {
         res.json(obj);
