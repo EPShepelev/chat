@@ -11,7 +11,9 @@ export interface IMessage extends Document {
     ref: String;
     require: true;
   };
-  unread: boolean;
+  unread: {
+    type: Boolean;
+  };
 }
 
 const MessageSchema = new Schema(
