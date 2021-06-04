@@ -1,6 +1,6 @@
 import express from "express";
 
-import { DialogModel } from "../models";
+import { DialogModel, MessageModel } from "../models";
 
 class DialogController {
   index(req: express.Request, res: express.Response) {
@@ -28,6 +28,7 @@ class DialogController {
       .save()
       .then((obj: any) => {
         res.json(obj);
+        const message = new MessageModel({});
       })
       .catch((reason) => {
         res.json({ reason });
