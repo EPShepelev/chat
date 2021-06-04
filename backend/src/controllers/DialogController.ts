@@ -27,8 +27,16 @@ class DialogController {
     dialog
       .save()
       .then((obj: any) => {
-        res.json(obj);
-        const message = new MessageModel({});
+        const message = new MessageModel({
+          text: req.body.text,
+          dialog: obj._id,
+          user: req.body.author,
+        });
+
+        message.save().then((obj: any) => {
+          res.json(obj);
+        }).catch((reason) => {
+          res.json({ reason });
       })
       .catch((reason) => {
         res.json({ reason });
