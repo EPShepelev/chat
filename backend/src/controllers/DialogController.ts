@@ -26,15 +26,17 @@ class DialogController {
     const dialog = new DialogModel(postData);
     dialog
       .save()
-      .then((obj: any) => {
+      .then((dialogObj: any) => {
         const message = new MessageModel({
           text: req.body.text,
-          dialog: obj._id,
+          dialog: dialogObj._id,
           user: req.body.author,
         });
 
-        message.save().then((obj: any) => {
-          res.json(obj);
+        message.save().then((messageObj: any) => {
+          res.json({
+            dialog: messageObj._id,
+          });
         }).catch((reason) => {
           res.json({ reason });
       })
