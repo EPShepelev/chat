@@ -35,7 +35,8 @@ class DialogController {
 
         message.save().then((messageObj: any) => {
           res.json({
-            dialog: messageObj._id,
+            dialog: dialogObj,
+            message: messageObj
           });
         }).catch((reason) => {
           res.json({ reason });
