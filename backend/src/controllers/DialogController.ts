@@ -33,11 +33,8 @@ class DialogController {
           user: req.body.author,
         });
 
-        message.save().then((messageObj: any) => {
-          res.json({
-            dialog: dialogObj,
-            message: messageObj
-          });
+        message.save().then(() => {
+          res.json(dialogObj);
         }).catch((reason) => {
           res.json({ reason });
       })
