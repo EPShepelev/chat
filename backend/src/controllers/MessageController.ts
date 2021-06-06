@@ -36,17 +36,17 @@ class MessageController {
 
   delete(req: express.Request, res: express.Response) {
     const id: string = req.params.id;
-    DialogModel.findOneAndRemove({ _id: id })
-      .then((dialog) => {
-        if (dialog) {
+    MessageModel.findOneAndRemove({ _id: id })
+      .then((message) => {
+        if (message) {
           res.json({
-            message: "Dialog deleted",
+            message: "Message deleted",
           });
         }
       })
       .catch(() => {
         res.json({
-          message: "Dialog not found",
+          message: "Message not found",
         });
       });
   }
