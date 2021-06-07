@@ -8,6 +8,8 @@ import {
   MessageController,
 } from "./controllers";
 
+import { updateLastSeen } from "./middlewares";
+
 const app = express();
 
 app.use(bodyParser.json());
