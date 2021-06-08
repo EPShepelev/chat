@@ -6,10 +6,17 @@ export default (
   __: express.Response,
   next: express.NextFunction
 ) => {
-  UserModel.updateOne(
-    { _id: req.user._id },
-    { set: { last_seen: new Date() } },
-    () => {}
+  UserModel.findOneAndUpdate(
+    {
+      _id: req.user._id,
+    },
+    { fullname: "qwe", last_seen: new Date() },
+    { new: true }
   );
+  // UserModel.updateOne(
+  //   { _id: req.user._id },
+  //   { set: { last_seen: new Date() } },
+  //   () => {}
+  // );
   next();
 };
