@@ -5,6 +5,10 @@ export default (
   __: express.Response,
   next: express.NextFunction
 ) => {
-  UserModel.updateOne({ _id: req.user._id }, { last_seen: new Date() });
+  UserModel.updateOne(
+    { _id: req.user._id },
+    { set: { last_seen: new Date() } },
+    () => {}
+  );
   next();
 };
