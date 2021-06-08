@@ -1,6 +1,10 @@
 import { UserModel } from "../models";
 
-export default (req: express.Request, res: express.Response, next) => {
-  UserModel.updateOne({ _id: req.user._id, last_seen: new Date() });
+export default (
+  _: express.Request,
+  __: express.Response,
+  next: express.NextFunction
+) => {
+  UserModel.updateOne({ _id: req.user._id }, { last_seen: new Date() });
   next();
 };
