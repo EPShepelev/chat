@@ -11,12 +11,8 @@ export default (
       _id: req.user._id,
     },
     { fullname: "qwe", last_seen: new Date() },
-    { new: true }
+    { new: true },
+    () => {}
   );
-  // UserModel.updateOne(
-  //   { _id: req.user._id },
-  //   { set: { last_seen: new Date() } },
-  //   () => {}
-  // );
   next();
 };
