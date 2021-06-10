@@ -1,3 +1,3 @@
 export default {
-  JWT_TOKEN: "bEUCHpOQyKrDqbqKjzX7",
+  JWT_KEY: "bEUCHpOQyKrDqbqKjzX7",
 };
