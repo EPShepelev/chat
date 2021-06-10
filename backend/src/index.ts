@@ -12,6 +12,7 @@ import {
 import { updateLastSeen } from "./middlewares";
 
 const app = express();
+dotenv.config();
 
 app.use(bodyParser.json());
 app.use(updateLastSeen);
@@ -40,6 +41,6 @@ app.get("/messages", Messages.index);
 app.post("/messages", Messages.create);
 app.delete("/messages/:id", Messages.delete);
 
-app.listen(port, () => {
+app.listen(process.env.PORT, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
