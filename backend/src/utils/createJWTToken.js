@@ -24,7 +24,7 @@ export default (details) => {
     },
     process.env.JWT_SECRET,
     {
-      expiresIn: details.maxAge,
+      expiresIn: process.env.JWT_MAX_AGE,
       algorithm: "HS256",
     }
   );
