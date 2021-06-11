@@ -17,4 +17,17 @@ export default (details) => {
     },
     {}
   );
+
+  let token = jwt.sign(
+    {
+      data: details.sessionData,
+    },
+    process.env.JWT_SECRET,
+    {
+      expiresIn: details.maxAge,
+      algorithm: "HS256",
+    }
+  );
+
+  return token;
 };
