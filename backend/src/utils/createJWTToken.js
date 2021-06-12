@@ -5,16 +5,7 @@ export default (user: IUser) => {
   
   }
 
-  // details.sessionData = _.reduce(
-  //   details.sessionData || {},
-  //   (memo, val, key) => {
-  //     if (typeof val !== "function" && key !== "password") {
-  //       memo[key] = val;
-  //     }
-  //     return memo;
-  //   },
-  //   {}
-  // );
+
 
   let token = jwt.sign(
     {
