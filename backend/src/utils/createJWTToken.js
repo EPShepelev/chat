@@ -5,7 +5,9 @@ import { IUser } from "../models/User";
 export default (user: IUser) => {
   let token = jwt.sign(
     {
-      data: user,
+      data: reduce(user, (initial, value, key) => {
+        return initial;
+      }),
     },
     process.env.JWT_SECRET,
     {
