@@ -9,7 +9,7 @@ export default (user: IUser) => {
 
   let token = jwt.sign(
     {
-      data: details.sessionData,
+      data: user.reduce((initial, curVal, key)=>{},user),
     },
     process.env.JWT_SECRET,
     {
