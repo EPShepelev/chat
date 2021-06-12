@@ -2,14 +2,14 @@ import jwt from "jsonwebtoken";
 import {IUser} from "../models/User";
 
 export default (user: IUser) => {
-  
-  }
+  const keys = 
+ const userData = 
 
 
 
   let token = jwt.sign(
     {
-      data: user.reduce((initial, curVal, key)=>{},user),
+      data: user,
     },
     process.env.JWT_SECRET,
     {
