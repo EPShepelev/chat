@@ -1,6 +1,12 @@
 import express from "express";
 import { verifyJWTToken } from "../utils";
 
+declare namespace Express {
+  export interface Request {
+    tenant?: string;
+  }
+}
+
 export default (
   req: express.Request,
   _: express.Response,
@@ -14,6 +20,6 @@ export default (
       next();
     })
     .catch(() => {
-      res.status(400).json({ message: "Invalid auth token provided" });
+      res.status(403).json({ message: "Invalid auth token provided" });
     });
 };
