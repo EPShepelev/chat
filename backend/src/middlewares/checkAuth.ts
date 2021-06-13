@@ -1,9 +1,10 @@
 import express from "express";
 import { verifyJWTToken } from "../utils";
+import { IUser } from "../models/User";
 
 declare namespace Express {
   export interface Request {
-    tenant?: string;
+    user?: IUser;
   }
 }
 
