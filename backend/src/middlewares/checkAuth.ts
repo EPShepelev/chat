@@ -5,6 +5,6 @@ export default (
   _: express.Response,
   next: express.NextFunction
 ) => {
-  const token = req.header.token;
+  const token = req.headers.token;
   next();
 };
