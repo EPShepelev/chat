@@ -7,5 +7,13 @@ export default (
   next: express.NextFunction
 ) => {
   const token = req.headers.token;
-  next();
+
+  verifyJWTToken(token)
+    .then((user) => {
+      req.user = user;
+      next();
+    })
+    .catch(() => {
+      res.status(400).json({ message: "Invalid auth token provided" });
+    });
 };
