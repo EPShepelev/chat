@@ -9,13 +9,14 @@ import {
   MessageController,
 } from "./controllers";
 
-import { updateLastSeen } from "./middlewares";
+import { updateLastSeen, checkAuth } from "./middlewares";
 
 const app = express();
 dotenv.config();
 
 app.use(bodyParser.json());
 app.use(updateLastSeen);
+app.use(checkAuth);
 
 const User = new UserController();
 const Dialog = new DialogController();
