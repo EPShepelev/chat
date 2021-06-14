@@ -7,7 +7,7 @@ export default (user: IUser) => {
     {
       data: reduce(
         user,
-        (result, value, key) => {
+        (result: any, value, key) => {
           if (key !== "password") {
             result[key] = value;
           }
@@ -16,7 +16,7 @@ export default (user: IUser) => {
         {}
       ),
     },
-    process.env.JWT_SECRET,
+    process.env.JWT_SECRET || "",
     {
       expiresIn: process.env.JWT_MAX_AGE,
       algorithm: "HS256",
