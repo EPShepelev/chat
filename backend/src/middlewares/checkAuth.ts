@@ -2,12 +2,6 @@ import express from "express";
 import { verifyJWTToken } from "../utils";
 import { IUser } from "../models/User";
 
-declare namespace Express {
-  export interface Request {
-    user?: IUser;
-  }
-}
-
 export default (
   req: express.Request,
   _: express.Response,
