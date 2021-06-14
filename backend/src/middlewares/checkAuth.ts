@@ -2,8 +2,15 @@ import express from "express";
 import { verifyJWTToken } from "../utils";
 export { IUser } from "../models/User";
 
+interface RequestCustom extends express.Request {
+  user?: IUser;
+  headers: {
+    token?: string;
+  };
+}
+
 export default (
-  req: express.Request,
+  req: express.RequestCustom,
   res: express.Response,
   next: express.NextFunction
 ) => {
