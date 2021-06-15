@@ -1,6 +1,6 @@
 import express from "express";
 import { verifyJWTToken } from "../utils";
-export { IUser } from "../models/User";
+import { IUser } from "../models/User";
 
 interface RequestCustom extends express.Request {
   user?: IUser;
