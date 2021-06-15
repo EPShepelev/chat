@@ -2,12 +2,12 @@ import express from "express";
 import { verifyJWTToken } from "../utils";
 import { IUser } from "../models/User";
 
-interface RequestCustom extends express.Request {
-  user?: IUser;
-  headers: {
-    token?: string;
-  };
-}
+// interface RequestCustom extends express.Request {
+//   user?: IUser;
+//   headers: {
+//     token?: string;
+//   };
+// }
 
 export default (
   req: express.RequestCustom,
