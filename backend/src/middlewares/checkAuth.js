@@ -9,11 +9,7 @@ import { IUser } from "../models/User";
 //   };
 // }
 
-export default (
-  req: express.RequestCustom,
-  res: express.Response,
-  next: express.NextFunction
-) => {
+export default (req, res, next) => {
   const token = req.headers.token;
 
   verifyJWTToken(token)
