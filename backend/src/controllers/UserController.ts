@@ -54,7 +54,7 @@ class UserController {
   login(req: express.Request, res: express.Response) {
     const postData = {
       email: req.body.login,
-      password: req.body.passowrd,
+      password: req.body.password,
     };
     const token = createJWTToken(postData);
   }
