@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import { reduce } from "lodash";
-import { IUser } from "../models/User";
+
+interface ILoginData
 
 export default (user: any) => {
   let token = jwt.sign(
