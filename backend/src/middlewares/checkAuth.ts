@@ -2,7 +2,7 @@ import express from "express";
 import { verifyJWTToken } from "../utils";
 import { IUser } from "../models/User";
 
-export default (req, res, next) => {
+export default (req: any, res: any, next: any) => {
   const token = req.headers.token;
 
   verifyJWTToken(token)
