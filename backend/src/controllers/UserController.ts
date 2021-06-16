@@ -1,5 +1,5 @@
 import express from "express";
-
+import { createJWTToken } from "../utils/createJWTToken";
 import { UserModel } from "../models";
 
 class UserController {
@@ -49,6 +49,13 @@ class UserController {
           message: "User not found",
         });
       });
+  }
+
+  login(req: express.Request, res: express.Response) {
+    const postData = {
+      login: req.body.login,
+      password: req.body.passowrd,
+    };
   }
 }
 

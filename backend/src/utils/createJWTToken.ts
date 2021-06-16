@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 import { reduce } from "lodash";
 import { IUser } from "../models/User";
 
-export default (user: IUser) => {
+export default (user: any) => {
   let token = jwt.sign(
     {
       data: reduce(
