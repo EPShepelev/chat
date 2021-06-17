@@ -5,6 +5,9 @@ import { IUser } from "../models/User";
 export default (req: any, res: any, next: any) => {
   const token = req.headers.token;
 
+  if (req.path !== "user/login") {
+  }
+
   verifyJWTToken(token)
     .then((user) => {
       req.user = user;
