@@ -1,6 +1,7 @@
 import express from "express";
 import { createJWTToken } from "../utils/createJWTToken";
 import { UserModel } from "../models";
+import { IUser } from "../models/User";
 
 class UserController {
   show(req: express.Request, res: express.Response) {
@@ -57,7 +58,7 @@ class UserController {
       password: req.body.password,
     };
 
-    UserModel.findOne({email: postData.email}, (err, user: any)=>{
+    UserModel.findOne({email: postData.email}, (err, user: IUser)=>{
       if(err){
         return res.status(404).json({message: "User not found"});
       }
