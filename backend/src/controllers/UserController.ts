@@ -58,7 +58,10 @@ class UserController {
     };
 
     UserModel.findOne({email: postData.email}, (err, user)=>{
-      
+      if(err){
+        return res.status(404).json({message: "User not found"});
+      }
+      res.json(user);
     })
     const token = createJWTToken(postData);
 
