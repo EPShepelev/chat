@@ -68,6 +68,11 @@ class UserController {
           status: "success",
           token,
         });
+      } else {
+        res.json({
+          status: "error",
+          message: "invalid password or email",
+        });
       }
     });
   }
