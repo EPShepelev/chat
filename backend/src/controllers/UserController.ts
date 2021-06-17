@@ -58,20 +58,18 @@ class UserController {
       password: req.body.password,
     };
 
-    UserModel.findOne({email: postData.email}, (err, user: IUser)=>{
-      if(err){
-        return res.status(404).json({message: "User not found"});
+    UserModel.findOne({ email: postData.email }, (err, user: IUser) => {
+      if (err) {
+        return res.status(404).json({ message: "User not found" });
       }
-      if(user.password === postData.password){
+      if (user.password === postData.password) {
         const token = createJWTToken(user);
+        res.json({
+          status: "success",
+          token,
+        });
       }
-    })
-    
-
-    res.json({
-      status: "success"
-      token
-    })
+    });
   }
 }
 
