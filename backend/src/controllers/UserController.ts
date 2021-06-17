@@ -56,6 +56,10 @@ class UserController {
       email: req.body.login,
       password: req.body.password,
     };
+
+    UserModel.findOne({email: postData.email}, (err, user)=>{
+      
+    })
     const token = createJWTToken(postData);
 
     res.json({
