@@ -57,6 +57,11 @@ class UserController {
       password: req.body.password,
     };
     const token = createJWTToken(postData);
+
+    res.json({
+      status: "success"
+      token
+    })
   }
 }
 
