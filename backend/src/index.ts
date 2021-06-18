@@ -10,6 +10,7 @@ import {
 } from "./controllers";
 
 import { updateLastSeen, checkAuth } from "./middlewares";
+import { loginValidation } from "./utils/validations";
 
 const app = express();
 dotenv.config();
