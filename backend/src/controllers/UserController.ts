@@ -54,7 +54,7 @@ class UserController {
 
   login(req: express.Request, res: express.Response) {
     const postData = {
-      email: req.body.login,
+      email: req.body.email,
       password: req.body.password,
     };
 
