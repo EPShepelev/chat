@@ -5,7 +5,7 @@ import { IUser } from "../models/User";
 export default (req: any, res: any, next: any) => {
   const token = req.headers.token;
 
-  if (req.path !== "user/login") {
+  if (req.path === "user/login") {
     return next();
   }
 
