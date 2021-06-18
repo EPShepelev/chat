@@ -6,6 +6,7 @@ export default (req: any, res: any, next: any) => {
   const token = req.headers.token;
 
   if (req.path !== "user/login") {
+    return next();
   }
 
   verifyJWTToken(token)
