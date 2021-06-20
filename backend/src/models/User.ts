@@ -1,5 +1,4 @@
 import mongoose, { Schema, Document } from "mongoose";
-import bcrypt from "bcrypt";
 import { isEmail } from "validator";
 
 export interface IUser extends Document {

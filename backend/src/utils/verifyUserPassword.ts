@@ -1,11 +1,10 @@
 import bcrypt from "bcrypt";
 
-export default (password: string) => {
-  if (!user.isModified("password")) return next();
+export default (password: string, handleError: any) => {
   bcrypt.genSalt(SALT_WORK_FACTOR, function (err, salt) {
-    if (err) return next(err);
+    if (err) return handleError(err);
     bcrypt.hash(user.password, salt, function (err, hash) {
-      if (err) return next(err);
+      if (err) return handleError(err);
       user.password = hash;
       next();
     });
