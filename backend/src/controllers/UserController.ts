@@ -1,7 +1,9 @@
 import express from "express";
-import { createJWTToken } from "../utils/createJWTToken";
+import { validationResult } from "express-validator";
+
 import { UserModel } from "../models";
 import { IUser } from "../models/User";
+import { createJWTToken, verifyUserPassword } from "../utils";
 
 class UserController {
   show(req: express.Request, res: express.Response) {
