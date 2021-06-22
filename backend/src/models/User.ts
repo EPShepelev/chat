@@ -48,7 +48,14 @@ const UserSchema = new Schema(
 UserSchema.pre("save", function (next) {
   const user: IUser = this;
   if (!user.isModified("password")) return next();
-  verifyUserPassword(user.password);
+  verifyUserPassword(user.password)
+    .then((hash) => {
+      user.password = hash;
+      next();
+    })
+    .catch((err) => {
+      next(err);
+    });
   bcrypt.getSalt(function (err, salt) {
     if (err) return next(err);
     bcrypt.hash(user.password, salt, function (err, hash) {
