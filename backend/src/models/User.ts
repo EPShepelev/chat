@@ -49,7 +49,7 @@ UserSchema.pre("save", function (next) {
   if (!user.isModified("password")) return next();
   verifyUserPassword(user.password)
     .then((hash) => {
-      user.password = hash;
+      user.password = String(hash);
       next();
     })
     .catch((err) => {
