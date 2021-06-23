@@ -1,5 +1,6 @@
 import express from "express";
 import { validationResult } from "express-validator";
+import { nextTick } from "process";
 
 import { UserModel } from "../models";
 import { IUser } from "../models/User";
@@ -66,7 +67,11 @@ class UserController {
       }
 
       verifyUserPassword(user.password){
-        
+        .then(hash=>{
+            user.password = String(hash);
+            next();
+          }
+        )
       }
 
       if (user.password === postData.password) {
