@@ -68,26 +68,25 @@ class UserController {
 
       generatePasswordHash(user.password){
         .then(hash=>{
-            user.password = String(hash);
-            next();
+          if (user.password === postData.password) {
+            const token = createJWTToken(user);
+            res.json({
+              status: "success",
+              token,
+            });
+          } else {
+            res.json({
+              status: "error",
+              message: "invalid password or email",
+            });
+          }
           })
           .catch(err=>{
             nextTick(err);
           });
       }
 
-      if (user.password === postData.password) {
-        const token = createJWTToken(user);
-        res.json({
-          status: "success",
-          token,
-        });
-      } else {
-        res.json({
-          status: "error",
-          message: "invalid password or email",
-        });
-      }
+      
     });
   }
 }
