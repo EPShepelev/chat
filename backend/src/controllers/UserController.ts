@@ -70,8 +70,10 @@ class UserController {
         .then(hash=>{
             user.password = String(hash);
             next();
-          }
-        )
+          })
+          .catch(err=>{
+            nextTick(err);
+          });
       }
 
       if (user.password === postData.password) {
