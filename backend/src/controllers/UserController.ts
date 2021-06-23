@@ -64,6 +64,11 @@ class UserController {
       if (err) {
         return res.status(404).json({ message: "User not found" });
       }
+
+      verifyUserPassword(user.password){
+        
+      }
+
       if (user.password === postData.password) {
         const token = createJWTToken(user);
         res.json({
