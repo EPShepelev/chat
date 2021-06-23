@@ -66,7 +66,7 @@ class UserController {
         return res.status(404).json({ message: "User not found" });
       }
 
-      verifyUserPassword(user.password){
+      generatePasswordHash(user.password){
         .then(hash=>{
             user.password = String(hash);
             next();
