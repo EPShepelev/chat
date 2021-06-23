@@ -4,7 +4,7 @@ import { nextTick } from "process";
 
 import { UserModel } from "../models";
 import { IUser } from "../models/User";
-import { createJWTToken, verifyUserPassword } from "../utils";
+import { createJWTToken, generatePasswordHash } from "../utils";
 
 class UserController {
   show(req: express.Request, res: express.Response) {
