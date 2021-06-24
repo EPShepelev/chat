@@ -67,8 +67,8 @@ class UserController {
       }
 
       generatePasswordHash(user.password){
-        .then(hash=>{
-          if (user.password === hash) {
+        .then(passwordHash=>{
+          if (user.password === passwordHash) {
             const token = createJWTToken(user);
             res.json({
               status: "success",
