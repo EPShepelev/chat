@@ -62,6 +62,9 @@ class UserController {
     };
 
     UserModel.findOne({ email: postData.email }, (err, user: IUser) => {
+      if (err) {
+        return res.status(404).json({ message: "User not found" });
+      }
 
       generatePasswordHash(user.password){
         .then(passwordHash=>{
