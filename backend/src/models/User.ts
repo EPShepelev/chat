@@ -1,6 +1,6 @@
 import mongoose, { Schema, Document } from "mongoose";
 import { isEmail } from "validator";
-import { verifyUserPassword } from "../utils";
+import { generatePasswordHash } from "../utils";
 
 export interface IUser extends Document {
   email?: string;
@@ -47,7 +47,7 @@ const UserSchema = new Schema(
 UserSchema.pre("save", function (next) {
   const user: IUser = this;
   if (!user.isModified("password")) return next();
-  verifyUserPassword(user.password)
+  generatePasswordHash(user.password)
     .then((hash) => {
       user.password = String(hash);
       next();
@@ -55,13 +55,6 @@ UserSchema.pre("save", function (next) {
     .catch((err) => {
       next(err);
     });
-  // bcrypt.getSalt(function (err, salt) {
-  //   if (err) return next(err);
-  //   bcrypt.hash(user.password, salt, function (err, hash) {
-  //     user.password = hash;
-  //     next();
-  //   });
-  // });
 });
 
 const UserModel = mongoose.model<IUser>("User", UserSchema);
