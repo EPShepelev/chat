@@ -1,6 +1,7 @@
 import express from "express";
 import { validationResult } from "express-validator";
 import { nextTick } from "process";
+import bcrypt from "bcrypt";
 
 import { UserModel } from "../models";
 import { IUser } from "../models/User";
@@ -64,6 +65,10 @@ class UserController {
     UserModel.findOne({ email: postData.email }, (err, user: IUser) => {
       if (err) {
         return res.status(404).json({ message: "User not found" });
+      }
+
+      if (bcrypt.compareSync(postData.password, user.password)) {
+      } else {
       }
 
       if (user.password === passwordHash) {
