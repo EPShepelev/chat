@@ -68,7 +68,16 @@ class UserController {
       }
 
       if (bcrypt.compareSync(postData.password, user.password)) {
+        const token = createJWTToken(user);
+        res.json({
+          status: "success",
+          token,
+        });
       } else {
+        res.json({
+          status: "error",
+          message: "invalid password or email",
+        });
       }
 
       if (user.password === passwordHash) {
