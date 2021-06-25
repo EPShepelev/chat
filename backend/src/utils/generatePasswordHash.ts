@@ -5,7 +5,7 @@ export default (password: string) => {
     bcrypt.genSalt(function (err, salt) {
       if (err) return reject(err);
 
-      bcrypt.hash(password, salt, function (err, hash: string) {
+      bcrypt.hash(password, 10, function (err, hash: string) {
         if (err) return reject(err);
         resolve(hash);
       });
