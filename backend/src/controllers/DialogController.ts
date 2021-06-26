@@ -2,12 +2,9 @@ import express from "express";
 
 import { DialogModel, MessageModel } from "../models";
 
-interface CustomRequest extends Request{
-  user: any;
-} 
 
 class DialogController {
-  index(req: CustomRequest, res: express.Response) {
+  index(req: express.Request, res: express.Response) {
     const authorId = req.user._id;
 
     DialogModel.find({ author: authorId })
