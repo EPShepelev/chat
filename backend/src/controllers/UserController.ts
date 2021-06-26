@@ -79,26 +79,6 @@ class UserController {
           message: "invalid password or email",
         });
       }
-
-      // generatePasswordHash(user.password){
-      //   .then(passwordHash=>{
-      //     if (user.password === passwordHash) {
-      //       const token = createJWTToken(user);
-      //       res.json({
-      //         status: "success",
-      //         token,
-      //       });
-      //     } else {
-      //       res.json({
-      //         status: "error",
-      //         message: "invalid password or email",
-      //       });
-      //     }
-      //     })
-      //     .catch(err=>{
-      //       return res.status(404).json({ message: err });
-      //     });
-      // }
     });
   }
 }
