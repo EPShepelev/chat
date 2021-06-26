@@ -7,7 +7,7 @@ interface CustomRequest extends express.Request{
 } 
 
 class DialogController {
-  index(req: express.Request, res: express.Response) {
+  index(req: CustomRequest, res: express.Response) {
     const authorId = req.user._id;
 
     DialogModel.find({ author: authorId })
