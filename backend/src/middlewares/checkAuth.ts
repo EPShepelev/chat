@@ -10,8 +10,8 @@ export default (req: any, res: any, next: any) => {
   }
 
   verifyJWTToken(token)
-    .then((user) => {
-      req.user = user;
+    .then((user: any) => {
+      req.user = user._doc;
       next();
     })
     .catch(() => {
