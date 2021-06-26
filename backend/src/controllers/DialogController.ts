@@ -2,6 +2,10 @@ import express from "express";
 
 import { DialogModel, MessageModel } from "../models";
 
+interface CustomRequest extends express.Request{
+  user: any;
+} 
+
 class DialogController {
   index(req: express.Request, res: express.Response) {
     const authorId = req.user._id;
