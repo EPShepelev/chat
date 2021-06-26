@@ -2,7 +2,7 @@ import express from "express";
 
 import { DialogModel, MessageModel } from "../models";
 
-interface CustomRequest extends express.Request{
+interface CustomRequest extends Request{
   user: any;
 } 
 
