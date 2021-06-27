@@ -2,7 +2,6 @@ import express from "express";
 
 import { DialogModel, MessageModel } from "../models";
 
-
 class DialogController {
   index(req: express.Request, res: express.Response) {
     const authorId = req.user._id;
@@ -25,24 +24,26 @@ class DialogController {
       partner: req.body.partner,
     };
     const dialog = new DialogModel(postData);
-    dialog
-      .save()
-      .then((dialogObj: any) => {
-        const message = new MessageModel({
-          text: req.body.text,
-          dialog: dialogObj._id,
-          user: req.body.author,
-        });
+    dialog.save().then((dialogObj: any) => {
+      const message = new MessageModel({
+        text: req.body.text,
+        dialog: dialogObj._id,
+        user: req.body.author,
+      });
 
-        message.save().then(() => {
+      message
+        .save()
+        .then(() => {
           res.json(dialogObj);
-        }).catch((reason) => {
+        })
+        .catch((reason) => {
           res.json({ reason });
-      })
-      .catch((reason) => {
-        res.json({ reason });
-      });   
-    }
+        })
+        .catch((reason) => {
+          res.json({ reason });
+        });
+    });
+  }
 
   delete(req: express.Request, res: express.Response) {
     const id: string = req.params.id;
@@ -59,7 +60,6 @@ class DialogController {
           message: "Dialog not found",
         });
       });
-  }
   }
 }
 
