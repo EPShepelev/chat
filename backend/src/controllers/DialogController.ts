@@ -42,7 +42,8 @@ class DialogController {
       .catch((reason) => {
         res.json({ reason });
       });
-  }
+      }
+    }
 
   delete(req: express.Request, res: express.Response) {
     const id: string = req.params.id;
