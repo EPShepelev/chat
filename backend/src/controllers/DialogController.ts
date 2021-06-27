@@ -41,8 +41,7 @@ class DialogController {
       })
       .catch((reason) => {
         res.json({ reason });
-      });
-      }
+      });   
     }
 
   delete(req: express.Request, res: express.Response) {
@@ -60,6 +59,7 @@ class DialogController {
           message: "Dialog not found",
         });
       });
+  }
   }
 }
 
