@@ -14,6 +14,7 @@ import { loginValidation } from "./utils/validations";
 
 const app = express();
 const http = require("http").creatServer(app);
+const io = require("socket.io")(http);
 dotenv.config();
 
 app.use(bodyParser.json());
@@ -45,6 +46,10 @@ app.delete("/dialogs/:id", Dialog.delete);
 app.get("/messages", Messages.index);
 app.post("/messages", Messages.create);
 app.delete("/messages/:id", Messages.delete);
+
+io.on("connection", function (socket) {
+  console.log("User connected");
+});
 
 http.listen(process.env.PORT, () => {
   console.log(`Example app listening at http://localhost:${process.env.PORT}`);
