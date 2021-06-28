@@ -47,7 +47,7 @@ app.get("/messages", Messages.index);
 app.post("/messages", Messages.create);
 app.delete("/messages/:id", Messages.delete);
 
-io.on("connection", function (socket) {
+io.on("connection", function (socket: any) {
   console.log("User connected");
 });
 
