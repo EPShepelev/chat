@@ -46,6 +46,6 @@ app.get("/messages", Messages.index);
 app.post("/messages", Messages.create);
 app.delete("/messages/:id", Messages.delete);
 
-app.listen(process.env.PORT, () => {
+http.listen(process.env.PORT, () => {
   console.log(`Example app listening at http://localhost:${process.env.PORT}`);
 });
