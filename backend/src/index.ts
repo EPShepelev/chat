@@ -13,6 +13,7 @@ import { updateLastSeen, checkAuth } from "./middlewares";
 import { loginValidation } from "./utils/validations";
 
 const app = express();
+const http = require("http").creatServer(app);
 dotenv.config();
 
 app.use(bodyParser.json());
