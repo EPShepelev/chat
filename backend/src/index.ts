@@ -50,7 +50,7 @@ app.post("/messages", Messages.create);
 app.delete("/messages/:id", Messages.delete);
 
 io.on("connection", function (socket: any) {
-  console.log("User connected");
+  console.log("CONNECTED!");
 });
 
 http.listen(process.env.PORT, () => {
