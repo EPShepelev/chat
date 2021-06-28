@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
 import express from "express";
+import socket from "socket.io";
+import { creatServer } from "http";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 
@@ -13,8 +15,8 @@ import { updateLastSeen, checkAuth } from "./middlewares";
 import { loginValidation } from "./utils/validations";
 
 const app = express();
-const http = require("http").creatServer(app);
-const io = require("socket.io")(http);
+const http = creatServer(app);
+const io = socket(http);
 dotenv.config();
 
 app.use(bodyParser.json());
