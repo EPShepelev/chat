@@ -51,7 +51,10 @@ app.delete("/messages/:id", Messages.delete);
 
 io.on("connection", function (socket: any) {
   console.log("CONNECTED!");
-  socket.emit("CHAT_RECEIVE_MESSAGE", "test message");
+  socket.emit("111", "test message");
+  socket.on("222", function (msg: any) {
+    console.log("CLIENT_SAY " + msg);
+  });
 });
 
 http.listen(process.env.PORT, () => {
