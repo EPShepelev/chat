@@ -13,13 +13,15 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      const io = io("http://localhost:3000");
-      window.socket = socket;
-      io.on("connection", function (socket) {
-        socket.on("CHAT_RECEIVE_MESSAGE", function (msg) {
-          console.log("message " + msg);
+      window.onload = () => {
+        const io = io("http://localhost:3000");
+        window.socket = socket;
+        io.on("connection", function (socket) {
+          socket.on("CHAT_RECEIVE_MESSAGE", function (msg) {
+            console.log("message " + msg);
+          });
         });
-      });
+      };
     </script>
   </body>
 </html>
