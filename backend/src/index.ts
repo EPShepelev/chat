@@ -51,6 +51,7 @@ app.delete("/messages/:id", Messages.delete);
 
 io.on("connection", function (socket: any) {
   console.log("CONNECTED!");
+  socket.emit("CHAT_RECEIVE_MESSAGE", "test message");
 });
 
 http.listen(process.env.PORT, () => {

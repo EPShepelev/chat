@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      const socket = io("http://localhost:3000");
+      const io = io("http://localhost:3000");
       io.on("connection", function (socket) {
         socket.on("CHAT_RECEIVE_MESSAGE", function (msg) {
           console.log("message " + msg);
