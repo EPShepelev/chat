@@ -15,7 +15,7 @@
     <script>
       const socket = io("http://localhost:3000");
       io.on("connection", function (socket) {
-        socket.on("chat message", function (msg) {
+        socket.on("CHAT_RECEIVE_MESSAGE", function (msg) {
           console.log("message " + msg);
         });
       });
