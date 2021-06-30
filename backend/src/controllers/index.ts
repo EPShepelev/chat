@@ -1,3 +1,9 @@
-export { default as UserController } from "./UserController";
-export { default as DialogController } from "./DialogController";
-export { default as MessageController } from "./MessageController";
+import UserController from "./UserController";
+import DialogController from "./DialogController";
+import MessageController from "./MessageController";
+
+export default {
+  UserController: new UserController(),
+  DialogController: new DialogController(),
+  MessageController: new MessageController(),
+};
