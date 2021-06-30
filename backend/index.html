@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      window.onload = () => {
+      window.onload = function () {
         const io = io("http://localhost:3000");
         window.socket = socket;
         io.on("connection", function (socket) {
