@@ -14,9 +14,9 @@
     ></script>
     <script>
       window.onload = function () {
-        const io = io("http://localhost:3000");
+        const server = io("http://localhost:3000");
         window.socket = socket;
-        io.on("connection", function (socket) {
+        server.on("connection", function (socket) {
           socket.on("CHAT_RECEIVE_MESSAGE", function (msg) {
             console.log("message " + msg);
           });
