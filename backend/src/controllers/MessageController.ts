@@ -52,4 +52,4 @@ class MessageController {
   }
 }
 
-export default MessageController;
+export MessageController;

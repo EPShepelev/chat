@@ -63,4 +63,4 @@ class DialogController {
   }
 }
 
-export default DialogController;
+export DialogController;
