@@ -1,9 +1,7 @@
-import UserController from "./UserController";
-import DialogController from "./DialogController";
-import MessageController from "./MessageController";
+import { default as UserCtrl } from "./UserController";
+import { default as DialogCtrl } from "./DialogController";
+import { default as MessageCtrl } from "./MessageController";
 
-export default {
-  UserController: new UserController(),
-  DialogController: new DialogController(),
-  MessageController: new MessageController(),
-};
+export const UserController = new UserCtrl();
+export const DialogController = new DialogCtrl();
+export const MessageController = new MessageCtrl();
