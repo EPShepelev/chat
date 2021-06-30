@@ -14,12 +14,10 @@
     ></script>
     <script>
       window.onload = function () {
-        const server = io("http://localhost:3000");
+        const socket = io("http://localhost:3000");
         window.socket = socket;
-        server.on("connection", function (socket) {
-          socket.on("CHAT_RECEIVE_MESSAGE", function (msg) {
-            console.log("message " + msg);
-          });
+        socket.on("CHAT_RECEIVE_MESSAGE", function (msg) {
+          console.log("message " + msg);
         });
       };
     </script>
