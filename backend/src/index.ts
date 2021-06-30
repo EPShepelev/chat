@@ -1,4 +1,3 @@
-import mongoose from "mongoose";
 import express from "express";
 import socket from "socket.io";
 import { creatServer } from "http";
@@ -10,6 +9,8 @@ import {
   DialogController,
   MessageController,
 } from "./controllers";
+
+import "./core/db";
 
 import { updateLastSeen, checkAuth } from "./middlewares";
 import { loginValidation } from "./utils/validations";
@@ -25,17 +26,11 @@ app.use(checkAuth);
 
 const port = 3000;
 
-mongoose.connect("mongodb://localhost:27017/chat", {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-});
-
 app.get("/user/me", UserController.getMe);
 app.get("/user/:id", UserController.show);
 app.delete("/user/:id", UserController.delete);
 app.post("/user/registration", UserController.create);
-app.post("/user/login", UserController.login);
+app.post("/user/login", loginValidation, UserController.login);
 
 app.get("/dialogs", DialogController.index);
 app.post("/dialogs", DialogController.create);
