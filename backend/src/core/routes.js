@@ -1,5 +1,11 @@
-import { updateLastSeen, checkAuth } from "./middlewares";
-import { loginValidation } from "./utils/validations";
+import { updateLastSeen, checkAuth } from "..middlewares";
+import { loginValidation } from "../utils/validations";
+
+import {
+  UserController,
+  DialogController,
+  MessageController,
+} from "../controllers";
 
 export default (app) => {
   app.use(bodyParser.json());

@@ -4,12 +4,6 @@ import { creatServer } from "http";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 
-import {
-  UserController,
-  DialogController,
-  MessageController,
-} from "./controllers";
-
 import "./core/db";
 
 const app = express();
