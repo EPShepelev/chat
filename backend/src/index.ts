@@ -4,13 +4,15 @@ import { creatServer } from "http";
 import dotenv from "dotenv";
 
 import "./core/db";
-import "./core/routes";
+import createRoutes from "./core/routes";
 
 const app = express();
 const http = creatServer(app);
 const io = socket(http);
 
 dotenv.config();
+
+createRoutes(app);
 
 io.on("connection", function (socket: any) {
   console.log("CONNECTED!");
