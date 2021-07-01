@@ -4,6 +4,7 @@ import { creatServer } from "http";
 import dotenv from "dotenv";
 
 import "./core/db";
+import "./core/routes";
 
 const app = express();
 const http = creatServer(app);
