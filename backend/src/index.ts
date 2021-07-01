@@ -1,7 +1,6 @@
 import express from "express";
 import socket from "socket.io";
 import { creatServer } from "http";
-import bodyParser from "body-parser";
 import dotenv from "dotenv";
 
 import "./core/db";
@@ -9,6 +8,7 @@ import "./core/db";
 const app = express();
 const http = creatServer(app);
 const io = socket(http);
+
 dotenv.config();
 
 io.on("connection", function (socket: any) {

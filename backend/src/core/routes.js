@@ -1,5 +1,6 @@
 import { updateLastSeen, checkAuth } from "..middlewares";
 import { loginValidation } from "../utils/validations";
+import bodyParser from "body-parser";
 
 import {
   UserController,
