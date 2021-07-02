@@ -8,7 +8,7 @@ import {
   MessageController,
 } from "../controllers";
 
-export default (app) => {
+const createRoutes = (app: any) => {
   app.use(bodyParser.json());
   app.use(updateLastSeen);
   app.use(checkAuth);
@@ -29,3 +29,5 @@ export default (app) => {
   app.post("/messages", MessageController.create);
   app.delete("/messages/:id", MessageController.delete);
 };
+
+export default createRoutes;
