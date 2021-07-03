@@ -2,6 +2,7 @@ import { updateLastSeen, checkAuth } from "..middlewares";
 import { loginValidation } from "../utils/validations";
 import bodyParser from "body-parser";
 import express from "express";
+import io from "socket.io";
 
 import {
   UserController,
@@ -9,7 +10,7 @@ import {
   MessageController,
 } from "../controllers";
 
-const createRoutes = (app: express.Express) => {
+const createRoutes = (app: express.Express, io: io.EngineSocket) => {
   app.use(bodyParser.json());
   app.use(updateLastSeen);
   app.use(checkAuth);
