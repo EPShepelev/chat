@@ -17,7 +17,7 @@ class MessageController {
       });
   }
 
-  create(req: express.Request, res: express.Response) {
+  create(req: any, res: express.Response) {
     const postData = {
       text: req.body.text,
       user: req.body.user, //временно указать юзера напрямую

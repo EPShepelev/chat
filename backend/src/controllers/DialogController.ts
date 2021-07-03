@@ -3,7 +3,7 @@ import express from "express";
 import { DialogModel, MessageModel } from "../models";
 
 class DialogController {
-  index(req: express.Request, res: express.Response) {
+  index(req: any, res: express.Response) {
     const authorId = req.user._id;
 
     DialogModel.find({ author: authorId })
