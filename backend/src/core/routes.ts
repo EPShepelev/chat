@@ -1,6 +1,7 @@
 import { updateLastSeen, checkAuth } from "..middlewares";
 import { loginValidation } from "../utils/validations";
 import bodyParser from "body-parser";
+import express from "express";
 
 import {
   UserController,
@@ -8,7 +9,7 @@ import {
   MessageController,
 } from "../controllers";
 
-const createRoutes = (app: any) => {
+const createRoutes = (app: express.Express) => {
   app.use(bodyParser.json());
   app.use(updateLastSeen);
   app.use(checkAuth);
