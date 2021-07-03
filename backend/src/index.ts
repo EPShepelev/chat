@@ -12,7 +12,7 @@ const io = socket(http);
 
 dotenv.config();
 
-createRoutes(app);
+createRoutes(app, io);
 
 io.on("connection", function (socket: any) {
   console.log("CONNECTED!");
