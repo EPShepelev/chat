@@ -5,7 +5,7 @@ import bcrypt from "bcrypt";
 
 import { UserModel } from "../models";
 import { IUser } from "../models/User";
-import { createJWTToken, generatePasswordHash } from "../utils";
+import { createJWTToken } from "../utils";
 
 class UserController {
   show(req: express.Request, res: express.Response) {
