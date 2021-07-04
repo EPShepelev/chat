@@ -11,7 +11,9 @@ import { isObject } from "lodash";
 class UserController {
   constructor(){
     io.on("connection", function(socket: any){
-
+socket.on("", function(obj:any){
+  //create method
+});
     });
   }
 
