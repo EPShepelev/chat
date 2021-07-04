@@ -9,13 +9,13 @@ import { createJWTToken } from "../utils";
 import { isObject } from "lodash";
 
 class UserController {
-  constructor(){
-    io.on("connection", function(socket: any){
-socket.on("", function(obj:any){
-  //create method
-});
-    });
-  }
+//   constructor(){
+//     io.on("connection", function(socket: any){
+// socket.on("", function(obj:any){
+//   //create method
+// });
+//     });
+//   }
 
   show(req: express.Request, res: express.Response) {
     const id: string = req.params.id;
