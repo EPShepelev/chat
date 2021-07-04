@@ -17,7 +17,7 @@ const createRoutes = (app: express.Express, io: io.EngineSocket) => {
 
   const port = 3000;
 
-  app.get("/user/me", UserController.getMe.bind(null, io));
+  app.get("/user/me", UserController.getMe);
   app.get("/user/:id", UserController.show);
   app.delete("/user/:id", UserController.delete);
   app.post("/user/registration", UserController.create);
