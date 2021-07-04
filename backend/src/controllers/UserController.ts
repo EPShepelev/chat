@@ -6,8 +6,15 @@ import bcrypt from "bcrypt";
 import { UserModel } from "../models";
 import { IUser } from "../models/User";
 import { createJWTToken } from "../utils";
+import { isObject } from "lodash";
 
 class UserController {
+  constructor(){
+    io.on("connection", function(socket: any){
+
+    });
+  }
+
   show(req: express.Request, res: express.Response) {
     const id: string = req.params.id;
     UserModel.findById(id, (err, user) => {
