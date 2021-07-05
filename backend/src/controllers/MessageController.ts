@@ -1,8 +1,14 @@
 import express from "express";
+import socket from "socket.io"
 
 import { MessageModel } from "../models";
 
 class MessageController {
+  io: socket.EngineSocket;
+  constructor(io: socket.EngineSocket){
+    this.io = io;
+  }
+
   index(req: express.Request, res: express.Response) {
     const dialogId: string = req.query.dialog;
     MessageModel.find({ dialog: dialogId })

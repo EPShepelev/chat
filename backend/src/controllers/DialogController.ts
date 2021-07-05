@@ -1,8 +1,14 @@
 import express from "express";
+import socket from "socket.io"
 
 import { DialogModel, MessageModel } from "../models";
 
 class DialogController {
+  io: socket.EngineSocket;
+  constructor(io: socket.EngineSocket){
+    this.io = io;
+  }
+
   index(req: any, res: express.Response) {
     const authorId = req.user._id;
 
