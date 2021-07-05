@@ -2,20 +2,16 @@ import express from "express";
 import { validationResult } from "express-validator";
 import { nextTick } from "process";
 import bcrypt from "bcrypt";
-
+import socket from "socket.io"
 import { UserModel } from "../models";
 import { IUser } from "../models/User";
 import { createJWTToken } from "../utils";
 import { isObject } from "lodash";
 
 class UserController {
-//   constructor(){
-//     io.on("connection", function(socket: any){
-// socket.on("", function(obj:any){
-//   //create method
-// });
-//     });
-//   }
+constructor(io: socket.EngineSocket){
+  this.io = io;
+}
 
   show(req: express.Request, res: express.Response) {
     const id: string = req.params.id;
