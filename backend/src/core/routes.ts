@@ -7,6 +7,10 @@ import io from "socket.io";
 import { UserCtr, DialogCtr, MessageCtr } from "../controllers";
 
 const createRoutes = (app: express.Express, io: io.EngineSocket) => {
+  const UserController = new UserCtr(io);
+  const DialogController = new DialogCtr(io);
+  const MessageController = new MessageCtr(io);
+
   app.use(bodyParser.json());
   app.use(updateLastSeen);
   app.use(checkAuth);
