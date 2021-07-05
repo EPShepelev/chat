@@ -4,11 +4,7 @@ import bodyParser from "body-parser";
 import express from "express";
 import io from "socket.io";
 
-import {
-  UserController,
-  DialogController,
-  MessageController,
-} from "../controllers";
+import { UserCtr, DialogCtr, MessageCtr } from "../controllers";
 
 const createRoutes = (app: express.Express, io: io.EngineSocket) => {
   app.use(bodyParser.json());
