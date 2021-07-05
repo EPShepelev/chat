@@ -16,7 +16,7 @@
       window.onload = function () {
         const socket = io("http://localhost:3000");
         window.socket = socket;
-        socket.on("111", function (msg) {
+        socket.on("NEW:MESSAGE", function (msg) {
           console.log("message " + msg);
         });
       };
