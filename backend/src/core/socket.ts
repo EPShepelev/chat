@@ -3,6 +3,6 @@ import http from "http";
 
 export default (http: http.Server) => {
   const io = socket(http);
-  io.on("connection", function (socket: any) {});
+  io.on("connection", function (socket: socket.Socket) {});
   return io;
 };
