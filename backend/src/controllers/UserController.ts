@@ -11,7 +11,7 @@ import { createJWTToken } from "../utils";
 
 
 class UserController {
-  io: socket.EngineSocket;
+  io: socket.Server;
   constructor(io: socket.Server){
     this.io = io;
   }
