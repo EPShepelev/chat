@@ -9,7 +9,7 @@ class MessageController {
     this.io = io;
   }
 
-  index(req: express.Request, res: express.Response) {
+  index = (req: express.Request, res: express.Response) => {
     const dialogId: string = req.query.dialog;
     MessageModel.find({ dialog: dialogId })
       .populate(["dialog"])
@@ -23,7 +23,7 @@ class MessageController {
       });
   }
 
-  create(req: any, res: express.Response) {
+  create = (req: express.Request, res: express.Response) => {
     const postData = {
       text: req.body.text,
       user: req.body.user, //временно указать юзера напрямую
@@ -41,7 +41,7 @@ class MessageController {
       });
   }
 
-  delete(req: express.Request, res: express.Response) {
+  delete = (req: express.Request, res: express.Response) => {
     const id: string = req.params.id;
     MessageModel.findOneAndRemove({ _id: id })
       .then((message) => {
