@@ -1,11 +1,11 @@
 import express from "express";
-import socket from "socket.io"
+import socket from "socket.io";
 
 import { MessageModel } from "../models";
 
 class MessageController {
   io: socket.Server;
-  constructor(io: socket.Server){
+  constructor(io: socket.Server) {
     this.io = io;
   }
 
@@ -21,7 +21,7 @@ class MessageController {
         }
         return res.json(messages);
       });
-  }
+  };
 
   create = (req: express.Request, res: express.Response) => {
     const postData = {
@@ -34,12 +34,12 @@ class MessageController {
       .save()
       .then((obj: any) => {
         res.json(obj);
-        this.io.emit(NEW:MESSAGE, obj);
+        this.io.emit("SERVER:NEW:MESSAGE", obj);
       })
       .catch((reason) => {
         res.json({ reason });
       });
-  }
+  };
 
   delete = (req: express.Request, res: express.Response) => {
     const id: string = req.params.id;
@@ -56,7 +56,7 @@ class MessageController {
           message: "Message not found",
         });
       });
-  }
+  };
 }
 
 export default MessageController;
