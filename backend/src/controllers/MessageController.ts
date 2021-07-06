@@ -5,7 +5,7 @@ import { MessageModel } from "../models";
 
 class MessageController {
   io: socket.EngineSocket;
-  constructor(io: socket.EngineSocket){
+  constructor(io: socket.Server){
     this.io = io;
   }
 

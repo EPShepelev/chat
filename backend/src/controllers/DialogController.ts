@@ -5,7 +5,7 @@ import { DialogModel, MessageModel } from "../models";
 
 class DialogController {
   io: socket.EngineSocket;
-  constructor(io: socket.EngineSocket){
+  constructor(io: socket.Server){
     this.io = io;
   }
 

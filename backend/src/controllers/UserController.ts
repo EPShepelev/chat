@@ -12,7 +12,7 @@ import { createJWTToken } from "../utils";
 
 class UserController {
   io: socket.EngineSocket;
-  constructor(io: socket.EngineSocket){
+  constructor(io: socket.Server){
     this.io = io;
   }
 
