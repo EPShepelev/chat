@@ -34,7 +34,7 @@ class MessageController {
       .save()
       .then((obj: any) => {
         res.json(obj);
-        this.io.emit("SERVER:NEW:MESSAGE", obj);
+        this.io.emit("SERVER:NEW_MESSAGE", obj);
       })
       .catch((reason) => {
         res.json({ reason });
