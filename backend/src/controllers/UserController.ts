@@ -3,20 +3,19 @@ import { nextTick } from "process";
 import { isObject } from "lodash";
 import express from "express";
 import bcrypt from "bcrypt";
-import socket from "socket.io"
+import socket from "socket.io";
 
 import { UserModel } from "../models";
 import { IUser } from "../models/User";
 import { createJWTToken } from "../utils";
 
-
 class UserController {
   io: socket.Server;
-  constructor(io: socket.Server){
+  constructor(io: socket.Server) {
     this.io = io;
   }
 
-  show(req: express.Request, res: express.Response) {
+  show = (req: express.Request, res: express.Response) => {
     const id: string = req.params.id;
     UserModel.findById(id, (err, user) => {
       if (err) {
@@ -26,9 +25,9 @@ class UserController {
       }
       res.json(user);
     });
-  }
+  };
 
-  getMe(req: any, res: express.Response, io: any) {
+  getMe = (req: any, res: express.Response, io: any) => {
     const id: string = req.user._id;
     UserModel.findById(id, (err, user) => {
       if (err) {
@@ -38,9 +37,9 @@ class UserController {
       }
       res.json(user);
     });
-  }
+  };
 
-  create(req: express.Request, res: express.Response) {
+  create = (req: express.Request, res: express.Response) => {
     const postData = {
       email: req.body.email,
       fullname: req.body.fullname,
@@ -55,9 +54,9 @@ class UserController {
       .catch((reason) => {
         res.json({ reason });
       });
-  }
+  };
 
-  delete(req: express.Request, res: express.Response) {
+  delete = (req: express.Request, res: express.Response) => {
     const id: string = req.params.id;
     UserModel.findOneAndRemove({ _id: id })
       .then((user) => {
@@ -72,9 +71,9 @@ class UserController {
           message: "User not found",
         });
       });
-  }
+  };
 
-  login(req: express.Request, res: express.Response) {
+  login = (req: express.Request, res: express.Response) => {
     const postData = {
       email: req.body.email,
       password: req.body.password,
@@ -98,7 +97,7 @@ class UserController {
         });
       }
     });
-  }
+  };
 }
 
-export UserController;
+export default UserController;

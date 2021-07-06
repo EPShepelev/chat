@@ -59,4 +59,4 @@ class MessageController {
   }
 }
 
-export MessageController;
+export default MessageController;
