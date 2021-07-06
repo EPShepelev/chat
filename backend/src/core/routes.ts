@@ -6,7 +6,7 @@ import socket from "socket.io";
 
 import { UserCtr, DialogCtr, MessageCtr } from "../controllers";
 
-const createRoutes = (app: express.Express, io: socket.EngineSocket) => {
+const createRoutes = (app: express.Express, io: socket.Server) => {
   const UserController = new UserCtr(io);
   const DialogController = new DialogCtr(io);
   const MessageController = new MessageCtr(io);
