@@ -33,10 +33,11 @@ class MessageController {
     };
     const message = new MessageModel(postData);
     message
+      .populate(["dialog"])
       .save()
       .then((obj: any) => {
         res.json(obj);
-        this.io.emit("SERVER:NEW_MESSAGE", obj.populate(["dialog"]));
+        this.io.emit("SERVER:NEW_MESSAGE", obj);
       })
       .catch((reason) => {
         res.json({ reason });
