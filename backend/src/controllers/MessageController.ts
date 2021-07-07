@@ -36,7 +36,7 @@ class MessageController {
       .save()
       .then((obj: any) => {
         res.json(obj);
-        this.io.emit("SERVER:NEW_MESSAGE", obj);
+        this.io.emit("SERVER:NEW_MESSAGE", obj.populate(["dialog"]));
       })
       .catch((reason) => {
         res.json({ reason });
