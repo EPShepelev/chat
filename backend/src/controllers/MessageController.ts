@@ -26,8 +26,8 @@ class MessageController {
   create = (req: express.Request, res: express.Response) => {
     const postData = {
       text: req.body.text,
-      user: req.body.user, //временно указать юзера напрямую
       dialog: req.body.dialog_id,
+      user: userId,
     };
     const message = new MessageModel(postData);
     message
