@@ -24,6 +24,8 @@ class MessageController {
   };
 
   create = (req: express.Request, res: express.Response) => {
+    const userId = req.user._id;
+
     const postData = {
       text: req.body.text,
       dialog: req.body.dialog_id,
