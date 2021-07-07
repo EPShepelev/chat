@@ -16,7 +16,10 @@
       window.onload = function () {
         const socket = io("http://localhost:3000");
         window.socket = socket;
-        socket.on("SERVER:NEW_MESSAGE", function (msg) {});
+        socket.on("SERVER:NEW_MESSAGE", function (msg) {
+          if (window.user === msg.author) {
+          }
+        });
       };
     </script>
   </body>
