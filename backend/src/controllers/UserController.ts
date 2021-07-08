@@ -18,7 +18,7 @@ class UserController {
   show = (req: express.Request, res: express.Response) => {
     const id: string = req.params.id;
     UserModel.findById(id, (err, user) => {
-      if (err) {
+      if (err || !user) {
         return res.status(404).json({
           message: "User not found",
         });
