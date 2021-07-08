@@ -36,7 +36,7 @@ class MessageController {
     message
       .save()
       .then((obj: any) => {
-        obj.populate("_creator", function (err, book) {
+        obj.populate("_creator", (err: any, book: any) => {
           if (err) {
             return res.status(500).json({
               message: err,
