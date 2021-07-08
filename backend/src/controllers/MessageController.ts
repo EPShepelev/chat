@@ -38,7 +38,7 @@ class MessageController {
       .then((obj: any) => {
         obj.populate("_creator", function (err, book) {
           if (err) {
-            return res.status(404).json({
+            return res.status(500).json({
               message: err,
             });
           }
