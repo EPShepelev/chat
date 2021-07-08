@@ -1,3 +1,4 @@
+import { O_NONBLOCK } from "constants";
 import express from "express";
 import socket from "socket.io";
 
@@ -33,11 +34,17 @@ class MessageController {
     };
     const message = new MessageModel(postData);
     message
-      .populate("dialog")
       .save()
       .then((obj: any) => {
-        res.json(obj);
-        this.io.emit("SERVER:NEW_MESSAGE", obj);
+        obj.populate("_creator", function (err, book) {
+          if (err) {
+            return res.status(404).json({
+              message: err,
+            });
+          }
+          res.json(obj);
+          this.io.emit("SERVER:NEW_MESSAGE", obj);
+        });
       })
       .catch((reason) => {
         res.json({ reason });
