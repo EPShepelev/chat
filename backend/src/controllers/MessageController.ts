@@ -33,7 +33,7 @@ class MessageController {
     };
     const message = new MessageModel(postData);
     message
-      .populate(["dialog"])
+      .populate("dialog")
       .save()
       .then((obj: any) => {
         res.json(obj);
