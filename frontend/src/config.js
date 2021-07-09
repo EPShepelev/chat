@@ -1,7 +1,6 @@
 export default {
   development: {
-    API_URL: "http://localhost",
-    API_PORT: 3003,
+    API_URL: window.location.origin,
   },
   production: {},
 };
