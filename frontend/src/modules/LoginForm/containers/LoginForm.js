@@ -16,11 +16,11 @@ export default withFormik({
     return errors;
   },
 
-  handleSubmit: (values, { setSubmitting }) => {
+  handleSubmit: (values, { setSubmitting, setStatus }) => {
     return axios
       .post("/user/login", values)
       .then(({ data }) => {
-        console.log(data);
+        setStatus(data.status);
         setSubmitting(false);
       })
       .catch(() => {
