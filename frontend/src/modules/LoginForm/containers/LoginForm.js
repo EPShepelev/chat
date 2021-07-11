@@ -12,7 +12,7 @@ export default withFormik({
   }),
   validate: (values) => {
     let errors = {};
-    validateForm({ values, errors });
+    validateForm({ isAuth: true, values, errors });
     return errors;
   },
 
