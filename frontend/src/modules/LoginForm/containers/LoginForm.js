@@ -21,6 +21,7 @@ export default withFormik({
       .post("/user/login", values)
       .then(({ data }) => {
         setStatus(data.status);
+        localStorage.token = data.token;
         setSubmitting(false);
       })
       .catch(() => {
