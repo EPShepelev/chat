@@ -17,9 +17,15 @@ export default withFormik({
   },
 
   handleSubmit: (values, { setSubmitting }) => {
-    return axios.post("/user/login", values).then(({ data }) => {
-      console.log(data);
-    });
+    return axios
+      .post("/user/login", values)
+      .then(({ data }) => {
+        console.log(data);
+        setSubmitting(false);
+      })
+      .catch(() => {
+        setSubmitting(false);
+      });
   },
 
   displayName: "LoginForm",
