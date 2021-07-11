@@ -1,8 +1,8 @@
-import LoginForm from "../components/LoginForm";
 import { withFormik } from "formik";
-import validateForm from "utils/validate";
-
 import axios from "core/axios";
+
+import LoginForm from "../components/LoginForm";
+import validateForm from "utils/validate";
 
 export default withFormik({
   enableReinitialize: true,
