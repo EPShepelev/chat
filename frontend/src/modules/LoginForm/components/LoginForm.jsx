@@ -59,7 +59,12 @@ const LoginForm = (props) => {
 
           <Form.Item>
             {isSubmitting && !isValid && <span>Ошибка!</span>}
-            <Button onClick={handleSubmit} type="primary" size="large">
+            <Button
+              disabled={isSubmitting}
+              onClick={handleSubmit}
+              type="primary"
+              size="large"
+            >
               Войти в аккаунт
             </Button>
           </Form.Item>
