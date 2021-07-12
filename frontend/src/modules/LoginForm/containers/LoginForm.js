@@ -21,6 +21,12 @@ export default withFormik({
     return axios
       .post("/user/login", values)
       .then(({ data }) => {
+        const { status, token } = data;
+        if (status === "error") {
+          openNotification({
+            text: "Неверный логин или пароль",
+          });
+        }
         setStatus(data.status);
         localStorage.token = data.token;
         setSubmitting(false);
