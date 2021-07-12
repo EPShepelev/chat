@@ -1,11 +1,8 @@
 import { notification } from "antd";
 
-export default (text, type="info") => {
+export default (title, text, type="info") => {
   notification.open({
-    message: 'Notification Title',
+    message: title,
     description:
-      'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
-    onClick: () => {
-      console.log('Notification Clicked!');
-    },
+    text,
 }
