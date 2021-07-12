@@ -17,7 +17,7 @@ export default withFormik({
     return errors;
   },
 
-  handleSubmit: (values, { setSubmitting, setStatus }) => {
+  handleSubmit: (values, { setSubmitting }) => {
     return axios
       .post("/user/login", values)
       .then(({ data }) => {
@@ -25,9 +25,9 @@ export default withFormik({
         if (status === "error") {
           openNotification({
             text: "Неверный логин или пароль",
+            type: "error",
           });
         }
-        setStatus(data.status);
         localStorage.token = data.token;
         setSubmitting(false);
       })
