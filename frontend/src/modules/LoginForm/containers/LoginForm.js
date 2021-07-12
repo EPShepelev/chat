@@ -24,8 +24,14 @@ export default withFormik({
         const { status, token } = data;
         if (status === "error") {
           openNotification({
+            title: "Ошибка авторизации",
             text: "Неверный логин или пароль",
             type: "error",
+          });
+        } else {
+          openNotification({
+            text: "Успех авторизации",
+            type: "success",
           });
         }
         localStorage.token = data.token;
