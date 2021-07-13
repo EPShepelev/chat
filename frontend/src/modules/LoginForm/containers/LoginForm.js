@@ -30,6 +30,7 @@ export default withFormik({
           });
         } else {
           openNotification({
+            title: "Отлично!",
             text: "Успех авторизации",
             type: "success",
           });
