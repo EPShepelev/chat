@@ -35,7 +35,6 @@ export default withFormik({
             type: "success",
           });
         }
-        localStorage.token = data.token;
         setSubmitting(false);
       })
       .catch(() => {
