@@ -1,26 +1,10 @@
-import { messagesApi } from "utils/api";
+import { userApi } from "utils/api";
 
 const actions = {
-  setMessages: (items) => ({
-    type: "MESSAGES:SET_ITEMS",
-    payload: items,
+  setUserData: (data) => ({
+    type: "USER:SET_DATA",
+    payload: data,
   }),
-  setIsLoading: (bool) => ({
-    type: "MESSAGES:SET_IS_LOADING",
-    payload: bool,
-  }),
-
-  fetchMessages: (dialogId) => (dispatch) => {
-    dispatch(actions.setIsLoading(true));
-    messagesApi
-      .getAllByDialogId(dialogId)
-      .then(({ data }) => {
-        dispatch(actions.setMessages(data));
-      })
-      .catch(() => {
-        dispatch(actions.setIsLoading(false));
-      });
-  },
 };
 
 export default actions;
