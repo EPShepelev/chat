@@ -5,6 +5,9 @@ const actions = {
     type: "USER:SET_DATA",
     payload: data,
   }),
+  fetchUserLogin: (postData) => (dispatch) => {
+    return userApi.login(postData).then(({ data }) => {});
+  },
 };
 
 export default actions;
