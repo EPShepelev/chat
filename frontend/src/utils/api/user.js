@@ -1,5 +1,5 @@
 import { axios } from "core";
 
 export default {
-  getAllByDialogId: (id) => axios.get("./messages?dialog=" + id),
+  login: (postData) => axios.get("./user/login", postData),
 };
