@@ -1,3 +1,4 @@
+import { connect } from "react-redux";
 import { withFormik } from "formik";
 
 import LoginForm from "../components/LoginForm";
