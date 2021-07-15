@@ -6,7 +6,7 @@ import validateForm from "utils/validate";
 import { openNotification } from "/utils/helpers";
 import { userActions } from "redux/actions";
 
-export default withFormik({
+const formEnhaced = withFormik({
   enableReinitialize: true,
   mapPropsToValues: () => ({
     email: "",
