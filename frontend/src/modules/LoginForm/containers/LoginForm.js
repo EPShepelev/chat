@@ -6,7 +6,9 @@ import validateForm from "utils/validate";
 import { openNotification } from "/utils/helpers";
 import { userActions } from "redux/actions";
 
-const formEnhaced = withFormik({
+const LoginFormConnected = connect((state) => state, userActions)(LoginForm);
+
+const LoginFormContainer = withFormik({
   enableReinitialize: true,
   mapPropsToValues: () => ({
     email: "",
@@ -44,6 +46,6 @@ const formEnhaced = withFormik({
   },
 
   displayName: "LoginForm",
-})(LoginForm);
+})(LoginFormConnected);
 
 export default LoginFormContainer;
