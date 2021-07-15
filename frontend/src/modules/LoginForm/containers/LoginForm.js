@@ -46,4 +46,4 @@ const formEnhaced = withFormik({
   displayName: "LoginForm",
 })(LoginForm);
 
-export default LoginForm;
+export default LoginFormContainer;
