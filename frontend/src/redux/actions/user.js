@@ -12,4 +12,4 @@ const Actions = {
   },
 };
 
-export default actions;
+export default Actions;
