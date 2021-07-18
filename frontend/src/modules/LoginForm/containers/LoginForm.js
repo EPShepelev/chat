@@ -21,7 +21,6 @@ const LoginFormContainer = withFormik({
   },
 
   handleSubmit: (values, { setSubmitting, fetchUserLogin }) => {
-    console.log(fetchUserLogin);
     return axios
       .post("/user/login", values)
       .then(({ data }) => {
