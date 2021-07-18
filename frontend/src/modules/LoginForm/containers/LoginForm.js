@@ -26,19 +26,7 @@ const LoginFormContainer = withFormik({
       .post("/user/login", values)
       .then(({ data }) => {
         const { status, token } = data;
-        if (status === "error") {
-          openNotification({
-            title: "Ошибка авторизации",
-            text: "Неверный логин или пароль",
-            type: "error",
-          });
-        } else {
-          openNotification({
-            title: "Отлично!",
-            text: "Успех авторизации",
-            type: "success",
-          });
-        }
+
         setSubmitting(false);
       })
       .catch(() => {

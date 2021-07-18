@@ -8,6 +8,19 @@ const Actions = {
   }),
   fetchUserLogin: (postData) => (dispatch) => {
     return userApi.login(postData).then(({ data }) => {
+      if (status === "error") {
+        openNotification({
+          title: "Ошибка авторизации",
+          text: "Неверный логин или пароль",
+          type: "error",
+        });
+      } else {
+        openNotification({
+          title: "Отлично!",
+          text: "Успех авторизации",
+          type: "success",
+        });
+      }
       dispatch(Actions.setUserData(data));
     });
   },
