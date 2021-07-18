@@ -4,7 +4,9 @@ import { withFormik } from "formik";
 import LoginForm from "../components/LoginForm";
 import validateForm from "utils/validate";
 import { openNotification } from "/utils/helpers";
+
 import { userActions } from "redux/actions";
+import store from "redux/store";
 
 const LoginFormConnected = connect((state) => state, userActions)(LoginForm);
 
