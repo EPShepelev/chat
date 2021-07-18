@@ -8,6 +8,7 @@ const Actions = {
   }),
   fetchUserLogin: (postData) => (dispatch) => {
     return userApi.login(postData).then(({ data }) => {
+      const { status, token } = data;
       if (status === "error") {
         openNotification({
           title: "Ошибка авторизации",

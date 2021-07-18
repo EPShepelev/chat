@@ -24,8 +24,6 @@ const LoginFormContainer = withFormik({
     return axios
       .post("/user/login", values)
       .then(({ data }) => {
-        const { status, token } = data;
-
         setSubmitting(false);
       })
       .catch(() => {
