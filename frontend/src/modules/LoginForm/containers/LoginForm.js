@@ -23,10 +23,10 @@ const LoginFormContainer = withFormik({
   },
 
   handleSubmit: (values, { setSubmitting }) => {
-    fetchUserLogin(values);
+    store.dispatch(userActions(fetchUserLogin(values)));
   },
 
   displayName: "LoginForm",
-})(LoginFormConnected);
+})(LoginForm);
 
 export default LoginFormContainer;
