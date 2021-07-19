@@ -21,8 +21,8 @@ const Actions = {
           text: "Успех авторизации",
           type: "success",
         });
+        dispatch(Actions.setUserData(data));
       }
-      dispatch(Actions.setUserData(data));
       // window.token = token;
     });
   },
