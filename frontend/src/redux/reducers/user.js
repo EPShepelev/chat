@@ -9,6 +9,7 @@ export default (state = initialState, { type, payload }) => {
       return {
         ...state,
         data: payload,
+        isAuth: true,
       };
     default:
       return state;
