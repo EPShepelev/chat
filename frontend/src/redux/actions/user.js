@@ -6,6 +6,9 @@ const Actions = {
     type: "USER:SET_DATA",
     payload: data,
   }),
+  fetchUserData: () => (dispatch) => {
+    dispatch(Actions.setUserData(data));
+  },
   fetchUserLogin: (postData) => (dispatch) => {
     return userApi.login(postData).then(({ data }) => {
       const { status, token } = data;
@@ -21,7 +24,6 @@ const Actions = {
           text: "Успех авторизации",
           type: "success",
         });
-        dispatch(Actions.setUserData(data));
       }
       // window.token = token;
     });
