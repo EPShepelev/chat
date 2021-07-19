@@ -23,6 +23,7 @@ const Actions = {
         });
       }
       dispatch(Actions.setUserData(data));
+      windpw.token = token;
     });
   },
 };
