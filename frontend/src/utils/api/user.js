@@ -1,5 +1,5 @@
 import { axios } from "core";
 
 export default {
-  login: (postData) => axios.get("./user/login", postData),
+  login: (postData) => axios.post("./user/login", postData),
 };
