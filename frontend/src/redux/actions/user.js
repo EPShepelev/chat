@@ -23,7 +23,7 @@ const Actions = {
         });
       }
       dispatch(Actions.setUserData(data));
-      window.token = token;
+      // window.token = token;
     });
   },
 };
