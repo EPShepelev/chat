@@ -1,5 +1,6 @@
 const initialState = {
   data: null,
+  isAuth: false,
 };
 
 export default (state = initialState, { type, payload }) => {
