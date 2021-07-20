@@ -25,7 +25,7 @@ const Actions = {
           type: "success",
         });
       }
-      // window.token = token;
+      window.localStorage["token"] = token;
     });
   },
 };
