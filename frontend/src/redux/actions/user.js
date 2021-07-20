@@ -7,7 +7,9 @@ const Actions = {
     payload: data,
   }),
   fetchUserData: () => (dispatch) => {
-    dispatch(Actions.setUserData(data));
+    userApi.getMe().then(({ data }) => {
+      dispatch(Actions.setUserData(data));
+    });
   },
   fetchUserLogin: (postData) => (dispatch) => {
     return userApi.login(postData).then(({ data }) => {
