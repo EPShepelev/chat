@@ -1,16 +1,12 @@
 import { connect } from "react-redux";
 import { withFormik } from "formik";
-import { withRouter } from "react-router";
 
 import LoginForm from "../components/LoginForm";
 import validateForm from "utils/validate";
 import { openNotification } from "/utils/helpers";
 
 import { userActions } from "redux/actions";
-
 import store from "redux/store";
-
-const LoginFormRouter = withRouter(LoginForm);
 
 const LoginFormConnected = connect((state) => state, userActions)(LoginForm);
 
@@ -26,8 +22,7 @@ const LoginFormContainer = withFormik({
     return errors;
   },
 
-  handleSubmit: (values, props) => {
-    const { setSubmitting } = props;
+  handleSubmit: (values, { setSubmitting }) => {
     store.dispatch(
       userActions(fetchUserLogin(values)).then(() => {
         setSubmitting(false);
@@ -36,6 +31,6 @@ const LoginFormContainer = withFormik({
   },
 
   displayName: "LoginForm",
-})(LoginFormRouter);
+})(LoginForm);
 
 export default LoginFormContainer;
