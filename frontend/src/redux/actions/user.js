@@ -24,8 +24,9 @@ const Actions = {
           text: "Успех авторизации",
           type: "success",
         });
+        axios.defaults.headers.common["token"] = window.token;
+        window.localStorage["token"] = token;
       }
-      window.localStorage["token"] = token;
     });
   },
 };
