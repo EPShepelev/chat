@@ -13,4 +13,4 @@ const App = () => {
   );
 };
 
-export default connect(App);
+export default connect(({ user }) => ({ isAuth: user.isAuth }))(App);
