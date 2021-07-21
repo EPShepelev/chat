@@ -1,5 +1,6 @@
 const initialState = {
   data: null,
+  token: "",
   isAuth: false,
 };
 
