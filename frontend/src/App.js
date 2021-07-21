@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 
 import { Auth, Home } from "pages";
 
-const App = () => {
+const App = (props) => {
   const { isAuth } = this.props;
   return (
     <div className="wrapper">
@@ -14,5 +14,4 @@ const App = () => {
     </div>
   );
 };
-
 export default connect(({ user }) => ({ isAuth: user.isAuth }))(App);
