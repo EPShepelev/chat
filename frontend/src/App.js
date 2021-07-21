@@ -5,10 +5,12 @@ import { Route } from "react-router-dom";
 import { Auth, Home } from "pages";
 
 const App = () => {
+  const { isAuth } = this.props;
   return (
     <div className="wrapper">
-      <Route exact path={["/", "/login", "/registration"]} component={Auth} />
+      <Route exact path={["/login", "/registration"]} component={Auth} />
       <Route exact path="/im" component={Home} />
+      {}
     </div>
   );
 };
