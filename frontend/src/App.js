@@ -1,6 +1,8 @@
-import React from "react";
-import { Auth, Home } from "pages";
+import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Route } from "react-router-dom";
+
+import { Auth, Home } from "pages";
 
 const App = () => {
   return (
