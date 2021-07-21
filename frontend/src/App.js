@@ -5,7 +5,7 @@ import { Route, Redirect } from "react-router-dom";
 import { Auth, Home } from "pages";
 
 const App = (props) => {
-  const { isAuth } = this.props;
+  const { isAuth } = props;
   return (
     <div className="wrapper">
       <Route exact path={["/login", "/registration"]} component={Auth} />
