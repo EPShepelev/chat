@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { Route, Redirect } from "react-router-dom";
 
@@ -10,7 +10,7 @@ const App = (props) => {
     <div className="wrapper">
       <Route exact path={["/login", "/registration"]} component={Auth} />
       <Route exact path="/im" component={Home} />
-      {isAuth ? <Redirect to="/im" /> : <Redirect to="/login" />}
+      {isAuth ? <Home /> : <Redirect to="/login" />}
     </div>
   );
 };
