@@ -9,8 +9,16 @@ const App = (props) => {
   return (
     <div className="wrapper">
       <Route exact path={["/login", "/registration"]} component={Auth} />
-      <Route exact path="/im" component={Home} />
-      {isAuth ? <Home /> : <Redirect to="/login" />}
+
+      <Route
+        exact
+        path="/"
+        render={() => {
+          {
+            isAuth ? <Home /> : <Redirect to="/login" />;
+          }
+        }}
+      />
     </div>
   );
 };
