@@ -1,13 +1,7 @@
 import React from "react";
 import { Form, Input } from "antd";
-import {
-  UserOutlined,
-  LockOutlined,
-  MailOutlined,
-  ExclamationCircleOutlined,
-} from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import { Button, Block } from "components";
+import { Button, Block, FormField } from "components";
 
 const sucsess = false;
 
