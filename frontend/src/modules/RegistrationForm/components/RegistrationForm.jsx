@@ -8,7 +8,6 @@ import {
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { Button, Block } from "components";
-import { validateField } from "utils/helpers";
 
 const sucsess = false;
 
