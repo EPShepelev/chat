@@ -21,16 +21,16 @@ const FormField = ({
 }) => {
   return (
     <Form.Item
-      validateStatus={validateField("email", touched, errors)}
+      validateStatus={validateField(name, touched, errors)}
       hasFeedback
-      help={!touched.email ? "" : errors.email}
+      help={!touched[name] ? "" : errors[name]}
     >
       <Input
-        id="email"
+        id={name}
         prefix={<MailOutlined className="site-form-item-icon" />}
-        placeholder="E-mail"
+        placeholder={placeholder}
         size="large"
-        value={values.email}
+        value={values[name]}
         onChange={handleChange}
         onBlur={handleBlur}
       />
