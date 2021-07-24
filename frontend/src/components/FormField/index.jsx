@@ -3,7 +3,7 @@ import { Form, Input } from "antd";
 
 import { validateField } from "utils/helpers";
 
-const FormField = () => {
+const FormField = ({ name, placeholder, icon, touched, errors, values }) => {
   return (
     <Form.Item
       validateStatus={validateField("email", touched, errors)}
