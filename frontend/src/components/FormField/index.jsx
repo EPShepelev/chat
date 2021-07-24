@@ -1,10 +1,24 @@
 import React from "react";
-import PropTypes from "prop-types";
-import store from "./store";
-import * as actionTypes from "./store/actionTypes";
+import { Form, Input } from "antd";
 
 const FormField = () => {
-  return <div></div>;
+  return (
+    <Form.Item
+      validateStatus={validateField("email", touched, errors)}
+      hasFeedback
+      help={!touched.email ? "" : errors.email}
+    >
+      <Input
+        id="email"
+        prefix={<MailOutlined className="site-form-item-icon" />}
+        placeholder="E-mail"
+        size="large"
+        value={values.email}
+        onChange={handleChange}
+        onBlur={handleBlur}
+      />
+    </Form.Item>
+  );
 };
 
 export default FormField;
