@@ -1,11 +1,5 @@
 import React from "react";
 import { Form, Input } from "antd";
-import {
-  UserOutlined,
-  LockOutlined,
-  MailOutlined,
-  ExclamationCircleOutlined,
-} from "@ant-design/icons";
 
 import { validateField } from "utils/helpers";
 
@@ -27,7 +21,7 @@ const FormField = ({
     >
       <Input
         id={name}
-        prefix={<MailOutlined className="site-form-item-icon" />}
+        prefix={prefix}
         placeholder={placeholder}
         size="large"
         value={values[name]}

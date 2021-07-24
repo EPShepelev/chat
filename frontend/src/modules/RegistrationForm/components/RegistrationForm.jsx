@@ -3,6 +3,13 @@ import { Form, Input } from "antd";
 import { Link } from "react-router-dom";
 import { Button, Block, FormField } from "components";
 
+import {
+  UserOutlined,
+  LockOutlined,
+  MailOutlined,
+  ExclamationCircleOutlined,
+} from "@ant-design/icons";
+
 const sucsess = false;
 
 const RegistrationForm = (props) => {
