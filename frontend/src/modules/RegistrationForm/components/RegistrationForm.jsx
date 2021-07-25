@@ -39,7 +39,7 @@ const RegistrationForm = (props) => {
               handleBlur={handleBlur}
               touched={touched}
               errors={errors}
-              placeholder={placeholder}
+              placeholder="e-mail"
               values={values}
             />
 
