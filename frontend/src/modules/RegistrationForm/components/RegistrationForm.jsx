@@ -43,7 +43,7 @@ const RegistrationForm = (props) => {
               values={values}
             />
             <FormField
-              name="fullname"
+              name="full name"
               prefix={<UserOutlined className="site-form-item-icon" />}
               handleChange={handleChange}
               handleBlur={handleBlur}
@@ -52,23 +52,16 @@ const RegistrationForm = (props) => {
               placeholder="Ваше имя"
               values={values}
             />
-
-            <Form.Item
-              validateStatus={validateField("password", touched, errors)}
-              hasFeedback
-              help={!touched.password ? "" : errors.password}
-            >
-              <Input.Password
-                prefix={<LockOutlined className="site-form-item-icon" />}
-                placeholder="Пароль"
-                size="large"
-                id="password"
-                type="password"
-                value={values.password}
-                onChange={handleChange}
-                onBlur={handleBlur}
-              />
-            </Form.Item>
+            <FormField
+              name="password"
+              prefix={<LockOutlined className="site-form-item-icon" />}
+              handleChange={handleChange}
+              handleBlur={handleBlur}
+              touched={touched}
+              errors={errors}
+              placeholder="Пароль"
+              values={values}
+            />
 
             <Form.Item>
               <Input.Password
