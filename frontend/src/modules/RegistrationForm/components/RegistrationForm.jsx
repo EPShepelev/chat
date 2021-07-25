@@ -41,21 +41,6 @@ const RegistrationForm = (props) => {
               errors={errors}
               placeholder={placeholder}
             />
-            <Form.Item
-              validateStatus={validateField("email", touched, errors)}
-              hasFeedback
-              help={!touched.email ? "" : errors.email}
-            >
-              <Input
-                id="email"
-                prefix={<MailOutlined className="site-form-item-icon" />}
-                placeholder="E-mail"
-                size="large"
-                value={values.email}
-                onChange={handleChange}
-                onBlur={handleBlur}
-              />
-            </Form.Item>
 
             <Form.Item>
               <Input
