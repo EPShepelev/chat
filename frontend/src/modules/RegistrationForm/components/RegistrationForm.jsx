@@ -42,8 +42,9 @@ const RegistrationForm = (props) => {
               placeholder="e-mail"
               values={values}
             />
+
             <FormField
-              name="full name"
+              name="full_name"
               prefix={<UserOutlined className="site-form-item-icon" />}
               handleChange={handleChange}
               handleBlur={handleBlur}
@@ -52,6 +53,7 @@ const RegistrationForm = (props) => {
               placeholder="Ваше имя"
               values={values}
             />
+
             <FormField
               name="password"
               prefix={<LockOutlined className="site-form-item-icon" />}
@@ -63,14 +65,16 @@ const RegistrationForm = (props) => {
               values={values}
             />
 
-            <Form.Item>
-              <Input.Password
-                prefix={<LockOutlined className="site-form-item-icon" />}
-                placeholder="Повторите пароль"
-                size="large"
-                type="password2"
-              />
-            </Form.Item>
+            <FormField
+              name="password_2"
+              prefix={<LockOutlined className="site-form-item-icon" />}
+              handleChange={handleChange}
+              handleBlur={handleBlur}
+              touched={touched}
+              errors={errors}
+              placeholder="Повторите пароль"
+              values={values}
+            />
 
             <Form.Item>
               {isSubmitting && !isValid && <span>Ошибка!</span>}
