@@ -42,14 +42,16 @@ const RegistrationForm = (props) => {
               placeholder="e-mail"
               values={values}
             />
-
-            <Form.Item>
-              <Input
-                prefix={<UserOutlined className="site-form-item-icon" />}
-                placeholder="Ваше имя"
-                size="large"
-              />
-            </Form.Item>
+            <FormField
+              name="fullname"
+              prefix={<UserOutlined className="site-form-item-icon" />}
+              handleChange={handleChange}
+              handleBlur={handleBlur}
+              touched={touched}
+              errors={errors}
+              placeholder="Ваше имя"
+              values={values}
+            />
 
             <Form.Item
               validateStatus={validateField("password", touched, errors)}
