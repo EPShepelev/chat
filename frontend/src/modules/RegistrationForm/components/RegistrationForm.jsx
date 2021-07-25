@@ -40,6 +40,7 @@ const RegistrationForm = (props) => {
               touched={touched}
               errors={errors}
               placeholder={placeholder}
+              values={values}
             />
 
             <Form.Item>
