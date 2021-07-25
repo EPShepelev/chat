@@ -32,6 +32,15 @@ const RegistrationForm = (props) => {
       <Block>
         {!sucsess ? (
           <Form className="login-form" onSubmit={handleSubmit}>
+            <FormField
+              name="e-mail"
+              prefix={<MailOutlined className="site-form-item-icon" />}
+              handleChange={handleChange}
+              handleBlur={handleBlur}
+              touched={touched}
+              errors={errors}
+              placeholder={placeholder}
+            />
             <Form.Item
               validateStatus={validateField("email", touched, errors)}
               hasFeedback
