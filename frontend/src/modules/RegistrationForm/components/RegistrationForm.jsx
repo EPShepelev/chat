@@ -63,6 +63,7 @@ const RegistrationForm = (props) => {
               errors={errors}
               placeholder="Пароль"
               values={values}
+              type="password"
             />
 
             <FormField
@@ -74,6 +75,7 @@ const RegistrationForm = (props) => {
               errors={errors}
               placeholder="Повторите пароль"
               values={values}
+              type="password"
             />
 
             <Form.Item>
