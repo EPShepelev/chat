@@ -17,6 +17,13 @@ export default ({ isAuth, values, errors }) => {
         errors.password = "Слишком простой пароль";
       }
     },
+    full_name: (value) => {
+      if (!value) {
+        errors.email = "Введите email";
+      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+        errors.email = "Некорректный email";
+      }
+    },
   };
 
   Object.keys(values).forEach((key) => rules[key] && rules[key](values[key]));
