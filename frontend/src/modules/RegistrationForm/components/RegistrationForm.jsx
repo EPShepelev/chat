@@ -22,6 +22,7 @@ const RegistrationForm = (props) => {
     handleSubmit,
     isValid,
     isSubmitting,
+    type,
   } = props;
   return (
     <div>

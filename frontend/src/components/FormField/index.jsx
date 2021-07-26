@@ -12,6 +12,7 @@ const FormField = ({
   touched,
   errors,
   values,
+  type,
 }) => {
   return (
     <Form.Item
@@ -27,6 +28,7 @@ const FormField = ({
         value={values[name]}
         onChange={handleChange}
         onBlur={handleBlur}
+        type={type}
       />
     </Form.Item>
   );
