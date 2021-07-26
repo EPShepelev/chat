@@ -19,7 +19,7 @@ export default ({ isAuth, values, errors }) => {
     },
     password_2: (value) => {
       if (!isAuth && value !== value.password) {
-        errors.password = "Пароли не совпадают";
+        errors.password_2 = "Пароли не совпадают";
       } 
     },
     full_name: (value) => {
