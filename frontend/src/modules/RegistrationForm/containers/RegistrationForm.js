@@ -1,6 +1,10 @@
-import RegistrationForm from "../components/RegistrationForm";
 import { withFormik } from "formik";
+import RegistrationForm from "../components/RegistrationForm";
+
+import { userActions } from "redux/actions";
 import validateForm from "utils/validate";
+
+import store from "redux/store";
 
 export default withFormik({
   enableReinitialize: true,
