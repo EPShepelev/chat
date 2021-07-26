@@ -18,10 +18,9 @@ export default ({ isAuth, values, errors }) => {
       }
     },
     full_name: (value) => {
-      if (!value) {
-        errors.email = "Введите email";
-      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-        errors.email = "Некорректный email";
+      if (!isAuth && !value) {
+        errors.full_name = "Укажите свое имя";
+        } 
       }
     },
   };
