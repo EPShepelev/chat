@@ -62,7 +62,10 @@ class UserController {
       fullname: req.body.fullname,
       password: req.body.password,
     };
+
+    const errors = validationResult(req);
     const user = new UserModel(postData);
+
     user
       .save()
       .then((obj: any) => {
