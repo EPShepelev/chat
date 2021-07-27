@@ -39,23 +39,6 @@ class UserController {
     });
   };
 
-  create = (req: express.Request, res: express.Response) => {
-    const postData = {
-      email: req.body.email,
-      fullname: req.body.fullname,
-      password: req.body.password,
-    };
-    const user = new UserModel(postData);
-    user
-      .save()
-      .then((obj: any) => {
-        res.json(obj);
-      })
-      .catch((reason) => {
-        res.json({ reason });
-      });
-  };
-
   delete = (req: express.Request, res: express.Response) => {
     const id: string = req.params.id;
     UserModel.findOneAndRemove({ _id: id })
@@ -70,6 +53,23 @@ class UserController {
         res.json({
           message: "User not found",
         });
+      });
+  };
+
+  create = (req: express.Request, res: express.Response) => {
+    const postData = {
+      email: req.body.email,
+      fullname: req.body.fullname,
+      password: req.body.password,
+    };
+    const user = new UserModel(postData);
+    user
+      .save()
+      .then((obj: any) => {
+        res.json(obj);
+      })
+      .catch((reason) => {
+        res.json({ reason });
       });
   };
 
