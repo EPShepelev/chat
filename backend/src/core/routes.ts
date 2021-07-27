@@ -1,5 +1,5 @@
 import { updateLastSeen, checkAuth } from "..middlewares";
-import { loginValidation } from "../utils/validations";
+import { loginValidation, registerValidation } from "../utils/validations";
 import bodyParser from "body-parser";
 import express from "express";
 import socket from "socket.io";
@@ -20,7 +20,7 @@ const createRoutes = (app: express.Express, io: socket.Server) => {
   app.get("/user/me", UserController.getMe);
   app.get("/user/:id", UserController.show);
   app.delete("/user/:id", UserController.delete);
-  app.post("/user/registration", loginValidation, UserController.create);
+  app.post("/user/registration", registerValidation, UserController.create);
   app.post("/user/login", loginValidation, UserController.login);
 
   app.get("/dialogs", DialogController.index);
