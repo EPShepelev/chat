@@ -77,7 +77,10 @@ class UserController {
         res.json(obj);
       })
       .catch((reason) => {
-        res.json({ reason });
+        res.status(500).json({
+          status: "error",
+          message: reason,
+        });
       });
   };
 
