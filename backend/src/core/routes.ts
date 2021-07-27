@@ -20,7 +20,7 @@ const createRoutes = (app: express.Express, io: socket.Server) => {
   app.get("/user/me", UserController.getMe);
   app.get("/user/:id", UserController.show);
   app.delete("/user/:id", UserController.delete);
-  app.post("/user/registration", UserController.create);
+  app.post("/user/registration", loginValidation, UserController.create);
   app.post("/user/login", loginValidation, UserController.login);
 
   app.get("/dialogs", DialogController.index);
