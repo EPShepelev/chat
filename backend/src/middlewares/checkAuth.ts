@@ -1,12 +1,11 @@
-import express from "express";
 import { verifyJWTToken } from "../utils";
 
 export default (req: any, res: any, next: any) => {
-  const token = req.headers.token;
-
-  if (req.path === "user/login" || req.path === "user/registration") {
+  if (req.path === "user/signin" || req.path === "user/signup") {
     return next();
   }
+
+  const token = req.headers.token;
 
   verifyJWTToken(token)
     .then((user: any) => {
