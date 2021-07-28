@@ -12,7 +12,7 @@ const Actions = {
     });
   },
   fetchUserLogin: (postData) => (dispatch) => {
-    return userApi.login(postData).then(({ data }) => {
+    return userApi.signin(postData).then(({ data }) => {
       const { status, token } = data;
       if (status === "error") {
         openNotification({
@@ -34,7 +34,7 @@ const Actions = {
     });
   },
   fetchUserRegister: (postData) => (dispatch) => {
-    return userApi.register(postData).then(({ data }) => {
+    return userApi.signup(postData).then(({ data }) => {
       const { status, token } = data;
 
       return data;
