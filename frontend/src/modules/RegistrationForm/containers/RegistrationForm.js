@@ -23,14 +23,18 @@ export default withFormik({
 
   handleSubmit: (values, { setSubmitting, props }) => {
     store.dispatch(
-      userActions(fetchUserRegister(values)).then(({ status }) => {
-        if (status === "success") {
-          setTimeout(() => {
-            props.history.push("/");
-          }, 500);
-        }
-        setSubmitting(false);
-      })
+      userActions(fetchUserRegister(values))
+        .then(({ status }) => {
+          if (status === "success") {
+            setTimeout(() => {
+              props.history.push("/");
+            }, 500);
+          }
+          setSubmitting(false);
+        })
+        .catch(() => {
+          setSubmitting(false);
+        })
     );
   },
 
