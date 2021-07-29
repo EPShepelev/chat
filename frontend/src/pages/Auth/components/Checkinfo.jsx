@@ -1,10 +1,14 @@
-import React, { Component, Fragment } from "react";
-import PropTypes from "prop-types";
-import store from "./store";
-import * as actionTypes from "./store/actionTypes";
+import React from "react";
+import { Typography } from "antd";
+
+const { Title } = Typography;
 
 const CheckEmailInfo = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Title level={2}>h2. Ant Design</Title>
+    </div>
+  );
 };
 
 export default CheckEmailInfo;
