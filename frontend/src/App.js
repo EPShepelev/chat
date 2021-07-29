@@ -15,7 +15,7 @@ const App = (props) => {
         path="/"
         render={() => {
           {
-            isAuth ? <Home /> : <Redirect to="/login" />;
+            isAuth ? <Home /> : <Redirect to="/signin" />;
           }
         }}
       />
