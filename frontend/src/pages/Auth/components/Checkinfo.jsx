@@ -6,7 +6,11 @@ const { Title } = Typography;
 const CheckEmailInfo = () => {
   return (
     <div>
-      <Title level={2}>h2. Ant Design</Title>
+      <Title level={2}>Готово!</Title>
+      <p>
+        Регистрация прошла успешно. Ссылка для подтверждения регистрации
+        отправлена на e-mail
+      </p>
     </div>
   );
 };
