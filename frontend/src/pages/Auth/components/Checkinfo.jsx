@@ -1,17 +1,11 @@
 import React from "react";
-import { Typography } from "antd";
+import { Result } from "antd";
 
 const { Title } = Typography;
 
 const CheckEmailInfo = () => {
   return (
-    <div>
-      <Title level={2}>Готово!</Title>
-      <p>
-        Регистрация прошла успешно. Ссылка для подтверждения регистрации
-        отправлена на e-mail
-      </p>
-    </div>
+    <Result status="success" title="Готово!" subTitle="Регистрация прошла ус" />
   );
 };
 
