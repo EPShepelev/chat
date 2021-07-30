@@ -5,8 +5,14 @@ const { Title } = Typography;
 
 const CheckEmailInfo = () => {
   return (
+    <div>
+    <Block>
     <Result status="success" title="Готово!" subTitle="Регистрация прошла ус" />
+    </Block>
+  </div>;
   );
 };
 
 export default CheckEmailInfo;
+
+
