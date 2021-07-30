@@ -1,5 +1,5 @@
 import React from "react";
-import { Result } from "antd";
+import { Block, Result } from "antd";
 
 const { Title } = Typography;
 
