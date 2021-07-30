@@ -7,7 +7,7 @@ const CheckEmailInfo = () => {
   return (
     <div>
     <Block>
-    <Result status="success" title="Готово!" subTitle="Регистрация прошла ус" />
+    <Result status="success" title="Готово!" subTitle="Регистрация прошла успешно. Ссылка для подтверждения регистрации отправлена на e-mail" />
     </Block>
   </div>;
   );
