@@ -89,7 +89,10 @@ class UserController {
           message: "User not found",
         });
       }
-      res.json(user);
+      res.json({
+        status: "success",
+        message: "Аккаунт подтвержден!",
+      });
     });
   };
 
