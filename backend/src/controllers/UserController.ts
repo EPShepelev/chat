@@ -81,7 +81,7 @@ class UserController {
   verify = (req: express.Request, res: express.Response) => {
     const hash = req.query.hash;
     if (!hash) {
-      return res.status(404).json({ message: "User not found" });
+      return res.status(422).json({ errors: "Invalid hash" });
     }
   };
 
