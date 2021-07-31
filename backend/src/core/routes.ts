@@ -22,6 +22,7 @@ const createRoutes = (app: express.Express, io: socket.Server) => {
   app.delete("/user/:id", UserController.delete);
   app.post("/user/signup", registerValidation, UserController.create);
   app.post("/user/signin", loginValidation, UserController.login);
+  app.post("/user/verify", UserController.verify);
 
   app.get("/dialogs", DialogController.index);
   app.post("/dialogs", DialogController.create);
