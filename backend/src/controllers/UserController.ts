@@ -83,6 +83,14 @@ class UserController {
     if (!hash) {
       return res.status(422).json({ errors: "Invalid hash" });
     }
+    UserModel.find({ confirm_hash: hash }, (err, user) => {
+      if (err || !user) {
+        return res.status(404).json({
+          message: "User not found",
+        });
+      }
+      res.json(user);
+    });
   };
 
   login = (req: express.Request, res: express.Response) => {
