@@ -84,6 +84,10 @@ class UserController {
       });
   };
 
+  verify = (req: express.Request, res: express.Response) => {
+    const hash = req.query.hash;
+  };
+
   login = (req: express.Request, res: express.Response) => {
     const postData = {
       email: req.body.email,
