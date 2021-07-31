@@ -10,7 +10,7 @@ const App = (props) => {
     <div className="wrapper">
       <Route
         exact
-        path={["/signin", "/signup", "/signup/check"]}
+        path={["/signin", "/signup", "/signup/verify"]}
         component={Auth}
       />
 
