@@ -11,7 +11,7 @@ const Auth = () => (
     <div className="auth__content">
       <Route exact path="/signin" component={LoginForm} />
       <Route path="/signup" component={RegistrationForm} />
-      <Route path="/signup/check" component={CheckInfo} />
+      <Route path="/signup/verify" component={CheckInfo} />
     </div>
   </section>
 );
