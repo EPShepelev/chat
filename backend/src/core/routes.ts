@@ -18,8 +18,7 @@ const createRoutes = (app: express.Express, io: socket.Server) => {
   const port = 3000;
 
   app.get("/user/me", UserController.getMe);
-  app.post("/user/verify", UserController.verify);
-  app.get("/user/:id", UserController.show);
+  app.get("/user/verify", UserController.verify);
   app.post("/user/signup", registerValidation, UserController.create);
   app.post("/user/signin", loginValidation, UserController.login);
   app.delete("/user/:id", UserController.delete);
