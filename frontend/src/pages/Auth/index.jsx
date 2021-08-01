@@ -2,7 +2,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { LoginForm, RegistrationForm } from "modules";
-import CheckInfo from "./container/CheckEmailInfo";
+import CheckInfo from "./components/CheckEmailInfo";
 
 import "./Auth.scss";
 

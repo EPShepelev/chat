@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Block, Result } from "antd";
 
-const CheckEmailInfo = () => {
+const CheckEmailInfo = (props) => {
+useEffect(() => {
+
+  }
+});
+
   return (
     <div>
       <Block>
