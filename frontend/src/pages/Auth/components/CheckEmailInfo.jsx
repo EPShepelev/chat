@@ -4,7 +4,7 @@ import { Block, Result } from "antd";
 import { userApi } from "utils/api";
 
 const CheckEmailInfo = ({ location }) => {
-  const [verified, setVerified] = useState();
+  const [verified, setVerified] = useState(false);
 
   useEffect(() => {
     hash = location.search.split("hash=")[1];
