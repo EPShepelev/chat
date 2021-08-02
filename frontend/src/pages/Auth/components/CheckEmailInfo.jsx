@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { Block, Result } from "antd";
 
+import { userApi } from "utils/api";
+
 const CheckEmailInfo = ({ location }) => {
   useEffect(() => {
     hash = location.search.split("hash=")[1];
