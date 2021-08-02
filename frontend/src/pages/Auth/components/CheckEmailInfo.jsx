@@ -1,9 +1,9 @@
 import React, {useContext} from "react";
 import { Block, Result } from "antd";
 
-const CheckEmailInfo = (props) => {
+const CheckEmailInfo = ({location}) => {
 useEffect(() => {
-
+    hash = location.search.split("hash=")[1];
   }
 });
 
