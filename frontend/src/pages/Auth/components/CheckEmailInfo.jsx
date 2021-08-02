@@ -9,7 +9,11 @@ const CheckEmailInfo = ({ location }) => {
   useEffect(() => {
     hash = location.search.split("hash=")[1];
     if (hash) {
-      userApi.verifyHash(hash);
+      userApi.verifyHash(hash).then(({data})=>{
+        if(data.status === "success"){
+          setVerified(true)
+        }
+      })
     }
   });
 
@@ -20,10 +24,10 @@ const CheckEmailInfo = ({ location }) => {
           status="success"
           title="Готово!"
           subTitle={
-            <p>
+            !verified ? <p>
               "Регистрация прошла успешно! <br /> Ссылка для подтверждения
               регистрации отправлена на e-mail"
-            </p>
+            </p> : 
           }
         />
       </Block>
