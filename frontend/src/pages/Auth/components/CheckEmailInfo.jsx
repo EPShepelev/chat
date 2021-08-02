@@ -1,12 +1,15 @@
-import React, { useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { Block, Result } from "antd";
 
 import { userApi } from "utils/api";
 
 const CheckEmailInfo = ({ location }) => {
+  const [textInfo, setTextInfo] = useState();
+
   useEffect(() => {
     hash = location.search.split("hash=")[1];
     if (hash) {
+      userApi.verifyHash(hash);
     }
   });
 
