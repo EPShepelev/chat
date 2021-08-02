@@ -3,6 +3,18 @@ import { Block, Result } from "antd";
 
 import { userApi } from "utils/api";
 
+const RenderTextInfo = () => {
+  if (hash) {
+    if (verified) {
+      return "Аккаунт успешно подтвержден";
+    } else {
+      return "Ошибка при подтверждении аккаунта";
+    }
+  } else {
+    return "Ссылка для подтверждения регистрации отправлена на e-mail";
+  }
+};
+
 const CheckEmailInfo = ({ location }) => {
   const [verified, setVerified] = useState(false);
 
