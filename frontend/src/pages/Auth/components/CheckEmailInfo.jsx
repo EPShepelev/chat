@@ -1,11 +1,12 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { Block, Result } from "antd";
 
-const CheckEmailInfo = ({location}) => {
-useEffect(() => {
+const CheckEmailInfo = ({ location }) => {
+  useEffect(() => {
     hash = location.search.split("hash=")[1];
-  }
-});
+    if (hash) {
+    }
+  });
 
   return (
     <div>
