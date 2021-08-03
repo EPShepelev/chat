@@ -8,7 +8,7 @@ const renderTextInfo = (hash, verified) => {
   if (hash) {
     if (verified) {
       return {
-        status: withSuccess,
+        status: success,
         message: "Аккаунт успешно подтвержден",
       };
     } else {
