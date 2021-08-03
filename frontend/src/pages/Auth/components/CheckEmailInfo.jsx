@@ -43,7 +43,10 @@ const CheckEmailInfo = ({ location }) => {
   return (
     <div>
       <Block>
-        <Result status={info.status} title={info.message} />
+        <Result
+          status={info.status}
+          title={info.status === "success" ? "Готово" : "Ошибка"}
+        />
       </Block>
     </div>
   );
