@@ -3,7 +3,6 @@ import { Block, Result } from "antd";
 
 import { userApi } from "utils/api";
 
-const hash = location.search.split("hash=")[1];
 const renderTextInfo = (hash, verified) => {
   if (hash) {
     if (verified) {
@@ -18,6 +17,7 @@ const renderTextInfo = (hash, verified) => {
 
 const CheckEmailInfo = ({ location }) => {
   const [verified, setVerified] = useState(false);
+  const hash = location.search.split("hash=")[1];
 
   useEffect(() => {
     if (hash) {
