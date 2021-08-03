@@ -19,7 +19,7 @@ const renderTextInfo = (hash, verified) => {
     }
   } else {
     return {
-      status: error,
+      status: success,
       message: "Ссылка для подтверждения регистрации отправлена на e-mail",
     };
   }
