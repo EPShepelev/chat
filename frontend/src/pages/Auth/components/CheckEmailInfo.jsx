@@ -28,6 +28,7 @@ const renderTextInfo = (hash, verified) => {
 const CheckEmailInfo = ({ location }) => {
   const [verified, setVerified] = useState(false);
   const hash = location.search.split("hash=")[1];
+  const info = renderTextInfo(hash, verified);
 
   useEffect(() => {
     if (hash) {
