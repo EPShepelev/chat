@@ -12,10 +12,16 @@ const renderTextInfo = (hash, verified) => {
         message: "Аккаунт успешно подтвержден",
       };
     } else {
-      return "Ошибка при подтверждении аккаунта";
+      return {
+        status: error,
+        message: "Ошибка при подтверждении аккаунта",
+      };
     }
   } else {
-    return "Ссылка для подтверждения регистрации отправлена на e-mail";
+    return {
+      status: error,
+      message: "Ссылка для подтверждения регистрации отправлена на e-mail",
+    };
   }
 };
 
