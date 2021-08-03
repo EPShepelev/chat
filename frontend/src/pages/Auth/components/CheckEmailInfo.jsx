@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Block, Result } from "antd";
 
 import { userApi } from "utils/api";
+import { withSuccess } from "antd/lib/modal/confirm";
 
 const renderTextInfo = (hash, verified) => {
   if (hash) {
     if (verified) {
-      return "Аккаунт успешно подтвержден";
+      return {
+        status: withSuccess,
+        message: "Аккаунт успешно подтвержден",
+      };
     } else {
       return "Ошибка при подтверждении аккаунта";
     }
