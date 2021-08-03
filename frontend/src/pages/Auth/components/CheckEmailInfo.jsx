@@ -42,11 +42,7 @@ const CheckEmailInfo = ({ location }) => {
   return (
     <div>
       <Block>
-        <Result
-          status="success"
-          title="Готово!"
-          subTitle={renderTextInfo(hash, verified)}
-        />
+        <Result status="success" title="Готово!" subTitle={info.message} />
       </Block>
     </div>
   );
