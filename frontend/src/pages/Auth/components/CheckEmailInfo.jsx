@@ -47,7 +47,7 @@ const CheckEmailInfo = ({ location, history }) => {
           status={info.status}
           title={info.status === "success" ? "Готово" : "Ошибка"}
           subTitle={info.message}
-          extra={<Button onClick={}>Войти</Button>}
+          extra={<Button onClick={() => history.push("/signin")}>Войти</Button>}
         />
       </Block>
     </div>
