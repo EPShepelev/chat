@@ -91,10 +91,11 @@ class UserController {
       }
 
       user.confirmed = true;
-
-      res.json({
-        status: "success",
-        message: "Аккаунт подтвержден!",
+      user.save(function (err) {
+        res.json({
+          status: "success",
+          message: "Аккаунт подтвержден!",
+        });
       });
     });
   };
