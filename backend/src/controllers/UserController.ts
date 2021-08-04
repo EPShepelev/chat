@@ -95,7 +95,7 @@ class UserController {
         if (err) {
           return res.status(404).json({
             status: "error",
-            message: "Hash not found",
+            message: err,
           });
         }
         res.json({
