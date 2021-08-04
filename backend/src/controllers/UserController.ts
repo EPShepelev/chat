@@ -89,6 +89,9 @@ class UserController {
           message: "Hash not found",
         });
       }
+
+      user.confirmed = true;
+
       res.json({
         status: "success",
         message: "Аккаунт подтвержден!",
