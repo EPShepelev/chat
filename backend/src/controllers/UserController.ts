@@ -86,6 +86,7 @@ class UserController {
     UserModel.findOne({ confirm_hash: hash }, (err, user) => {
       if (err || !user) {
         return res.status(404).json({
+          status: "error",
           message: "Hash not found",
         });
       }
