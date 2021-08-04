@@ -92,6 +92,12 @@ class UserController {
 
       user.confirmed = true;
       user.save((err) => {
+        if (err) {
+          return res.status(404).json({
+            status: "error",
+            message: "Hash not found",
+          });
+        }
         res.json({
           status: "success",
           message: "Аккаунт подтвержден!",
