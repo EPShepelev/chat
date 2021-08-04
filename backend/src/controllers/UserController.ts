@@ -91,7 +91,7 @@ class UserController {
       }
 
       user.confirmed = true;
-      user.save(function (err) {
+      user.save((err) => {
         res.json({
           status: "success",
           message: "Аккаунт подтвержден!",
