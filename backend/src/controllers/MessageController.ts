@@ -47,6 +47,7 @@ class MessageController {
           DialogModel.findOneAndUpdate({_id:postData.dialog}, {lastMessage: message._id}, {upsert: true}, function(err, doc) {
             if (err) {
               return res.status(500).json({
+                status: "error",
                 message: err,
               });
             return res.send('Succesfully saved.');
