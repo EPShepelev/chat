@@ -131,7 +131,7 @@ class UserController {
           token,
         });
       } else {
-        res.status(500).json({
+        res.status(403).json({
           status: "error",
           message: "invalid password or email",
         });
