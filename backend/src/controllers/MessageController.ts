@@ -2,7 +2,7 @@ import { O_NONBLOCK } from "constants";
 import express from "express";
 import socket from "socket.io";
 
-import { MessageModel } from "../models";
+import { MessageModel, DialogModel } from "../models";
 
 class MessageController {
   io: socket.Server;
