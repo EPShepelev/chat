@@ -40,11 +40,11 @@ class MessageController {
           message.save((err: any) => {
             if (err) {
               return res.status(500).json({
-                status: "error",
                 message: err,
               });
             }
           });
+          DialogModel.update();
           res.json(message);
 
           this.io.emit("SERVER:NEW_MESSAGE", message);
