@@ -40,6 +40,7 @@ class MessageController {
           message.save((err: any) => {
             if (err) {
               return res.status(500).json({
+                status: "error",
                 message: err,
               });
             }
