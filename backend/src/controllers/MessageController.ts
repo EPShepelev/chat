@@ -37,7 +37,7 @@ class MessageController {
       .save()
       .then((obj: any) => {
         obj.populate("dialog", (err: any, message: any) => {
-          message.save((err) => {
+          message.save((err: any) => {
             if (err) {
               return res.status(500).json({
                 status: "error",
