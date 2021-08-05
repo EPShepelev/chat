@@ -44,7 +44,13 @@ class MessageController {
               });
             }
           });
-          DialogModel.update();
+          DialogModel.findOneAndUpdate({_id:postData.dialog}, {lastMessage: message._id}, {upsert: true}, function(err, doc) {
+            if (err) {
+              return res.status(500).json({
+                message: err,
+              });
+            return res.send('Succesfully saved.');
+        });
           res.json(message);
 
           this.io.emit("SERVER:NEW_MESSAGE", message);
