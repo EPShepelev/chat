@@ -23,13 +23,13 @@ const Dialogs = ({
     setInputValue(value);
   };
 
-  // useEffect(() => {
-  //   if (!items.length) {
-  //     fetchDialogs();
-  //   } else {
-  //     setFilteredItems(items);
-  //   }
-  // }, [items]);
+  useEffect(() => {
+    if (!items.length) {
+      fetchDialogs();
+    } else {
+      setFilteredItems(items);
+    }
+  }, [items]);
 
   return (
     <BaseDialogs
