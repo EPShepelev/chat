@@ -44,6 +44,10 @@ const UserSchema = new Schema(
   }
 );
 
+personSchema.virtual("fullName").get(function () {
+  
+});
+
 UserSchema.pre("save", function (next) {
   const user: IUser = this;
   if (!user.isModified("password")) return next();
