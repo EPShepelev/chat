@@ -52,15 +52,15 @@ UserSchema.virtual("isOnline").get(function () {
 UserSchema.pre("save", function (next) {
   const user: IUser = this;
   if (!user.isModified("password")) return next();
-  
+
   generatePasswordHash(user.password)
     .then((hash) => {
       user.password = String(hash);
-      generatePasswordHash(new Date()).then(confirmHash)=>{
+      generatePasswordHash(+new Date()).then((confirmHash) => {
         user.confirm_hash = String(confirmHash);
         next();
       });
-    })     
+    })
     .catch((err) => {
       next(err);
     });
