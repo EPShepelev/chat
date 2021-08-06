@@ -44,7 +44,7 @@ const UserSchema = new Schema(
   }
 );
 
-personSchema.virtual("fullName").get(function () {
+UserSchema.virtual("isOnline").get(function () {
   
 });
 
