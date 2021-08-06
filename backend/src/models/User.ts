@@ -46,12 +46,13 @@ const UserSchema = new Schema(
 );
 
 UserSchema.virtual("isOnline").get(function () {
-  
+  return differenceInMinutes();
 });
 
 UserSchema.pre("save", function (next) {
   const user: IUser = this;
   if (!user.isModified("password")) return next();
+  
   generatePasswordHash(user.password)
     .then((hash) => {
       user.password = String(hash);
