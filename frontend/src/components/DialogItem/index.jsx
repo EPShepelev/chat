@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import "./DialogItem.scss";
-import { IconRead } from "../";
+import { IconRead } from "..";
 import { format, isToday } from "date-fns";
 import { Avatar } from "components";
 
