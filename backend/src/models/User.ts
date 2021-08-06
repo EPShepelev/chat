@@ -59,9 +59,7 @@ UserSchema.pre("save", function (next) {
         user.confirm_hash = String(confirmHash);
         next();
       });
-    })
-      next();
-    })
+    })     
     .catch((err) => {
       next(err);
     });
