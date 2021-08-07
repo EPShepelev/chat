@@ -46,7 +46,7 @@ const UserSchema = new Schema(
 );
 
 UserSchema.virtual("isOnline").get(function (this: any) {
-  return differenceInMinutes(this.last_seen, new Date.toISOString());
+  return differenceInMinutes(new Date.toISOString(), this.last_seen) > 5;
 });
 
 UserSchema.pre("save", function (next) {
