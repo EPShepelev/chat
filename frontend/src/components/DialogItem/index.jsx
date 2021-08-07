@@ -32,11 +32,11 @@ const DialogItem = ({
     onClick={onSelect.bind(this, _id)}
   >
     <div className="dialogs__item-avatar">
-      <Avatar user={user} />
+      <Avatar user={lastMessage.user} />
     </div>
     <div className="dialogs__item-info">
       <div className="dialogs__item-info-top">
-        <b>{user.fullname}</b>
+        <b>{lastMessage.user.fullname}</b>
         <span>{getMessageTime(created_at)}</span>
       </div>
       <div className="dialogs__item-info-bottom">
