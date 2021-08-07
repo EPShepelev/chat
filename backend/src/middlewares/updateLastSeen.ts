@@ -2,7 +2,7 @@ import express from "express";
 import { UserModel } from "../models";
 
 export default (
-  _: express.Request,
+  req: express.Request,
   __: express.Response,
   next: express.NextFunction
 ) => {
