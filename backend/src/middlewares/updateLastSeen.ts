@@ -10,7 +10,7 @@ export default (
     {
       _id: req.user._id,
     },
-    { fullname: "qwe", last_seen: new Date() },
+    { last_seen: new Date() },
     { new: true },
     () => {}
   );
