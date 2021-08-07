@@ -22,6 +22,7 @@ const DialogItem = ({
   text,
   currentDialogId,
   onSelect,
+  lastMessage,
 }) => (
   <div
     className={classNames("dialogs__item", {
