@@ -13,7 +13,7 @@ class DialogController {
     const authorId = req.user._id;
 
     DialogModel.find({ author: authorId })
-      .populate(["author", "partner", "lastMessage", "lastMessage.user"])
+      .populate(["author", "partner"])
       .populate({
         path: "lastMessage",
         populate: {
