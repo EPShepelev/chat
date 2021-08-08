@@ -42,9 +42,9 @@ const DialogItem = ({
       <div className="dialogs__item-info-bottom">
         <p>{lastMessage.text}</p>
         {isMe && <IconRead isMe={true} isRead={true} />}
-        {unread > 0 && (
+        {lastMessage.unread > 0 && (
           <div className="dialogs__item-info-bottom-count">
-            {unread > 9 ? "+9" : unread}
+            {unread > 9 ? "+9" : lastMessage.unread}
           </div>
         )}
       </div>
