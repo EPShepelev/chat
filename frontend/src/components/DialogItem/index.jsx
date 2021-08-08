@@ -37,7 +37,7 @@ const DialogItem = ({
     <div className="dialogs__item-info">
       <div className="dialogs__item-info-top">
         <b>{lastMessage.user.fullname}</b>
-        <span>{getMessageTime(created_at)}</span>
+        <span>{getMessageTime(lastMessage.created_at)}</span>
       </div>
       <div className="dialogs__item-info-bottom">
         <p>{text}</p>
