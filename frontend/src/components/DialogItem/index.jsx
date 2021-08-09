@@ -4,7 +4,7 @@ import "./DialogItem.scss";
 import { IconRead } from "..";
 import { format, isToday } from "date-fns";
 import { Avatar } from "components";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const getMessageTime = (created_at) => {
   if (isToday(new Date(created_at))) {
