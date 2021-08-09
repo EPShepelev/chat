@@ -16,7 +16,8 @@ const App = (props) => {
 
       <Route
         exact
-        path="/"
+        path={["/", "dialog/:id"]}
+        component={Auth}
         render={() => {
           {
             isAuth ? <Home /> : <Redirect to="/signin" />;
