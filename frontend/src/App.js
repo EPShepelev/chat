@@ -17,7 +17,7 @@ const App = (props) => {
 
         <Route
           exact
-          path={["/", "dialog/:id"]}
+          path="/"
           component={Auth}
           render={() => {
             {
