@@ -37,7 +37,6 @@ const Dialogs = ({
       items={filtered}
       onSearch={onChangeInput}
       inputValue={inputValue}
-      onSelectDialog={setCurrentDialogId}
       currentDialogId={currentDialogId}
     />
   );
