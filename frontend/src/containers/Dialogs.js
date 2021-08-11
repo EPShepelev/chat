@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Dialogs as BaseDialogs } from "components";
 import { dialogsActions } from "redux/actions";
+import socket from "core/socket";
 
 const Dialogs = ({
   fetchDialogs,
