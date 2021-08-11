@@ -32,6 +32,10 @@ const Dialogs = ({
     }
   }, [items]);
 
+  socket.on("SERVER:DIALOG_CREATED", () => {
+    fetchDialogs();
+  });
+
   return (
     <BaseDialogs
       uerId={userId}
