@@ -32,7 +32,7 @@ const Dialogs = ({
     }
   }, [items]);
 
-  socket.on("SERVER:DIALOG_CREATED", () => {
+  socket.on("SERVER:DIALOG_CREATED", (data) => {
     fetchDialogs();
   });
 
