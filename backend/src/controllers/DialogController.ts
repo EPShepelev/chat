@@ -32,7 +32,7 @@ class DialogController {
 
   create = (req: express.Request, res: express.Response) => {
     const postData = {
-      author: req.body.author,
+      author: req.user._id,
       partner: req.body.partner,
     };
     const dialog = new DialogModel(postData);
