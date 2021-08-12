@@ -59,7 +59,7 @@ class MessageController {
             }
           );
           res.json(message);
-
+          dialogObj.lastMessage = message._id;
           this.io.emit("SERVER:NEW_MESSAGE", message);
         });
       })
