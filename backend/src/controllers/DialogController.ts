@@ -49,6 +49,7 @@ class DialogController {
           res.json(dialogObj);
           this.io.emit("SERVER:DIALOG_CREATED", {
             ...postData,
+            dialog: dialogObj,
           });
         })
         .catch((reason) => {
