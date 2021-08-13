@@ -18,7 +18,7 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
   }, [items]);
 
   socket.on("SERVER:MESSAGE_CREATED", (data) => {
-    fetchDialogs();
+    fetchMessages(currentDialogId);
   });
 
   return (
