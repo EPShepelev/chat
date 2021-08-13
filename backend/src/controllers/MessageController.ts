@@ -60,8 +60,12 @@ class MessageController {
           );
           res.json(message);
           dialogObj.lastMessage = message._id;
-          dialogObj.save().then();
-          this.io.emit("SERVER:NEW_MESSAGE", message);
+          dialogObj.save().then(() => {
+            this.io.emit("SERVER:DIALOG_CREATED", {
+              ...postData,
+              dialog: dialogObj,
+            });
+          });
         });
       })
       .catch((reason) => {
