@@ -17,6 +17,10 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
     messagesRef.current.scrollTo(0, 99999);
   }, [items]);
 
+  socket.on("SERVER:DIALOG_CREATED", (data) => {
+    fetchDialogs();
+  });
+
   return (
     <BaseMessages blockRef={messagesRef} items={items} isLoading={isLoading} />
   );
