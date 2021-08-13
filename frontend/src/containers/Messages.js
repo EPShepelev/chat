@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { Messages as BaseMessages } from "components";
 import { messagesActions } from "redux/actions";
+import socket from "core/socket";
 
 const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
   const messagesRef = useRef(null);
