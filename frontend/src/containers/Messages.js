@@ -17,7 +17,7 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
     messagesRef.current.scrollTo(0, 99999);
   }, [items]);
 
-  socket.on("SERVER:MESSAGE_CREATED", (data) => {
+  socket.on("SERVER:NEW_MESSAGE", (data) => {
     fetchMessages(currentDialogId);
   });
 
