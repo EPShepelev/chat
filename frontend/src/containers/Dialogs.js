@@ -30,11 +30,10 @@ const Dialogs = ({
     } else {
       setFilteredItems(items);
     }
+    socket.on("SERVER:DIALOG_CREATED", (data) => {
+      fetchDialogs();
+    });
   }, [items]);
-
-  socket.on("SERVER:DIALOG_CREATED", (data) => {
-    fetchDialogs();
-  });
 
   return (
     <BaseDialogs
