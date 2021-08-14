@@ -11,15 +11,14 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
     if (currentDialogId) {
       fetchMessages(currentDialogId);
     }
+    socket.on("SERVER:NEW_MESSAGE", (data) => {
+      fetchMessages(currentDialogId);
+    });
   }, [currentDialogId]);
 
   useEffect(() => {
     messagesRef.current.scrollTo(0, 99999);
   }, [items]);
-
-  socket.on("SERVER:NEW_MESSAGE", (data) => {
-    fetchMessages(currentDialogId);
-  });
 
   return (
     <BaseMessages blockRef={messagesRef} items={items} isLoading={isLoading} />
