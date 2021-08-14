@@ -5,6 +5,10 @@ const Actions = {
     type: "MESSAGES:SET_ITEMS",
     payload: items,
   }),
+  addMessages: (message) => ({
+    type: "MESSAGES:ADD_MESSAGE",
+    payload: message,
+  }),
   setIsLoading: (bool) => ({
     type: "MESSAGES:SET_IS_LOADING",
     payload: bool,
