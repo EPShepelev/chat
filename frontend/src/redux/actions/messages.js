@@ -6,10 +6,14 @@ const Actions = {
     payload: items,
   }),
   addMessages: (message) => (dispatch, getState) => {
-    dispatch({
-      type: "MESSAGES:ADD_MESSAGE",
-      payload: message,
-    });
+    const { dialogs } = getState();
+    const { currentDialogId } = dialogs;
+    if (currentDialogId === id) {
+      dispatch({
+        type: "MESSAGES:ADD_MESSAGE",
+        payload: message,
+      });
+    }
   },
   setIsLoading: (bool) => ({
     type: "MESSAGES:SET_IS_LOADING",
