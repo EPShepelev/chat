@@ -16,7 +16,7 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
     }
     socket.on("SERVER:NEW_MESSAGE", onNewMessage);
     return () => {
-      socket.removeListener("SERVER:NEW_MESSAGE");
+      socket.removeListener("SERVER:NEW_MESSAGE", onNewMessage);
     };
   }, [currentDialogId]);
 
