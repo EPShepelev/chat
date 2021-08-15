@@ -6,14 +6,18 @@ import socket from "core/socket";
 
 const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
   const messagesRef = useRef(null);
+  const onNewMessage = (data) => {
+    fetchMessages(currentDialogId);
+  };
 
   useEffect(() => {
     if (currentDialogId) {
       fetchMessages(currentDialogId);
     }
-    socket.on("SERVER:NEW_MESSAGE", (data) => {
-      fetchMessages(currentDialogId);
-    });
+    socket.on("SERVER:NEW_MESSAGE", onNewMessage);
+    return () => {
+      socket.removeListener("SERVER:NEW_MESSAGE");
+    };
   }, [currentDialogId]);
 
   useEffect(() => {
