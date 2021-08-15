@@ -11,7 +11,7 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
   };
 
   useEffect(() => {
-    if (currentDialogId && !items.length) {
+    if (currentDialogId && !items) {
       fetchMessages(currentDialogId);
     }
     socket.on("SERVER:NEW_MESSAGE", onNewMessage);
