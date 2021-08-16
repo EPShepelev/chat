@@ -32,6 +32,10 @@ class Dialogs extends React.Component {
     const { currentDialogId, fetchMessages, items, isLoading } = this.props;
   
   }
+  componentDidUpdate(prevProps) {
+    if(this.props.items !== null || )
+  }
+  
   return (
     <BaseMessages blockRef={messagesRef} items={items} isLoading={isLoading} />
   );
