@@ -24,15 +24,17 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
     messagesRef.current.scrollTo(0, 99999);
   }, [items]);
 
-  return (
-    <BaseMessages blockRef={messagesRef} items={items} isLoading={isLoading} />
-  );
+  
 };
 
 class Dialogs extends React.Component {
   render() {
     const { currentDialogId, fetchMessages, items, isLoading } = this.props;
+  
   }
+  return (
+    <BaseMessages blockRef={messagesRef} items={items} isLoading={isLoading} />
+  );
 }
 
 export default connect(
