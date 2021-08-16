@@ -20,9 +20,6 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
     };
   }, [currentDialogId]);
 
-  useEffect(() => {
-    messagesRef.current.scrollTo(0, 99999);
-  }, [items]);
 
   
 };
@@ -34,7 +31,7 @@ class Dialogs extends React.Component {
   }
   componentDidUpdate(prevProps) {
     if(this.props.items.length !== prevProps.items.length ){
-      
+      this.messagesRef.scrollTo(0, 99999);
     }
   }
   
