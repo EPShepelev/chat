@@ -29,6 +29,8 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
   );
 };
 
+class Dialogs extends React.Component {}
+
 export default connect(
   ({ dialogs, messages }) => ({
     currentDialogId: dialogs.currentDialogId,
