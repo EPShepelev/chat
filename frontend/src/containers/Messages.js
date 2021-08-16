@@ -33,7 +33,9 @@ class Dialogs extends React.Component {
   
   }
   componentDidUpdate(prevProps) {
-    if(this.props.items !== null || )
+    if(this.props.items.length !== prevProps.items.length ){
+      
+    }
   }
   
   return (
