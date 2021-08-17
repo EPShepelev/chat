@@ -12,7 +12,7 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
 
   useEffect(() => {
     if (currentDialogId) {
-      fetchMessages(currentDialogId);
+     
     }
     socket.on("SERVER:NEW_MESSAGE", onNewMessage);
     return () => {
@@ -34,7 +34,7 @@ class Dialogs extends React.Component {
       this.messagesRef.scrollTo(0, 99999);
     }
     if(this.props.currentDialogId !== prevProps.currentDialogId){
-      
+      fetchMessages(currentDialogId);
     }
   }
   
