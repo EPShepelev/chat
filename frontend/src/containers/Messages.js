@@ -33,6 +33,9 @@ class Dialogs extends React.Component {
     if(this.props.items.length !== prevProps.items.length ){
       this.messagesRef.scrollTo(0, 99999);
     }
+    if(this.props.currentDialogId !== prevProps.currentDialogId){
+      
+    }
   }
   
   return (
