@@ -30,7 +30,7 @@ class Dialogs extends React.Component {
   }
 
   onNewMessage = () => {
-    socket.on("SERVER:NEW_MESSAGE", onNewMessage)
+   
   }
 
   componentDidUpdate(prevProps) {
@@ -40,6 +40,7 @@ class Dialogs extends React.Component {
     if(this.props.currentDialogId !== prevProps.currentDialogId){
       fetchMessages(currentDialogId);
     }
+    socket.on("SERVER:NEW_MESSAGE", this.onNewMessage)
   }
   
   return (
