@@ -27,8 +27,12 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
 class Dialogs extends React.Component {
   render() {
     const { currentDialogId, fetchMessages, items, isLoading } = this.props;
-  
   }
+
+  onNewMessage = () => {
+    socket.on("SERVER:NEW_MESSAGE", onNewMessage)
+  }
+
   componentDidUpdate(prevProps) {
     if(this.props.items.length !== prevProps.items.length ){
       this.messagesRef.scrollTo(0, 99999);
