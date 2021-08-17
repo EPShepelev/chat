@@ -12,11 +12,11 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
 
   useEffect(() => {
     if (currentDialogId) {
-     
+      fetchMessages(currentDialogId);
     }
     socket.on("SERVER:NEW_MESSAGE", onNewMessage);
     return () => {
-     
+      socket.removeListener("SERVER:NEW_MESSAGE", onNewMessage);
     };
   }, [currentDialogId]);
 
@@ -27,24 +27,12 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
 class Dialogs extends React.Component {
   render() {
     const { currentDialogId, fetchMessages, items, isLoading } = this.props;
+  
   }
-
-  onNewMessage = () => {
-   
-  }
-
   componentDidUpdate(prevProps) {
     if(this.props.items.length !== prevProps.items.length ){
       this.messagesRef.scrollTo(0, 99999);
     }
-    if(this.props.currentDialogId !== prevProps.currentDialogId){
-      fetchMessages(currentDialogId);
-    }
-    socket.on("SERVER:NEW_MESSAGE", this.onNewMessage)
-  }
-
-  componentWillUnmount(){
-    socket.removeListener("SERVER:NEW_MESSAGE", this.onNewMessage);
   }
   
   return (
