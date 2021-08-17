@@ -44,7 +44,7 @@ class Dialogs extends React.Component {
   }
 
   componentWillUnmount(){
-    socket.removeListener("SERVER:NEW_MESSAGE", onNewMessage);
+    socket.removeListener("SERVER:NEW_MESSAGE", this.onNewMessage);
   }
   
   return (
