@@ -16,7 +16,7 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
     }
     socket.on("SERVER:NEW_MESSAGE", onNewMessage);
     return () => {
-      socket.removeListener("SERVER:NEW_MESSAGE", onNewMessage);
+     
     };
   }, [currentDialogId]);
 
@@ -41,6 +41,10 @@ class Dialogs extends React.Component {
       fetchMessages(currentDialogId);
     }
     socket.on("SERVER:NEW_MESSAGE", this.onNewMessage)
+  }
+
+  componentWillUnmount(){
+    socket.removeListener("SERVER:NEW_MESSAGE", onNewMessage);
   }
   
   return (
