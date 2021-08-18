@@ -14,7 +14,7 @@ const Dialogs = ({
   const messagesRef = useRef(null);
 
   const onNewMessage = (data) => {
-    //
+    addMessage(data);
   };
 
   useEffect(() => {
