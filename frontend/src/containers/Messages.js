@@ -19,26 +19,11 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
       socket.removeListener("SERVER:NEW_MESSAGE", onNewMessage);
     };
   }, [currentDialogId]);
-
-
-  
 };
 
-class Dialogs extends React.Component {
-  render() {
-    const { currentDialogId, fetchMessages, items, isLoading } = this.props;
-  
-  }
-  componentDidUpdate(prevProps) {
-    if(this.props.items.length !== prevProps.items.length ){
-      this.messagesRef.scrollTo(0, 99999);
-    }
-  }
-  
-  return (
-    <BaseMessages blockRef={messagesRef} items={items} isLoading={isLoading} />
-  );
-}
+return (
+  <BaseMessages blockRef={messagesRef} items={items} isLoading={isLoading} />
+);
 
 export default connect(
   ({ dialogs, messages }) => ({
