@@ -36,7 +36,7 @@ class MessageController {
     message
       .save()
       .then((obj: any) => {
-        obj.populate(["dialog", "message"], (err: any, message: any) => {
+        obj.populate(["dialog", "user"], (err: any, message: any) => {
           message.save((err: any) => {
             if (err) {
               return res.status(500).json({
