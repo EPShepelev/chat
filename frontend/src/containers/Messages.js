@@ -20,6 +20,10 @@ const Dialogs = ({ currentDialogId, fetchMessages, items, isLoading }) => {
       socket.removeListener("SERVER:NEW_MESSAGE", onNewMessage);
     };
   }, [currentDialogId]);
+
+  useEffect(() => {
+    messagesRef.current.scrollTo(0, 99999);
+  }, [items]);
 };
 
 return (
