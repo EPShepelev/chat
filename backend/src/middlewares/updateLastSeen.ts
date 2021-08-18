@@ -6,13 +6,16 @@ export default (
   __: express.Response,
   next: express.NextFunction
 ) => {
-  UserModel.findOneAndUpdate(
-    {
-      _id: req.user._id,
-    },
-    { last_seen: new Date() },
-    { new: true },
-    () => {}
-  );
+  if (req.user) {
+    UserModel.findOneAndUpdate(
+      {
+        _id: req.user._id,
+      },
+      { last_seen: new Date() },
+      { new: true },
+      () => {}
+    );
+  }
+
   next();
 };
