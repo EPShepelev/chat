@@ -11,7 +11,7 @@ import "./styles/index.scss";
 import "emoji-mart/css/emoji-mart.css";
 
 const render = () => {
-  store.dispatch();
+  store.dispatch(userActions.fetchUserData());
 };
 
 ReactDOM.render(
