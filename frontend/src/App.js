@@ -4,6 +4,10 @@ import { Route, Redirect, Switch } from "react-router-dom";
 
 import { Auth, Home } from "pages";
 
+const bootstrap () =>{
+  
+}
+
 const App = (props) => {
   const { isAuth } = props;
   return (
