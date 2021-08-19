@@ -9,7 +9,9 @@ import App from "./App";
 import "./styles/index.scss";
 import "emoji-mart/css/emoji-mart.css";
 
-const render = () => {};
+const render = () => {
+  store.dispatch();
+};
 
 ReactDOM.render(
   <React.StrictMode>
