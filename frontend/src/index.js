@@ -5,9 +5,7 @@ import { Provider } from "react-redux";
 
 import store from "redux/store";
 
-const bootstrap () =>{
-  
-}
+const render = () => {};
 
 import App from "./App";
 import "./styles/index.scss";
