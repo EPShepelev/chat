@@ -37,10 +37,11 @@ return (
 );
 
 export default connect(
-  ({ dialogs, messages }) => ({
+  ({ dialogs, messages, user }) => ({
     currentDialogId: dialogs.currentDialogId,
     items: messages.item,
     isLoading: messages.isLoading,
+    user,
   }),
   messagesActions
 )(Dialogs);
