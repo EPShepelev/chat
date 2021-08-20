@@ -11,16 +11,15 @@ import "./styles/index.scss";
 import "emoji-mart/css/emoji-mart.css";
 
 const render = () => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <Router>
+          <App />
+        </Router>
+      </Provider>
+    </React.StrictMode>,
+    document.getElementById("root")
+  );
   store.dispatch(userActions.fetchUserData());
 };
-
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <Router>
-        <App />
-      </Router>
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
