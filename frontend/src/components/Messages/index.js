@@ -15,7 +15,9 @@ const Messages = ({ blockRef, isLoading, items, user }) => {
         <Spin tip="Загрузка сообщений..." size="large"></Spin>
       ) : items && !isLoading ? (
         items.length > 0 ? (
-          items.map((item) => <Message key={item._id} {...item} />)
+          items.map((item) => (
+            <Message key={item._id} {...item} isMe={user._id} />
+          ))
         ) : (
           <Empty description="Сообщений еще нет" />
         )
