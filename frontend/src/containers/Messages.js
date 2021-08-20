@@ -34,7 +34,12 @@ const Dialogs = ({
 };
 
 return (
-  <BaseMessages blockRef={messagesRef} items={items} isLoading={isLoading} />
+  <BaseMessages
+    user={user}
+    blockRef={messagesRef}
+    items={items}
+    isLoading={isLoading}
+  />
 );
 
 export default connect(
