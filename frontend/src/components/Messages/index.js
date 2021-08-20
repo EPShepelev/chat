@@ -5,7 +5,7 @@ import { Message } from "components";
 import classNames from "classnames";
 import "./Messages.scss";
 
-const Messages = ({ blockRef, isLoading, items }) => {
+const Messages = ({ blockRef, isLoading, items, user }) => {
   return (
     <div
       ref={blockRef}
