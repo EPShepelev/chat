@@ -10,6 +10,7 @@ const Dialogs = ({
   adMessage,
   items,
   isLoading,
+  user,
 }) => {
   const messagesRef = useRef(null);
 
