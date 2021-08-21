@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from "react";
 import { ChatInput } from "components";
 import {connect} from 'react-redux';
+import {messagesActions} from 'redux/actions';
 
 const ChatInput = () => {
   return <ChatInput onSendMessage={}/>;
 };
 
-export default ChatInput;
+export default connect(null, messagesActions)(ChatInput);
