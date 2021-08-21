@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { ChatInput } from "components";
 
 const ChatInput = () => {
-  return <div></div>;
+  return <ChatInput onSendMessage={}/>;
 };
 
-export default Chatinput;
+export default ChatInput;
