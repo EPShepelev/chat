@@ -16,7 +16,11 @@ const Messages = ({ blockRef, isLoading, items, user }) => {
       ) : items && !isLoading ? (
         items.length > 0 ? (
           items.map((item) => (
-            <Message key={item._id} {...item} isMe={user._id} />
+            <Message
+              key={item._id}
+              {...item}
+              isMe={user._id === item.author._id}
+            />
           ))
         ) : (
           <Empty description="Сообщений еще нет" />
