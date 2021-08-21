@@ -47,7 +47,7 @@ export default connect(
     currentDialogId: dialogs.currentDialogId,
     items: messages.item,
     isLoading: messages.isLoading,
-    user,
+    user: user.data,
   }),
   messagesActions
 )(Dialogs);
