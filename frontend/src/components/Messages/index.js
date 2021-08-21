@@ -19,7 +19,7 @@ const Messages = ({ blockRef, isLoading, items, user }) => {
             <Message
               key={item._id}
               {...item}
-              isMe={user._id === item.author._id}
+              isMe={user._id === item.user._id}
             />
           ))
         ) : (
