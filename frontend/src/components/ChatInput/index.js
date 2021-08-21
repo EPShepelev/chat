@@ -16,6 +16,7 @@ import "./ChatInput.scss";
 const ChatInput = () => {
   const [value, setValue] = useState("");
   const [emojiPickerVisible, setEmojiPickerVisible] = useState(false);
+  const {onSendMessage} = props;
 
   const toggleEmojiPicker = () => {
     setEmojiPickerVisible(!emojiPickerVisible);
@@ -38,6 +39,7 @@ const ChatInput = () => {
       </div>
       <Input
         onChange={(e) => setValue(e.target.value)}
+        onKeyUp={}
         size="large"
         placeholder="Введите сообщение"
       />
