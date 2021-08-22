@@ -15,8 +15,8 @@ const Actions = {
       });
     }
   },
-  fetchSendMessage: () => dispatch => {
-    
+  fetchSendMessage: (text) => dispatch => {
+    messagesApi.send(text).then();
   }
   setIsLoading: (bool) => ({
     type: "MESSAGES:SET_IS_LOADING",
