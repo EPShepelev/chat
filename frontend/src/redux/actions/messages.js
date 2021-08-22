@@ -16,7 +16,7 @@ const Actions = {
     }
   },
   fetchSendMessage: (text) => dispatch => {
-    messagesApi.send(text).then();
+    messagesApi.text;
   }
   setIsLoading: (bool) => ({
     type: "MESSAGES:SET_IS_LOADING",
