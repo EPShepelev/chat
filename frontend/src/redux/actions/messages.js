@@ -15,7 +15,9 @@ const Actions = {
       });
     }
   },
-  fetchSendMessage()
+  fetchSendMessage: () => dispatch => {
+    
+  }
   setIsLoading: (bool) => ({
     type: "MESSAGES:SET_IS_LOADING",
     payload: bool,
