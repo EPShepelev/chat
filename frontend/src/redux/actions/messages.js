@@ -16,7 +16,7 @@ const Actions = {
     }
   },
   fetchSendMessage: (text, dialogId) => dispatch => {
-    messagesApi.send(text);
+    messagesApi.send(text, dialogId);
   }
   setIsLoading: (bool) => ({
     type: "MESSAGES:SET_IS_LOADING",
