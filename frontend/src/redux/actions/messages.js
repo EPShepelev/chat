@@ -15,7 +15,7 @@ const Actions = {
       });
     }
   },
-  fetchSendMessage: (text) => dispatch => {
+  fetchSendMessage: (text, dialogId) => dispatch => {
     messagesApi.text;
   }
   setIsLoading: (bool) => ({
