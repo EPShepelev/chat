@@ -4,11 +4,7 @@ import { connect } from "react-redux";
 import { messagesActions } from "redux/actions";
 
 const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
-  return (
-    <ChatInputBase
-      onSendMessage={fetchSendMessage.bind(this, currentDialogId)}
-    />
-  );
+  return <ChatInputBase onSendMessage={fetchSendMessage} />;
 };
 
 export default connect(({ dialogs }) => dialogs, messagesActions)(ChatInput);
