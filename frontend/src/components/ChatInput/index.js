@@ -23,7 +23,8 @@ const ChatInput = () => {
   };
 
   const handleSendMessage = () => {
-     onSendMessage(value, currentDialogId)};
+    onSendMessage(value, currentDialogId);
+  };
 
   return (
     <div className="chat-input">
@@ -42,9 +43,7 @@ const ChatInput = () => {
       </div>
       <Input
         onChange={(e) => setValue(e.target.value)}
-        onKeyUp={(e) =>
-          e.keyCode === 13 &&
-        }
+        onKeyUp={(e) => e.keyCode === 13 && handleSendMessage()}
         size="large"
         placeholder="Введите сообщение"
       />
