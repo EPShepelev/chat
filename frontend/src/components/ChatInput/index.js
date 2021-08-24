@@ -49,6 +49,7 @@ const ChatInput = () => {
         onKeyUp={handleSendMessage}
         size="large"
         placeholder="Введите сообщение"
+        value={value}
       />
       <div className="chat-input__actions">
         <UploadField
