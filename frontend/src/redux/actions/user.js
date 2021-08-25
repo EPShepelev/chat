@@ -34,7 +34,7 @@ const Actions = {
         }
         return data;
       })
-      .catch((res) => {});
+      .catch((err) => {});
   },
   fetchUserRegister: (postData) => (dispatch) => {
     return userApi.signup(postData).then(({ data }) => {
