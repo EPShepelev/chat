@@ -24,16 +24,19 @@ const Dialogs = ({
     setInputValue(value);
   };
 
+  const onNewDialog = () => {
+    fetchDialogs();
+  };
+
   useEffect(() => {
     if (!items.length) {
       fetchDialogs();
     } else {
       setFilteredItems(items);
     }
-    socket.on("SERVER:DIALOG_CREATED", (data) => {
-      fetchDialogs();
-    });
-  }, [items]);
+    socket.on("SERVER:DIALOG_CREATED", onNewDialog);
+    return () => socket.removeListener("SERVER:DIALOG_CREATED", onNewDialog);
+  }, []);
 
   return (
     <BaseDialogs
