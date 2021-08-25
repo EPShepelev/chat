@@ -36,6 +36,11 @@ const Actions = {
       })
       .catch((response) => {
         if (response.status === 403) {
+          openNotification({
+            title: "Ошибка при авторизации",
+            text: "Неверный логин или пароль",
+            type: "success",
+          });
         }
       });
   },
