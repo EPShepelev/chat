@@ -39,7 +39,7 @@ const Actions = {
           openNotification({
             title: "Ошибка при авторизации",
             text: "Неверный логин или пароль",
-            type: "success",
+            type: "error",
           });
         }
       });
