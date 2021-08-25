@@ -34,7 +34,10 @@ const Actions = {
         }
         return data;
       })
-      .catch((err) => {});
+      .catch((response) => {
+        if (response.status === 403) {
+        }
+      });
   },
   fetchUserRegister: (postData) => (dispatch) => {
     return userApi.signup(postData).then(({ data }) => {
