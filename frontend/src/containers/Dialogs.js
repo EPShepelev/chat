@@ -29,11 +29,11 @@ const Dialogs = ({
   };
 
   useEffect(() => {
-    if (!items.length) {
-      fetchDialogs();
-    } else {
-      setFilteredItems(items);
-    }
+    // if (!items.length) {
+    //   fetchDialogs();
+    // } else {
+    //   setFilteredItems(items);
+    // }
     socket.on("SERVER:DIALOG_CREATED", onNewDialog);
     return () => socket.removeListener("SERVER:DIALOG_CREATED", onNewDialog);
   }, []);
