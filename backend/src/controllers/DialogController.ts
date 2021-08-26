@@ -12,7 +12,8 @@ class DialogController {
   index = (req: any, res: express.Response) => {
     const userId = req.user._id;
 
-    DialogModel.find({ author: authorId })
+    DialogModel.find()
+      .or([{ author: userId }, { partner: userId }])
       .populate(["author", "partner"])
       .populate({
         path: "lastMessage",
