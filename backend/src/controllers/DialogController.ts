@@ -10,7 +10,7 @@ class DialogController {
   }
 
   index = (req: any, res: express.Response) => {
-    const authorId = req.user._id;
+    const userId = req.user._id;
 
     DialogModel.find({ author: authorId })
       .populate(["author", "partner"])
