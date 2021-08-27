@@ -28,6 +28,7 @@ const Dialogs = ({
     fetchDialogs();
   };
 
+  window.fetchDialogs = fetchDialogs;
   useEffect(() => {
     fetchDialogs();
     // if (!items.length) {
