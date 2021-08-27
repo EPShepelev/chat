@@ -18,7 +18,10 @@ const Dialogs = ({
     setFilteredItems(
       items.filter(
         (dialog) =>
-          dialog.author.fullname.toLowerCase().indexOf(value.toLowerCase()) >= 0
+          dialog.author.fullname.toLowerCase().indexOf(value.toLowerCase()) >=
+            0 ||
+          dialog.partner.fullname.toLowerCase().indexOf(value.toLowerCase()) >=
+            0
       )
     );
     setInputValue(value);
