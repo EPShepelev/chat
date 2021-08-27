@@ -30,7 +30,9 @@ const Dialogs = ({
 
   window.fetchDialogs = fetchDialogs;
   useEffect(() => {
-    onChangeInput("");
+    if (items.length) {
+      onChangeInput("");
+    }
   }, [items]);
 
   useEffect(() => {
