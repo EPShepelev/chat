@@ -14,7 +14,7 @@ const Dialogs = ({
   const [inputValue, setInputValue] = useState("");
   const [filtered, setFilteredItems] = useState(Array.from(items));
 
-  const onChangeInput = (value) => {
+  const onChangeInput = (value = "") => {
     setFilteredItems(
       items.filter(
         (dialog) =>
