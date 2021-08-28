@@ -9,4 +9,7 @@ const Status = ({ currentDialogId, items }) => {
   return <StatusBase online={online} />;
 };
 
-export default connect(({ dialogs }) => dialogs)(Status);
+export default connect(({ dialogs, user }) => ({
+  dialogs,
+  user: user.data,
+}))(Status);
