@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React from "react";
 import { ChatInput as ChatInputBase } from "components";
 import { connect } from "react-redux";
 import { messagesActions } from "redux/actions";
