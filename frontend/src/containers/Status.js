@@ -6,13 +6,13 @@ const Status = ({ currentDialogId, user, items }) => {
   const currentDialogObj = items.filter(
     (dialog) => dialog._id === currentDialogId
   )[0];
-  let partner = false;
+  let partner = {};
   if currentDialogObj.author._id === user._id) {
     partner = currentDialogObj.partner;
   } else {
     partner = currentDialogObj.author;
   }
-  return <StatusBase online={online} />;
+  return <StatusBase online={partner.isOnline} />;
 };
 
 export default connect(({ dialogs, user }) => ({
