@@ -7,10 +7,10 @@ const Status = ({ currentDialogId, user, items }) => {
     (dialog) => dialog._id === currentDialogId
   )[0];
   let online = false;
-  if (dialog.author._id === user._id) {
-    online = dialog.partner.isOnline;
+  if currentDialogObj.author._id === user._id) {
+    online = currentDialogObj.partner.isOnline;
   } else {
-    online = dialog.author.isOnline;
+    online = currentDialogObj.author.isOnline;
   }
   return <StatusBase online={online} />;
 };
