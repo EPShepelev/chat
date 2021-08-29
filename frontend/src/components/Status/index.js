@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import "./Status.scss";
 
-const Status = ({ online }) => (
+const Status = ({ online, fullname }) => (
   <div className="chat__dialog-header-center">
     <b className="chat__dialog-header-username">Гай Юлий Цезарь</b>
     <div className="chat__dialog-header-status">
