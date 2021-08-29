@@ -12,7 +12,7 @@ const Status = ({ currentDialogId, user, items }) => {
   } else {
     partner = currentDialogObj.author;
   }
-  return <StatusBase online={partner.isOnline} />;
+  return <StatusBase online={partner.isOnline} fullname = {partner.fullname}/>;
 };
 
 export default connect(({ dialogs, user }) => ({
