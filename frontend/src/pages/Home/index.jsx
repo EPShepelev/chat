@@ -26,12 +26,8 @@ const Home = () => (
     <div className="chat__dialog">
       <div className="chat__dialog-header">
         <div />
-        <div className="chat__dialog-header-center">
-          <b className="chat__dialog-header-username">Гай Юлий Цезарь</b>
-          <div className="chat__dialog-header-status">
-            <Status online />
-          </div>
-        </div>
+        <Status online />
+
         <Button
           type="link"
           shape="circle"
