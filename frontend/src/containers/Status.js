@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 const Status = ({ currentDialogId, user, dialogs }) => {
   if(!dialogs.length){
-    return
+    return null
   }
   const currentDialogObj = items.filter(
     (dialog) => dialog._id === currentDialogId
