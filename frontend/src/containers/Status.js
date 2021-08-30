@@ -20,5 +20,6 @@ const Status = ({ currentDialogId, user, dialogs }) => {
 
 export default connect(({ dialogs, user }) => ({
   dialogs: dialogs.item,
-  currentDialogId: user.data,
+  currentDialogId: user.currentDialogId,
+  user: user.data,
 }))(Status);
