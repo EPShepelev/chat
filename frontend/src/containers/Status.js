@@ -3,6 +3,9 @@ import { Status as StatusBase } from "components";
 import { connect } from "react-redux";
 
 const Status = ({ currentDialogId, user, items }) => {
+  if(!items.length){
+    return
+  }
   const currentDialogObj = items.filter(
     (dialog) => dialog._id === currentDialogId
   )[0];
