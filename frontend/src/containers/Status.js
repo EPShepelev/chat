@@ -2,7 +2,7 @@ import React from "react";
 import { Status as StatusBase } from "components";
 import { connect } from "react-redux";
 
-const Status = ({ currentDialogId, user, dialogs }) => {
+const ChatInput = ({ currentDialogId, user, dialogs }) => {
   if(!dialogs.length || ! currentDialogId){
     return null
   }
@@ -22,4 +22,4 @@ export default connect(({ dialogs, user }) => ({
   dialogs: dialogs.item,
   currentDialogId: user.currentDialogId,
   user: user.data,
-}))(Status);
+}))(ChatInput);
