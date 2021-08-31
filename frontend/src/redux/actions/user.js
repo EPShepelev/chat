@@ -7,9 +7,14 @@ const Actions = {
     payload: data,
   }),
   fetchUserData: () => (dispatch) => {
-    userApi.getMe().then(({ data }) => {
-      dispatch(Actions.setUserData(data));
-    });
+    userApi
+      .getMe()
+      .then(({ data }) => {
+        dispatch(Actions.setUserData(data));
+      })
+      .catch((err) => {
+        console.log(err.response.status);
+      });
   },
   fetchUserLogin: (postData) => (dispatch) => {
     return userApi
