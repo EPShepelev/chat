@@ -19,6 +19,7 @@ const Actions = {
       .catch((err) => {
         if (err.response.status === 403) {
           dispatch(Actions.setUIsAuth(false));
+          delete window.localStorage.token;
         }
       });
   },
