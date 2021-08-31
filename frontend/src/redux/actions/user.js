@@ -6,9 +6,9 @@ const Actions = {
     type: "USER:SET_DATA",
     payload: data,
   }),
-  setUIsAuth: (data) => ({
+  setUIsAuth: (bool) => ({
     type: "USER:SET_IS_AUTH",
-    payload: data,
+    payload: bool,
   }),
   fetchUserData: () => (dispatch) => {
     userApi
@@ -18,7 +18,7 @@ const Actions = {
       })
       .catch((err) => {
         if (err.response.status === 403) {
-          dispatch(Actions.setUserData(data));
+          dispatch(Actions.setUIsAuth(false));
         }
       });
   },
