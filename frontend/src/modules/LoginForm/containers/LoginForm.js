@@ -26,9 +26,7 @@ const LoginFormContainer = withFormik({
       userActions(fetchUserLogin(values))
         .then(({ status }) => {
           if (status === "success") {
-            setTimeout(() => {
-              props.history.push("/");
-            }, 500);
+            props.history.push("/");
           }
           setSubmitting(false);
         })
