@@ -1,6 +1,7 @@
 import React from "react";
-import { ChatInput as ChatInputBase } from "components";
 import { connect } from "react-redux";
+
+import { ChatInput as ChatInputBase } from "components";
 import { messagesActions } from "redux/actions";
 
 const ChatInput = ({ fetchSendMessage, currentDialogId }) => {

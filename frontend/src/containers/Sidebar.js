@@ -1,6 +1,7 @@
 import React from "react";
-import { Sidebar } from "components";
 import { connect } from "react-redux";
+
+import { Sidebar } from "components";
 
 const SidebarContainer = ({ fetchSendMessage, currentDialogId }) => {
   return (
