@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "antd";
 
-const Sidebar = ({ userId }) => {
+const Sidebar = ({ user }) => {
   return (
     <div className="chat__sidebar">
       <div className="chat__sidebar-header">
@@ -13,7 +13,7 @@ const Sidebar = ({ userId }) => {
       </div>
 
       <div className="chat__sidebar-dialogs">
-        <Dialogs userId={userId} />
+        <Dialogs userId={user._id} />
       </div>
     </div>
   );
