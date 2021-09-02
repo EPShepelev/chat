@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import { Sidebar } from "components";
 
-const SidebarContainer = ({ fetchSendMessage, currentDialogId }) => {
+const SidebarContainer = ({ userId }) => {
   return <Sidebar userId={uder._id} />;
 };
 
