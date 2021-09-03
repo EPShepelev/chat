@@ -3,9 +3,9 @@ import { connect } from "react-redux";
 
 import { Sidebar } from "components";
 
-const SidebarContainer = () => {
+const SidebarContainer = ({ user }) => {
   <div>
-    <Sidebar />
+    <Sidebar user={user} />
   </div>;
 };
 export default connect(({ user }) => user.data)(Sidebar);
