@@ -8,4 +8,4 @@ const SidebarContainer = ({ user }) => {
     <Sidebar user={user} />
   </div>;
 };
-export default connect(({ user }) => user.data)(Sidebar);
+export default connect(({ user }) => user.data)(SidebarContainer);
