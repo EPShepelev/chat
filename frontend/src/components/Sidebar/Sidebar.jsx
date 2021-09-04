@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "antd";
+import { Modal, Button } from "antd";
 
 const Sidebar = ({ user }) => {
   return (
