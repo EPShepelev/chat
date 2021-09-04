@@ -6,4 +6,4 @@ import { Sidebar } from "components";
 const SidebarContainer = ({ user }) => {
   <Sidebar user={user} />;
 };
-export default connect(({ user }) => user.data)(SidebarContainer);
+export default connect(( user) => ({user: user.data})(SidebarContainer);
