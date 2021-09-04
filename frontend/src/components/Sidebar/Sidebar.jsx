@@ -13,7 +13,7 @@ const Sidebar = ({ user }) => {
       </div>
 
       <div className="chat__sidebar-dialogs">
-        <Dialogs userId={user._id} />
+        <Dialogs userId={user && user._id} />
       </div>
     </div>
   );
