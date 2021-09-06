@@ -20,6 +20,16 @@ const Sidebar = ({ user }) => {
       <div className="chat__sidebar-dialogs">
         <Dialogs userId={user && user._id} />
       </div>
+      <Modal
+        title="Basic Modal"
+        visible={isModalVisible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Modal>
     </div>
   );
 };
