@@ -3,6 +3,10 @@ import { Modal, Button } from "antd";
 
 const Sidebar = ({ user }) => {
   const [visible, setVisible] = useState(false);
+
+  const onClose = () => {
+    setVisible(false);
+  };
   return (
     <div className="chat__sidebar">
       <div className="chat__sidebar-header">
