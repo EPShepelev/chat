@@ -21,10 +21,10 @@ const Sidebar = ({ user }) => {
         <Dialogs userId={user && user._id} />
       </div>
       <Modal
-        title="Basic Modal"
-        visible={isModalVisible}
-        onOk={handleOk}
-        onCancel={handleCancel}
+        title="Создать диалог"
+        visible={visible}
+        onOk={onClose}
+        onCancel={onClose}
       >
         <p>Some contents...</p>
         <p>Some contents...</p>
