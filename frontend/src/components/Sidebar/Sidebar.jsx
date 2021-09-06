@@ -14,7 +14,14 @@ const Sidebar = ({ user }) => {
         <div>
           <span>Список диалогов</span>
         </div>
-        <Button type="link" shape="circle" icon={<FormOutlined />} />
+        <Button
+          onClick={() => {
+            setVisible(true);
+          }}
+          type="link"
+          shape="circle"
+          icon={<FormOutlined />}
+        />
       </div>
 
       <div className="chat__sidebar-dialogs">
