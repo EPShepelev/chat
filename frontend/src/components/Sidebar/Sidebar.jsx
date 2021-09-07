@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Modal, Button, Select } from "antd";
 
-const Sidebar = ({ user, onShow }) => {
+const Sidebar = ({ user, onShow, onClose }) => {
   return (
     <div className="chat__sidebar">
       <div className="chat__sidebar-header">
