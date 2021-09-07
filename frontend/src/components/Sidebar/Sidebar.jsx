@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Modal, Button, Select } from "antd";
 
-const Sidebar = ({ user, onShow, onClose }) => {
+const Sidebar = ({ user, visible, onShow, onClose }) => {
   return (
     <div className="chat__sidebar">
       <div className="chat__sidebar-header">
@@ -10,9 +10,7 @@ const Sidebar = ({ user, onShow, onClose }) => {
           <span>Список диалогов</span>
         </div>
         <Button
-          onClick={() => {
-            setVisible(true);
-          }}
+          onClick={onShow}
           type="link"
           shape="circle"
           icon={<FormOutlined />}
