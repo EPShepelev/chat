@@ -12,6 +12,6 @@ const SidebarContainer = ({ user }) => {
     setVisible(false);
   };
   
-  return <Sidebar user={user} />;
+  return <Sidebar user={user} visible={visible}/>;
 };
 export default connect(({ user }) => ({user: user.data})(SidebarContainer);
