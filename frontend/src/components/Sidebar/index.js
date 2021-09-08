@@ -5,6 +5,9 @@ import { Dialogs } from "containers";
 const { Option } = Select;
 
 const Sidebar = ({ user, visible, onShow, onClose }) => {
+  const options = this.state.data.map(d=>{
+    <Option key={d.value}>{d.text}</Option>
+  })
   return (
     <div className="chat__sidebar">
       <div className="chat__sidebar-header">
@@ -29,7 +32,7 @@ const Sidebar = ({ user, visible, onShow, onClose }) => {
         onOk={onClose}
         onCancel={onClose}
       >
-        <Select>{options}</Select>
+        <Select ShowSearch value={}>{options}</Select>
       </Modal>
     </div>
   );
