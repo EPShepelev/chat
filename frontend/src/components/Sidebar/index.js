@@ -1,5 +1,6 @@
 import React from "react";
 import { Modal, Button, Select } from "antd";
+import { Dialogs } from "containers";
 
 const { Option } = Select;
 
