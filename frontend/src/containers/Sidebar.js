@@ -7,6 +7,7 @@ import { Sidebar } from "components";
 const SidebarContainer = ({ user }) => {
   
   const [visible, setVisible] = useState(false);
+  const [inputValue, setInputValue] = useState("");
 
   const onClose = () => {
     setVisible(false);
