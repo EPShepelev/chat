@@ -5,8 +5,8 @@ import { Dialogs } from "containers";
 const { Option } = Select;
 
 const Sidebar = ({ user, visible, onShow, onClose, users }) => {
-  const options = users.map(d=>{
-    <Option key={d.value}>{d.text}</Option>
+  const options = users.map( user =>{
+    <Option key={user._id}>{user.fullname}</Option>
   });
   return (
     <div className="chat__sidebar">
