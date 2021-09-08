@@ -1,6 +1,8 @@
 import React from "react";
 import { Modal, Button, Select } from "antd";
 
+const { Option } = Select;
+
 const Sidebar = ({ user, visible, onShow, onClose }) => {
   return (
     <div className="chat__sidebar">
