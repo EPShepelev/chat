@@ -16,6 +16,10 @@ const SidebarContainer = ({ user }) => {
   const onShow = () => {
     setVisible(true);
   }
+
+  const handleChangeInput = () => {
+   setInputValue(e.target.value);
+  }
   
   return <Sidebar user={user} inputValue={inputValue} visible={visible} onClose={onClose} onShow={onShow}/>;
 };
