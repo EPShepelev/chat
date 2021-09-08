@@ -5,7 +5,7 @@ import { Dialogs } from "containers";
 const { Option } = Select;
 
 const Sidebar = ({ user, visible, onShow, onClose, users }) => {
-  const options = this.state.data.map(d=>{
+  const options = users.map(d=>{
     <Option key={d.value}>{d.text}</Option>
   });
   return (
