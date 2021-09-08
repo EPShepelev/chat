@@ -29,9 +29,7 @@ const Sidebar = ({ user, visible, onShow, onClose }) => {
         onOk={onClose}
         onCancel={onClose}
       >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        <Select>{options}</Select>
       </Modal>
     </div>
   );
