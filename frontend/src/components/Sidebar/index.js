@@ -4,10 +4,10 @@ import { Dialogs } from "containers";
 
 const { Option } = Select;
 
-const Sidebar = ({ user, visible, onShow, onClose }) => {
+const Sidebar = ({ user, visible, onShow, onClose, users }) => {
   const options = this.state.data.map(d=>{
     <Option key={d.value}>{d.text}</Option>
-  })
+  });
   return (
     <div className="chat__sidebar">
       <div className="chat__sidebar-header">
