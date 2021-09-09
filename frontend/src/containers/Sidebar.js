@@ -17,7 +17,7 @@ const SidebarContainer = ({ user }) => {
     setVisible(true);
   }
 
-  const handleChangeInput = () => {
+  const handleChangeInput = (value) => {
    setInputValue(e.target.value);
   }
   
