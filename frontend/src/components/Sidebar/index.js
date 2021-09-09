@@ -4,7 +4,7 @@ import { Dialogs } from "containers";
 
 const { Option } = Select;
 
-const Sidebar = ({ user, visible, onShow, onClose, users, onChangeInpu }) => {
+const Sidebar = ({ user, visible, onShow, onClose, users, onChangeInput }) => {
   const options = users.map((user) => {
     <Option key={user._id}>{user.fullname}</Option>;
   });
@@ -32,7 +32,7 @@ const Sidebar = ({ user, visible, onShow, onClose, users, onChangeInpu }) => {
         onOk={onClose}
         onCancel={onClose}
       >
-        <Select ShowSearch value={inputValue onChange={onChangeInpu}}>
+        <Select ShowSearch value={inputValue} onChange={onChangeInput}>
           {options}
         </Select>
       </Modal>
