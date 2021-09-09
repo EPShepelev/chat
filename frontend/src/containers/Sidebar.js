@@ -17,10 +17,14 @@ const SidebarContainer = ({ user }) => {
     setVisible(true);
   }
 
+  const onSearch = () => {
+
+  }
+
   const handleChangeInput = (value) => {
    setInputValue(e.target.value);
   }
   
-  return <Sidebar user={user} inputValue={inputValue} visible={visible} onClose={onClose} onShow={onShow} onChangeInput={handleChangeInput}/>;
+  return <Sidebar user={user} inputValue={inputValue} visible={visible} onClose={onClose} onShow={onShow} onChangeInput={handleChangeInput} onSearch={onSearch}/>;
 };
 export default connect(({ user }) => ({user: user.data})(SidebarContainer);

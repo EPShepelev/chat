@@ -4,7 +4,15 @@ import { Dialogs } from "containers";
 
 const { Option } = Select;
 
-const Sidebar = ({ user, visible, onShow, onClose, users, onChangeInput }) => {
+const Sidebar = ({
+  user,
+  visible,
+  onShow,
+  onClose,
+  users,
+  onChangeInput,
+  onSearch,
+}) => {
   const options = users.map((user) => {
     <Option key={user._id}>{user.fullname}</Option>;
   });
@@ -31,6 +39,7 @@ const Sidebar = ({ user, visible, onShow, onClose, users, onChangeInput }) => {
         visible={visible}
         onOk={onClose}
         onCancel={onClose}
+        onSearch={onSearch}
       >
         <Select ShowSearch value={inputValue} onChange={onChangeInput}>
           {options}
