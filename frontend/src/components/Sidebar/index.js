@@ -32,7 +32,7 @@ const Sidebar = ({ user, visible, onShow, onClose, users, onChangeInpu }) => {
         onOk={onClose}
         onCancel={onClose}
       >
-        <Select ShowSearch value={inputValue}>
+        <Select ShowSearch value={inputValue onChange={onChangeInpu}}>
           {options}
         </Select>
       </Modal>
