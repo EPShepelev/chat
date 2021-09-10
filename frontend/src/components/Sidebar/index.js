@@ -49,6 +49,9 @@ const Sidebar = ({
           value={inputValue}
           onChange={onChangeInput}
           onSearch={onSearch}
+          defaultActiveFirstOption={false}
+          showArrow={false}
+          filterOptions={false}
         >
           {options}
         </Select>
