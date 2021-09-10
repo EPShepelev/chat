@@ -44,6 +44,7 @@ const Sidebar = ({
       >
         <Select
           ShowSearch
+          style={{ width: "100%" }}
           value={inputValue}
           onChange={onChangeInput}
           onSearch={onSearch}
