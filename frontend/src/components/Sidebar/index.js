@@ -7,12 +7,12 @@ const { Option } = Select;
 const Sidebar = ({
   user,
   visible,
+  inputValue,
   onShow,
   onClose,
   users,
   onChangeInput,
   onSearch,
-  inputValue,
 }) => {
   const options = users.map((user) => {
     <Option key={user._id}>{user.fullname}</Option>;
