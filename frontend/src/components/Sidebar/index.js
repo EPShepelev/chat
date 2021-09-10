@@ -43,15 +43,15 @@ const Sidebar = ({
         onSearch={onSearch}
       >
         <Select
-          ShowSearch
-          placeholder="Найти пользователя"
           style={{ width: "100%" }}
+          placeholder="Найти пользователя"
           value={inputValue}
           onSearch={onSearch}
           onChange={onChangeInput}
           defaultActiveFirstOption={false}
           showArrow={false}
           filterOptions={false}
+          ShowSearch
         >
           {options}
         </Select>
