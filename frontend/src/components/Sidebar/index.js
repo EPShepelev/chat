@@ -44,6 +44,7 @@ const Sidebar = ({
       >
         <Select
           ShowSearch
+          placeholder="Найти пользователя"
           style={{ width: "100%" }}
           value={inputValue}
           onChange={onChangeInput}
