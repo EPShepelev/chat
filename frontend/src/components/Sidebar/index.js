@@ -42,7 +42,12 @@ const Sidebar = ({
         onCancel={onClose}
         onSearch={onSearch}
       >
-        <Select ShowSearch value={inputValue} onChange={onChangeInput}>
+        <Select
+          ShowSearch
+          value={inputValue}
+          onChange={onChangeInput}
+          onSearch={onSearch}
+        >
           {options}
         </Select>
       </Modal>
