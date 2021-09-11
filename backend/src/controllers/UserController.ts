@@ -41,7 +41,8 @@ class UserController {
 
   findUsers = (req: any, res: express.Response, io: any) => {
     const query: string = req.user.query;
-    UserModel.or([{ fullname: query }, { email: query }])
+    UserModel.find()
+      .or([{ fullname: query }, { email: query }])
       .then((users: any) => res.json(users))
       .catch((err: any) => {
         return res.status(404).json({
