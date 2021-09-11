@@ -42,10 +42,11 @@ class UserController {
   findUsers = (req: any, res: express.Response, io: any) => {
     const query: string = req.user.query;
     UserModel.or([{ fullname: query }, { email: query }])
-      .then((users) => res.json(user))
+      .then((users) => res.json(users))
       .catch((err) => {
         return res.status(404).json({
-          message: "User not found",
+          status: "error",
+          message: err,
         });
       });
   };
