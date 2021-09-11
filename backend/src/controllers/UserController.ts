@@ -40,7 +40,7 @@ class UserController {
   };
 
   findUsers = (req: any, res: express.Response, io: any) => {
-    const query: string = req.params.query;
+    const query: string = req.query.query;
     UserModel.find()
       .or([
         { fullname: new RegExp(query, "i") },
