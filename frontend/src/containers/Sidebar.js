@@ -9,6 +9,7 @@ const SidebarContainer = ({ user }) => {
   
   const [visible, setVisible] = useState(false);
   const [inputValue, setInputValue] = useState("");
+  const [users, setUsers] = useState([]);
 
   const onClose = () => {
     setVisible(false);
@@ -19,7 +20,9 @@ const SidebarContainer = ({ user }) => {
   }
 
   const onSearch = (value) => {
-    userApi.findUsers(value).then()
+    userApi.findUsers(value).then(({data})=>{
+
+    })
   }
 
   const handleChangeInput = (value) => {
