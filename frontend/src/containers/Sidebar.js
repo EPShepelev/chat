@@ -21,7 +21,7 @@ const SidebarContainer = ({ user }) => {
 
   const onSearch = (value) => {
     userApi.findUsers(value).then(({data})=>{
-
+      setUsers(data)
     })
   }
 
