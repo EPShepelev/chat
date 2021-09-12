@@ -18,8 +18,8 @@ const SidebarContainer = ({ user }) => {
     setVisible(true);
   }
 
-  const onSearch = () => {
-
+  const onSearch = (value) => {
+    userApi.findUsers(value).then()
   }
 
   const handleChangeInput = (value) => {
