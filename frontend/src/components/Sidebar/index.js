@@ -41,7 +41,6 @@ const Sidebar = ({
         visible={visible}
         onOk={onClose}
         onCancel={onClose}
-        onSearch={onSearch}
       >
         <Select
           placeholder="Найти пользователя"
