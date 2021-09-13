@@ -25,6 +25,8 @@ const SidebarContainer = ({ user }) => {
     userApi.findUsers(value).then(({data})=>{
       setUsers(data)
       setIsLoading(false);
+    }).catch(()=>{
+      setIsLoading(false);
     })
   }
 
