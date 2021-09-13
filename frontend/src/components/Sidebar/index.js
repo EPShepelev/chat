@@ -48,6 +48,7 @@ const Sidebar = ({
           value={inputValue}
           onSearch={onSearch}
           onChange={onChangeInput}
+          onSelect={onSelectUser}
           style={{ width: "100%" }}
           defaultActiveFirstOption={false}
           showArrow={false}
