@@ -28,6 +28,10 @@ const SidebarContainer = ({ user }) => {
   const handleChangeInput = (value) => {
    setInputValue(value);
   }
+
+  const  onSelectUser = user =>{
+    
+  }
   
   return <Sidebar user={user} inputValue={inputValue} visible={visible} onClose={onClose} onShow={onShow} onChangeInput={handleChangeInput} onSelectUser={ onSelectUser } onSearch={onSearch}/>;
 };
