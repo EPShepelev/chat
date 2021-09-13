@@ -16,9 +16,7 @@ const Sidebar = ({
   onSelectUser,
 }) => {
   const options = users.map((user) => {
-    <Option key={user._id} value={user}>
-      {user.fullname}
-    </Option>;
+    <Option key={user._id}>{user.fullname}</Option>;
   });
   return (
     <div className="chat__sidebar">
