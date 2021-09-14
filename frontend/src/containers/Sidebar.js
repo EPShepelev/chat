@@ -36,7 +36,7 @@ const SidebarContainer = ({ user }) => {
   }
 
   const  onSelectUser = userId =>{
-
+    setSelectedUserId(userId);
   }
   
   return <Sidebar user={user} inputValue={inputValue} visible={visible} onClose={onClose} onShow={onShow} onChangeInput={handleChangeInput} onSelectUser={ onSelectUser } onSearch={onSearch} isSerching={isSearching}/>;
