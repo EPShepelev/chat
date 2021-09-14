@@ -10,7 +10,7 @@ const SidebarContainer = ({ user }) => {
   const [visible, setVisible] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [users, setUsers] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
 
   const onClose = () => {
     setVisible(false);
@@ -21,12 +21,12 @@ const SidebarContainer = ({ user }) => {
   }
 
   const onSearch = (value) => {
-    setIsLoading(true);
+    setIsSearching(true);
     userApi.findUsers(value).then(({data})=>{
       setUsers(data)
-      setIsLoading(false);
+      setIsSearching(false);
     }).catch(()=>{
-      setIsLoading(false);
+      setIsSearching(false);
     })
   }
 
@@ -38,6 +38,6 @@ const SidebarContainer = ({ user }) => {
 
   }
   
-  return <Sidebar user={user} inputValue={inputValue} visible={visible} onClose={onClose} onShow={onShow} onChangeInput={handleChangeInput} onSelectUser={ onSelectUser } onSearch={onSearch} isSerching={isLoading}/>;
+  return <Sidebar user={user} inputValue={inputValue} visible={visible} onClose={onClose} onShow={onShow} onChangeInput={handleChangeInput} onSelectUser={ onSelectUser } onSearch={onSearch} isSerching={isSearching}/>;
 };
 export default connect(({ user }) => ({user: user.data})(SidebarContainer);
