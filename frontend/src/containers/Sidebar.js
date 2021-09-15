@@ -33,8 +33,8 @@ const SidebarContainer = ({ user }) => {
 
   const onAddDialog = () => {
     dialogsApi.create({
-      
-    }).then(({data})=>{
+
+    }).then((selectedUserId)=>{
       setUsers(data)
       setIsSearching(false);
     }).catch(()=>{
@@ -50,6 +50,6 @@ const SidebarContainer = ({ user }) => {
     setSelectedUserId(userId);
   }
   
-  return <Sidebar user={user} inputValue={inputValue} visible={visible} onClose={onClose} onShow={onShow} onChangeInput={handleChangeInput} onSelectUser={ onSelectUser } onSearch={onSearch} isSerching={isSearching}/>;
+  return <Sidebar user={user} inputValue={inputValue} visible={visible} onClose={onClose} onShow={onShow} onChangeInput={handleChangeInput} onSelectUser={ onSelectUser } onSearch={onSearch} isSerching={isSearching} onAddDialog={onAddDialog}/>;
 };
 export default connect(({ user }) => ({user: user.data})(SidebarContainer);
