@@ -3,7 +3,7 @@ import { Modal, Button, Select } from "antd";
 import { connect } from "react-redux";
 
 import { Sidebar } from "components";
-import { userApi } from "utils/api";
+import { userApi, dialogsApi } from "utils/api";
 
 const SidebarContainer = ({ user }) => {
   
