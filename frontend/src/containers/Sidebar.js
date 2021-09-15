@@ -33,12 +33,13 @@ const SidebarContainer = ({ user }) => {
 
   const onAddDialog = () => {
     dialogsApi.create({
-
-    }).then((selectedUserId)=>{
+      selectedUserId
+    }).then(({data})=>{
       setUsers(data)
-      setIsSearching(false);
+      //...
+      setIsLoading(false);
     }).catch(()=>{
-      setIsSearching(false);
+      setIsLoading(false);
     })
   }
 
