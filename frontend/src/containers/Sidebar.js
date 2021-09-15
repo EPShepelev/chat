@@ -32,8 +32,9 @@ const SidebarContainer = ({ user }) => {
   }
 
   const onAddDialog = () => {
-    setIsSearching(true);
-    userApi.findUsers(value).then(({data})=>{
+    dialogsApi.create({
+      
+    }).then(({data})=>{
       setUsers(data)
       setIsSearching(false);
     }).catch(()=>{
