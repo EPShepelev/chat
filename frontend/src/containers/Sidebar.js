@@ -10,7 +10,7 @@ const SidebarContainer = ({ user }) => {
   const [visible, setVisible] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [users, setUsers] = useState([]);
-  const [isSearching, setIsSearching] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [selectedUserId, setSelectedUserId] = useState(false);
 
   const onClose = () => {
