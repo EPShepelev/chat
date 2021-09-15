@@ -31,6 +31,10 @@ const SidebarContainer = ({ user }) => {
     })
   }
 
+  const onAddDialog = () => {
+    
+  }
+
   const handleChangeInput = (value) => {
    setInputValue(value);
   }
