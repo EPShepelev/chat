@@ -32,7 +32,13 @@ const SidebarContainer = ({ user }) => {
   }
 
   const onAddDialog = () => {
-    
+    setIsSearching(true);
+    userApi.findUsers(value).then(({data})=>{
+      setUsers(data)
+      setIsSearching(false);
+    }).catch(()=>{
+      setIsSearching(false);
+    })
   }
 
   const handleChangeInput = (value) => {
