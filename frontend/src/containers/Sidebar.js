@@ -13,13 +13,7 @@ const SidebarContainer = ({ user }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedUserId, setSelectedUserId] = useState(false);
 
-  const onClose = () => {
-    setVisible(false);
-  };
 
-  const onShow = () => {
-    setVisible(true);
-  }
 
   const onSearch = (value) => {
     setIsLoading(true);
@@ -41,6 +35,14 @@ const SidebarContainer = ({ user }) => {
     }).catch(()=>{
       setIsLoading(false);
     })
+  }
+
+  const onClose = () => {
+    setVisible(false);
+  };
+
+  const onShow = () => {
+    setVisible(true);
   }
 
   const handleChangeInput = (value) => {
