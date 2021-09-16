@@ -35,9 +35,7 @@ const SidebarContainer = ({ user }) => {
     dialogsApi.create({
       selectedUserId
     }).then(({data})=>{
-      setUsers(data)
-      //...
-      setIsLoading(false);
+      setUsers(data);
       onClose();
     }).catch(()=>{
       setIsLoading(false);
