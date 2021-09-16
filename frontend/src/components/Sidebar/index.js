@@ -15,6 +15,7 @@ const Sidebar = ({
   onSearch,
   onSelectUser,
   isLoading,
+  onAddDialog,
 }) => {
   const options = users.map((user) => {
     <Option key={user._id}>{user.fullname}</Option>;
