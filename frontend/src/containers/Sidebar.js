@@ -42,8 +42,6 @@ const SidebarContainer = ({ user }) => {
     setVisible(false);
   };
 
-  const onOk = () => {}
-
   const onShow = () => {
     setVisible(true);
   }
