@@ -32,6 +32,7 @@ const SidebarContainer = ({ user }) => {
       setUsers(data)
       //...
       setIsLoading(false);
+      onClose();
     }).catch(()=>{
       setIsLoading(false);
     })
