@@ -64,7 +64,7 @@ const Sidebar = ({
           {options}
         </Select>
 
-        <TextArea />
+        <TextArea placeholder="Введите сообщение" />
       </Modal>
     </div>
   );
