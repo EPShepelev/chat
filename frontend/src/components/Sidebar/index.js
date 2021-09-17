@@ -3,6 +3,7 @@ import { Modal, Button, Select, Input } from "antd";
 import { Dialogs } from "containers";
 
 const { Option } = Select;
+const { TextaArea } = Input;
 
 const Sidebar = ({
   user,
