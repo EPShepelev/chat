@@ -63,6 +63,8 @@ const Sidebar = ({
         >
           {options}
         </Select>
+
+        <TextArea />
       </Modal>
     </div>
   );
