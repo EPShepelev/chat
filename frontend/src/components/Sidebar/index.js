@@ -16,6 +16,7 @@ const Sidebar = ({
   onSelectUser,
   isLoading,
   onAddDialog,
+  onModalOk,
 }) => {
   const options = users.map((user) => {
     <Option key={user._id}>{user.fullname}</Option>;
@@ -41,7 +42,7 @@ const Sidebar = ({
       <Modal
         title="Создать диалог"
         visible={visible}
-        onOk={onClose}
+        onOk={onModalOk}
         onCancel={onClose}
         okText="создать"
         canselText="закрыть"
