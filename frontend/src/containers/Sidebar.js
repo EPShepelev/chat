@@ -62,6 +62,7 @@ const SidebarContainer = ({ user }) => {
     onSearch={onSearch} 
     isLoading={isLoading} 
     onAddDialog={onAddDialog}
+    onModalOk={onAddDialog}
     />
   );
 };
