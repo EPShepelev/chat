@@ -50,6 +50,16 @@ const SidebarContainer = ({ user }) => {
     setSelectedUserId(userId);
   }
   
-  return <Sidebar user={user} inputValue={inputValue} visible={visible} onClose={onClose} onShow={onShow} onChangeInput={handleChangeInput} onSelectUser={ onSelectUser } onSearch={onSearch} isLoading={isLoading} onAddDialog={onAddDialog}/>;
+  return <Sidebar 
+    user={user} 
+    inputValue={inputValue} 
+    visible={visible} 
+    onClose={onClose} 
+    onShow={onShow} 
+    onChangeInput={handleChangeInput} 
+    onSelectUser={ onSelectUser }
+    onSearch={onSearch} 
+    isLoading={isLoading} 
+    onAddDialog={onAddDialog}/>;
 };
 export default connect(({ user }) => ({user: user.data})(SidebarContainer);
