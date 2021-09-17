@@ -61,7 +61,6 @@ const SidebarContainer = ({ user }) => {
     onSelectUser={ onSelectUser }
     onSearch={onSearch} 
     isLoading={isLoading} 
-    onAddDialog={onAddDialog}
     onModalOk={onAddDialog}
     />
   );
