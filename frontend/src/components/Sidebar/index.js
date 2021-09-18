@@ -9,6 +9,7 @@ const Sidebar = ({
   user,
   visible,
   inputValue,
+  messageText,
   onShow,
   onClose,
   users,
