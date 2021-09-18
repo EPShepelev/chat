@@ -65,7 +65,11 @@ const Sidebar = ({
           {options}
         </Select>
 
-        <TextArea placeholder="Введите сообщение" onChange={onChangeTextArea} />
+        <TextArea
+          placeholder="Введите сообщение"
+          autosize={{ minRows: 2, maxRows: 6 }}
+          onChange={onChangeTextArea}
+        />
       </Modal>
     </div>
   );
