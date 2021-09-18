@@ -64,6 +64,7 @@ const SidebarContainer = ({ user }) => {
     isLoading={isLoading} 
     onModalOk={onAddDialog}
     messageText={messageText}
+    onChangeTextArea={onChangeTextArea}
     />
   );
 };
