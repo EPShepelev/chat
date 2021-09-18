@@ -69,6 +69,7 @@ const Sidebar = ({
           placeholder="Введите сообщение"
           autosize={{ minRows: 2, maxRows: 6 }}
           onChange={onChangeTextArea}
+          value={messageText}
         />
       </Modal>
     </div>
