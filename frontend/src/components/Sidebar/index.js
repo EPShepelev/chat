@@ -68,7 +68,7 @@ const Sidebar = ({
 
         <TextArea
           placeholder="Введите сообщение"
-          autosize={{ minRows: 2, maxRows: 6 }}
+          autosize={{ minRows: 3, maxRows: 10 }}
           onChange={onChangeTextArea}
           value={messageText}
         />
