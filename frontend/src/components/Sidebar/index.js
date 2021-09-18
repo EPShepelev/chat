@@ -18,6 +18,7 @@ const Sidebar = ({
   isLoading,
   onAddDialog,
   onModalOk,
+  onChangeTextArea,
 }) => {
   const options = users.map((user) => {
     <Option key={user._id}>{user.fullname}</Option>;
@@ -64,7 +65,7 @@ const Sidebar = ({
           {options}
         </Select>
 
-        <TextArea placeholder="Введите сообщение" />
+        <TextArea placeholder="Введите сообщение" onChange={onChangeTextArea} />
       </Modal>
     </div>
   );
