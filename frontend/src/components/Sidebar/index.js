@@ -49,7 +49,7 @@ const Sidebar = ({
         onCancel={onClose}
         okText="создать"
         canselText="закрыть"
-        confirmLoading={isSerching}
+        confirmLoading={isLoading}
       >
         <Select
           placeholder="Найти пользователя"
