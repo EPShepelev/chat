@@ -48,16 +48,15 @@ const Sidebar = ({
         onOk={onModalOk}
         onCancel={onClose}
         okText="создать"
-        canselText="закрыть"
-        confirmLoading={isLoading}
+        canselText=""
         footer={[
           <Button key="back" onClick={this.handleCancel}>
-            Return
+            Закрыть
           </Button>,
           <Button
             key="submit"
             type="primary"
-            loading={loading}
+            loading={isLoading}
             onClick={this.handleOk}
           >
             Создать
