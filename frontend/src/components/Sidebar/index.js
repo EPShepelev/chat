@@ -50,7 +50,19 @@ const Sidebar = ({
         okText="создать"
         canselText="закрыть"
         confirmLoading={isLoading}
-        footer={[<Button key="submit" type="primary" loading={loading} onClick={this.handleOk}> Создать <Button />]}
+        footer={[
+          <Button key="back" onClick={this.handleCancel}>
+            Return
+          </Button>,
+          <Button
+            key="submit"
+            type="primary"
+            loading={loading}
+            onClick={this.handleOk}
+          >
+            Создать
+          </Button>,
+        ]}
       >
         <Select
           placeholder="Найти пользователя"
