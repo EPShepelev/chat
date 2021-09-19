@@ -48,7 +48,7 @@ const SidebarContainer = ({ user }) => {
   }
 
   const onChangeTextArea = (e) => {
-
+    setMessageText(e.target.value)
   }
 
   const  onSelectUser = userId =>{
