@@ -78,7 +78,7 @@ const Sidebar = ({
         >
           {options}
         </Select>
-
+        <br />
         <TextArea
           placeholder="Введите сообщение"
           autosize={{ minRows: 3, maxRows: 10 }}
