@@ -65,22 +65,24 @@ const Sidebar = ({
         ]}
       >
         <Form>
-          <Form.Item label="Введите имя пользователя или e-mail"></Form.Item>
+          <Form.Item label="Введите имя пользователя или e-mail">
+            <Select
+              placeholder="Найти пользователя"
+              value={inputValue}
+              onSearch={onSearch}
+              onChange={onChangeInput}
+              onSelect={onSelectUser}
+              style={{ width: "100%" }}
+              defaultActiveFirstOption={false}
+              showArrow={false}
+              filterOptions={false}
+              ShowSearch
+            >
+              {options}
+            </Select>
+          </Form.Item>
         </Form>
-        <Select
-          placeholder="Найти пользователя"
-          value={inputValue}
-          onSearch={onSearch}
-          onChange={onChangeInput}
-          onSelect={onSelectUser}
-          style={{ width: "100%" }}
-          defaultActiveFirstOption={false}
-          showArrow={false}
-          filterOptions={false}
-          ShowSearch
-        >
-          {options}
-        </Select>
+
         <br />
         <TextArea
           placeholder="Введите сообщение"
