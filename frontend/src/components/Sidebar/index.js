@@ -57,7 +57,7 @@ const Sidebar = ({
             key="submit"
             type="primary"
             loading={isLoading}
-            onClick={this.handleOk}
+            onClick={onModalOk}
           >
             Создать
           </Button>,
