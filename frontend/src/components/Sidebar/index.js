@@ -54,6 +54,7 @@ const Sidebar = ({
             Закрыть
           </Button>,
           <Button
+            disabled={!messageText}
             key="submit"
             type="primary"
             loading={isLoading}
