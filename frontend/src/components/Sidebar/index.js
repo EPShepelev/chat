@@ -64,15 +64,7 @@ const Sidebar = ({
           </Button>,
         ]}
       >
-        <Form
-          name="basic"
-          labelCol={{ span: 8 }}
-          wrapperCol={{ span: 16 }}
-          initialValues={{ remember: true }}
-          onFinish={onFinish}
-          onFinishFailed={onFinishFailed}
-          autoComplete="off"
-        >
+        <Form>
           <Form.Item
             label="Username"
             name="username"
