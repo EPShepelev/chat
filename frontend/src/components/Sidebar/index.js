@@ -50,7 +50,7 @@ const Sidebar = ({
         okText="создать"
         canselText=""
         footer={[
-          <Button key="back" onClick={this.handleCancel}>
+          <Button key="back" onClick={onClose}>
             Закрыть
           </Button>,
           <Button
