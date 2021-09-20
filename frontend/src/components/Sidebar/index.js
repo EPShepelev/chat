@@ -65,13 +65,7 @@ const Sidebar = ({
         ]}
       >
         <Form>
-          <Form.Item
-            label="Введите имя пользователя или e-mail"
-            name="username"
-            rules={[{ required: true, message: "Please input your username!" }]}
-          >
-            <Input />
-          </Form.Item>
+          <Form.Item label="Введите имя пользователя или e-mail"></Form.Item>
         </Form>
         <Select
           placeholder="Найти пользователя"
