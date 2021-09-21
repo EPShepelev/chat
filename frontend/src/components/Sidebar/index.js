@@ -64,7 +64,7 @@ const Sidebar = ({
           </Button>,
         ]}
       >
-        <Form>
+        <Form className="add-dialog-form">
           <Form.Item label="Введите имя пользователя или e-mail">
             <Select
               placeholder="Найти пользователя"
