@@ -2,6 +2,8 @@ import React from "react";
 import { Modal, Button, Select, Input, Form } from "antd";
 import { Dialogs } from "containers";
 
+import "./Sidebar.scss";
+
 const { Option } = Select;
 const { TextaArea } = Input;
 
