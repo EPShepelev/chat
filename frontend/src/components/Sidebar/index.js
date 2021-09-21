@@ -83,13 +83,15 @@ const Sidebar = ({
               {options}
             </Select>
           </Form.Item>
-          <Form.Item label="Введите сообщение">
-            <TextArea
-              autosize={{ minRows: 3, maxRows: 10 }}
-              onChange={onChangeTextArea}
-              value={messageText}
-            />
-          </Form.Item>
+          {messageText && (
+            <Form.Item label="Введите сообщение">
+              <TextArea
+                autosize={{ minRows: 3, maxRows: 10 }}
+                onChange={onChangeTextArea}
+                value={messageText}
+              />
+            </Form.Item>
+          )}
         </Form>
       </Modal>
     </div>
