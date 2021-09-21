@@ -2,7 +2,7 @@
   .ant-form-item {
     margin-bottom: 0;
     &-label {
-      line-height: 0;
+      line-height: inherit;
     }
   }
 }
