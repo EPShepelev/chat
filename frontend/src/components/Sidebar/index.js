@@ -22,6 +22,7 @@ const Sidebar = ({
   onAddDialog,
   onModalOk,
   onChangeTextArea,
+  selectedUserId,
 }) => {
   const options = users.map((user) => {
     <Option key={user._id}>{user.fullname}</Option>;
@@ -79,11 +80,12 @@ const Sidebar = ({
               showArrow={false}
               filterOptions={false}
               ShowSearch
+              selectedUserId={selectedUserId}
             >
               {options}
             </Select>
           </Form.Item>
-          {messageText && (
+          {selectedUserId && (
             <Form.Item label="Введите сообщение">
               <TextArea
                 autosize={{ minRows: 3, maxRows: 10 }}
