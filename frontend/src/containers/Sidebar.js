@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Modal, Button, Select } from "antd";
+import { Modal, Button, Select, message } from "antd";
 import { connect } from "react-redux";
 
 import { Sidebar } from "components";
@@ -34,7 +34,8 @@ const SidebarContainer = ({ user }) => {
 
   const onAddDialog = () => {
     dialogsApi.create({
-      selectedUserId
+      partner: selectedUserId,
+      text: messageText
     }).then(({data})=>{
       setUsers(data);
       onClose();
