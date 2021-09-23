@@ -108,7 +108,7 @@ const Message = ({
       <div className="message__content">
         <div className="message__avatar">
           <Popover content={<div></div>} title="Title" trigger="click">
-            <Button type="link" shape="circle" icon="ellipsis"></Button>
+            <Button type="link" shape="circle" icon="ellipsis" />
           </Popover>
           <Avatar user={user} />
         </div>
