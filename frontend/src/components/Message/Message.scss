@@ -57,6 +57,9 @@
     }
     &-actions {
       transform: rotate(90deg);
+      position: absolute;
+      left: -31px;
+      top: -5px;
     }
   }
   &--is-audio {
