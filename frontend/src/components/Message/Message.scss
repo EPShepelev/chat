@@ -7,6 +7,11 @@
     max-width: 440px;
     margin-bottom: 20px;
     position: relative;
+    &:hover {
+      #{$self}__icon-actions {
+        display: block;
+      }
+    }
   }
   &__avatar {
     display: flex;
