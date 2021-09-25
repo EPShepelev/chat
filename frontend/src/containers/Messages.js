@@ -39,6 +39,7 @@ return (
     blockRef={messagesRef}
     items={items}
     isLoading={isLoading}
+    onRemoveMessage={onRemoveMessage}
   />
 );
 
