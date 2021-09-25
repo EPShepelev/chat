@@ -11,6 +11,7 @@ const Dialogs = ({
   items,
   isLoading,
   user,
+  onRemoveMessage,
 }) => {
   const messagesRef = useRef(null);
 
