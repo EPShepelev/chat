@@ -110,7 +110,7 @@ const Message = ({
           <Popover
             content={
               <div>
-                <Button></Button>
+                <Button>Удалить сообщение</Button>
               </div>
             }
             trigger="click"
