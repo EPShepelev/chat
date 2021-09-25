@@ -95,6 +95,7 @@ const Message = ({
   isRead,
   attachments,
   isTyping,
+  onRemoveMessage,
 }) => {
   return (
     <div
