@@ -21,7 +21,7 @@ const Actions = {
       .then(({ data }) => {
         dispatch({
           type: "MESSAGES:REMOVE_MESSAGE",
-          payload: message,
+          payload: id,
         });
       })
       .catch(() => {
