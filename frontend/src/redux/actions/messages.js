@@ -15,6 +15,7 @@ const Actions = {
       });
     }
   },
+  removeMessageById: (id){},
   fetchSendMessage: (text, dialogId) => dispatch => {
     messagesApi.send(text, dialogId);
   }
