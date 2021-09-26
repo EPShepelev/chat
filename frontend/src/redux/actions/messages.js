@@ -15,7 +15,22 @@ const Actions = {
       });
     }
   },
-  removeMessageById: (id) => dispatch => {},
+  removeMessageById: (id) => dispatch => {
+    messagesApi
+      .removeById(id)
+      .then(({ data }) => {
+        dispatch({
+          type: "MESSAGES:REMOVE_MESSAGE",
+          payload: message,
+        });
+      })
+      .catch(() => {
+        dispatch({
+        type: "MESSAGES:ADD_MESSAGE",
+        payload: message,
+      }));
+      });
+  },
   fetchSendMessage: (text, dialogId) => dispatch => {
     messagesApi.send(text, dialogId);
   }
