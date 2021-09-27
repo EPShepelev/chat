@@ -93,6 +93,7 @@ class MessageController {
           message: "Not have permission",
         });
       }
+      res.json(user);
     });
 
     MessageModel.findOneAndRemove({ _id: id })
