@@ -76,6 +76,19 @@ class MessageController {
 
   delete = (req: express.Request, res: express.Response) => {
     const id: string = req.params.id;
+    const userId: string = req.user.id;
+    MessageModel.findById(id, (err, message: any) => {
+      if (err) {
+        return res.status(404).json({
+          status: "error",
+          message: "Messages not found",
+        });
+      }
+
+      if (message.user === userId) {
+      }
+    });
+
     MessageModel.findOneAndRemove({ _id: id })
       .then((message) => {
         if (message) {
