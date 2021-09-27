@@ -78,7 +78,7 @@ class MessageController {
     const id: string = req.params.id;
     const userId: string = req.user.id;
     MessageModel.findById(id, (err, message: any) => {
-      if (err) {
+      if (err || !message) {
         return res.status(404).json({
           status: "error",
           message: "Messages not found",
