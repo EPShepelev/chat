@@ -86,6 +86,7 @@ class MessageController {
       }
 
       if (message.user === userId) {
+        message.remove();
       }
     });
 
