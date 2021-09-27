@@ -80,6 +80,7 @@ class MessageController {
       .then((message) => {
         if (message) {
           res.json({
+            status: "success",
             message: "Message deleted",
           });
         }
