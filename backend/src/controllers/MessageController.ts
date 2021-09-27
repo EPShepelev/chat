@@ -85,8 +85,9 @@ class MessageController {
           });
         }
       })
-      .catch(() => {
+      .catch((err) => {
         res.json({
+          status: "error",
           message: "Message not found",
         });
       });
