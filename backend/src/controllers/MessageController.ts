@@ -88,7 +88,7 @@ class MessageController {
       if (message.user === userId) {
         message.remove();
         return res.status(403).json({
-          status: "error",
+          status: "success",
           message: "Not have permission",
         });
       } else {
