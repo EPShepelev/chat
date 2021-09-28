@@ -85,7 +85,7 @@ class MessageController {
         });
       }
 
-      if (message.user === userId) {
+      if (message.user.toString() === userId) {
         message.remove();
         return res.status(403).json({
           status: "success",
