@@ -16,20 +16,22 @@ const Actions = {
     }
   },
   removeMessageById: (id) => dispatch => {
+   if (window.confirm("Удалить сообщение?")) {
     messagesApi
-      .removeById(id)
-      .then(({ data }) => {
-        dispatch({
-          type: "MESSAGES:REMOVE_MESSAGE",
-          payload: id,
-        });
-      })
-      .catch(() => {
-        dispatch({
-        type: "MESSAGES:ADD_MESSAGE",
-        payload: message,
-        });
+    .removeById(id)
+    .then(({ data }) => {
+      dispatch({
+        type: "MESSAGES:REMOVE_MESSAGE",
+        payload: id,
       });
+    })
+    .catch(() => {
+      dispatch({
+      type: "MESSAGES:ADD_MESSAGE",
+      payload: message,
+      });
+    });
+   }
   },
   fetchSendMessage: (text, dialogId) => dispatch => {
     messagesApi.send(text, dialogId);
