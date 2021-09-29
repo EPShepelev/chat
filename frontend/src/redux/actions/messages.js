@@ -28,7 +28,7 @@ const Actions = {
         dispatch({
         type: "MESSAGES:ADD_MESSAGE",
         payload: message,
-      }));
+        });
       });
   },
   fetchSendMessage: (text, dialogId) => dispatch => {
