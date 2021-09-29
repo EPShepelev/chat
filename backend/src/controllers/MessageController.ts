@@ -98,22 +98,6 @@ class MessageController {
         });
       }
     });
-
-    MessageModel.findOneAndRemove({ _id: id })
-      .then((message) => {
-        if (message) {
-          res.json({
-            status: "success",
-            message: "Message deleted",
-          });
-        }
-      })
-      .catch(() => {
-        res.json({
-          status: "error",
-          message: "Message not found",
-        });
-      });
   };
 }
 
