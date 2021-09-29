@@ -86,8 +86,8 @@ class MessageController {
       }
 
       if (message.user.toString() === userId) {
-        message.remove();
         MessageModel.findOne({ dialog: message.dialog.toString() });
+        message.remove();
         return res.json({
           status: "success",
           message: "Message deleted",
