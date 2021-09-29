@@ -75,7 +75,7 @@ class MessageController {
   };
 
   delete = (req: express.Request, res: express.Response) => {
-    const id: string = req.params.id;
+    const id: string = req.query.id;
     const userId: string = req.user.id;
     MessageModel.findById(id, (err, message: any) => {
       if (err || !message) {
