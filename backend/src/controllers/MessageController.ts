@@ -87,7 +87,7 @@ class MessageController {
 
       if (message.user.toString() === userId) {
         message.remove();
-        return res.status(403).json({
+        return res.json({
           status: "success",
           message: "Message deleted",
         });
