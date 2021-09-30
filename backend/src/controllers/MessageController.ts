@@ -92,9 +92,9 @@ class MessageController {
           { sort: { create_at: -1 } },
           function (err, post) {
             if (err) {
-              res.status(404).json({
+              res.status(401).json({
                 status: "error",
-                message: "Messages not found",
+                message: error,
               });
             }
           }
