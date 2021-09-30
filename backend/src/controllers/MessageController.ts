@@ -89,7 +89,8 @@ class MessageController {
         MessageModel.findOne(
           { dialog: message.dialog },
           {},
-          { sort: { create_at: -1 } }
+          { sort: { create_at: -1 } },
+          function (err, post) {}
         );
         message.remove();
         return res.json({
