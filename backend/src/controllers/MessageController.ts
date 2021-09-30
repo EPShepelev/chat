@@ -90,7 +90,14 @@ class MessageController {
           { dialog: message.dialog },
           {},
           { sort: { create_at: -1 } },
-          function (err, post) {}
+          function (err, post) {
+            if (err) {
+              res.status(404).json({
+                status: "error",
+                message: "Messages not found",
+              });
+            }
+          }
         );
         message.remove();
         return res.json({
