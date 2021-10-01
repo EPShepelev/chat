@@ -90,7 +90,7 @@ class MessageController {
           { dialog: message.dialog },
           {},
           { sort: { create_at: -1 } },
-          function (err, post) {
+          function (err, lastMessage) {
             if (err) {
               res.status(500).json({
                 status: "error",
