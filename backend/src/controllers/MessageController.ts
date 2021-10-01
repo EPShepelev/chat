@@ -98,6 +98,7 @@ class MessageController {
                 message: err,
               });
             }
+            DialogModel.findById();
           }
         );
         message.remove();
