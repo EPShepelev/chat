@@ -86,6 +86,7 @@ class MessageController {
       }
 
       if (message.user.toString() === userId) {
+        const dialogId = message.dialog;
         MessageModel.findOne(
           { dialog: message.dialog },
           {},
