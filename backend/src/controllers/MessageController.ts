@@ -98,7 +98,14 @@ class MessageController {
                 message: err,
               });
             }
-            DialogModel.findById(dialogId, (err, dialog) => {});
+            DialogModel.findById(dialogId, (err, dialog) => {
+              if (err) {
+                res.status(500).json({
+                  status: "error",
+                  message: err,
+                });
+              }
+            });
           }
         );
         message.remove();
