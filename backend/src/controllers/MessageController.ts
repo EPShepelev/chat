@@ -106,6 +106,7 @@ class MessageController {
                 });
               }
               dialog.lastMessage = lastMessage;
+              dialog.save();
             });
           }
         );
