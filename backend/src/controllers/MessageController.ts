@@ -105,6 +105,7 @@ class MessageController {
                   message: err,
                 });
               }
+              dialog.lastMessage = lastMessage;
             });
           }
         );
