@@ -87,6 +87,7 @@ class MessageController {
 
       if (message.user.toString() === userId) {
         const dialogId = message.dialog;
+        message.remove();
         MessageModel.findOne(
           { dialog: dialogId },
           {},
@@ -110,7 +111,7 @@ class MessageController {
             });
           }
         );
-        message.remove();
+
         return res.json({
           status: "success",
           message: "Message deleted",
