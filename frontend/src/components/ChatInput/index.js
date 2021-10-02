@@ -29,6 +29,8 @@ const ChatInput = () => {
     }
   };
 
+  const setEmojiToInputValue = () => {};
+
   return (
     <div className="chat-input">
       <div className="chat-input__smile-btn">
