@@ -98,7 +98,7 @@ class MessageController {
                 message: err,
               });
             }
-            DialogModel.findById(dialogId, (err, dialog) => {
+            DialogModel.findById(dialogId, (err, dialog: any) => {
               if (err) {
                 res.status(500).json({
                   status: "error",
