@@ -29,7 +29,9 @@ const ChatInput = () => {
     }
   };
 
-  const addEmoji = ({ colons }) => {};
+  const addEmoji = ({ colons }) => {
+    setValue(value + " " + colons);
+  };
 
   return (
     <div className="chat-input">
