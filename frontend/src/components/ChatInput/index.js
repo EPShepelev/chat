@@ -30,6 +30,7 @@ const ChatInput = () => {
   };
 
   const addEmoji = ({ obj }) => {
+    debugger;
     const { colons } = obj;
     setValue(value + " " + colons.trim());
   };
