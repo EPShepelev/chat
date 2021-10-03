@@ -36,10 +36,7 @@ const ChatInput = () => {
       <div className="chat-input__smile-btn">
         {emojiPickerVisible && (
           <div className="chat-input__emoji-picker">
-            <Picker
-              onSelect={(emojiTag) => setEmojiToInputValue(emojiTag)}
-              set="apple"
-            />
+            <Picker onSelect={(emojiTag) => addEmoji(emojiTag)} set="apple" />
           </div>
         )}
         <Button
