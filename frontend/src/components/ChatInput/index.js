@@ -29,7 +29,7 @@ const ChatInput = () => {
     }
   };
 
-  const setEmojiToInputValue = () => {};
+  const addEmoji = () => {};
 
   return (
     <div className="chat-input">
