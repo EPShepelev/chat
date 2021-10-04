@@ -9,7 +9,7 @@ import pauseSvg from "assets/img/pause.svg";
 import { convertCurrentTime } from "utils/helpers";
 import { Popover, Button } from "antd";
 import reactStringReplace from "react-string-replace";
-import { Picker } from "emoji-mart";
+import { Emoji } from "emoji-mart";
 
 const MessageAudio = ({ audioSrc }) => {
   const audioElem = useRef(null);
