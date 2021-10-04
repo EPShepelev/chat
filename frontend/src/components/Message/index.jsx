@@ -127,7 +127,7 @@ const Message = ({
             <div className="message__bubble">
               {text && (
                 <p className="message__text">
-                  {reactStringReplace(text, /(\d+)/g, (match, i) => (
+                  {reactStringReplace(text, /:(.+?):g/, (match, i) => (
                     <span key={i} style={{ color: "red" }}>
                       {match}
                     </span>
