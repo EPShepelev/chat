@@ -125,7 +125,15 @@ const Message = ({
         <div className="message__info">
           {(audio || text || isTyping) && (
             <div className="message__bubble">
-              {text && <p className="message__text">{text}</p>}
+              {text && (
+                <p className="message__text">
+                  {reactStringReplace(text, /(\d+)/g, (match, i) => (
+                    <span key={i} style={{ color: "red" }}>
+                      {match}
+                    </span>
+                  ))}
+                </p>
+              )}
               {isTyping && (
                 <div className="message__typing">
                   <span className="dot one"></span>
