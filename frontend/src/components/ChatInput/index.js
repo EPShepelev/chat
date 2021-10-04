@@ -10,6 +10,7 @@ import {
 import { Input, Button } from "antd";
 import { UploadField } from "@navjobs/upload";
 import { Picker } from "emoji-mart";
+import reactStringReplace from "react-string-replace";
 
 import "./ChatInput.scss";
 
