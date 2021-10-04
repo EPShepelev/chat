@@ -129,9 +129,7 @@ const Message = ({
               {text && (
                 <p className="message__text">
                   {reactStringReplace(text, /:(.+?):g/, (match, i) => (
-                    <span key={i} style={{ color: "red" }}>
-                      {match}
-                    </span>
+                    <Emoji emoji={match} set="apple" size={16} />
                   ))}
                 </p>
               )}
