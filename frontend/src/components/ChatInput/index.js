@@ -50,7 +50,7 @@ const ChatInput = () => {
           icon={<SmileOutlined />}
         />
       </div>
-      <Input
+      <TextArea
         onChange={(e) => setValue(e.target.value)}
         onKeyUp={handleSendMessage}
         size="large"
