@@ -39,7 +39,7 @@ return (
     user={user}
     blockRef={messagesRef}
     items={items}
-    isLoading={isLoading}
+    isLoading={isLoading && user}
     onRemoveMessage={removeMessageById}
   />
 );
