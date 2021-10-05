@@ -13,7 +13,7 @@ import { Picker } from "emoji-mart";
 
 import "./ChatInput.scss";
 
-const {textArea}
+const { textArea } = Input;
 
 const ChatInput = () => {
   const [value, setValue] = useState("");
