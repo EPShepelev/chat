@@ -56,6 +56,7 @@ const ChatInput = () => {
         size="large"
         placeholder="Введите сообщение"
         value={value}
+        autosize={{ minRows: 1, maxRows: 6 }}
       />
       <div className="chat-input__actions">
         <UploadField
