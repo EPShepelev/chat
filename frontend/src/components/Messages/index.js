@@ -19,7 +19,7 @@ const Messages = ({ onRemoveMessage, blockRef, isLoading, items, user }) => {
             <Message
               key={item._id}
               {...item}
-              isMe={user._id === item.user._id}
+              isMe={user && user._id === item.user._id}
               onRemoveMessage={onRemoveMessage.bind(this, item._id)}
             />
           ))
