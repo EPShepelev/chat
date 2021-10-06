@@ -10,7 +10,7 @@ const ChatInput = ({ currentDialogId, user, dialogs }) => {
     (dialog) => dialog._id === currentDialogId
   )[0];
   let partner = {};
-  if (user && currentDialogObj.author._id === user._id) {
+  if (currentDialogObj.author._id === user._id) {
     partner = currentDialogObj.partner;
   } else {
     partner = currentDialogObj.author;
