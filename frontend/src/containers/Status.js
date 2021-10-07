@@ -15,6 +15,7 @@ const ChatInput = ({ currentDialogId, user, dialogs }) => {
   } else {
     partner = currentDialogObj.author;
   }
+  console.log(partner);
   return null;
   // return <StatusBase online={partner.isOnline} fullname={partner.fullname} />;
 };
