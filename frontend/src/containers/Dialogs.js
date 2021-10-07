@@ -46,8 +46,10 @@ const Dialogs = ({
     //   setFilteredItems(items);
     // }
     socket.on("SERVER:DIALOG_CREATED", onNewDialog);
+    socket.on("SERVER:NEW_MESSAGE", onNewDialog);
     return () => {
       socket.removeListener("SERVER:DIALOG_CREATED", onNewDialog);
+      socket.removeListener("SERVER:NEW_MESSAGE", onNewDialog);
     };
   }, []);
 
