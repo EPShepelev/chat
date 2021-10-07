@@ -27,10 +27,6 @@ const Dialogs = ({
     setInputValue(value);
   };
 
-  const onNewDialog = () => {
-    fetchDialogs();
-  };
-
   window.fetchDialogs = fetchDialogs;
   useEffect(() => {
     if (items.length) {
@@ -45,11 +41,11 @@ const Dialogs = ({
     // } else {
     //   setFilteredItems(items);
     // }
-    socket.on("SERVER:DIALOG_CREATED", onNewDialog);
-    socket.on("SERVER:NEW_MESSAGE", onNewDialog);
+    socket.on("SERVER:DIALOG_CREATED", fetchDialogs());
+    socket.on("SERVER:NEW_MESSAGE", fetchDialogs());
     return () => {
-      socket.removeListener("SERVER:DIALOG_CREATED", onNewDialog);
-      socket.removeListener("SERVER:NEW_MESSAGE", onNewDialog);
+      socket.removeListener("SERVER:DIALOG_CREATED", fetchDialogs());
+      socket.removeListener("SERVER:NEW_MESSAGE", fetchDialogs());
     };
   }, []);
 
