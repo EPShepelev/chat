@@ -5,3 +5,10 @@ export default (ref, callback) => {
     }
   };
 };
+
+useEffect(() => {
+  document.addEventListener("click", handleClick);
+  return () => {
+    document.removeEventListener("click", handleClick);
+  };
+});
