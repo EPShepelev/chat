@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export default (el, callback) => {
   const handleClick = (e) => {
-    if (ref && !ref.contains(e.target)) {
+    if (el && !el.contains(e.target)) {
       callback();
     }
   };
