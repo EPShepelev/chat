@@ -1,1 +1,3 @@
-export default (ref, callback) => {};
+export default (ref, callback) => {
+  const handleClick = (e) => {};
+};
