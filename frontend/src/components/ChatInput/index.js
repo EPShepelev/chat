@@ -36,6 +36,8 @@ const ChatInput = () => {
     setValue(value + " " + colons.trim());
   };
 
+  useOutside();
+
   return (
     <div className="chat-input">
       <div className="chat-input__smile-btn">
