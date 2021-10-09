@@ -37,7 +37,7 @@ const ChatInput = () => {
   };
 
   useEffect(() => {
-   
+   const el = document.querySelector('chat-input__emoji-picker');
   }, [])
   useOutside();
 
