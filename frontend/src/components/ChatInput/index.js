@@ -36,6 +36,9 @@ const ChatInput = () => {
     setValue(value + " " + colons.trim());
   };
 
+  useEffect(() => {
+   
+  }, [])
   useOutside();
 
   return (
