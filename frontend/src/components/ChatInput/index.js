@@ -12,6 +12,7 @@ import { UploadField } from "@navjobs/upload";
 import { Picker } from "emoji-mart";
 
 import "./ChatInput.scss";
+import {useOutside} from 'utils/helpers';
 
 const { TextArea } = Input;
 
