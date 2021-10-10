@@ -36,9 +36,9 @@ const ChatInput = () => {
     setValue(value + " " + colons.trim());
   };
 
-  const handleOutsideClick = e => {
+  const handleOutsideClick = (el, e) => {
     if (el && !el.contains(e.target)) {
-      callback();
+      setEmojiPickerVisible(false);
     }
   }
 
