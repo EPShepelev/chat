@@ -46,11 +46,11 @@ const ChatInput = () => {
   return (
     <div className="chat-input">
       <div className="chat-input__smile-btn">
-        {emojiPickerVisible && (
-          <div className="chat-input__emoji-picker">
-            <Picker ref={} onSelect={(emojiTag) => addEmoji(emojiTag)} set="apple" />
-          </div>
+      <div className="chat-input__emoji-picker">
+        {emojiPickerVisible && (  
+            <Picker ref={} onSelect={(emojiTag) => addEmoji(emojiTag)} set="apple" /> 
         )}
+        </div>
         <Button
           onClick={toggleEmojiPicker}
           type="link"
