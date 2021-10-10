@@ -45,12 +45,10 @@ const ChatInput = () => {
 
   useEffect(() => {
    const el = document.querySelector('.chat-input__emoji-picker');
-   console.log(el);
    document.addEventListener("click", handleClick);
    return () => {
     document.removeEventListener("click", handleClick);
   };
-  //  useOutside(el, () => setEmojiPickerVisible(false));
   }, [])
  
 
