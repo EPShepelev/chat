@@ -8,9 +8,4 @@ export default (el, callback) => {
   };
 };
 
-useEffect(() => {
-  document.addEventListener("click", handleClick);
-  return () => {
-    document.removeEventListener("click", handleClick);
-  };
-});
+useEffect(() => {});
