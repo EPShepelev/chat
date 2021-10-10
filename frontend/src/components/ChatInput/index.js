@@ -36,7 +36,12 @@ const ChatInput = () => {
     setValue(value + " " + colons.trim());
   };
 
-  const handleOutsideClick =
+  const handleOutsideClick = e => {
+    if (el && !el.contains(e.target)) {
+      callback();
+    }
+  }
+
 
   useEffect(() => {
    const el = document.querySelector('.chat-input__emoji-picker');

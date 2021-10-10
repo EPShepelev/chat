@@ -1,11 +1,7 @@
 import { useEffect } from "react";
 
 export default (el, callback) => {
-  const handleClick = (e) => {
-    if (el && !el.contains(e.target)) {
-      callback();
-    }
-  };
+  const handleClick = (e) => {};
 };
 
 useEffect(() => {});
