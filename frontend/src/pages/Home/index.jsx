@@ -9,6 +9,8 @@ import {
 import { Button } from "antd";
 import "./Home.scss";
 
+// сделать загрузку для проверки user
+
 const Home = () => (
   <section className="chat">
     <Sidebar />
