@@ -45,7 +45,7 @@ const ChatInput = () => {
 
   useEffect(() => {
    const el = document.querySelector('.chat-input__emoji-picker');
-   document.addEventListener("click", handleClick);
+   document.addEventListener("click",handleOutsideClick.bind(this, el));
    return () => {
     document.removeEventListener("click", handleClick);
   };
