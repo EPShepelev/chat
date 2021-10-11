@@ -6,7 +6,6 @@ import {
   FormOutlined,
   EllipsisOutlined,
 } from "@ant-design/icons";
-import { Button } from "antd";
 import "./Home.scss";
 
 // сделать загрузку для проверки user
