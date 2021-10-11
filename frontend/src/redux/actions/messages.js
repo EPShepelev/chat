@@ -16,6 +16,7 @@ const Actions = {
     }
   },
   removeMessageById: (id) => dispatch => {
+    // сделать обновление последнего сообщения после удаления
    if (window.confirm("Удалить сообщение?")) {
     messagesApi
     .removeById(id)
