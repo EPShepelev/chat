@@ -14,8 +14,6 @@ const Home = () => (
   <section className="chat">
     <Sidebar />
     <div className="chat__dialog">
-      <div className="chat__dialog-header">
-        <div />
         <Status />
       </div>
       <div className="chat__dialog-messages">
