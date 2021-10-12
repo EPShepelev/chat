@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 const ChatInput = ({ currentDialogId, user, dialogs }) => {
   if (!dialogs.length || !currentDialogId) {
-    return "диалог не выбран";
+    return null;
   }
   const currentDialogObj = items.filter(
     (dialog) => dialog._id === currentDialogId
