@@ -16,7 +16,7 @@ const Home = () => (
     <div className="chat__dialog">
       <div className="chat__dialog-header">
         <div />
-        <Status online />
+        <Status />
       </div>
       <div className="chat__dialog-messages">
         <Messages />
