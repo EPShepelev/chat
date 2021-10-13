@@ -28,4 +28,4 @@ const Home = () => (
   </section>
 );
 
-export default withRouter()(Home);
+export default withRoute(Home);
