@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
+import { WithRouter } from "react-router";
 
 import { LoginForm, RegistrationForm } from "modules";
 import CheckInfo from "./components/CheckEmailInfo";
