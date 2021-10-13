@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { WithRouter } from "react-router";
+
 import { Dialogs, Messages, ChatInput, Status } from "containers";
 import { Sidebar } from "containers";
 import {
