@@ -16,13 +16,11 @@ const getMessageTime = (created_at) => {
 
 const DialogItem = ({
   _id,
-  user,
   unread,
   created_at,
   isMe,
   text,
   currentDialogId,
-  onSelect,
   lastMessage,
 }) => (
   <Link to={`/dialog/${_id}`}>
