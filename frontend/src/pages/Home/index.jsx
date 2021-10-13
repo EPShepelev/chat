@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { WithRouter } from "react-router";
+import { withRouter } from "react-router";
 
 import { Dialogs, Messages, ChatInput, Status } from "containers";
 import { Sidebar } from "containers";
@@ -28,4 +28,4 @@ const Home = () => (
   </section>
 );
 
-export default Home;
+export default withRouter()(Home);
