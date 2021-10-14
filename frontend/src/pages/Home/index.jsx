@@ -14,7 +14,10 @@ import "./Home.scss";
 
 const Home = (props) => {
   useEffect(() => {
-    console.log("111");
+    const {
+      location: { pathname },
+    } = props;
+    const dialogId = pathname.split("/").pop();
   }, [props.location.pathname]);
   return (
     <section className="chat">
