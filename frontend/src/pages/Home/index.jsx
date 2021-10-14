@@ -14,12 +14,12 @@ import "./Home.scss";
 
 const Home = (props) => {
   useEffect(() => {
-    effect
+    effect;
   }, [input]);
-  return (  
-  <section className="chat">
-    <Sidebar />
-    <div className="chat__dialog">
+  return (
+    <section className="chat">
+      <Sidebar />
+      <div className="chat__dialog">
         <Status />
       </div>
       <div className="chat__dialog-messages">
@@ -28,10 +28,8 @@ const Home = (props) => {
       <div className="chat__dialog-input">
         <ChatInput />
       </div>
-    </div>
-  </section>
-  )
-
-  };
+    </section>
+  );
+};
 
 export default withRoute(Home);
