@@ -14,8 +14,8 @@ import "./Home.scss";
 
 const Home = (props) => {
   useEffect(() => {
-    effect;
-  }, [input]);
+    console.log("111");
+  }, [props.location.pathname]);
   return (
     <section className="chat">
       <Sidebar />
