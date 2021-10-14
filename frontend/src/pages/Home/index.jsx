@@ -12,10 +12,11 @@ import "./Home.scss";
 
 // сделать загрузку для проверки user
 
-const Home = (props) => (
+const Home = (props) => {
   useEffect(() => {
     effect
   }, [input]);
+  return (  
   <section className="chat">
     <Sidebar />
     <div className="chat__dialog">
@@ -29,6 +30,8 @@ const Home = (props) => (
       </div>
     </div>
   </section>
-);
+  )
+
+  };
 
 export default withRoute(Home);
