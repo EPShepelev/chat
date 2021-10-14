@@ -12,7 +12,7 @@ import "./Home.scss";
 
 // сделать загрузку для проверки user
 
-const Home = () => (
+const Home = (props) => (
   <section className="chat">
     <Sidebar />
     <div className="chat__dialog">
