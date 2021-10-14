@@ -13,6 +13,9 @@ import "./Home.scss";
 // сделать загрузку для проверки user
 
 const Home = (props) => (
+  useEffect(() => {
+    effect
+  }, [input]);
   <section className="chat">
     <Sidebar />
     <div className="chat__dialog">
