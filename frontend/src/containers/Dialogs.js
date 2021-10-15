@@ -30,11 +30,6 @@ const Dialogs = ({ fetchDialogs, currentDialogId, items, userId }) => {
 
   useEffect(() => {
     fetchDialogs();
-    // if (!items.length) {
-    //   fetchDialogs();
-    // } else {
-    //   setFilteredItems(items);
-    // }
     socket.on("SERVER:DIALOG_CREATED", fetchDialogs);
     socket.on("SERVER:NEW_MESSAGE", fetchDialogs);
     return () => {
