@@ -35,13 +35,15 @@ const Dialogs = ({
 };
 
 return (
-  <BaseMessages
-    user={user}
-    blockRef={messagesRef}
-    items={items}
-    isLoading={isLoading && !user}
-    onRemoveMessage={removeMessageById}
-  />
+  currentDialogId && (
+    <BaseMessages
+      user={user}
+      blockRef={messagesRef}
+      items={items}
+      isLoading={isLoading && !user}
+      onRemoveMessage={removeMessageById}
+    />
+  )
 );
 
 export default connect(
