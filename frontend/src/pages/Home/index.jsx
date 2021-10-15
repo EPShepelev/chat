@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { withRouter } from "react-router";
+import { connect } from "react-redux";
 
 import { Dialogs, Messages, ChatInput, Status } from "containers";
 import { Sidebar } from "containers";
