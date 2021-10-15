@@ -20,9 +20,7 @@ const Home = (props) => {
       location: { pathname },
     } = props;
     const dialogId = pathname.split("/").pop();
-    if (dialogId) {
-      setCurrentDialogId(dialogId);
-    }
+    setCurrentDialogId(dialogId);
   }, [props.location.pathname]);
   return (
     <section className="chat">
