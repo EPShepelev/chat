@@ -36,6 +36,6 @@ const Home = (props) => {
   );
 };
 
-export default withRoute(
+export default withRouter(
   connect(({ dialogs }) => dialogs, dialogsActions)(Home)
 );
