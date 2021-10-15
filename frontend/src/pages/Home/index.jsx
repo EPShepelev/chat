@@ -36,5 +36,5 @@ const Home = (props) => {
 };
 
 export default withRoute(
-  connect(({ dialogs }) => dialogs, dialogsActions)(Dialogs)
+  connect(({ dialogs }) => dialogs, dialogsActions)(Home)
 );
