@@ -11,9 +11,9 @@ export interface IMessage extends Document {
     ref: String;
     require: true;
   };
-  unread: {
+  read: {
     type: boolean;
-    default: boolean;
+    default: false;
   };
 }
 
