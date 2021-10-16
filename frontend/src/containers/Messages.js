@@ -15,7 +15,7 @@ const Dialogs = ({
   removeMessageById,
 }) => {
   if (!currentDialogId) {
-    return null;
+    return <Empty description="Откройте диалог" />;
   }
 
   const messagesRef = useRef(null);
