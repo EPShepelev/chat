@@ -2,9 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { Empty } from "antd";
 
-import { Messages as BaseMessages } from "components";
 import { messagesActions } from "redux/actions";
-
 import socket from "core/socket";
 
 const Dialogs = ({
@@ -12,8 +10,8 @@ const Dialogs = ({
   fetchMessages,
   adMessage,
   items,
-  isLoading,
   user,
+  isLoading,
   removeMessageById,
 }) => {
   if (!currentDialogId) {
