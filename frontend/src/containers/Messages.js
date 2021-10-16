@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { Messages as BaseMessages } from "components";
 import { messagesActions } from "redux/actions";
+import { Empty, Spin } from "antd";
 import socket from "core/socket";
 
 const Dialogs = ({
