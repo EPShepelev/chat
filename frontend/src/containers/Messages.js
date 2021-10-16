@@ -13,6 +13,10 @@ const Dialogs = ({
   user,
   removeMessageById,
 }) => {
+  if (!currentDialogId) {
+    return null;
+  }
+
   const messagesRef = useRef(null);
 
   const onNewMessage = (data) => {
