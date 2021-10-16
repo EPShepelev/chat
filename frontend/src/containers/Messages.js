@@ -38,7 +38,7 @@ const Dialogs = ({
   }, [items]);
 };
 
-return currentDialogId ? (
+return (
   <BaseMessages
     user={user}
     blockRef={messagesRef}
@@ -46,7 +46,7 @@ return currentDialogId ? (
     isLoading={isLoading && !user}
     onRemoveMessage={removeMessageById}
   />
-) : null;
+);
 
 export default connect(
   ({ dialogs, messages, user }) => ({
