@@ -16,7 +16,13 @@ class MessageController {
     MessageModel.updateMany({
       dialog: dialogId,
       user: { $not: new RegExp(userId) },
-    });
+    },err => {
+      if (err) {
+        return res.status(500).json({
+          status: 'error',
+          message: err,
+        });
+    } );
     MessageModel.find({ dialog: dialogId })
       .populate(["dialog", "user"])
       .exec(function (err, messages) {
