@@ -13,6 +13,10 @@ class MessageController {
   index = (req: express.Request, res: express.Response) => {
     const dialogId: string = req.query.dialog;
     const userId = req.user._id;
+    MessageModel.updateMany({
+      dialog: dialogId,
+      user: { $not: new RegExp(userId) },
+    });
     MessageModel.find({ dialog: dialogId })
       .populate(["dialog", "user"])
       .exec(function (err, messages) {
