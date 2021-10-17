@@ -16,7 +16,7 @@ class MessageController {
     MessageModel.updateMany({
       dialog: dialogId,
       user: { $not: new RegExp(userId) },
-    },err => {
+    },(err: any) => {
       if (err) {
         return res.status(500).json({
           status: 'error',
