@@ -1,15 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import reactStringReplace from "react-string-replace";
+import { Popover, Button } from "antd";
+import { Emoji } from "emoji-mart";
 import { Time, Avatar } from "..";
+
+import { convertCurrentTime } from "utils/helpers";
+
 import "./Message.scss";
 import waveSvg from "assets/img/wave.svg";
 import playSvg from "assets/img/play.svg";
 import pauseSvg from "assets/img/pause.svg";
-import { convertCurrentTime } from "utils/helpers";
-import { Popover, Button } from "antd";
-import reactStringReplace from "react-string-replace";
-import { Emoji } from "emoji-mart";
 
 const MessageAudio = ({ audioSrc }) => {
   const audioElem = useRef(null);
@@ -93,7 +95,7 @@ const Message = ({
   audio,
   date,
   isMe,
-  isRead,
+  read,
   attachments,
   isTyping,
   onRemoveMessage,
