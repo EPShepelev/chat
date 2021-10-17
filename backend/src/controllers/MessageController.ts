@@ -15,7 +15,7 @@ class MessageController {
     const userId = req.user._id;
     MessageModel.updateMany({
       dialog: dialogId,
-      user: { $not: new RegExp(userId) },
+      user: { $ne: userId },
     },{
       "read": true
     },(err: any) => {
