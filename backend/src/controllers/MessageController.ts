@@ -16,9 +16,9 @@ class MessageController {
     MessageModel.updateMany({
       dialog: dialogId,
       user: { $ne: userId },
-    },{
+    },{"$set":{
       "read": true
-    },(err: any) => {
+    }},(err: any) => {
       if (err) {
         return res.status(500).json({
           status: 'error',
