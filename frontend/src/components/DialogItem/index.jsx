@@ -16,7 +16,7 @@ const getMessageTime = (created_at) => {
 
 const DialogItem = ({
   _id,
-  unread,
+  read,
   created_at,
   isMe,
   text,
@@ -40,10 +40,10 @@ const DialogItem = ({
         </div>
         <div className="dialogs__item-info-bottom">
           <p>{lastMessage.text}</p>
-          {isMe && <IconRead isMe={true} isRead={true} />}
+          {isMe && <IconRead isMe={isMe} isRead={lastMessage.read} />}
           {lastMessage.unread > 0 && (
             <div className="dialogs__item-info-bottom-count">
-              {lastMessage.unread > 9 ? "+9" : lastMessage.unread}
+              {lastMessage.read > 9 ? "+9" : lastMessage.read}
             </div>
           )}
         </div>
