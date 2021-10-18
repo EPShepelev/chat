@@ -11,30 +11,12 @@ export interface IUploadFile extends Document {
 
 const UploadFileSchema = new Schema(
   {
-    email: {
-      type: "String",
-      require: "Email address is required",
-      validate: [isEmail, "Invalid email"],
-      unique: true,
-    },
-    avatar: String,
-    fullname: {
-      type: "String",
-      require: "Full name is required",
-    },
-    password: {
-      type: "String",
-      require: "Password is required",
-    },
-    confirmed: {
-      type: "Boolean",
-      default: false,
-    },
-    confirm_hash: String,
-    last_seen: {
-      type: Date,
-      default: new Date(),
-    },
+    filename: String,
+    size: Number,
+    url: String,
+    ext: String,
+    message: String,
+    user: String,
   },
   {
     timestamps: true,
