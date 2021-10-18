@@ -23,10 +23,6 @@ const UploadFileSchema = new Schema(
   }
 );
 
-UserSchema.virtual("isOnline").get(function (this: any) {
-  return differenceInMinutes(new Date.toISOString(), this.last_seen) < 5;
-});
-
 UserSchema.set("toJSON", {
   virtuals: true,
 });
