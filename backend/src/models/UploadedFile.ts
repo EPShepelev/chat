@@ -9,7 +9,7 @@ export interface IUploadFile extends Document {
   user: string;
 }
 
-const UserSchema = new Schema(
+const UploadFileSchema = new Schema(
   {
     email: {
       type: "String",
