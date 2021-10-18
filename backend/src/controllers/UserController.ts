@@ -1,6 +1,4 @@
 import { validationResult } from "express-validator";
-import { nextTick } from "process";
-import { isObject } from "lodash";
 import express from "express";
 import bcrypt from "bcrypt";
 import socket from "socket.io";
