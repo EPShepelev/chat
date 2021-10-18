@@ -1,7 +1,4 @@
 import mongoose, { Schema, Document } from "mongoose";
-import { isEmail } from "validator";
-import { generatePasswordHash } from "../utils";
-import differenceInMinutes from "date-fns/differenceInMinutes";
 
 export interface IUser extends Document {
   email?: string;
