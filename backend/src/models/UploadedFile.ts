@@ -1,13 +1,12 @@
 import mongoose, { Schema, Document } from "mongoose";
 
-export interface IUser extends Document {
-  email?: string;
-  fullname?: string;
-  password?: string;
-  confirmed?: boolean;
-  avatar?: string;
-  confirm_hash?: string;
-  last_seen?: Date;
+export interface IUploadFile extends Document {
+  filename: string;
+  size: number;
+  url: string;
+  ext: string;
+  message: string;
+  user: string;
 }
 
 const UserSchema = new Schema(
