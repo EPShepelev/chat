@@ -3,9 +3,7 @@ import express from "express";
 import bcrypt from "bcrypt";
 import socket from "socket.io";
 
-import { UserModel } from "../models";
-import { IUser } from "../models/User";
-import { createJWTToken } from "../utils";
+import { UploadFileModel } from "../models";
 
 class UserController {
   io: socket.Server;
