@@ -23,10 +23,6 @@ const UploadFileSchema = new Schema(
   }
 );
 
-UserSchema.set("toJSON", {
-  virtuals: true,
-});
-
 UserSchema.pre("save", function (next) {
   const user: IUser = this;
   if (!user.isModified("password")) return next();
