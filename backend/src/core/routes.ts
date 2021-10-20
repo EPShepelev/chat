@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import express from "express";
 import socket from "socket.io";
 
-import { UserCtr, DialogCtr, MessageCtr } from "../controllers";
+import { UserCtr, DialogCtr, MessageCtr, UploadCtr } from "../controllers";
 
 const createRoutes = (app: express.Express, io: socket.Server) => {
   const UserController = new UserCtr(io);
