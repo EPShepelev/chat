@@ -10,6 +10,7 @@ const createRoutes = (app: express.Express, io: socket.Server) => {
   const UserController = new UserCtr(io);
   const DialogController = new DialogCtr(io);
   const MessageController = new MessageCtr(io);
+  const UploadController = new UploadCtr();
 
   app.use(bodyParser.json());
   app.use(checkAuth);
