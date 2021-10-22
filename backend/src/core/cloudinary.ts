@@ -8,4 +8,6 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+const storage = cloudinaryStorage({});
+
 export default cloudinary;
