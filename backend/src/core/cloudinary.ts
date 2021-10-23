@@ -10,6 +10,8 @@ cloudinary.config({
 
 const storage = cloudinaryStorage({
   cloudinary,
+  folder: "",
+  allowedFormats: ["jpg", "png"],
 });
 
 export default cloudinary;
