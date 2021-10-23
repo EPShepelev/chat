@@ -4,6 +4,8 @@ import bodyParser from "body-parser";
 import express from "express";
 import socket from "socket.io";
 
+import uploader from "./uploader";
+
 import { UserCtr, DialogCtr, MessageCtr, UploadCtr } from "../controllers";
 
 const createRoutes = (app: express.Express, io: socket.Server) => {
