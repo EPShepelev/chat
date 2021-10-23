@@ -15,6 +15,6 @@ const storage = cloudinaryStorage({
   transformation: [{ width: 500, height: 500, crop: "limit" }],
 });
 
-const parser = multer({ storage });
+const uploader = multer({ storage });
 
-export default parser;
+export default uploader;
