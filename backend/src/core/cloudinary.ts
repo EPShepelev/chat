@@ -12,6 +12,7 @@ const storage = cloudinaryStorage({
   cloudinary,
   folder: "",
   allowedFormats: ["jpg", "png"],
+  tranformation: [{ width: 500, height: 500, crop: "limit" }],
 });
 
 export default cloudinary;
