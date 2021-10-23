@@ -10,8 +10,8 @@ cloudinary.config({
 
 const storage = cloudinaryStorage({
   cloudinary,
-  folder: "photos",
-  allowedFormats: ["jpg", "png"],
+  folder: "images",
+  allowedFormats: ["jpg", "jpeg", "png", "gif"],
   transformation: [{ width: 500, height: 500, crop: "limit" }],
 });
 
