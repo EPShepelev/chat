@@ -1,3 +1,4 @@
+import express from "express";
 import { UploadFileModel } from "../models";
 
 class UserController {
