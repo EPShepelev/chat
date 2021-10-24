@@ -4,7 +4,7 @@ import { UploadFileModel } from "../models";
 class UserController {
   create = (req: express.Request, res: Express.Response) => {
     console.log(req.file);
-    const image = {};
+    let image = {};
     image.url = req.file.url;
     image.id = req.file.public._id;
   };
