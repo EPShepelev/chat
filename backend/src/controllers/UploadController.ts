@@ -6,6 +6,7 @@ class UserController {
     console.log(req.file);
     const image = {};
     image.url = req.file.url;
+    image.id = req.file.public._id;
   };
   delete = () => {};
 }
