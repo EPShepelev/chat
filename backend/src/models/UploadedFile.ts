@@ -23,6 +23,9 @@ const UploadFileSchema = new Schema(
   }
 );
 
-const UploadFileModel = mongoose.model<IUploadFile>("User", UploadFileSchema);
+const UploadFileModel = mongoose.model<IUploadFile>(
+  "UploadFile",
+  UploadFileSchema
+);
 
 export default UploadFileModel;
