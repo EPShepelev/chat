@@ -5,6 +5,7 @@ class UserController {
   create = (req: express.Request, res: Express.Response) => {
     console.log(req.file);
     const image = {};
+    image.url = req.file.url;
   };
   delete = () => {};
 }
