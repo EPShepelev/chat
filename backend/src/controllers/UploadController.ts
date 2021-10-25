@@ -7,7 +7,7 @@ class UserController {
 
     const fileData = {
       filename: String,
-      size: Number,
+      size: file.bits,
       url: String,
       ext: file.format,
       message: { type: Schema.Types.ObjectId, ref: "Message", require: true },
