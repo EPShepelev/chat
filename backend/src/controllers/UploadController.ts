@@ -6,10 +6,10 @@ class UserController {
     const file: any = req.file;
 
     const fileData = {
-      filename: String,
+      filename: file.originalname,
       size: file.bits,
-      url: String,
       ext: file.format,
+      url: String,
       message: { type: Schema.Types.ObjectId, ref: "Message", require: true },
       user: { type: Schema.Types.ObjectId, ref: "User", require: true },
     };
