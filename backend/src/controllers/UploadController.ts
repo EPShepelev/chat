@@ -1,5 +1,5 @@
 import express from "express";
-import { UploadFileModel } from "../models";
+// import { UploadFileModel } from "../models";
 
 class UserController {
   create = (req: express.Request, res: Express.Response) => {
