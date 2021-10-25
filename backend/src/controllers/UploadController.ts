@@ -3,7 +3,9 @@ import { UploadFileModel } from "../models";
 
 class UserController {
   create = (req: express.Request, res: Express.Response) => {
-    const file = {
+    const file = req.file;
+
+    const fileData = {
       filename: String,
       size: Number,
       url: String,
