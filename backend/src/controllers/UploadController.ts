@@ -9,7 +9,7 @@ class UserController {
       filename: String,
       size: Number,
       url: String,
-      ext: String,
+      ext: file.format,
       message: { type: Schema.Types.ObjectId, ref: "Message", require: true },
       user: { type: Schema.Types.ObjectId, ref: "User", require: true },
     };
