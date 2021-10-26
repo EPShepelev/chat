@@ -12,7 +12,7 @@ class UserController {
       ext: file.format,
       url: String,
       message: { type: Schema.Types.ObjectId, ref: "Message", require: true },
-      user: { type: Schema.Types.ObjectId, ref: "User", require: true },
+      user,
     };
     const dialog = new UploadFileModel(postData);
     dialog.save().then((dialogObj: any) => {});
