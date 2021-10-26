@@ -14,7 +14,8 @@ class UserController {
       user: userId,
     };
     const uploadedFile = new UploadFileModel(fileData);
-    dialog.save().then((dialogObj: any) => {});
+
+    uploadedFile.save().then((dialogObj: any) => {});
   };
   delete = () => {};
 }
