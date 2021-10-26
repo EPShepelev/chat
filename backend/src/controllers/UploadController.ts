@@ -11,7 +11,6 @@ class UserController {
       size: file.bits,
       ext: file.format,
       url: String,
-      message: { type: Schema.Types.ObjectId, ref: "Message", require: true },
       user,
     };
     const dialog = new UploadFileModel(postData);
