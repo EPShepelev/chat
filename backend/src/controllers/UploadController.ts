@@ -13,7 +13,7 @@ class UserController {
       url: String,
       user: userId,
     };
-    const dialog = new UploadFileModel(postData);
+    const dialog = new UploadFileModel(fileData);
     dialog.save().then((dialogObj: any) => {});
   };
   delete = () => {};
