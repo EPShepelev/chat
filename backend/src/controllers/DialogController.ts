@@ -37,29 +37,34 @@ class DialogController {
       partner: req.body.partner,
     };
     const dialog = new DialogModel(postData);
-    dialog.save().then((dialogObj: any) => {
-      const message = new MessageModel({
-        text: req.body.text,
-        dialog: dialogObj._id,
-        user: req.body.author,
-      });
-
-      message
-        .save()
-        .then(() => {
-          res.json(dialogObj);
-          this.io.emit("SERVER:DIALOG_CREATED", {
-            ...postData,
-            dialog: dialogObj,
-          });
-        })
-        .catch((reason) => {
-          res.json({ reason });
-        })
-        .catch((reason) => {
-          res.json({ reason });
+    dialog
+      .save()
+      .then((dialogObj: any) => {
+        const message = new MessageModel({
+          text: req.body.text,
+          dialog: dialogObj._id,
+          user: req.body.author,
         });
-    });
+
+        message
+          .save()
+          .then(() => {
+            res.json(dialogObj);
+            this.io.emit("SERVER:DIALOG_CREATED", {
+              ...postData,
+              dialog: dialogObj,
+            });
+          })
+          .catch((reason) => {
+            res.json({ reason });
+          });
+      })
+      .catch((reason) => {
+        res.json({
+          status: "error",
+          message: reason,
+        });
+      });
   };
 
   delete = (req: express.Request, res: express.Response) => {
