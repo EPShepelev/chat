@@ -3,7 +3,7 @@ import { UploadFileModel } from "../models";
 
 class UserController {
   create = (req: express.Request, res: Express.Response) => {
-    const user = req.user._id;
+    const userId = req.user._id;
     const file: any = req.file;
 
     const fileData = {
@@ -11,7 +11,7 @@ class UserController {
       size: file.bits,
       ext: file.format,
       url: String,
-      user,
+      user: userId,
     };
     const dialog = new UploadFileModel(postData);
     dialog.save().then((dialogObj: any) => {});
