@@ -23,7 +23,7 @@ class UserController {
           file: fileObj,
         });
       })
-      .catch();
+      .catch((err) => {});
   };
   delete = () => {};
 }
