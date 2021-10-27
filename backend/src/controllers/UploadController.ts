@@ -10,7 +10,7 @@ class UserController {
       filename: file.originalname,
       size: file.bits,
       ext: file.format,
-      url: String,
+      url: file.url,
       user: userId,
     };
     const uploadedFile = new UploadFileModel(fileData);
