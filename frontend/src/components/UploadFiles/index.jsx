@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function index() {
+function UploadFiles() {
   return <div></div>;
 }
+
+export default UploadFiles;
