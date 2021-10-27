@@ -23,7 +23,12 @@ class UserController {
           file: fileObj,
         });
       })
-      .catch((err) => {});
+      .catch((err) => {
+        res.json({
+          status: "success",
+          file: fileObj,
+        });
+      });
   };
   delete = () => {};
 }
