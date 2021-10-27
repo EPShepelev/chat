@@ -25,8 +25,8 @@ class UserController {
       })
       .catch((err) => {
         res.json({
-          status: "success",
-          file: fileObj,
+          status: "error",
+          message: err,
         });
       });
   };
