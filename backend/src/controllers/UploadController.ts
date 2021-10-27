@@ -15,12 +15,15 @@ class UserController {
     };
     const uploadedFile = new UploadFileModel(fileData);
 
-    uploadedFile.save().then((fileObj: any) => {
-      res.json({
-        status: "success",
-        file: fileObj,
-      });
-    });
+    uploadedFile
+      .save()
+      .then((fileObj: any) => {
+        res.json({
+          status: "success",
+          file: fileObj,
+        });
+      })
+      .catch();
   };
   delete = () => {};
 }
