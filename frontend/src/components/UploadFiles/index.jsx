@@ -1,8 +1,9 @@
 import React from "react";
+import { Upload, Icon, Modal } from 'antd';
 
 function UploadFiles() {
   return <div>
-    import { Upload, Icon, Modal } from 'antd';
+    
 
 function getBase64(file) {
   return new Promise((resolve, reject) => {
@@ -13,7 +14,7 @@ function getBase64(file) {
   });
 }
 
-class PicturesWall extends React.Component {
+class UploadFiles extends React.Component {
   state = {
     previewVisible: false,
     previewImage: '',
