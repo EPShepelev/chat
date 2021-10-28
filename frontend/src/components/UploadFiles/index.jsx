@@ -64,12 +64,6 @@ class UploadFiles extends React.Component {
 
   render() {
     const { previewVisible, previewImage, fileList } = this.state;
-    const uploadButton = (
-      <div>
-        <Icon type="plus" />
-        <div className="ant-upload-text">Upload</div>
-      </div>
-    );
     return (
       <div className="clearfix">
         <Upload
