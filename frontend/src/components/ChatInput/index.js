@@ -53,6 +53,7 @@ const ChatInput = () => {
  
 
   return (
+    <Fragment>
     <div className="chat-input">
       <div className="chat-input__smile-btn">
       <div className="chat-input__emoji-picker">
@@ -95,10 +96,11 @@ const ChatInput = () => {
           <Button type="link" shape="circle" icon={<AudioOutlined />} />
         )}
       </div>
-      <div>
-      <UploadFiles/>
-      </div>
     </div>
+     <div>
+     <UploadFiles/>
+     </div>
+     </Fragment>
   );
 };
 
