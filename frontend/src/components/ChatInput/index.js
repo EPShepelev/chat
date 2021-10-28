@@ -94,6 +94,7 @@ const ChatInput = () => {
           <Button type="link" shape="circle" icon={<AudioOutlined />} />
         )}
       </div>
+      <div></div>
     </div>
   );
 };
