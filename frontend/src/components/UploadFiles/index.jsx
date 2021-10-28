@@ -72,9 +72,7 @@ class UploadFiles extends React.Component {
           fileList={fileList}
           onPreview={this.handlePreview}
           onChange={this.handleChange}
-        >
-          {fileList.length >= 8 ? null : uploadButton}
-        </Upload>
+        ></Upload>
         <Modal
           visible={previewVisible}
           footer={null}
