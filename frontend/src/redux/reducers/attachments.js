@@ -13,7 +13,7 @@ export default (state = initialState, { type, payload }) => {
         isAuth: true,
         token: window.localStorage.token,
       };
-    case "USER:SET_IS_AUTH":
+    case "ATTACHMENTS:REMOVE_FILE":
       return {
         ...state,
         isAuth: payload,
