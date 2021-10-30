@@ -6,7 +6,7 @@ const initialState = {
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
-    case "ATTACHMENTS:SET_DATA":
+    case "ATTACHMENTS:ADD_FILE":
       return {
         ...state,
         data: payload,
