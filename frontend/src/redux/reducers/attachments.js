@@ -9,7 +9,7 @@ export default (state = initialState, { type, payload }) => {
     case "ATTACHMENTS:ADD_FILE":
       return {
         ...state,
-        items: [],
+        items: [...state.items, action.payload],
       };
     case "ATTACHMENTS:REMOVE_FILE":
       return {
