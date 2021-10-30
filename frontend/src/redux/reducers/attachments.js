@@ -9,9 +9,7 @@ export default (state = initialState, { type, payload }) => {
     case "ATTACHMENTS:ADD_FILE":
       return {
         ...state,
-        data: payload,
-        isAuth: true,
-        token: window.localStorage.token,
+        items: [],
       };
     case "ATTACHMENTS:REMOVE_FILE":
       return {
