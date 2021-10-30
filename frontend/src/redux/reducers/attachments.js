@@ -14,7 +14,7 @@ export default (state = initialState, { type, payload }) => {
     case "ATTACHMENTS:REMOVE_FILE":
       return {
         ...state,
-        isAuth: payload,
+        isAuth: state.items.filter((file) => file.__id !== payload),
       };
     default:
       return state;
