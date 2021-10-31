@@ -26,7 +26,9 @@ const MessageSchema = new Schema(
       type: Boolean,
       default: false,
     },
-    attachments: [{ type: Schema.Types.ObjectId, ref: "User", require: true }],
+    attachments: [
+      { type: Schema.Types.ObjectId, ref: "UploadedFile", require: true },
+    ],
   },
   {
     timestamps: true,
