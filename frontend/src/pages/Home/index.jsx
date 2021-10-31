@@ -12,7 +12,6 @@ import {
 import "./Home.scss";
 
 // сделать загрузку для проверки user
-// сделать typing...
 
 const Home = (props) => {
   const { setCurrentDialogId } = props;
