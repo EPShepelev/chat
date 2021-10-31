@@ -11,8 +11,6 @@ import {
 } from "@ant-design/icons";
 import "./Home.scss";
 
-// сделать загрузку для проверки user
-
 const Home = (props) => {
   const { setCurrentDialogId } = props;
   useEffect(() => {
