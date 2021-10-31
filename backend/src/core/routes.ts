@@ -36,7 +36,7 @@ const createRoutes = (app: express.Express, io: socket.Server) => {
   app.post("/messages", MessageController.create);
   app.delete("/messages", MessageController.delete);
 
-  app.post("/files", uploader.single("image"), UploadController.create);
+  app.post("/files", UploadController.create);
   app.delete("/files", UploadController.delete);
 };
 
