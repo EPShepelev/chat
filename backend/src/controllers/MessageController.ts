@@ -49,6 +49,9 @@ class MessageController {
     message
       .save()
       .then((obj: any) => {
+        if(req.body.attachment) {
+          
+        }
         obj.populate(["dialog", "user"], (err: any, message: any) => {
           message.save((err: any) => {
             if (err) {
