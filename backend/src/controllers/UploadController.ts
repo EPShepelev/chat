@@ -13,9 +13,9 @@ class UserController {
       url: file.url,
       user: userId,
     };
-    const uploadedFile = new UploadFileModel(fileData);
+    const uploadFile = new UploadFileModel(fileData);
 
-    uploadedFile
+    uploadFile
       .save()
       .then((fileObj: any) => {
         res.json({
