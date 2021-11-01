@@ -55,7 +55,7 @@ class MessageController {
         if(req.body.attachments) {
           obj.attachments.push();
         }
-        obj.populate(["dialog", "user"], (err: any, message: any) => {
+        obj.populate(["dialog", "user", "attachments"], (err: any, message: any) => {
           message.save((err: any) => {
             if (err) {
               return res.status(500).json({
