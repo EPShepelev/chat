@@ -30,6 +30,7 @@ const MessageSchema = new Schema(
   },
   {
     timestamps: true,
+    usePushEach: true,
   }
 );
 
