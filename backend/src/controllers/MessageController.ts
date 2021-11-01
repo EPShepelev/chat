@@ -46,7 +46,7 @@ class MessageController {
       user: userId,
     };
 
-    const message = new MessageModel(postData,{usePushEach: true});
+    const message = new MessageModel(postData);
 
     message
       .save()
