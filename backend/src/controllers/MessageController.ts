@@ -45,7 +45,9 @@ class MessageController {
       dialog: req.body.dialog_id,
       user: userId,
     };
-    const message = new MessageModel(postData);
+
+    const message = new MessageModel(postData,{usePushEach: true});
+
     message
       .save()
       .then((obj: any) => {
