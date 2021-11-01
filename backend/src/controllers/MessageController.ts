@@ -44,6 +44,7 @@ class MessageController {
       text: req.body.text,
       dialog: req.body.dialog_id,
       user: userId,
+      attachments: req.body.attachments
     };
 
     const message = new MessageModel(postData);
