@@ -6,6 +6,9 @@ import classNames from "classnames";
 import "./Messages.scss";
 
 const Messages = ({ onRemoveMessage, blockRef, isLoading, items, user }) => {
+  const chatInputEl = document.querySelector(
+    ".chat__dialog-messages"
+  ).clientHeight;
   return (
     <div
       className="chat__dialog-messages"
