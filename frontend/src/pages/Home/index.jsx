@@ -26,9 +26,7 @@ const Home = (props) => {
       <div className="chat__dialog">
         <Status />
       </div>
-      <div className="chat__dialog-messages">
-        <Messages />
-      </div>
+      <Messages />
       <div className="chat__dialog-input">
         <ChatInput />
       </div>
