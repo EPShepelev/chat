@@ -6,14 +6,14 @@ import classNames from "classnames";
 import "./Messages.scss";
 
 const Messages = ({ onRemoveMessage, blockRef, isLoading, items, user }) => {
-  const chatInputEl = document.querySelector(
+  const chatInputHeight = document.querySelector(
     ".chat__dialog-messages"
   ).clientHeight;
   return (
     <div
       className="chat__dialog-messages"
       style={{
-        height: "calc(100% - 138px)",
+        height: `calc(100% - ${chatInputHeight}px)`,
       }}
       ref={blockRef}
       className={classNames("messages", { "messages--loading": isLoading })}
