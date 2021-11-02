@@ -8,6 +8,7 @@ import "./Messages.scss";
 const Messages = ({ onRemoveMessage, blockRef, isLoading, items, user }) => {
   return (
     <div
+      className="chat__dialog-messages"
       ref={blockRef}
       className={classNames("messages", { "messages--loading": isLoading })}
     >
