@@ -6,7 +6,7 @@ import classNames from "classnames";
 import "./Messages.scss";
 
 const Messages = ({ onRemoveMessage, blockRef, isLoading, items, user }) => {
-  let chatInputHeight = 376;
+  let chatInputHeight = 130;
   useEffect(() => {
     chatInputHeight = document.querySelector(
       ".chat__dialog-messages"
