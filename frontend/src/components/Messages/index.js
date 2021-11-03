@@ -8,9 +8,11 @@ import "./Messages.scss";
 const Messages = ({ onRemoveMessage, blockRef, isLoading, items, user }) => {
   const [chatInputHeight, setChatInputHeight] = useState(130);
   useEffect(() => {
-    setChatInputHeight(
-      document.querySelector(".chat__dialog-messages").clientHeight
-    );
+    setTimeout(() => {
+      setChatInputHeight(
+        document.querySelector(".chat__dialog-messages").clientHeight
+      );
+    }, 500);
   }, []);
 
   return (
