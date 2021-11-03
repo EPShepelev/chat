@@ -11,7 +11,10 @@ const Messages = ({ onRemoveMessage, blockRef, isLoading, items, user }) => {
     setChatInputHeight(
       document.querySelector(".chat__dialog-messages").clientHeight
     );
-  }, [document.querySelector(".chat__dialog-messages").clientHeight]);
+  }, [
+    document.querySelector(".chat__dialog-messages").clientHeight !==
+      chatInputHeight,
+  ]);
 
   return (
     <div
