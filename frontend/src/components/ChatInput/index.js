@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useEffect, Fragment } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import {UploadFiles} from 'components';
@@ -17,8 +17,7 @@ import "./ChatInput.scss";
 const { TextArea } = Input;
 
 const ChatInput = () => {
-  const [value, setValue] = useState("");
-  const [emojiPickerVisible, setEmojiPickerVisible] = useState(false);
+
   const { onSendMessage, currentDialogId } = props;
 
   const toggleEmojiPicker = () => {
