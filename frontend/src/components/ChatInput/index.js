@@ -55,7 +55,8 @@ const ChatInput = () => {
   return (
     <Fragment>
     <div className="chat-input">
-      <div className="chat-input__smile-btn">
+     <div>
+     <div className="chat-input__smile-btn">
       <div className="chat-input__emoji-picker">
         {emojiPickerVisible && (  
             <Picker ref={} onSelect={(emojiTag) => addEmoji(emojiTag)} set="apple" /> 
@@ -96,6 +97,7 @@ const ChatInput = () => {
           <Button type="link" shape="circle" icon={<AudioOutlined />} />
         )}
       </div>
+     </div>
       <div className="chat-input__attachment">
      <UploadFiles/>
      </div>
