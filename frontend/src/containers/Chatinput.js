@@ -12,6 +12,8 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     return null;
   return (
     <ChatInputBase
+      value={value}
+      setValue={setValue}
       onSendMessage={fetchSendMessage}
       currentDialogId={currentDialogId}
     />
