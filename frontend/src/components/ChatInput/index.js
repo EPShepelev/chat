@@ -96,10 +96,10 @@ const ChatInput = () => {
           <Button type="link" shape="circle" icon={<AudioOutlined />} />
         )}
       </div>
-    </div>
-     <div className="chat-input__attachment">
+      <div className="chat-input__attachment">
      <UploadFiles/>
      </div>
+    </div>
      </Fragment>
   );
 };
