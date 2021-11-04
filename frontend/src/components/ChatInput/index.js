@@ -97,7 +97,7 @@ const ChatInput = () => {
         )}
       </div>
     </div>
-     <div>
+     <div className="attachment">
      <UploadFiles/>
      </div>
      </Fragment>
