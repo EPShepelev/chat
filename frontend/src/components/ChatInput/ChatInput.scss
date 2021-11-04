@@ -1,7 +1,9 @@
 .chat-input {
-  display: flex;
   margin: 20px;
   position: relative;
+  & div {
+    display: flex;
+  }
   &__smile-btn {
     margin-right: 15px;
   }
