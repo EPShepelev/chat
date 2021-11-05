@@ -16,9 +16,9 @@ import "./ChatInput.scss";
 
 const { TextArea } = Input;
 
-const ChatInput = () => {
+const ChatInput = (props) => {
 
-  const { onSendMessage, currentDialogId, setEmojiPickerVisible, emojiPickerVisible, value, setValue } = props;
+  const { onSendMessage, currentDialogId,  handleOutsideClick, emojiPickerVisible, value, setValue, } = props;
 
   const handleSendMessage = (e) => {
     if (e.keyCode === 13) {
