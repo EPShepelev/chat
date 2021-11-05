@@ -8,6 +8,10 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
   const [value, setValue] = useState("");
   const [emojiPickerVisible, setEmojiPickerVisible] = useState(false);
 
+  const toggleEmojiPicker = () => {
+    setEmojiPickerVisible(!emojiPickerVisible);
+  };
+
   if (!currentDialogId) {
     return null;
   return (
