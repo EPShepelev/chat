@@ -31,13 +31,6 @@ const ChatInput = () => {
     setValue(value + " " + colons.trim());
   };
 
-  const handleOutsideClick = (el, e) => {
-    if (el && !el.contains(e.target)) {
-      setEmojiPickerVisible(false);
-    }
-  }
-
-
   useEffect(() => {
    const el = document.querySelector('.chat-input__smile-btn');
    document.addEventListener("click", handleOutsideClick.bind(this, el));

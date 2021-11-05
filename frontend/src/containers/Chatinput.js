@@ -12,6 +12,13 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     setEmojiPickerVisible(!emojiPickerVisible);
   };
 
+  
+  const handleOutsideClick = (el, e) => {
+    if (el && !el.contains(e.target)) {
+      setEmojiPickerVisible(false);
+    }
+  }
+
   if (!currentDialogId) {
     return null;
   return (
