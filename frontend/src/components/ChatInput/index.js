@@ -18,7 +18,7 @@ const { TextArea } = Input;
 
 const ChatInput = () => {
 
-  const { onSendMessage, currentDialogId } = props;
+  const { onSendMessage, currentDialogId, setEmojiPickerVisible } = props;
 
   const toggleEmojiPicker = () => {
     setEmojiPickerVisible(!emojiPickerVisible);
