@@ -14,6 +14,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     <ChatInputBase
       value={value}
       setValue={setValue}
+      emojiPickerVisible={emojiPickerVisible}
       onSendMessage={fetchSendMessage}
       currentDialogId={currentDialogId}
     />
