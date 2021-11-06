@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { ChatInput as ChatInputBase } from "components";
 import { messagesActions } from "redux/actions";
 
-const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
+const ChatInput = ({ fetchSendMessage, currentDialogId, onSendMessage }) => {
   const [value, setValue] = useState("");
   const [emojiPickerVisible, setEmojiPickerVisible] = useState(false);
 
