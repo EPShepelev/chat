@@ -32,6 +32,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
       emojiPickerVisible={ emojiPickerVisible }
       handleOutsideClick={ handleOutsideClick }
       toggleEmojiPicker={ toggleEmojiPicker }
+      addEmoji={ addEmoji }
       onSendMessage={fetchSendMessage}
       currentDialogId={currentDialogId}
     />
