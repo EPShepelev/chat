@@ -19,7 +19,6 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     }
   }
 
-  
   const addEmoji = ({ colons }) => {
     setValue(value + " " + colons.trim());
   };
