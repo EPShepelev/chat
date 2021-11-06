@@ -27,10 +27,6 @@ const ChatInput = (props) => {
     }
   };
 
-  const addEmoji = ({ colons }) => {
-    setValue(value + " " + colons.trim());
-  };
-
   useEffect(() => {
    const el = document.querySelector('.chat-input__smile-btn');
    document.addEventListener("click", handleOutsideClick.bind(this, el));
