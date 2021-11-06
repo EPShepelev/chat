@@ -20,13 +20,6 @@ const ChatInput = (props) => {
 
   const { onSendMessage, currentDialogId, handleOutsideClick, emojiPickerVisible, value, setValue, addEmoji } = props;
 
-  const handleSendMessage = (e) => {
-    if (e.keyCode === 13) {
-      onSendMessage(value, currentDialogId);
-      setValue("");
-    }
-  };
-
   useEffect(() => {
    const el = document.querySelector('.chat-input__smile-btn');
    document.addEventListener("click", handleOutsideClick.bind(this, el));
