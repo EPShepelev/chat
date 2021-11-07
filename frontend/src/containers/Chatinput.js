@@ -5,6 +5,10 @@ import { ChatInput as ChatInputBase } from "components";
 import { messagesActions } from "redux/actions";
 
 const ChatInput = ({ fetchSendMessage, currentDialogId, onSendMessage }) => {
+  if (!currentDialogId) {
+    return null;
+  }
+
   const [value, setValue] = useState("");
   const [emojiPickerVisible, setEmojiPickerVisible] = useState(false);
 
@@ -12,12 +16,11 @@ const ChatInput = ({ fetchSendMessage, currentDialogId, onSendMessage }) => {
     setEmojiPickerVisible(!emojiPickerVisible);
   };
 
-  
   const handleOutsideClick = (el, e) => {
     if (el && !el.contains(e.target)) {
       setEmojiPickerVisible(false);
     }
-  }
+  };
 
   const addEmoji = ({ colons }) => {
     setValue(value + " " + colons.trim());
@@ -31,24 +34,22 @@ const ChatInput = ({ fetchSendMessage, currentDialogId, onSendMessage }) => {
   };
 
   useEffect(() => {
-    const el = document.querySelector('.chat-input__smile-btn');
+    const el = document.querySelector(".chat-input__smile-btn");
     document.addEventListener("click", handleOutsideClick.bind(this, el));
     return () => {
-     document.removeEventListener("click", handleOutsideClick.bind(this, el));
-   };
-   }, [])
+      document.removeEventListener("click", handleOutsideClick.bind(this, el));
+    };
+  }, []);
 
-  if (!currentDialogId) {
-    return null;
   return (
     <ChatInputBase
       value={value}
-      setValue={ setValue }
-      emojiPickerVisible={ emojiPickerVisible }
-      handleOutsideClick={ handleOutsideClick }
-      toggleEmojiPicker={ toggleEmojiPicker }
-      addEmoji={ addEmoji }
-      handleSendMessage = { handleSendMessage }
+      setValue={setValue}
+      emojiPickerVisible={emojiPickerVisible}
+      handleOutsideClick={handleOutsideClick}
+      toggleEmojiPicker={toggleEmojiPicker}
+      addEmoji={addEmoji}
+      handleSendMessage={handleSendMessage}
       onSendMessage={fetchSendMessage}
       currentDialogId={currentDialogId}
     />
