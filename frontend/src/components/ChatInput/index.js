@@ -18,7 +18,7 @@ const { TextArea } = Input;
 
 const ChatInput = (props) => {
 
-  const { handleOutsideClick, emojiPickerVisible, value, setValue, addEmoji, handleSendMessage } = props;
+  const { handleOutsideClick, emojiPickerVisible, value, setValue, addEmoji, handleSendMessage, toggleEmojiPicker } = props;
 
   useEffect(() => {
    const el = document.querySelector('.chat-input__smile-btn');
