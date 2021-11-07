@@ -23,6 +23,14 @@ const ChatInput = ({ fetchSendMessage, currentDialogId, onSendMessage }) => {
     setValue(value + " " + colons.trim());
   };
 
+  useEffect(() => {
+    const el = document.querySelector('.chat-input__smile-btn');
+    document.addEventListener("click", handleOutsideClick.bind(this, el));
+    return () => {
+     document.removeEventListener("click", handleOutsideClick.bind(this, el));
+   };
+   }, [])
+
   const handleSendMessage = (e) => {
     if (e.keyCode === 13) {
       onSendMessage(value, currentDialogId);
