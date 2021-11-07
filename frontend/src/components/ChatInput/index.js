@@ -20,9 +20,6 @@ const ChatInput = (props) => {
 
   const { handleOutsideClick, emojiPickerVisible, value, setValue, addEmoji, handleSendMessage, toggleEmojiPicker } = props;
 
- 
- 
-
   return (
     <Fragment>
     <div className="chat-input">
