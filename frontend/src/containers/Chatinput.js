@@ -8,7 +8,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
   if (!currentDialogId) {
     return null;
   }
-
+  const [attachment, setAttachment] = useState([]);
   const [value, setValue] = useState("");
   const [emojiPickerVisible, setEmojiPickerVisible] = useState(false);
 
@@ -30,6 +30,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     fetchSendMessage(value, currentDialogId);
     setValue("");
   };
+
   const handleSendMessage = (e) => {
     if (e.keyCode === 13) {
       sendMessage();
