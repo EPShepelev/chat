@@ -60,7 +60,7 @@ const ChatInput = (props) => {
         </UploadField>
 
         {value ? (
-          <Button type="link" shape="circle" icon={<SendOutlined />} />
+          <Button onClick={sendMessage} type="link" shape="circle" icon={<SendOutlined />} />
         ) : (
           <Button type="link" shape="circle" icon={<AudioOutlined />} />
         )}
