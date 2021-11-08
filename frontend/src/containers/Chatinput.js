@@ -53,7 +53,6 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
       toggleEmojiPicker={toggleEmojiPicker}
       addEmoji={addEmoji}
       handleSendMessage={handleSendMessage}
-      onSendMessage={fetchSendMessage}
       currentDialogId={currentDialogId}
       sendMessage={sendMessage}
     />
