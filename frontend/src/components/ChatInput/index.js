@@ -18,7 +18,7 @@ const { TextArea } = Input;
 
 const ChatInput = (props) => {
 
-  const { emojiPickerVisible, value, setValue, addEmoji, handleSendMessage, toggleEmojiPicker } = props;
+  const { emojiPickerVisible, value, setValue, addEmoji, handleSendMessage, toggleEmojiPicker, sendMessage } = props;
 
   return (
     <Fragment>
