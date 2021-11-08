@@ -55,6 +55,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
       handleSendMessage={handleSendMessage}
       onSendMessage={fetchSendMessage}
       currentDialogId={currentDialogId}
+      sendMessage={sendMessage}
     />
   );
 };
