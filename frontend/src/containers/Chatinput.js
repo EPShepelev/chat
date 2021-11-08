@@ -28,7 +28,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
 
   const handleSendMessage = (e) => {
     if (e.keyCode === 13) {
-      onSendMessage(value, currentDialogId);
+      fetchSendMessage(value, currentDialogId);
       setValue("");
     }
   };
