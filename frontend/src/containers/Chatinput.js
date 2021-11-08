@@ -54,6 +54,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
       addEmoji={addEmoji}
       handleSendMessage={handleSendMessage}
       sendMessage={sendMessage}
+      attachment={attachment}
     />
   );
 };
