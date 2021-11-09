@@ -47,7 +47,7 @@ const ChatInput = (props) => {
       />
       <div className="chat-input__actions">
         <UploadField
-          onFiles={(files) => console.log(files)}
+          onFiles={onSelectFiles}
           containerProps={{
             className: "chat-input__actions-upload-btn",
           }}
