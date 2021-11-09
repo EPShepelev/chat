@@ -4,7 +4,7 @@ export default {
   upload: (file) => {
     const FormData = new FormData();
     FormData.append("image", file);
-    axios.post("upload_file", FormData, {
+    axios.post("/files", FormData, {
       headers: {
         "content-type": "multipart/form-data",
       },
