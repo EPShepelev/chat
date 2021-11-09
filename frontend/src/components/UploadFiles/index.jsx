@@ -41,6 +41,7 @@ class UploadFiles extends React.Component {
 
   render() {
     const { previewVisible, previewImage, fileList } = this.state;
+    const { attachments } = this.props;
     return (
       <div className="clearfix">
         <Upload
