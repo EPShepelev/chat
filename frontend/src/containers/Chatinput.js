@@ -57,6 +57,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
       handleSendMessage={handleSendMessage}
       sendMessage={sendMessage}
       attachment={attachment}
+      onSelectFiles={onSelectFiles}
     />
   );
 };
