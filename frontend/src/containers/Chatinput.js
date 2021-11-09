@@ -37,7 +37,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     }
   };
 
-  const onUpload = (files) => {};
+  const onSelectFiles = (files) => {};
 
   useEffect(() => {
     const el = document.querySelector(".chat-input__smile-btn");
