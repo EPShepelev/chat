@@ -39,7 +39,9 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
   };
 
   const onSelectFiles = (files) => {
-    filesApi(upload);
+    for (const key in files) {
+      filesApi(upload);
+    }
   };
 
   useEffect(() => {
