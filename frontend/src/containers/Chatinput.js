@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { files } from "utils/api";
+import { filesApi } from "utils/api";
 
 import { ChatInput as ChatInputBase } from "components";
 import { messagesActions } from "redux/actions";
