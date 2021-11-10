@@ -41,7 +41,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
   const onSelectFiles = (files) => {
     for (let i = 0; i < files.length; i++) {
       files.forEach((file) => {
-        filesApi.upload(file).then();
+        filesApi.upload(files).then();
       });
     }
   };
