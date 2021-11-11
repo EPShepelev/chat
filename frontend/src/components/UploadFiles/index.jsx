@@ -19,7 +19,12 @@ class UploadFiles extends React.Component {
     previewVisible: false,
     previewImage: "",
     fileList: [
-      
+      {
+        uid: "-1",
+        name: "image.png",
+        status: "uploading",
+        url: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+      },
     ],
   };
 
