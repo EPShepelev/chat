@@ -10,17 +10,16 @@ function getBase64(file) {
   });
 }
 
+const uploadFiles = () => {
+  return ()
+}
+
 class UploadFiles extends React.Component {
   state = {
     previewVisible: false,
     previewImage: "",
     fileList: [
-      {
-        uid: "-1",
-        name: "image.png",
-        status: "uploading",
-        url: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-      },
+      
     ],
   };
 
