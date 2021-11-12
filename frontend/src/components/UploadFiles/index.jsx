@@ -12,19 +12,19 @@ function getBase64(file) {
 
 const uploadFiles = () => {
   const { previewVisible, previewImage, fileList } = this.state;
-  const { attachments } = this.props;
-  state = {
-    previewVisible: false,
-    previewImage: "",
-    fileList: [
-      {
-        uid: "-1",
-        name: "image.png",
-        status: "uploading",
-        url: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-      },
-    ],
-  };
+  // const { attachments } = this.props;
+  // state = {
+  //   previewVisible: false,
+  //   previewImage: "",
+  //   fileList: [
+  //     {
+  //       uid: "-1",
+  //       name: "image.png",
+  //       status: "uploading",
+  //       url: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+  //     },
+  //   ],
+  // };
 
   handleCancel = () => this.setState({ previewVisible: false });
 
