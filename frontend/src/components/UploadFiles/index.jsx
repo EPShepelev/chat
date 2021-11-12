@@ -11,7 +11,9 @@ function getBase64(file) {
 }
 
 const uploadFiles = () => {
-   state = {
+  const { previewVisible, previewImage, fileList } = this.state;
+  const { attachments } = this.props;
+  state = {
     previewVisible: false,
     previewImage: "",
     fileList: [
@@ -38,36 +40,26 @@ const uploadFiles = () => {
   };
 
   handleChange = ({ fileList }) => this.setState({ fileList });
-  return ()
-}
 
-class UploadFiles extends React.Component {
- 
-
-  render() {
-    const { previewVisible, previewImage, fileList } = this.state;
-    const { attachments } = this.props;
-    return (
-      <div className="clearfix">
-        <Upload
-          action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-          listType="picture-card"
-          fileList={fileList}
-          onPreview={this.handlePreview}
-          onChange={this.handleChange}
-        ></Upload>
-        <Modal
-          visible={previewVisible}
-          footer={null}
-          onCancel={this.handleCancel}
-        >
-          <img alt="example" style={{ width: "100%" }} src={previewImage} />
-        </Modal>
-      </div>
-    );
-  }
-}
-
+  return (
+    <div className="clearfix">
+      <Upload
+        action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+        listType="picture-card"
+        fileList={fileList}
+        onPreview={this.handlePreview}
+        onChange={this.handleChange}
+      ></Upload>
+      <Modal
+        visible={previewVisible}
+        footer={null}
+        onCancel={this.handleCancel}
+      >
+        <img alt="example" style={{ width: "100%" }} src={previewImage} />
+      </Modal>
+    </div>
+  );
+};
 ReactDOM.render(<PicturesWall />, mountNode);
 
 export default UploadFiles;
