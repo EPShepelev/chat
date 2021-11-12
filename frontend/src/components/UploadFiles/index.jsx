@@ -11,7 +11,7 @@ function getBase64(file) {
 }
 
 const uploadFiles = () => {
-  return ( state = {
+   state = {
     previewVisible: false,
     previewImage: "",
     fileList: [
@@ -37,7 +37,8 @@ const uploadFiles = () => {
     });
   };
 
-  handleChange = ({ fileList }) => this.setState({ fileList });)
+  handleChange = ({ fileList }) => this.setState({ fileList });
+  return ()
 }
 
 class UploadFiles extends React.Component {
