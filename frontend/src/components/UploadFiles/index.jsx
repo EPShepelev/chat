@@ -38,14 +38,10 @@ const uploadFiles = () => {
         action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
         listType="picture-card"
         fileList={fileList}
-        onPreview={this.handlePreview}
-        onChange={this.handleChange}
+        onPreview={handlePreview}
+        onChange={handleChange}
       ></Upload>
-      <Modal
-        visible={previewVisible}
-        footer={null}
-        onCancel={this.handleCancel}
-      >
+      <Modal visible={previewVisible} footer={null} onCancel={handleCancel}>
         <img alt="example" style={{ width: "100%" }} src={previewImage} />
       </Modal>
     </div>
