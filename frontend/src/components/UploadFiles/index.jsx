@@ -11,7 +11,11 @@ function getBase64(file) {
 }
 
 const uploadFiles = () => {
-  const [previewVisible, setPreviewVisible] = setState({});
+  const [previewVisible, setPreviewVisible] = setState({
+    previewVisible: false,
+    previewImage: "",
+    fileList: [],
+  });
   const { previewVisible, previewImage, fileList } = this.state;
   // const { attachments } = this.props;
   // state = {
