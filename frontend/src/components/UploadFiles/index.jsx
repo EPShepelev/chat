@@ -16,7 +16,7 @@ const uploadFiles = () => {
     previewImage: "",
     fileList: [],
   });
-  const { previewVisible, previewImage, fileList } = this.state;
+
   // const { attachments } = this.props;
   // state = {
   //   previewVisible: false,
