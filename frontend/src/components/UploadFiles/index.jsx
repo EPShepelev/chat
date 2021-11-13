@@ -17,20 +17,6 @@ const uploadFiles = () => {
     fileList: [],
   });
 
-  // const { attachments } = this.props;
-  // state = {
-  //   previewVisible: false,
-  //   previewImage: "",
-  //   fileList: [
-  //     {
-  //       uid: "-1",
-  //       name: "image.png",
-  //       status: "uploading",
-  //       url: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-  //     },
-  //   ],
-  // };
-
   handleCancel = () => this.setState({ previewVisible: false });
 
   handlePreview = async (file) => {
