@@ -17,9 +17,9 @@ const uploadFiles = () => {
     fileList: [],
   });
 
-  handleCancel = () => setState({ ...state, previewVisible: false });
+  const handleCancel = () => setState({ ...state, previewVisible: false });
 
-  handlePreview = async (file) => {
+  const handlePreview = async (file) => {
     if (!file.url && !file.preview) {
       file.preview = await getBase64(file.originFileObj);
     }
@@ -30,7 +30,7 @@ const uploadFiles = () => {
     });
   };
 
-  handleChange = ({ fileList }) => this.setState({ fileList });
+  const handleChange = ({ fileList }) => this.setState({ fileList });
 
   return (
     <div className="clearfix">
