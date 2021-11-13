@@ -17,7 +17,7 @@ const uploadFiles = () => {
     fileList: [],
   });
 
-  handleCancel = () => this.setState({ previewVisible: false });
+  handleCancel = () => setState({ ...state, previewVisible: false });
 
   handlePreview = async (file) => {
     if (!file.url && !file.preview) {
