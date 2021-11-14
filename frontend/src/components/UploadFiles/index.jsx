@@ -24,7 +24,7 @@ const uploadFiles = () => {
       file.preview = await getBase64(file.originFileObj);
     }
 
-    this.setState({
+    setState({
       ...state,
       previewImage: file.url || file.preview,
       previewVisible: true,
