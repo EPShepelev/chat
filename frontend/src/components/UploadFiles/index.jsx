@@ -31,7 +31,7 @@ const uploadFiles = () => {
     });
   };
 
-  const handleChange = ({ fileList }) => this.setState({ fileList });
+  const handleChange = ({ fileList }) => setState({ ...state, fileList });
 
   return (
     <div className="clearfix">
