@@ -25,6 +25,7 @@ const uploadFiles = () => {
     }
 
     this.setState({
+      ...state,
       previewImage: file.url || file.preview,
       previewVisible: true,
     });
