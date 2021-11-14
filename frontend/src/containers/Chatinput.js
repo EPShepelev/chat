@@ -42,7 +42,15 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
       files.forEach((file) => {
-        setAttachments([...attachments]);
+        setAttachments([
+          ...attachments,
+          {
+            uid: "-1",
+            name: "image.png",
+            status: "loading",
+            url: "https://aaaaaa",
+          },
+        ]);
         filesApi.upload(file);
       });
     }
