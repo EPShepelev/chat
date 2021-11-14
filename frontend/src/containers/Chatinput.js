@@ -9,7 +9,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
   if (!currentDialogId) {
     return null;
   }
-  const [attachment, setAttachment] = useState([]);
+  const [attachments, setattachments] = useState([]);
   const [value, setValue] = useState("");
   const [emojiPickerVisible, setEmojiPickerVisible] = useState(false);
 
@@ -42,7 +42,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
       files.forEach((file) => {
-        setAttachment([...attachment]);
+        setattachments([...attachments]);
         filesApi.upload(file);
       });
     }
@@ -65,7 +65,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
       addEmoji={addEmoji}
       handleSendMessage={handleSendMessage}
       sendMessage={sendMessage}
-      attachment={attachment}
+      attachments={attachments}
       onSelectFiles={onSelectFiles}
     />
   );
