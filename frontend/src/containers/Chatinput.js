@@ -41,6 +41,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
   const onSelectFiles = (files) => {
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
+      const uid = Math.round(Math.random() * 1000);
       files.forEach((file) => {
         setAttachments([
           ...attachments,
