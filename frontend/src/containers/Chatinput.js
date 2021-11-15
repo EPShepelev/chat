@@ -52,7 +52,13 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
           },
         ]);
         filesApi.upload(file).then(() => {
-          setAttachments(attachments.map((item) => {}));
+          setAttachments(
+            attachments.map((item) => {
+              if (item.uid === uid) {
+              }
+              return item;
+            })
+          );
         });
       });
     }
