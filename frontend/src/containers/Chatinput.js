@@ -55,6 +55,12 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
           setAttachments(
             attachments.map((item) => {
               if (item.uid === uid) {
+                item = {
+                  uid: "-1",
+                  name: "image.png",
+                  status: "loading",
+                  url: "http/some.url",
+                };
               }
               return item;
             })
