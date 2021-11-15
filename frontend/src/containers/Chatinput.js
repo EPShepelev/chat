@@ -51,7 +51,9 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
             status: "uploading",
           },
         ]);
-        filesApi.upload(file).then(() => {});
+        filesApi.upload(file).then(() => {
+          setAttachments(attachments.map((item) => {}));
+        });
       });
     }
   };
