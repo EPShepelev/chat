@@ -57,7 +57,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
               if (item.uid === uid) {
                 item = {
                   uid: data.file._id,
-                  name: data.file.name,
+                  name: data.file.filename,
                   status: "loading",
                   url: "http/some.url",
                 };
