@@ -10,7 +10,7 @@ function getBase64(file) {
   });
 }
 
-const uploadFiles = () => {
+const uploadFiles = ({ attachments }) => {
   const [state, setState] = setState({
     previewVisible: false,
     previewImage: "",
