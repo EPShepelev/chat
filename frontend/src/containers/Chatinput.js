@@ -59,7 +59,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
                   uid: data.file._id,
                   name: data.file.filename,
                   status: "done",
-                  url: "http/some.url",
+                  url: data.file.url,
                 };
               }
               return item;
