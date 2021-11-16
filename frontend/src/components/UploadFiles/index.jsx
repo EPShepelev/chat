@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Upload, Modal } from "antd";
 
 function getBase64(file) {
