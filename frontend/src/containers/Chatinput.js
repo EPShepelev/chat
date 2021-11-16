@@ -57,7 +57,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
               if (item.uid === uid) {
                 item = {
                   uid: data.file._id,
-                  name: "image.png",
+                  name: data.file.name,
                   status: "loading",
                   url: "http/some.url",
                 };
