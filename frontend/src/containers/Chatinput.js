@@ -58,7 +58,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
                 item = {
                   uid: data.file._id,
                   name: data.file.filename,
-                  status: "loading",
+                  status: "done",
                   url: "http/some.url",
                 };
               }
