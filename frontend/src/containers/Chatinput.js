@@ -56,7 +56,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
             attachments.map((item) => {
               if (item.uid === uid) {
                 item = {
-                  uid: "-1",
+                  uid: data.file._id,
                   name: "image.png",
                   status: "loading",
                   url: "http/some.url",
