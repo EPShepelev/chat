@@ -54,4 +54,8 @@ const uploadFiles = ({ attachments }) => {
 };
 ReactDOM.render(<PicturesWall />, mountNode);
 
+uploadFiles.defaultProps = {
+  attachments: [],
+};
+
 export default UploadFiles;
