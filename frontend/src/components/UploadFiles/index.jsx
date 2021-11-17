@@ -14,7 +14,7 @@ const uploadFiles = ({ attachments }) => {
   const [state, setState] = setState({
     previewVisible: false,
     previewImage: "",
-    fileList: [],
+    fileList: attachments,
   });
 
   const handleCancel = () => setState({ ...state, previewVisible: false });
