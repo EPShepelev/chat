@@ -38,6 +38,8 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     }
   };
 
+  const onUpload = (file) => {};
+
   const onSelectFiles = (files) => {
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
@@ -51,21 +53,6 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
             status: "uploading",
           },
         ]);
-        filesApi.upload(file).then(({ data }) => {
-          setAttachments(
-            attachments.map((item) => {
-              if (item.uid === uid) {
-                item = {
-                  uid: data.file._id,
-                  name: data.file.filename,
-                  status: "done",
-                  url: data.file.url,
-                };
-              }
-              return item;
-            })
-          );
-        });
       });
     }
   };
