@@ -69,6 +69,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
             status: "uploading",
           },
         ]);
+        onUpload(file);
       });
     }
   };
