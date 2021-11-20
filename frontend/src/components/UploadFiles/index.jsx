@@ -17,6 +17,10 @@ const uploadFiles = ({ attachments }) => {
     fileList: attachments,
   });
 
+  useEffect(() => {
+    useState();
+  }, [attachments]);
+
   const handleCancel = () => setState({ ...state, previewVisible: false });
 
   const handlePreview = async (file) => {
