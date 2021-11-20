@@ -18,7 +18,10 @@ const uploadFiles = ({ attachments }) => {
   });
 
   useEffect(() => {
-    useState();
+    useState({
+      ...state,
+      fileList: attachments,
+    });
   }, [attachments]);
 
   const handleCancel = () => setState({ ...state, previewVisible: false });
