@@ -72,13 +72,12 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
       ];
     }
     setAttachments(uploaded);
-  };
-
-  useEffect(() => {
-    attachments.forEach((item) => {
+    uploaded.forEach((item) => {
       onUpload(item.file, item.uid);
     });
-  }, [attachments]);
+  };
+
+  useEffect(() => {}, [attachments]);
 
   useEffect(() => {
     const el = document.querySelector(".chat-input__smile-btn");
