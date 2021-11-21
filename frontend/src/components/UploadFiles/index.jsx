@@ -18,7 +18,7 @@ const uploadFiles = ({ attachments }) => {
   });
 
   useEffect(() => {
-    useState({
+    setState({
       ...state,
       fileList: attachments,
     });
