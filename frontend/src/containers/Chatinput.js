@@ -63,9 +63,9 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
       const uid = Math.round(Math.random() * 1000);
       uploaded.push({
         uid,
+        file,
         name: file.name,
         status: "uploading",
-        file,
       });
     }
     setAttachments(uploaded);
