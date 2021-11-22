@@ -69,9 +69,11 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
       });
     }
     setAttachments(uploaded);
-    uploaded.forEach((item) => {
-      onUpload(item.file, item.uid);
-    });
+    setTimeout(() => {
+      uploaded.forEach((item) => {
+        onUpload(item.file, item.uid);
+      });
+    }, 1000);
   };
 
   useEffect(() => {}, [attachments]);
