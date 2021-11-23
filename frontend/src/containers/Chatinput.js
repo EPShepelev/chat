@@ -68,7 +68,6 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
         status: "uploading",
       });
     }
-    setAttachments(uploaded);
     setTimeout(() => {
       uploaded.forEach((item) => {
         onUpload(uploaded, item.file, item.uid);
