@@ -39,7 +39,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
   };
 
   const onUpload = (file, uid) => {
-    console.log(file);
+    console.log(attachments);
     filesApi.upload(file).then(({ data }) => {
       setAttachments(
         attachments.map((item) => {
