@@ -61,12 +61,15 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
       const uid = Math.round(Math.random() * 1000);
-      uploaded.push({
-        uid,
-        file,
-        name: file.name,
-        status: "uploading",
-      });
+      uploaded = [
+        ...uploaded,
+        {
+          uid,
+          file,
+          name: file.name,
+          status: "uploading",
+        }
+      ]
       uploaded.forEach((item) => {
         onUpload(uploaded, item.file, item.uid);
       });
