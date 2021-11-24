@@ -52,6 +52,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
         return item;
       })
     });
+    setAttachments(files);
   };
 
   const onSelectFiles = (files) => {
