@@ -11,9 +11,10 @@ import {
 import { Input, Button } from "antd";
 import { UploadField } from "@navjobs/upload";
 import { Picker } from "emoji-mart";
-const { TextArea } = Input;
 
 import "./ChatInput.scss";
+
+const { TextArea } = Input;
 
 const ChatInput = (props) => {
 
