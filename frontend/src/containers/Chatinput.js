@@ -79,7 +79,9 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
 
   useEffect(() => {
     if (uploadedIndex === attachments.length) {
-      setAttachments()
+      setAttachments(attachments.map(obj => {
+        
+      }))
     }
   }, [uploadedIndex]);
 
