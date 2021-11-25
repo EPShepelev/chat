@@ -40,9 +40,9 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     }
   };
 
-  const onUpload = (file, uid) => {
+  const onUpload = (file, uid, index) => {
     filesApi.upload(file).then(({ data }) => {
-      setAttachments(files);
+      setUploadedIndex(index);
     });
   };
 
@@ -73,7 +73,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
           status: "uploading",
         }
       ];
-        onUpload(file, uid);
+        onUpload(file, uid, i);
     }
   };
 
