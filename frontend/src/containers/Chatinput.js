@@ -72,7 +72,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
         }
       ];
       uploaded.forEach((item) => {
-        onUpload(uploaded, item.file, item.uid);
+        onUpload(item.file, item.uid);
       });
     }
   };
