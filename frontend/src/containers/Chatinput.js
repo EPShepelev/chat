@@ -40,22 +40,24 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     }
   };
 
-  const onUpload = (files, file, uid) => {
+  const onUpload = (file, uid) => {
     filesApi.upload(file).then(({ data }) => {
-      files = files.map((item) => {
-        if (item.uid === uid) {
-          item = {
-            uid: data.file._id,
-            name: data.file.filename,
-            status: "done",
-            url: data.file.url,
-          };
-        }
-        return item;
-      })
+      setAttachments(files);
     });
-    setAttachments(files);
   };
+
+
+  // files = files.map((item) => {
+  //   if (item.uid === uid) {
+  //     item = {
+  //       uid: data.file._id,
+  //       name: data.file.filename,
+  //       status: "done",
+  //       url: data.file.url,
+  //     };
+  //   }
+  //   return item;
+  // })
 
   const onSelectFiles = (files) => {
     let uploaded = [];
