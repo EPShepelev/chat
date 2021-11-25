@@ -12,6 +12,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
 
   const [value, setValue] = useState("");
   const [attachments, setAttachments] = useState([]);
+  const [uploadedIndex, setUploadedIndex] = useState(0);
   const [emojiPickerVisible, setEmojiPickerVisible] = useState(false);
 
   const toggleEmojiPicker = () => {
