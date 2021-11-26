@@ -39,10 +39,8 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     }
   };
 
-  const onUpload = (file, uid, index) => {
-    filesApi.upload(file).then(({ data }) => {
-      setUploadedIndex(index);
-    });
+  const onUpload = (file, uid) => {
+    filesApi.upload(file).then(({ data }) => {});
   };
 
   // files = files.map((item) => {
