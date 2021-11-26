@@ -44,7 +44,12 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
       setAttachments(
         attachments.map((item) => {
           if ((item.uid = uid)) {
-            return {};
+            return {
+              uid: data.file._id,
+              name: data.file.filename,
+              status: "done",
+              url: data.file.url,
+            };
           }
         })
       );
