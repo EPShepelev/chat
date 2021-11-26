@@ -51,22 +51,11 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
               url: data.file.url,
             };
           }
+          return item;
         })
       );
     });
   };
-
-  // files = files.map((item) => {
-  //   if (item.uid === uid) {
-  //     item = {
-  //       uid: data.file._id,
-  //       name: data.file.filename,
-  //       status: "done",
-  //       url: data.file.url,
-  //     };
-  //   }
-  //   return item;
-  // })
 
   const onSelectFiles = (files) => {
     let uploaded = [];
