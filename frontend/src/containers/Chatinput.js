@@ -77,11 +77,9 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
   };
 
   useEffect(() => {
-    effect;
-    return () => {
-      cleanup;
-    };
-  }, [input]);
+    if (attachments.length) {
+    }
+  }, [attachments]);
 
   useEffect(() => {
     const el = document.querySelector(".chat-input__smile-btn");
