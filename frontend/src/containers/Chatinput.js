@@ -77,6 +77,13 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
   };
 
   useEffect(() => {
+    effect;
+    return () => {
+      cleanup;
+    };
+  }, [input]);
+
+  useEffect(() => {
     const el = document.querySelector(".chat-input__smile-btn");
     document.addEventListener("click", handleOutsideClick.bind(this, el));
     return () => {
