@@ -12,7 +12,6 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
 
   const [value, setValue] = useState("");
   const [attachments, setAttachments] = useState([]);
-  const [uploadedIndex, setUploadedIndex] = useState(0);
   const [emojiPickerVisible, setEmojiPickerVisible] = useState(false);
 
   const toggleEmojiPicker = () => {
@@ -46,7 +45,6 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     });
   };
 
-
   // files = files.map((item) => {
   //   if (item.uid === uid) {
   //     item = {
@@ -71,17 +69,15 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
           file,
           name: file.name,
           status: "uploading",
-        }
+        },
       ];
-        onUpload(file, uid, i);
+      onUpload(file, uid, i);
     }
   };
 
   useEffect(() => {
     if (uploadedIndex === attachments.length) {
-      setAttachments(attachments.map(obj => {
-        
-      }))
+      setAttachments(attachments.map((obj) => {}));
     }
   }, [uploadedIndex]);
 
