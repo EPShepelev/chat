@@ -41,10 +41,10 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
   };
 
   const onUpload = (file) => {
-    filesApi.upload(file).then(({ data }) => {
+    filesApi.upload(file.file).then(({ data }) => {
       setAttachments(
         attachments.map((item) => {
-          if ((item.uid = uid)) {
+          if ((item.uid = file.uid)) {
             return {
               uid: data.file._id,
               name: data.file.filename,
