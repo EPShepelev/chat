@@ -167,5 +167,7 @@
       "react-app"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/plugin-transform-async-to-generator": "^7.16.0"
+  }
 }
