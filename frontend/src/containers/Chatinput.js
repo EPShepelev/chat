@@ -58,7 +58,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     });
   };
 
-  const onSelectFiles = (files) => {
+  const onSelectFiles = async (files) => {
     let uploaded = [];
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
