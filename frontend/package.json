@@ -165,6 +165,9 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-async-to-generator"
     ]
   },
   "devDependencies": {
