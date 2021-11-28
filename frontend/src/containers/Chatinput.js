@@ -45,9 +45,8 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
       uploaded = [
         ...uploaded,
         {
-          uid,
-          file,
-          name: file.name,
+          uid: data.file._id,
+          name: data.file.name,
           status: "uploading",
         },
       ];
