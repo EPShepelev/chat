@@ -67,6 +67,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
           status: "uploading",
         },
       ];
+      setAttachments();
       await onUpload(file).then(({data})=> {
          setAttachments(uploaded.map(item => {
            if (item.uid === uid){
