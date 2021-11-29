@@ -67,9 +67,10 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
           status: "uploading",
         },
       ];
-      await onUpload(file).then(({data}));
+      await onUpload(file).then(({data})=> {
+         setAttachments(uploaded);
+      });
     }
-    setAttachments(uploaded);
   };
 
   useEffect(() => {
