@@ -60,7 +60,8 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
       ];
       setAttachments(uploaded);
       await filesApi.upload(file).then(({data})=> {
-         setAttachments(uploaded.map(item => {
+         setAttachments(
+           uploaded.map(item => {
            if (item.uid === uid){
              return {
                status: 'done',
@@ -70,7 +71,8 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
              };
            }
            return item
-         }))
+         })
+         );
       });
     }
   };
