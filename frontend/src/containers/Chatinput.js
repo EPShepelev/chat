@@ -29,7 +29,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
   };
 
   const sendMessage = () => {
-    fetchSendMessage(value, currentDialogId);
+    fetchSendMessage(value, currentDialogId, attachments);
     setValue("");
   };
 
