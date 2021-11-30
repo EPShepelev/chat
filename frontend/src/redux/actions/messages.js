@@ -34,7 +34,7 @@ const Actions = {
     });
    }
   },
-  fetchSendMessage: (text, dialogId) => dispatch => {
+  fetchSendMessage: (text, dialogId, attachments) => dispatch => {
     messagesApi.send(text, dialogId);
   }
   setIsLoading: (bool) => ({
