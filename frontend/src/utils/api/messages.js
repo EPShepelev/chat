@@ -6,6 +6,6 @@ export default {
   send: (text, dialogId, attachments) =>
     axios.post("./messages?dialog=", {
       text: text,
-      dialog_id: dialogId,
+      dialog_id: dialogId, attachments
     }),
 };
