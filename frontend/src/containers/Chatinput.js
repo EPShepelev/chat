@@ -73,6 +73,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
         })
       });
     }
+    setAttachments(uploaded);
   };
 
   useEffect(() => {
