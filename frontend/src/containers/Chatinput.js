@@ -71,9 +71,6 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
           }
           return item
         })
-         setAttachments(
-         
-         );
       });
     }
   };
