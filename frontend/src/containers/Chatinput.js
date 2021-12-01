@@ -87,15 +87,16 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
   return (
     <ChatInputBase
       value={value}
-      setValue={setValue}
       emojiPickerVisible={emojiPickerVisible}
+      attachments={attachments}
+      isRecoriding={isRecoriding}
+      setValue={setValue}
       toggleEmojiPicker={toggleEmojiPicker}
       addEmoji={addEmoji}
       handleSendMessage={handleSendMessage}
       sendMessage={sendMessage}
-      attachments={attachments}
       onSelectFiles={onSelectFiles}
-      isRecoriding={isRecoriding}
+      handleStartRecording={handleStartRecording}
     />
   );
 };
