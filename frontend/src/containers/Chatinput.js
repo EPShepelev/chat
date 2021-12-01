@@ -31,6 +31,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
   const sendMessage = () => {
     fetchSendMessage(value, currentDialogId, attachments.map(file => file.uid));
     setValue("");
+    setAttachments([]);
   };
 
   const handleSendMessage = (e) => {
