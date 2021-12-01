@@ -91,6 +91,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
       sendMessage={sendMessage}
       attachments={attachments}
       onSelectFiles={onSelectFiles}
+      isRecoriding={isRecoriding}
     />
   );
 };
