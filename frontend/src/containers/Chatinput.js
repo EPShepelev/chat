@@ -10,6 +10,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
   }
 
   const [value, setValue] = useState("");
+  const [isRecoriding, setIsRecoriding] = useState(false);
   const [attachments, setAttachments] = useState([]);
   const [emojiPickerVisible, setEmojiPickerVisible] = useState(false);
 
