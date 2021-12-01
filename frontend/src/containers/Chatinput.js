@@ -40,6 +40,8 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     }
   };
 
+  const handleStartRecording = () => {}
+
   const onSelectFiles = async (files) => {
     let uploaded = [];
     for (let i = 0; i < files.length; i++) {
