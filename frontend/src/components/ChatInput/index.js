@@ -18,7 +18,7 @@ const { TextArea } = Input;
 
 const ChatInput = (props) => {
 
-const { emojiPickerVisible, value, setValue, addEmoji, handleSendMessage, toggleEmojiPicker, sendMessage, attachment, onSelectFiles, isRecoriding } = props;
+const { emojiPickerVisible, value, setValue, addEmoji, handleSendMessage, toggleEmojiPicker, sendMessage, attachment, onSelectFiles, isRecoriding, handleStartRecording } = props;
 
   return (
     <Fragment>
@@ -26,7 +26,7 @@ const { emojiPickerVisible, value, setValue, addEmoji, handleSendMessage, toggle
      <div>
      <div className="chat-input__smile-btn">
       <div className="chat-input__emoji-picker">
-        {emojiPickerVisible && (  
+        {emojiPickerVisible && (
             <Picker ref={} onSelect={(emojiTag) => addEmoji(emojiTag)} set="apple" /> 
         )}
         </div>
@@ -63,7 +63,7 @@ const { emojiPickerVisible, value, setValue, addEmoji, handleSendMessage, toggle
           <Button onClick={sendMessage} type="link" shape="circle" icon={<SendOutlined />} />
         ) : (
           <div className="chat-input__record-btn">
-            <Button type="link" shape="circle" icon={<AudioOutlined />} />
+            <Button type="link" shape="circle" onClick={handleStartRecording} icon={<AudioOutlined /> } />
             {
               isRecoriding && <div className="chat-input__record-status">
                 <i></i>
