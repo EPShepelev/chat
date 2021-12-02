@@ -64,14 +64,14 @@ const { emojiPickerVisible, value, setValue, addEmoji, handleSendMessage, toggle
         ) : (
           <div className="chat-input__record-btn">
             <Button type="link" shape="circle" onClick={handleStartRecording} icon={<AudioOutlined /> } />
-            {
+          </div>
+        )}
+        {
               isRecoriding && <div className="chat-input__record-status">
                 <i></i>
                 Recording...
               </div>
             }
-          </div>
-        )}
       </div>
      </div>
       <div className="chat-input__attachment">
