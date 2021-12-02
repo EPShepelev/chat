@@ -62,8 +62,9 @@ const { emojiPickerVisible, value, setValue, addEmoji, handleSendMessage, toggle
         {isRecoriding || value ? (
           <Button onClick={sendMessage} type="link" shape="circle" icon={<SendOutlined />} />
         ) : (
-          // <Button type="link" shape="circle" icon={<AudioOutlined />} />
-          <div className="chat-input__record-btn"></div>
+          <div className="chat-input__record-btn">
+            <Button type="link" shape="circle" icon={<AudioOutlined />} />
+          </div>
         )}
       </div>
      </div>
