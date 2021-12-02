@@ -59,7 +59,7 @@ const { emojiPickerVisible, value, setValue, addEmoji, handleSendMessage, toggle
           <Button type="link" shape="circle" icon={<CameraOutlined />} />
         </UploadField>
 
-        {value ? (
+        {isRecoriding || value ? (
           <Button onClick={sendMessage} type="link" shape="circle" icon={<SendOutlined />} />
         ) : (
           <Button type="link" shape="circle" icon={<AudioOutlined />} />
