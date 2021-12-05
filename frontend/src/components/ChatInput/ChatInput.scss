@@ -28,6 +28,7 @@
       box-shadow: 0 0 5px #f56b6b;
       position: relative;
       &::before {
+        content: "";
         position: absolute;
         left: 0;
         top: 0;
