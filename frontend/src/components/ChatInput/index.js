@@ -37,14 +37,19 @@ const { emojiPickerVisible, value, setValue, addEmoji, handleSendMessage, toggle
           icon={<SmileOutlined />}
         />
       </div>
-      <TextArea
+      { isRecoriding ? ( <div className="chat-input__record-status">
+                <i></i>
+                Recording...
+              </div>
+      ) : ( <TextArea
         onChange={(e) => setValue(e.target.value)}
         onKeyUp={handleSendMessage}
         size="large"
         placeholder="Введите сообщение"
         value={value}
         autosize={{ minRows: 1, maxRows: 6 }}
-      />
+      />)}
+     
       <div className="chat-input__actions">
         <UploadField
           onFiles={onSelectFiles}
@@ -66,12 +71,7 @@ const { emojiPickerVisible, value, setValue, addEmoji, handleSendMessage, toggle
             <Button type="link" shape="circle" onClick={handleStartRecording} icon={<AudioOutlined /> } />
           </div>
         )}
-        {
-              isRecoriding && <div className="chat-input__record-status">
-                <i></i>
-                Recording...
-              </div>
-            }
+        
       </div>
      </div>
       <div className="chat-input__attachment">
