@@ -19,6 +19,8 @@
     z-index: 1;
   }
   &__record-status {
+    display: flex;
+    align-items: center;
     i {
       display: inline-block;
       height: 10px;
