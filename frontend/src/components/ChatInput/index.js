@@ -48,7 +48,6 @@ const { emojiPickerVisible, value, setValue, addEmoji, handleSendMessage, toggle
         value={value}
         autosize={{ minRows: 1, maxRows: 6 }}
       />)}
-     
       <div className="chat-input__actions">
         <UploadField
           onFiles={onSelectFiles}
@@ -70,7 +69,6 @@ const { emojiPickerVisible, value, setValue, addEmoji, handleSendMessage, toggle
             <Button type="link" shape="circle" onClick={handleStartRecording} icon={<AudioOutlined /> } />
           </div>
         )}
-        
       </div>
      </div>
       <div className="chat-input__attachment">
