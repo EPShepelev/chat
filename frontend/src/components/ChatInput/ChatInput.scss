@@ -6,6 +6,9 @@
   }
   &__smile-btn {
     margin-right: 15px;
+    &--active {
+      display: initial;
+    }
   }
   .ant-btn-circle {
     span.anticon {
