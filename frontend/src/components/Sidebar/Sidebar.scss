@@ -6,4 +6,8 @@
     }
   }
 }
-
+.active {
+  &__form {
+    display: none;
+  }
+}
