@@ -100,7 +100,7 @@
 }
 .item {
   &__active {
-    display: auto;
+    display: inherit;
     margin: 0;
   }
 }
