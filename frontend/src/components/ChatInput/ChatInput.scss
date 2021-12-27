@@ -98,3 +98,8 @@
     transform: scale(1);
   }
 }
+.item {
+  &__active {
+    display: none;
+  }
+}
