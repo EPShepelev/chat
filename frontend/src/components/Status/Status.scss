@@ -21,4 +21,7 @@
 }
 .content {
   display: inline;
+  &__inner {
+    margin: 10px auto;
+  }
 }
