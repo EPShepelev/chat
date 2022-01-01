@@ -19,16 +19,3 @@
     }
   }
 }
-.content {
-  display: flex;
-  &__inner {
-    margin: 10px auto;
-    padding: 10px 43px;
-    display: none;
-    font-size: 28px;
-    line-height: 40px;
-    background-color: #ccc;
-    color: #acbd21;
-    cursor: pointer;
-  }
-}
